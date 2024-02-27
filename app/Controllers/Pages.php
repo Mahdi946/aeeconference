@@ -6,10 +6,10 @@ class Pages extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        return view('home.fa');
     }
 
-    public function view($page = 'home')
+    public function view($page = 'home.fa')
     {
         // ...
     }
