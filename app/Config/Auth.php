@@ -298,7 +298,7 @@ class Auth extends ShieldAuth
      * For example:
      *     $personalFields = ['firstname', 'lastname'];
      */
-    public array $personalFields = [];
+    public array $personalFields = ['firstname', 'lastname'];
 
     /**
      * --------------------------------------------------------------------
@@ -344,7 +344,7 @@ class Auth extends ShieldAuth
      * - PASSWORD_ARGON2I  - As of PHP 7.2 only if compiled with support for it
      * - PASSWORD_ARGON2ID - As of PHP 7.3 only if compiled with support for it
      */
-    public string $hashAlgorithm = PASSWORD_DEFAULT;
+    public string $hashAlgorithm = PASSWORD_BCRYPT;
 
     /**
      * --------------------------------------------------------------------
