@@ -192,6 +192,8 @@
                 </div>
             </div>
         </div>
+        <a href="<?= site_url('lang/en'); ?>">en</a>
+        <a href="<?= site_url('lang/fa'); ?>">fa</a>
         <!-- End Navbar Area -->
         <?= $this->renderSection('content') ?>
         <!-- Start Footer Area -->

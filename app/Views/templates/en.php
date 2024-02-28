@@ -188,6 +188,8 @@
                 </div>
             </div>
         </div>
+        <a href="<?= base_url('lang/en'); ?>">en</a>
+        <a href="<?= base_url('lang/fa'); ?>">fa</a>
         <!-- End Navbar Area -->
         <?= $this->renderSection('content') ?>
         <!-- Start Footer Area -->

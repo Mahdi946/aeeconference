@@ -35,8 +35,8 @@ abstract class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
-
+    protected $helpers = ["url"];
+    protected $locale;
     /**
      * Be sure to declare properties for any property fetch you initialized.
      * The creation of dynamic property is deprecated in PHP 8.2.
@@ -50,6 +50,11 @@ abstract class BaseController extends Controller
     {
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
+
+        $session = \Config\Services::session();
+        $language = \Config\Services::language();
+        $language->setLocale($session->lang);
+        $this->locale = $language->getLocale();
 
         // Preload any models, libraries, etc, here.
 
