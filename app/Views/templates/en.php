@@ -94,12 +94,12 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/awards" class="nav-link">
+                                            <a href="<?=base_url('awards')?>" class="nav-link">
                                                 Awards
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/logo" class="nav-link">
+                                            <a href="<?=base_url('logo')?>" class="nav-link">
                                                 Press & Media Kit
                                             </a>
                                         </li>
