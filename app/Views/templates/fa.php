@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-    
-<head>
+    <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,35 +8,35 @@
         <meta name="description" content="">
         <meta name="author" content="Novin Tarh Pars">
 
-        <link rel="stylesheet" href="/assets-rtl/css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/bootstrap.rtl.min.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/owl.default.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/owl.default.min.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/owl.carousel.min.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/magnific-popup.min.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/animate.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/animate.min.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/boxicons.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/boxicons.min.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/flaticon.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/flaticon.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/meanmenu.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/meanmenu.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/odometer.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/odometer.min.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/style.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/style.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/responsive.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/responsive.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/responsive.css">
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/responsive.css')?>">
 
-        <link rel="stylesheet" href="/assets-rtl/css/rtl.css">
-		
-		<title>جایزه فناوری و نوآوری یونسکو</title>
+        <link rel="stylesheet" href="<?=base_url('assets-rtl/css/rtl.css')?>">
 
-        <link rel="icon" type="image/png" href="/assets-rtl/img/favicon.png">
+        <title>جایزه فناوری و نوآوری یونسکو</title>
+
+        <link rel="icon" type="image/png" href="<?=base_url('assets-rtl/img/favicon.png')?>">
     </head>
 
     <body>
@@ -57,7 +56,7 @@
                 <div class="container">
                     <div class="fria-responsive-menu">
                         <div class="logo">
-                            <a href="/">
+                            <a href="<?=base_url('/')?>">
                                 <img src="/assets-rtl/img/logo.png" alt="logo">
                             </a>
                         </div>
@@ -68,7 +67,7 @@
             <div class="fria-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="<?=base_url('/')?>">
                             <img src="/assets-rtl/img/logo.png" alt="logo">
                         </a>
 
@@ -177,23 +176,43 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/contact" class="nav-link">
+                                    <a href="<?=base_url('contact')?>" class="nav-link">
                                         تماس با ما
                                     </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        زبان (Language)
+                                        <i class='bx bx-chevron-down'></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="<?= base_url('lang/fa'); ?>" class="nav-link">
+                                                فارسی
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url('lang/en'); ?>" class="nav-link">
+                                                English
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
 
                             <div class="others-options">
-                                <a href="/login" class="default-btn">ورود</a>
-                                <a href="/register" class="default-btn">ثبت‌نام</a>
+                                <a href="<?=base_url('login')?>" class="default-btn">ورود</a>
+<!--                                <a href="--><?php //=('register')?><!--" class="default-btn">ثبت‌نام</a>-->
                             </div>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-        <a href="<?= site_url('lang/en'); ?>">en</a>
-        <a href="<?= site_url('lang/fa'); ?>">fa</a>
+
         <!-- End Navbar Area -->
         <?= $this->renderSection('content') ?>
         <!-- Start Footer Area -->
@@ -332,38 +351,33 @@
         </div>
         <!-- End Go Top Section -->
         <!-- dark version -->
-        <div class="dark-version">
-            <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
-                <span class="slider round"></span>
-            </label>
-        </div>
+
         <!-- dark version -->
-<script src="/assets-rtl/js/jquery.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/jquery.min.js')?>"></script>
 
-<script src="/assets-rtl/js/popper.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/popper.min.js')?>"></script>
 
-<script src="/assets-rtl/js/bootstrap.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/bootstrap.min.js')?>"></script>
 
-<script src="/assets-rtl/js/jquery.meanmenu.js"></script>
+<script src="<?=base_url('assets-rtl/js/jquery.meanmenu.js')?>"></script>
 
-<script src="/assets-rtl/js/owl.carousel.js"></script>
+<script src="<?=base_url('assets-rtl/js/owl.carousel.js')?>"></script>
 
-<script src="/assets-rtl/js/jquery.magnific-popup.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/jquery.magnific-popup.min.js')?>"></script>
 
-<script src="/assets-rtl/js/jquery.appear.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/jquery.appear.min.js')?>"></script>
 
-<script src="/assets-rtl/js/odometer.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/odometer.min.js')?>"></script>
 
-<script src="/assets-rtl/js/jquery.ajaxchimp.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/jquery.ajaxchimp.min.js')?>"></script>
 
-<script src="/assets-rtl/js/form-validator.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/form-validator.min.js')?>"></script>
 
-<script src="/assets-rtl/js/contact-form-script.js"></script>
+<script src="<?=base_url('assets-rtl/js/contact-form-script.js')?>"></script>
 
-<script src="/assets-rtl/js/wow.min.js"></script>
+<script src="<?=base_url('assets-rtl/js/wow.min.js')?>"></script>
 
-<script src="/assets-rtl/js/main.js"></script>
+<script src="<?=base_url('assets-rtl/js/main.js')?>"></script>
     </body>
 
 

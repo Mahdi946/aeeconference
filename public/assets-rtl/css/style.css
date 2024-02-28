@@ -582,10 +582,10 @@ img {
 	margin-left: 30px
 }
 .navbar-area.navbar-two {
-	position: absolute;
-	z-index: 999;
-	width: 100%;
-	top: 0
+	/*position: absolute;*/
+	/*z-index: 999;*/
+	/*width: 100%;*/
+	/*top: 0*/
 }
 .navbar-area.navbar-two .fria-nav .navbar .navbar-nav {
 	margin-left: auto;

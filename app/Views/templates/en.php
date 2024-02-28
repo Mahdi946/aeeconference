@@ -52,7 +52,7 @@
                 <div class="container">
                     <div class="fria-responsive-menu">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="<?=base_url('/')?>">
                                 <img src="/assets/img/logo.png" class="black-logo" alt="image">
                                 <img src="/assets/img/logo-2.png" class="white-logo" alt="image">
                             </a>
@@ -64,7 +64,7 @@
             <div class="fria-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/">
                             <img src="/assets-rtl/img/logo.png" alt="logo">
                         </a>
 
@@ -173,23 +173,42 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/contact" class="nav-link">
+                                    <a href="<?=base_url('contact')?>" class="nav-link">
                                         Contact
                                     </a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Language (زبان)
+                                        <i class='bx bx-chevron-down'></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="<?= base_url('lang/en'); ?>" class="nav-link">
+                                                English
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="<?= base_url('lang/fa'); ?>" class="nav-link">
+                                                فارسی
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
                             </ul>
 
                             <div class="others-options">
-                                <a href="/login" class="default-btn">Login</a>
-                                <a href="/register" class="default-btn">Register</a>
+                                <a href="<?=base_url('login')?>" class="default-btn">Login</a>
+<!--                                <a href="--><?php //=base_url('register')?><!--" class="default-btn">Register</a>-->
                             </div>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-        <a href="<?= base_url('lang/en'); ?>">en</a>
-        <a href="<?= base_url('lang/fa'); ?>">fa</a>
         <!-- End Navbar Area -->
         <?= $this->renderSection('content') ?>
         <!-- Start Footer Area -->
