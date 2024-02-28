@@ -91,7 +91,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/eligible-fields" class="nav-link">
+                                            <a href="<?=base_url('eligible-fields')?>" class="nav-link">
                                                 حوزه‌ها
                                             </a>
                                         </li>
