@@ -128,7 +128,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/call-for-entries" class="nav-link">
+                                            <a href="<?=base_url('call-for-entries')?>" class="nav-link">
                                             فراخوان
                                             </a>
                                         </li>
