@@ -57,7 +57,7 @@
                     <div class="fria-responsive-menu">
                         <div class="logo">
                             <a href="<?=base_url('/')?>">
-                                <img src="/assets-rtl/img/logo.png" alt="logo">
+                                <img src="<?=base_url('assets-rtl/img/logo.png')?>" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -68,13 +68,13 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="<?=base_url('/')?>">
-                            <img src="/assets-rtl/img/logo.png" alt="logo">
+                            <img src="<?=base_url('assets-rtl/img/logo.png')?>" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="/" class="nav-link active">
+                                    <a href="<?=base_url('/')?>" class="nav-link active">
                                         صفحه اصلی 
                                     </a>
                                 </li>
@@ -85,7 +85,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="/prize-overview" class="nav-link">
+                                            <a href="<?=base_url('prize-overview')?>" class="nav-link">
                                                 جایزه در یک نگاه
                                             </a>
                                         </li>
@@ -261,19 +261,19 @@
 
                             <ul class="footer-quick-links">
                                 <li>
-                                    <a href="/prize-overview">جایزه در یک نگاه</a>
+                                    <a href="<?=base_url('prize-overview')?>">جایزه در یک نگاه</a>
                                 </li>
                                 <li>
-                                    <a href="/eligible-fields">حوزه‌ها</a>
+                                    <a href="<?=base_url('eligible-fields')?>">حوزه‌ها</a>
                                 </li>
                                 <li>
-                                    <a href="/awards">جوایز</a>
+                                    <a href="<?=base_url('awards')?>">جوایز</a>
                                 </li>
                                 <li>
-                                    <a href="/logo"> دانلود لوگو</a>
+                                    <a href="<?=base_url('logo')?>"> دانلود لوگو</a>
                                 </li>
                                 <li>
-                                    <a href="/organizational-structure">ساختار سازمانی</a>
+                                    <a href="<?=base_url('organizational-structure')?>">ساختار سازمانی</a>
                                 </li>
                             </ul>
                         </div>    
@@ -331,10 +331,10 @@
                         <div class="col-lg-6 col-md-6">
                             <ul>
                                 <li>
-                                    <a href="/terms-condition">قوانین و مقررات</a>
+                                    <a href="<?=base_url('terms-condition')?>">قوانین و مقررات</a>
                                 </li>
                                 <li>
-                                    <a href="/privacy-policy">حریم خصوصی</a>
+                                    <a href="<?=base_url('privacy-policy')?>">حریم خصوصی</a>
                                 </li>
                             </ul>
                         </div>

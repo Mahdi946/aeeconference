@@ -6,33 +6,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS --> 
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css')?>">
         <!-- Owl Carousel CSS --> 
-        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/owl.carousel.min.css')?>">
         <!-- Owl Default CSS --> 
-        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/owl.theme.default.min.css')?>">
         <!-- Owl Magnific CSS --> 
-        <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/magnific-popup.min.css')?>">
         <!-- Animate CSS --> 
-        <link rel="stylesheet" href="/assets/css/animate.min.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/animate.min.css')?>">
         <!-- Boxicons CSS --> 
-		<link rel="stylesheet" href="/assets/css/boxicons.min.css">
+		<link rel="stylesheet" href="<?=base_url('assets/css/boxicons.min.css')?>">
         <!-- Flaticon CSS --> 
-		<link rel="stylesheet" href="/assets/css/flaticon.css">
+		<link rel="stylesheet" href="<?=base_url('assets/css/flaticon.css')?>">
         <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="/assets/css/meanmenu.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/meanmenu.css')?>">
 		<!-- Odometer CSS-->
-		<link rel="stylesheet" href="/assets/css/odometer.min.css">
+		<link rel="stylesheet" href="<?=base_url('assets/css/odometer.min.css')?>">
         <!-- Style CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>">
         <!-- RTL CSS -->
-        <link rel="stylesheet" href="/assets/css/dark.css">
+        <link rel="stylesheet" href="<?=base_url('assets/css/dark.css')?>">
         <!-- Responsive CSS -->
-		<link rel="stylesheet" href="/assets/css/responsive.css">
+		<link rel="stylesheet" href="<?=base_url('assets/css/responsive.css')?>">
 		
 		<title>UNESCO Prize</title>
 
-        <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="<?=base_url('assets/img/favicon.png')?>">
     </head>
 
     <body>
@@ -53,8 +53,8 @@
                     <div class="fria-responsive-menu">
                         <div class="logo">
                             <a href="<?=base_url('/')?>">
-                                <img src="/assets/img/logo.png" class="black-logo" alt="image">
-                                <img src="/assets/img/logo-2.png" class="white-logo" alt="image">
+                                <img src="<?=base_url('assets/img/logo.png')?>" class="black-logo" alt="image">
+                                <img src="<?=base_url('assets/img/logo-2.png')?>" class="white-logo" alt="image">
                             </a>
                         </div>
                     </div>
@@ -64,14 +64,14 @@
             <div class="fria-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="/">
-                            <img src="/assets-rtl/img/logo.png" alt="logo">
+                        <a class="navbar-brand" href="<?=base_url('/')?>">
+                            <img src="<?=base_url('assets/img/logo.png')?>" alt="logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="/" class="nav-link active">
+                                    <a href="<?=base_url('/')?>" class="nav-link active">
                                         Home 
                                     </a>
                                 </li>
@@ -82,7 +82,7 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="/prize-overview" class="nav-link">
+                                            <a href="<?=base_url('prize-overview')?>" class="nav-link">
                                                 Prize Overview
                                             </a>
                                         </li>
@@ -257,19 +257,19 @@
 
                             <ul class="footer-quick-links">
                                 <li>
-                                    <a href="/prize-overview">Prize Overview</a>
+                                    <a href="<?=base_url('prize-overview')?>">Prize Overview</a>
                                 </li>
                                 <li>
-                                    <a href="/eligible-fields">Eligible Fields</a>
+                                    <a href="<?=base_url('eligible-fields')?>">Eligible Fields</a>
                                 </li>
                                 <li>
-                                    <a href="/awards">Awards</a>
+                                    <a href="<?=base_url('awards')?>">Awards</a>
                                 </li>
                                 <li>
-                                    <a href="/logo">Press & Media Kit</a>
+                                    <a href="<?=base_url('logo')?>">Press & Media Kit</a>
                                 </li>
                                 <li>
-                                    <a href="/organizational-structure">Organizational Structure</a>
+                                    <a href="<?=base_url('organizational-structure')?>">Organizational Structure</a>
                                 </li>
                             </ul>
                         </div>    
@@ -322,10 +322,10 @@
                         <div class="col-lg-6 col-md-6">
                             <ul>
                                 <li>
-                                    <a href="/terms-condition">Terms & Conditions</a>
+                                    <a href="<?=base_url('terms-condition')?>">Terms & Conditions</a>
                                 </li>
                                 <li>
-                                    <a href="/privacy-policy">Privacy Policy</a>
+                                    <a href="<?=base_url('privacy-policy')?>">Privacy Policy</a>
                                 </li>
                             </ul>
                         </div>
@@ -352,28 +352,28 @@
         <!-- dark version -->
 
         <!-- Jquery Slim JS -->
-        <script src="/assets/js/jquery.min.js"></script>
+        <script src="<?=base_url('assets/js/jquery.min.js')?>"></script>
         <!-- Bootstrap JS -->
-        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
         <!-- Meanmenu JS -->
-        <script src="/assets/js/jquery.meanmenu.js"></script>
+        <script src="<?=base_url('assets/js/jquery.meanmenu.js')?>"></script>
         <!-- Owl Carousel JS -->
-		<script src="/assets/js/owl.carousel.min.js"></script>
+		<script src="<?=base_url('assets/js/owl.carousel.min.js')?>"></script>
         <!-- Magnific JS -->
-		<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+		<script src="<?=base_url('assets/js/jquery.magnific-popup.min.js')?>"></script>
 		<!-- Appear JS --> 
-        <script src="/assets/js/jquery.appear.min.js"></script>
+        <script src="<?=base_url('assets/js/jquery.appear.min.js')?>"></script>
 		<!-- Odometer JS --> 
-		<script src="/assets/js/odometer.min.js"></script>
+		<script src="<?=base_url('assets/js/odometer.min.js')?>"></script>
 		<!-- Form Ajaxchimp JS -->
-		<script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="<?=base_url('assets/js/jquery.ajaxchimp.min.js')?>"></script>
 		<!-- Form Validator JS -->
-		<script src="/assets/js/form-validator.min.js"></script>
+		<script src="<?=base_url('assets/js/form-validator.min.js')?>"></script>
 		<!-- Contact JS -->
-        <script src="/assets/js/contact-form-script.js"></script>
+        <script src="<?=base_url('assets/js/contact-form-script.js')?>"></script>
         <!-- Wow JS -->
-        <script src="/assets/js/wow.min.js"></script>
+        <script src="<?=base_url('assets/js/wow.min.js')?>"></script>
         <!-- Custom JS -->
-        <script src="/assets/js/main.js"></script>
+        <script src="<?=base_url('assets/js/main.js')?>"></script>
     </body>
 </html>
