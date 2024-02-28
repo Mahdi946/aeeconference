@@ -88,7 +88,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/prize-fields" class="nav-link">
+                                            <a href="/eligible-fields" class="nav-link">
                                                 Eligible Fields
                                             </a>
                                         </li>
@@ -189,129 +189,18 @@
             </div>
         </div>
         <!-- End Navbar Area -->
-
-        <!-- Sidebar Modal -->
-        <div class="sidebar-modal">
-            <div class="sidebar-modal-inner">
-                <div class="sidebar-about-area">
-                    <div class="title">
-                        <h2>About Us</h2>
-                        <p>We believe brand interaction is key in communication. Real innovations and a positive customer experience are the heart of successful communication. No fake products and services. The customer is king, their lives and needs are the inspiration.</p>
-                    </div>
-                </div>
-
-                <div class="sidebar-contact-feed">
-                    <h2>Contact</h2>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="send-btn">
-                                        <button type="submit" class="send-btn-one">
-                                            Send Message
-                                        </button>
-
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="sidebar-contact-area">
-                    <div class="contact-info">
-                        <div class="contact-info-content">
-                            <h2>
-                                <a href="tel:+0881306298615">
-                                    +088 130 629 8615
-                                </a>
-                                <span>OR</span>
-                                <a href="/cdn-cgi/l/email-protection#5f392d363e1f38323e3633713c3032">
-                                    <span class="__cf_email__" data-cfemail="107662797150777d71797c3e737f7d">fria@gmail.com</span>
-                                </a>
-                            </h2>
-    
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-pinterest"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <span class="close-btn sidebar-modal-close-btn">
-                    <i class="flaticon-cancel"></i>
-                </span>
-            </div>
-        </div>
-        <!-- End Sidebar Modal -->
         <?= $this->renderSection('content') ?>
         <!-- Start Footer Area -->
         <section class="footer-section pt-100 pb-70">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="single-footer-widget">
                             <div class="footer-heading">
                                 <h3>About Us</h3>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                            <ul class="footer-social">
+                            <p>The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines.This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements. </p>
+                            <!-- <ul class="footer-social">
                                 <li>
                                     <a href="#">
                                         <i class="flaticon-facebook"></i>
@@ -335,56 +224,31 @@
                                         <i class="flaticon-instagram"></i>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
                             <div class="footer-heading">
-                                <h3>Important Links</h3>
+                                <h3>Prize</h3>
                             </div>
 
                             <ul class="footer-quick-links">
                                 <li>
-                                    <a href="about.html">About Us</a>
+                                    <a href="/prize-overview">Prize Overview</a>
                                 </li>
                                 <li>
-                                    <a href="projects-1.html">Project</a>
+                                    <a href="/eligible-fields">Eligible Fields</a>
                                 </li>
                                 <li>
-                                    <a href="services-1.html">Services</a>
+                                    <a href="/awards">Awards</a>
                                 </li>
                                 <li>
-                                    <a href="blog-1.html">Blog</a>
+                                    <a href="/logo">Press & Media Kit</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>    
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <div class="footer-heading">
-                                <h3>Featured Service</h3>
-                            </div>
-                            <ul class="footer-quick-links">
-                                <li>
-                                    <a href="#">IT Management</a>
-                                </li>
-                                <li>
-                                    <a href="#">Development</a>
-                                </li>
-                                <li>
-                                    <a href="services-1.html">Services</a>
-                                </li>
-                                <li>
-                                    <a href="#">UI/UX Design</a>
-                                </li>
-                                <li>
-                                    <a href="#">Support Engineer</a>
+                                    <a href="/organizational-structure">Organizational Structure</a>
                                 </li>
                             </ul>
                         </div>    
@@ -399,19 +263,19 @@
                             <div class="footer-info-contact">
                                 <i class="flaticon-phone-call"></i>
                                 <h3>Phone</h3>
-                                <span><a href="tel:+882-569-756">+123(456)123</a></span>
+                                <span><a href="tel:02188220700;180">+98 (21) 88220700 (Extension 180)</a></span>
                             </div>
 
                             <div class="footer-info-contact">
                                 <i class="flaticon-envelope"></i>
                                 <h3>Email</h3>
-                                <span><a href="/cdn-cgi/l/email-protection#fc9499909093bc9a8e959dd29f9391"><span class="__cf_email__" data-cfemail="92faf7fefefdd2f4e0fbf3bcf1fdff">fria@gmail.com</span></a></span>
+                                <span><a href="mailto:info@inotech-unescoprize.org">info@Inotech-UnescoPrize.org</a></span>
                             </div>
 
                             <div class="footer-info-contact">
                                 <i class="flaticon-pin"></i>
                                 <h3>Address</h3>
-                                <span>32 st Kilda Road, Melbourne VIC, 3004 Australia</span>
+                                <span>Iran Secretariat of the UNESCO Prize, Science and Technology Park of the University of Tehran, Farshi Moghadam, North Kargar, Tehran, Iran</span>
                             </div>
                         </div>
                     </div>
@@ -427,9 +291,9 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6">
                             <p>
-                                Copyright @<script>document.write(new Date().getFullYear())</script> Fria All Rights Reserved by
-                                <a href="https://envytheme.com/" target="_blank">
-                                    EnvyTheme
+                                Copyright @ <?=date('Y') ?> Iran Secretariat of the UNESCO Prize, All Rights Reserved.
+                                <a href="https://novintarhpars.com/" target="_blank">
+                                    Novin Tarh Pars
                                 </a>
                             </p>
                         </div>
@@ -437,10 +301,10 @@
                         <div class="col-lg-6 col-md-6">
                             <ul>
                                 <li>
-                                    <a href="terms-condition.html">Terms & Conditions</a>
+                                    <a href="/terms-condition">Terms & Conditions</a>
                                 </li>
                                 <li>
-                                    <a href="privacy-policy.html">Privacy Policy</a>
+                                    <a href="/privacy-policy">Privacy Policy</a>
                                 </li>
                             </ul>
                         </div>
