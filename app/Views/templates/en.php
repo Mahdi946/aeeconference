@@ -104,7 +104,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/organizational-structure" class="nav-link">
+                                            <a href="<?=base_url('organizational-structure')?>" class="nav-link">
                                                 Organizational Structure
                                             </a>
                                         </li>
