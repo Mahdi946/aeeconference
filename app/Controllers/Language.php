@@ -13,7 +13,8 @@ class Language extends BaseController
         $locale = $this->request->getLocale();
         $session->remove('lang');
         $session->set('lang', $locale);
-        $url = base_url();
+//        $url = base_url();
+        $url=$_SERVER['HTTP_REFERER'];
         return redirect()->to($url);
     }
 }
