@@ -92,7 +92,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/prize-fields" class="nav-link">
+                                            <a href="/eligible-fields" class="nav-link">
                                                 حوزه‌ها
                                             </a>
                                         </li>
@@ -193,241 +193,18 @@
             </div>
         </div>
         <!-- End Navbar Area -->
-
-        
-        <!-- Sidebar Modal -->
-        <div class="sidebar-modal">
-            <div class="sidebar-modal-inner">
-                <div class="sidebar-about-area">
-                    <div class="title">
-                        <h2>درباره ما</h2>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    </div>
-                </div>
-
-                <div class="sidebar-contact-feed">
-                    <h2>Contact</h2>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="لطفا نام خود را وارد کنید" placeholder="نام شما">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="لطفا ایمیل خود را وارد کنید" placeholder="ایمیل شما">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="لطفا تلفن خود را وارد کنید" class="form-control" placeholder="تلفن شما">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="لطفا موضوع خود را وارد کنید" placeholder="موضوع">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="پیام خود را بنویسید" placeholder="پیام شما"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="send-btn">
-                                        <button type="submit" class="send-btn-one">
-                                            ارسال پیام
-                                        </button>
-
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="sidebar-contact-area">
-                    <div class="contact-info">
-                        <div class="contact-info-content">
-                            <h2>
-                                <a href="تلفن:021-12345678">
-                                    021-12345678
-                                </a>
-                                <span>OR</span>
-                                <a href="mailto:fria@site.com">
-                                    fria@site.com
-                                </a>
-                            </h2>
-    
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-pinterest"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <span class="close-btn sidebar-modal-close-btn">
-                    <i class="flaticon-cancel"></i>
-                </span>
-            </div>
-        </div>
-        <!-- End Sidebar Modal -->
-
-        <!-- Sidebar Modal -->
-        <div class="sidebar-modal">
-            <div class="sidebar-modal-inner">
-                <div class="sidebar-about-area">
-                    <div class="title">
-                        <h2>درباره ما</h2>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    </div>
-                </div>
-
-                <div class="sidebar-contact-feed">
-                    <h2>Contact</h2>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="لطفا نام خود را وارد کنید" placeholder="نام شما">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="لطفا ایمیل خود را وارد کنید" placeholder="ایمیل شما">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="لطفا تلفن خود را وارد کنید" class="form-control" placeholder="تلفن شما">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="لطفا موضوع خود را وارد کنید" placeholder="موضوع">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="پیام خود را بنویسید" placeholder="پیام شما"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="send-btn">
-                                        <button type="submit" class="send-btn-one">
-                                            ارسال پیام
-                                        </button>
-
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="sidebar-contact-area">
-                    <div class="contact-info">
-                        <div class="contact-info-content">
-                            <h2>
-                                <a href="تلفن:021-12345678">
-                                    021-12345678
-                                </a>
-                                <span>OR</span>
-                                <a href="mailto:fria@site.com">
-                                    fria@site.com
-                                </a>
-                            </h2>
-    
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="flaticon-pinterest"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <span class="close-btn sidebar-modal-close-btn">
-                    <i class="flaticon-cancel"></i>
-                </span>
-            </div>
-        </div>
-        <!-- End Sidebar Modal -->
         <?= $this->renderSection('content') ?>
         <!-- Start Footer Area -->
         <section class="footer-section pt-100 pb-70">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="single-footer-widget">
                             <div class="footer-heading">
                                 <h3>درباره ما</h3>
                             </div>
-                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                            <ul class="footer-social">
+                            <p>توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است. این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است. جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری، کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد. </p>
+                            <!-- <ul class="footer-social">
                                 <li>
                                     <a href="#">
                                         <i class="flaticon-facebook"></i>
@@ -451,56 +228,31 @@
                                         <i class="flaticon-instagram"></i>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
                             <div class="footer-heading">
-                                <h3>لینکهای مفید</h3>
+                                <h3>جایزه</h3>
                             </div>
 
                             <ul class="footer-quick-links">
                                 <li>
-                                    <a href="about.html">درباره ما</a>
+                                    <a href="/prize-overview">جایزه در یک نگاه</a>
                                 </li>
                                 <li>
-                                    <a href="projects.html">پروژه</a>
+                                    <a href="/eligible-fields">حوزه‌ها</a>
                                 </li>
                                 <li>
-                                    <a href="services.html">خدمات</a>
+                                    <a href="/awards">جوایز</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">وبلاگ</a>
+                                    <a href="/logo"> دانلود لوگو</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">تماس با ما</a>
-                                </li>
-                            </ul>
-                        </div>    
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <div class="footer-heading">
-                                <h3>خدمات برجسته</h3>
-                            </div>
-                            <ul class="footer-quick-links">
-                                <li>
-                                    <a href="#">مدیریت داده ها</a>
-                                </li>
-                                <li>
-                                    <a href="#">توسعه دهنده</a>
-                                </li>
-                                <li>
-                                    <a href="services-3.html">خدمات</a>
-                                </li>
-                                <li>
-                                    <a href="#">طراحی رابط کاربری</a>
-                                </li>
-                                <li>
-                                    <a href="#">مهندس پشتیبانی</a>
+                                    <a href="/organizational-structure">ساختار سازمانی</a>
                                 </li>
                             </ul>
                         </div>    
@@ -515,19 +267,19 @@
                             <div class="footer-info-contact">
                                 <i class="flaticon-phone-call"></i>
                                 <h3>تلفن</h3>
-                                <span><a href="tel:021-12345678">021-12345678</a></span>
+                                <span><a href="tel:02188220700;180">۰۲۱-۸۸۲۲۰۷۰۰ داخلی  ۱۸۰</a></span>
                             </div>
 
                             <div class="footer-info-contact">
                                 <i class="flaticon-envelope"></i>
                                 <h3>ایمیل</h3>
-                                <span><a href="mailto:hello@fria.com">hello@fria.com</a></span>
+                                <span><a href="mailto:info@inotech-unescoprize.org">info@Inotech-UnescoPrize.org</a></span>
                             </div>
 
                             <div class="footer-info-contact">
                                 <i class="flaticon-pin"></i>
                                 <h3>آدرس</h3>
-                                <span>ایران ، استان تهران ، میدان آزادی ، خیابان 9 شرقی</span>
+                                <span>ایران ، تهران، خیابان ۱۶ شهید فرشی مقدم، پارک علم وفناوری دانشگاه تهران، ساختمان شماره یک، دبیرخانه جایزه یونسکو.</span>
                             </div>
                         </div>
                     </div>
@@ -548,9 +300,9 @@
                 <div class="copyright-area-content">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6">
-                            <p>کپی رایت © 1402 فریا. تمام حقوق قالب محفوظ است. طراحی و توسعه توسط
-                                <a href="https://www.rtl-theme.com/author/barat/?aff=barat" target="_blank">
-                                    Barat Hadian
+                            <p>کپی رایت © <?=date('Y') ?> دبیرخانه جایزه یونسکو. تمام حقوق محفوظ است. طراحی و توسعه توسط
+                                <a href="https://novintarhpars.com" target="_blank">
+                                    نوین طرح پارس
                                 </a>
                             </p>
                         </div>
@@ -558,10 +310,10 @@
                         <div class="col-lg-6 col-md-6">
                             <ul>
                                 <li>
-                                    <a href="terms-condition.html">قوانین و مقررات</a>
+                                    <a href="/terms-condition">قوانین و مقررات</a>
                                 </li>
                                 <li>
-                                    <a href="privacy-policy.html">حریم خصوصی</a>
+                                    <a href="/privacy-policy">حریم خصوصی</a>
                                 </li>
                             </ul>
                         </div>
@@ -577,7 +329,14 @@
             <i class="bx bx-chevron-up"></i>
         </div>
         <!-- End Go Top Section -->
-
+        <!-- dark version -->
+        <div class="dark-version">
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <!-- dark version -->
 <script src="/assets-rtl/js/jquery.min.js"></script>
 
 <script src="/assets-rtl/js/popper.min.js"></script>
