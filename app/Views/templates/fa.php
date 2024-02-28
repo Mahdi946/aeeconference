@@ -122,7 +122,7 @@
 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="/nomination-indicator" class="nav-link">
+                                            <a href="<?=base_url('nomination-indicator')?>" class="nav-link">
                                             شاخص های انتخاب و ارزیابی اثر
                                             </a>
                                         </li>

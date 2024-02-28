@@ -119,7 +119,7 @@
 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="/nomination-indicator" class="nav-link">
+                                            <a href="<?=base_url('nomination-indicator')?>" class="nav-link">
                                             Nomination Selection and Evaluation Criteria
                                             </a>
                                         </li>
