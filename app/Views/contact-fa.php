@@ -8,7 +8,7 @@
                     <div class="page-title-content">
                         <h2>تماس با ما</h2>
                         <ul>
-                            <li><a href="/index">خانه</a></li>
+                            <li><a href="<?= base_url('/'); ?>">خانه</a></li>
                             <li>تماس با ما</li>
                         </ul>
                     </div>
@@ -23,33 +23,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-contact-box">
+                    <div class="single-contact-box h-100">
                         <i class="flaticon-pin"></i>
                         <div class="content-title">
                             <h3>موقعیت</h3>
-                            <p>ایران ، استان تهران ، میدان آزادی ، خیابان 9 شرقی</p>
+                            <p>ایران ، تهران، خیابان ۱۶ شهید فرشی مقدم، پارک علم وفناوری دانشگاه تهران، ساختمان شماره یک، دبیرخانه جایزه یونسکو.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="single-contact-box">
+                    <div class="single-contact-box h-100">
                         <i class="flaticon-envelope"></i>
                         <div class="content-title">
                             <h3>ایمیل</h3>
-                            <a href="mailto:hello@fria.com">hello@fria.com</a>
-                            <a href="mailto:fax@fria.com">fax@fria.com</a>
+                            <a href="mailto:info@inotech-unescoprize.org">info@Inotech-UnescoPrize.org</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-                    <div class="single-contact-box">
+                    <div class="single-contact-box h-100">
                         <i class="flaticon-phone-call"></i>
                         <div class="content-title">
                             <h3>تلفن</h3>
-                            <a href="tel:021-12345678">021-12345678</a>
-                            <a href="tel:021-12345678">021-12345678</a>
+                            <a href="tel:02188220700;180">021-88220700</a>
+                            <a href="tel:02188220700;180">(داخلی 180)</a>
                         </div>
                     </div>
                 </div>
@@ -65,10 +64,10 @@
                 <div class="col-lg-6">
                     <div class="contact-text">
                         <h3>پیشنهادی برای ما دارید؟</h3>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. </p>
+                        <p>در صورت داشتن هر گونه پیشنهاد و انتقادی می توانید از روش های بالا با ما در تماس باشید. </p>
                     </div>
 
-                    <div class="contact-form">
+                    <div class="contact-form d-none">
                         <form id="contactForm">
                             <div class="form-group">
                                 <label>نام کاربری</label>
@@ -107,7 +106,7 @@
 
                 <div class="col-lg-6">
                     <div class="contact-image">
-                        <img src="assets/img/contact.png" alt="image">
+                        <img src="<?=base_url('assets-rtl/img/contact.png')?>" alt="image">
                     </div>
                 </div>
             </div>
