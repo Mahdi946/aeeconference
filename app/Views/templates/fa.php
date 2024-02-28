@@ -134,7 +134,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/process-nominees" class="nav-link">
+                                            <a href="<?=base_url('process-nominees')?>" class="nav-link">
                                             مراحل انتخاب و ارزیابی 
                                             </a>
                                         </li>
@@ -149,13 +149,13 @@
 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="/winners-2024" class="nav-link">
+                                            <a href="<?=base_url('winners-2024')?>" class="nav-link">
                                             برگزیدگان ۲۰۲۴
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/winners-2025" class="nav-link">
+                                            <a href="<?=base_url('winners-2025')?>" class="nav-link">
                                             برگزیدگان ۲۰۲۵
                                             </a>
                                         </li>
@@ -164,13 +164,13 @@
 
 
                                 <li class="nav-item">
-                                    <a href="/events" class="nav-link">
+                                    <a href="<?=base_url('events')?>" class="nav-link">
                                         رویدادها
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/news" class="nav-link">
+                                    <a href="<?=base_url('news')?>" class="nav-link">
                                         اخبار
                                     </a>
                                 </li>

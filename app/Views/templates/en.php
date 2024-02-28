@@ -131,7 +131,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/process-nominees" class="nav-link">
+                                            <a href="<?=base_url('process-nominees')?>" class="nav-link">
                                             Selection and Evaluation Process of Nominees 
                                             </a>
                                         </li>
@@ -146,13 +146,13 @@
 
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="/winners-2024" class="nav-link">
+                                            <a href="<?=base_url('winners-2024')?>" class="nav-link">
                                                 2024 Winners
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/winners-2025" class="nav-link">
+                                            <a href="<?=base_url('winners-2025')?>" class="nav-link">
                                                 2025 Winners
                                             </a>
                                         </li>
@@ -161,13 +161,13 @@
 
 
                                 <li class="nav-item">
-                                    <a href="/events" class="nav-link">
+                                    <a href="<?=base_url('events')?>" class="nav-link">
                                         Events
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="/news" class="nav-link">
+                                    <a href="<?=base_url('news')?>" class="nav-link">
                                         News
                                     </a>
                                 </li>
