@@ -65,7 +65,7 @@
 
                             <div class="single-info-box">
                                 <h4>دسته</h4>
-                                <span>برگزیدگان</span>
+                                <span>جایزه</span>
                             </div>
 
                             <div class="single-info-box">

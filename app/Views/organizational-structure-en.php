@@ -43,7 +43,7 @@
 
                             <div class="single-info-box">
                                 <h4>Category</h4>
-                                <span>Nomination</span>
+                                <span>Prize</span>
                             </div>
 
                             <div class="single-info-box">
