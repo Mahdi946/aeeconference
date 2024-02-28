@@ -64,10 +64,44 @@
                 <div class="col-lg-6">
                     <div class="contact-text">
                         <h3>Have Any Questions About Us?</h3>
-                        <p>If you have any suggestion or criticism, you can contact us using the above methods.</p>
+                        <p>For any comments or suggestions, you can provide your feedback through the contact information mentioned above.</p>
                     </div>
 
+                    <div class="contact-form d-none">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label>Name and surname</label>
+                                <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your Name and surname" placeholder="Name and surname">
+                                <div class="help-block with-errors"></div>
+                            </div>
 
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone number</label>
+                                <input type="text" name="phone" id="phone" class="form-control" required data-error="Please enter tour Phone number" placeholder="Phone number">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Comments and suggestions</label>
+                                <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="Please enter your Comments and suggestions" placeholder="Comments and suggestions"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="send-btn">
+                                <button type="submit" class="default-btn">
+                                    ارسال پیام
+                                </button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="col-lg-6">

@@ -64,14 +64,14 @@
                 <div class="col-lg-6">
                     <div class="contact-text">
                         <h3>پیشنهادی برای ما دارید؟</h3>
-                        <p>در صورت داشتن هر گونه پیشنهاد و انتقادی می توانید از روش های بالا با ما در تماس باشید. </p>
+                        <p>برای هر گونه انتقاد یا پیشنهاد، می توانید نظرات خود را از طریق اطلاعات تماس ذکر شده در بالا ارائه دهید. </p>
                     </div>
 
                     <div class="contact-form d-none">
                         <form id="contactForm">
                             <div class="form-group">
-                                <label>نام کاربری</label>
-                                <input type="text" name="name" id="name" class="form-control" required data-error="لطفا نام خود را وارد کنید" placeholder="نام شما">
+                                <label>نام و نام خانوادگی</label>
+                                <input type="text" name="name" id="name" class="form-control" required data-error="لطفا نام و نام خانوادگی خود را وارد کنید" placeholder="نام و نام خانوادگی">
                                 <div class="help-block with-errors"></div>
                             </div>
 
@@ -82,13 +82,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label>موضوع</label>
-                                <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="لطفا موضوع خود را وارد کنید" placeholder="موضوع">
+                                <label>شماره تماس</label>
+                                <input type="text" name="phone" id="phone" class="form-control" required data-error="لطفا شماره تماس خود را وارد کنید" placeholder="شماره تماس">
                                 <div class="help-block with-errors"></div>
                             </div>
 
                             <div class="form-group">
-                                <label>پیام</label>
+                                <label>نظرات و پیشنهادات</label>
                                 <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="پیام خود را بنویسید" placeholder="پیام شما"></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
