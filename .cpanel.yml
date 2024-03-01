@@ -3,13 +3,13 @@ deployment:
  tasks:
  - export DEPLOYPATH=/home/unescoprize/
  - export PUBLICPATH=/home/unescoprize/public_html/
- - echo "Copying..."
- - /bin/cp -R app $DEPLOYPATH
- - /bin/cp -R public $PUBLICPATH
- - echo "Copy complete"
  - echo "Composer installing..."
  - cd $PUBLICPATH; composer install
  - cd $PUBLICPATH; composer update --no-dev
  - echo "Composer complete"
+ - echo "Copying..."
+ - /bin/cp -R app $DEPLOYPATH
+ - /bin/cp -R public/* $PUBLICPATH
+ - echo "Copy complete"
 #  - cd $DEPLOYPATH; sudo chmod -R 777 writable
  - echo "Deployment complete"
