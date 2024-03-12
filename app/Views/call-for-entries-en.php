@@ -42,7 +42,7 @@
                         <p>The scientific committee of the award each year asks the deans of universities, science centers, science academies, science and technology parks, science and technology associations, and prominent scientists from all over the world to nominate their candidates according to the prominence of the work. The secretariat must be informed by a certain date about the priority, impact, and owner of the work. The winners will be awarded a certificate, a trophy, and a special cash gift in a grand ceremony attended by international personalities.</p>
 
 
-                        <div class="project-details-info">
+                        <div class="project-details-info d-none">
                             <div class="single-info-box">
                                 <h4>author</h4>
                                 <span>James Anderson</span>

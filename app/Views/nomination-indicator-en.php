@@ -7,10 +7,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2>Nomination Selection and Evaluation Criteria</h2>
+                        <h2>Criteria</h2>
                         <ul>
                             <li><a href="<?=base_url('/')?>">Home</a></li>
-                            <li>Nomination Selection and Evaluation Criteria</li>
+                            <li>Criteria</li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="projects-details-desc">
-                        <h3>Nomination Selection and Evaluation Criteria</h3>
+                        <h3>Criteria</h3>
 
                         <div class="features-text">
                             <h4><i class="flaticon-tick"></i> The amount of contribution to the advancement of science and technology. </h4>
@@ -61,7 +61,7 @@
                             <h4><i class="flaticon-tick"></i> The degree of compliance of the achievement with the reliability criteria. </h4>
                         </div>
 
-                        <div class="project-details-info">
+                        <div class="project-details-info d-none">
                             <div class="single-info-box">
                                 <h4>author</h4>
                                 <span>James Anderson</span>

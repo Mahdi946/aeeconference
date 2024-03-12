@@ -59,6 +59,10 @@
                             <a href="<?=base_url('/')?>">
                                 <img src="<?=base_url('assets-rtl/img/logo.png')?>" alt="logo">
                             </a>
+                            <a href="<?= base_url('lang/'.((\Config\Services::language()->getLocale()=="fa")?'en':'fa')); ?>" class="float-end mt-3">
+                                <img src="<?=base_url('assets-rtl/img/language-translation-icon.svg')?>" class="img-2-rem">
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -70,6 +74,7 @@
                         <a class="navbar-brand" href="<?=base_url('/')?>">
                             <img src="<?=base_url('assets-rtl/img/logo.png')?>" alt="logo">
                         </a>
+
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav">
@@ -141,7 +146,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="nav-item">
+                                <li class="nav-item d-none">
                                     <a href="#" class="nav-link">
                                         برگزیدگان 
                                         <i class='bx bx-chevron-down'></i>
@@ -181,29 +186,13 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        زبان (Language)
-                                        <i class='bx bx-chevron-down'></i>
-                                    </a>
 
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="<?= base_url('lang/fa'); ?>" class="nav-link">
-                                                فارسی
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="<?= base_url('lang/en'); ?>" class="nav-link">
-                                                English
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
 
                             <div class="others-options">
+                                <a href="<?= base_url('lang/'.((\Config\Services::language()->getLocale()=="fa")?'en':'fa')); ?>" class="">
+                                    <img src="<?=base_url('assets-rtl/img/language-translation-icon.svg')?>" class="img-2-rem">
+                                </a>
                                 <a href="<?=base_url('login')?>" class="default-btn">ورود</a>
 <!--                                <a href="--><?php //=('register')?><!--" class="default-btn">ثبت‌نام</a>-->
                             </div>
@@ -224,7 +213,7 @@
                             <div class="footer-heading">
                                 <h3>درباره ما</h3>
                             </div>
-                            <p>توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است. این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است. جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری، کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد. </p>
+                            <p class="text-vip-2-5">توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است. این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است. جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری، کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد. </p>
                             <!-- <ul class="footer-social">
                                 <li>
                                     <a href="#">

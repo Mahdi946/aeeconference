@@ -57,7 +57,7 @@
                             <p>« میزان و نوع هدیه ویژه در هر دوره توسط شورای سیاست گذاری تعیین و اعلام می شود. »</p>
                         </div>
 
-                        <div class="project-details-info">
+                        <div class="project-details-info d-none">
                             <div class="single-info-box">
                                 <h4>نویسنده</h4>
                                 <span>امین سپهری</span>

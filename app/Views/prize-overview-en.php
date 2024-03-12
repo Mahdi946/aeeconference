@@ -98,7 +98,7 @@
 
 
 
-                        <div class="project-details-info">
+                        <div class="project-details-info d-none">
                             <div class="single-info-box">
                                 <h4>author</h4>
                                 <span>James Anderson</span>
