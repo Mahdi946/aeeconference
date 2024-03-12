@@ -52,9 +52,13 @@
                 <div class="container">
                     <div class="fria-responsive-menu">
                         <div class="logo">
-                            <a href="<?=base_url('/')?>">
+                            <a href="<?=base_url('/')?>" class="float-start">
                                 <img src="<?=base_url('assets/img/logo.png')?>" class="black-logo" alt="image">
                                 <img src="<?=base_url('assets/img/logo-2.png')?>" class="white-logo" alt="image">
+                            </a>
+
+                            <a href="<?= base_url('lang/'.((\Config\Services::language()->getLocale()=="fa")?'en':'fa')); ?>" class="float-end mt-3">
+                                <img src="<?=base_url('assets-rtl/img/language-translation-icon.svg')?>" class="img-2-rem">
                             </a>
                         </div>
                     </div>
@@ -100,7 +104,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a href="<?=base_url('logo')?>" class="nav-link">
-                                                Press & Media Kit
+                                                Logo
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -120,7 +124,7 @@
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
                                             <a href="<?=base_url('nomination-indicator')?>" class="nav-link">
-                                            Nomination Selection and Evaluation Criteria
+                                            Criteria
                                             </a>
                                         </li>
 
@@ -132,13 +136,13 @@
 
                                         <li class="nav-item">
                                             <a href="<?=base_url('process-nominees')?>" class="nav-link">
-                                            Selection and Evaluation Process of Nominees 
+                                            Selection Process
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
 
-                                <li class="nav-item">
+                                <li class="nav-item d-none">
                                     <a href="#" class="nav-link">
                                         Winners 
                                         <i class='bx bx-chevron-down'></i>
@@ -178,29 +182,12 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Language (زبان)
-                                        <i class='bx bx-chevron-down'></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="<?= base_url('lang/en'); ?>" class="nav-link">
-                                                English
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="<?= base_url('lang/fa'); ?>" class="nav-link">
-                                                فارسی
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
                             </ul>
 
                             <div class="others-options">
+                                <a href="<?= base_url('lang/'.((\Config\Services::language()->getLocale()=="fa")?'en':'fa')); ?>" class="">
+                                    <img src="<?=base_url('assets-rtl/img/language-translation-icon.svg')?>" class="img-2-rem">
+                                </a>
                                 <a href="<?=base_url('login')?>" class="default-btn">Login</a>
 <!--                                <a href="--><?php //=base_url('register')?><!--" class="default-btn">Register</a>-->
                             </div>
@@ -220,7 +207,7 @@
                             <div class="footer-heading">
                                 <h3>About Us</h3>
                             </div>
-                            <p>The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines.This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements. </p>
+                            <p class="text-vip">The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines.This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements. </p>
                             <!-- <ul class="footer-social">
                                 <li>
                                     <a href="#">
@@ -266,7 +253,7 @@
                                     <a href="<?=base_url('awards')?>">Awards</a>
                                 </li>
                                 <li>
-                                    <a href="<?=base_url('logo')?>">Press & Media Kit</a>
+                                    <a href="<?=base_url('logo')?>">Logo</a>
                                 </li>
                                 <li>
                                     <a href="<?=base_url('organizational-structure')?>">Organizational Structure</a>
@@ -343,12 +330,12 @@
         <!-- End Go Top Section -->
 
         <!-- dark version -->
-        <div class="dark-version">
-            <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
-                <span class="slider round"></span>
-            </label>
-        </div>
+<!--        <div class="dark-version">-->
+<!--            <label id="switch" class="switch">-->
+<!--                <input type="checkbox" onchange="toggleTheme()" id="slider">-->
+<!--                <span class="slider round"></span>-->
+<!--            </label>-->
+<!--        </div>-->
         <!-- dark version -->
 
         <!-- Jquery Slim JS -->

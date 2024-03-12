@@ -100,7 +100,7 @@
 
 
 
-                        <div class="project-details-info">
+                        <div class="project-details-info d-none">
                             <div class="single-info-box">
                                 <h4>نویسنده</h4>
                                 <span>امین سپهری</span>

@@ -28,7 +28,7 @@ p {
 	font-size: 16px
 }
 p:last-child {
-	margin-bottom: 0
+	margin-bottom: 0;
 }
 i {
 	line-height: normal
@@ -6550,4 +6550,43 @@ margin-right: 0
 	opacity: 1;
 	visibility: visible;
 	top: 50%
+}
+
+.img-1-rem{
+	width: 1rem;
+}
+.img-1-5-rem{
+	width: 1.5rem;
+}
+.img-2-rem{
+	width: 2rem;
+}
+.img-2-5-rem{
+	width: 2.5rem;
+}
+.img-3-rem{
+	width: 3rem;
+}
+.img-4-rem{
+	width: 4rem;
+}
+.img-5-rem{
+	width: 5rem;
+}
+
+.text-vip-1{
+	text-align: justify !important;
+	line-height: 1rem;
+}
+.text-vip{
+	text-align: justify !important;
+	line-height: 1.5rem;
+}
+.text-vip-2{
+	text-align: justify !important;
+	line-height: 2rem;
+}
+.text-vip-2-5{
+	text-align: justify !important;
+	line-height: 2.5rem;
 }

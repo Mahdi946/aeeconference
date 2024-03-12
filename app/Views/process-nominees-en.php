@@ -7,10 +7,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2>Selection and Evaluation Process of Nominees</h2>
+                        <h2>Selection Process</h2>
                         <ul>
                             <li><a href="<?=base_url('/')?>">Home</a></li>
-                            <li>Selection and Evaluation Process of Nominees</li>
+                            <li>Selection Process</li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="projects-details-desc">
-                        <h3>Selection and Evaluation Process of Nominees</h3>
+                        <h3>Selection Process</h3>
 
                         <p>The entries submitted to the UNESCO Prize undergo two stages:</p>
 
@@ -56,7 +56,7 @@
                             <p>The deadline for individuals and legal entities in the field of science and technology to introduce and submit nominated works for this round of the UNESCO Prize is Saturday, June 22, 2024. </p>
                         </div>
 
-                        <div class="project-details-info">
+                        <div class="project-details-info d-none">
                             <div class="single-info-box">
                                 <h4>author</h4>
                                 <span>James Anderson</span>

@@ -58,7 +58,7 @@
                             <p>مهلت اشخاص حقیقی و حقوقی علمی و فناوری برای معرفی و ارسال آثار نامزد در این دوره از اعطای جایزه یونسکو تا روز شنبه، ۲ تیرماه ۱۴۰۳ (۲۲ ژوئن ۲۰۲۴) اعلام شده است. </p>
                         </div>
 
-                        <div class="project-details-info">
+                        <div class="project-details-info d-none">
                             <div class="single-info-box">
                                 <h4>نویسنده</h4>
                                 <span>امین سپهری</span>
