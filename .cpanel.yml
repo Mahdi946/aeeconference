@@ -3,13 +3,16 @@ deployment:
  tasks:
  - export DEPLOYPATH=/home/unescoprize/
  - export PUBLICPATH=/home/unescoprize/public_html/
- - echo "Composer installing..."
- - cd $PUBLICPATH; composer install
- - cd $PUBLICPATH; composer update --no-dev
- - echo "Composer complete"
  - echo "Copying..."
  - /bin/cp -R app $DEPLOYPATH
- - /bin/cp -R public/* $PUBLICPATH
+ - /bin/cp -R public $PUBLICPATH
  - echo "Copy complete"
+ - echo "Composer installing..."
+ - cd $DEPLOYPATH; composer install
+ - cd $DEPLOYPATH; composer update --no-dev
+ - echo "Composer complete"
 #  - cd $DEPLOYPATH; sudo chmod -R 777 writable
+#  - echo "Database Migrating..."
+#  - php spark migrate --all
+#  - echo "Database Migrating complete"
  - echo "Deployment complete"
