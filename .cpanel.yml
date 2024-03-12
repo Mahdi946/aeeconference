@@ -5,7 +5,10 @@ deployment:
  - export PUBLICPATH=/home/unescoprize/public_html/
  - echo "Copying..."
  - /bin/cp -R app $DEPLOYPATH
- - /bin/cp -R public/* $PUBLICPATH
+ - /bin/cp -R public/favicon.ico $PUBLICPATH/
+ - /bin/cp -R public/index.php $PUBLICPATH/
+ - /bin/cp -R public/robots.txt $PUBLICPATH/
+ - /bin/cp -R public/asset* $PUBLICPATH/
  - echo "Copy complete"
  - echo "Composer installing..."
  - cd $DEPLOYPATH; composer install
