@@ -4,18 +4,18 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class NewsDate extends Migration
+class Newsimage extends Migration
 {
     public function up()
     {
         $fields = [
-            'date' => ['type' => 'DATETIME'],
+            'image' => ['type' => 'VARCHAR','constraint' => '255',],
         ];
         $this->forge->addColumn('news', $fields);
     }
 
     public function down()
     {
-        $this->forge->dropColumn('news', 'date');
+        $this->forge->dropColumn('news', 'image');
     }
 }
