@@ -161,7 +161,7 @@
     </section> -->
     <!-- End Services Area -->
 
-    <!-- Start Audience Area -->
+    <!-- Start Prize Area -->
     <section class="audience-section ptb-100">
         <div class="container">
             <div class="row align-items-center">
@@ -173,13 +173,14 @@
 
                 <div class="col-lg-6">
                     <div class="audience-content">
-                        <h3>Engaging New Audience Through Smart Approach </h3>
+                        <h3>Prize </h3>
                         <div class="bar"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p>
+                        UNESCO's International Technology and Innovation PRIZE is held biennially. The fields of each period will be announced by the prize policy council one year before the prize ceremony. During this period, the prize will be given to candidates in the fields of health energy, and water.
+                        </p>
 
                         <div class="audience-btn">
-                            <a href="#" class="default-btn">Get Started</a>
+                            <a href="<?= base_url('prize-overview') ?>" class="default-btn">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -208,7 +209,7 @@
             </div>
         </div>
     </section>
-    <!-- End Audience Area -->
+    <!-- End Prize Area -->
 
     <!-- Start Solutions Area -->
     <section class="solutions-section pb-100">
