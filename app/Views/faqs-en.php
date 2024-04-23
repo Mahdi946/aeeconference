@@ -20,34 +20,32 @@
 
 <section class="conditions-section ptb-100">
     <div class="container">
-        <div class="accordion" id="accordionExample">
+        <div  dir="ltr" class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        جایزه فناوری و نوآوری یونسکو چیست؟
+                    <span style="flex-grow: 1; text-align: start;">What is the UNESCO Technology and Innovation Prize?</span>
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            جایزه بین المللی فناوری و نوآوری یونسکو به منظور ترغیب و تشویق فعالان حوزه‌های فناوری و افزایش تعاملات و همکاری توسعه علمی در جهت افزایش تاثیر مثبت و گسترده فناوری در زندگی مردم ایجاد شده است.
-
+                            The UNESCO International Technology and Innovation Prize celebrates individuals making significant contributions to technology. Its goal is to promote cooperation and collaboration among scientists worldwide to improve the positive impact of technology in people's lives. The award aims to inspire innovation to tackle global challenges and promote socioeconomic progress.
                         </strong>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 
-                        چه کسی جایزه فناوری و نوآوری یونسکو را اهدا میکند؟
-
+                        <span style="flex-grow: 1; text-align: start;">Who awards the UNESCO Technology and Innovation Prize?</span>
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            این جایزه با همکاری یونسکو، وزرات علوم و تحقیقات و فناوری جمهوری اسلامی ایران و دانشگاه تهران ایجاد شده است.
+                            This prize was created in collaboration with UNESCO, the Ministry of Science and Research and Technology of the Islamic Republic of Iran and the University of Tehran.
                         </strong>
                     </div>
                 </div>
@@ -55,13 +53,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading14">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
-                        جایزه فناوری و نوآوری یونسکو کجا و چه زمانی ارائه می‌شود؟
+                    <span style="flex-grow: 1; text-align: start;">Where and when is the UNESCO Technology and Innovation Prize presented?</span>
                     </button>
                 </h2>
                 <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            این جایزه در ایران، تهران و در روز ؟؟ آذر برگذار میشود.
+                            This prize is presented in Tehran, Iran at ?? December.
                         </strong>
 
                     </div>
@@ -70,13 +68,14 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading4">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                        چه کسانی واجد شرایط دریافت جایزه هستند؟
+                    <span style="flex-grow: 1; text-align: start;">Who is eligible for the prize?</span>
                     </button>
                 </h2>
                 <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            افراد و تیم های نوآور و فناور که دارای فعالیت های حرفه‌ای می باشند و همچنین پصاحبان شرکت‌هاي نوآور، فناور و دانش بنيان
+
+                            Innovative and technological people and teams who have professional activities, as well as owners of innovative, technological and knowledge-based companies.
                         </strong>
 
                     </div>
@@ -85,13 +84,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading5">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                     جایزه فناوری و نوآوری یونسکو کجا و چه زمانی ارائه می‌شود؟
+                    <span style="flex-grow: 1; text-align: start;">Who select the winner?</span>
                     </button>
                 </h2>
                 <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            این جایزه در ایران، تهران و در روز ؟؟ آذر برگذار میشود.
+                            Winners will be selected by the Prize Policy Council after initial evaluation by the Scientific Committee.
                         </strong>
 
                     </div>
@@ -100,13 +99,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading6">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                        چه کسی برنده را انتخاب میکند؟
+                    <span style="flex-grow: 1; text-align: start;">What are the prize criteria?</span>
                     </button>
                 </h2>
                 <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            برندگان پس از ارزیابی اولیه توسط کمیته علمی توسط شورای سیاستگذاری جایزه انتخاب خواهند شد.
+                            The nominated innovation should be recognizable, with clear contributions from the nominees. It must have a sustainable, global, and ethical basis in scientific and academic research, with consideration for its impact on the field and society.
                         </strong>
 
                     </div>
@@ -115,13 +114,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading7">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                        معیارهای جایزه چیست؟
+                    <span style="flex-grow: 1; text-align: start;">Are there any rules on how to use the prize money?</span>
                     </button>
                 </h2>
                 <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            نوآوری نامزد شده باید به وضوح قابل شناسایی باشد و نقش نامزدهایی که در نوآوری مشارکت داشته‌اند باید به وضوح نشان داده شود. تأثیر فعلی و آینده آن بر حوزه و جامعه به طور کلی نیز در فرآیند ارزیابی در نظر گرفته می شود. علاوه بر این، نوآوری باید پایدار، در سطح جهانی قابل دسترس و مبتنی بر تحقیقات علمی و آکادمیک از نظر اخلاقی باشد.
+                            The winner can choose how to use the prize money.
                         </strong>
 
                     </div>
@@ -130,13 +129,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading8">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                        . آیا قوانینی در مورد نحوه استفاده از مبلغ جایزه وجود دارد؟
+                    <span style="flex-grow: 1; text-align: start;">How often is the prize given?</span>
                     </button>
                 </h2>
                 <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            برنده می‌تواند نحوه استفاده از پول جایزه را انتخاب کند.
+                            The award is presented biennially.
                         </strong>
 
                     </div>
@@ -145,13 +144,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading9">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                        جایزه هر چند وقت یکبار داده میشود؟
+                    <span style="flex-grow: 1; text-align: start;">Can I nominate myself?</span>
                     </button>
                 </h2>
                 <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            جایزه هر ۲ سال یکبار داده می‌شود.
+                            No, self-nomination is not possible.
                         </strong>
 
                     </div>
@@ -160,13 +159,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading10">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                        میتوانم خودم را نامزد کنم؟
+                    <span style="flex-grow: 1; text-align: start;"> We are a scientific institution, if we introduce a person or a group within our institution, is it considered a self-nomination?</span>
                     </button>
                 </h2>
                 <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            خیر خود نامزدی امکان پذیر نمی‌باشد.
+                            If a group of scientists is nominated by an institution, it will not be considered as self-nomination.
                         </strong>
 
                     </div>
@@ -175,13 +174,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading11">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                        ما یک موسسه علمی هستیم ، اگر فرد یا گروهی را در داخل موسسه خود معرفی کنیم خود نامزدی محسوب میشود؟
+                    <span style="flex-grow: 1; text-align: start;">In what fields is the prize given?</span>
                     </button>
                 </h2>
                 <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            خیر. در این شرایط، اگر مؤسسه شما گروهی از دانشمندان را در داخل مؤسسه شما معرفی کند، به عنوان خود نامزدی تلقی نخواهد شد.
+                            The Policy Council determines the fields of the prize every two years. Currently, the fields of the award are health, energy, and water.
                         </strong>
 
                     </div>
@@ -190,35 +189,20 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading12">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                        جایزه در چه زمینه‌های داده میشود؟
+                    <span style="flex-grow: 1; text-align: start;">How can I get nominated?</span>
                     </button>
                 </h2>
                 <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            زمینه‌های جایزه هر دو سال یکبار و طبق تصمیم شورای سیاستگذاری تعیین میشود.
-                            زمینه‌های دور اول جایزه سلامت و انرژی و آب است.
+                            Only those who have received an invitation are eligible to nominate candidates for the award.
 
                         </strong>
 
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading13">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                    چگونه میتوانید نامزد جایزه شوم؟
-                    </button>
-                </h2>
-                <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>
-                        فقط افرادی که برای آنها دعوت نامه فرستاده شده است مجاز به معرفی نامزدهای جایزه هستند.
-                                            </strong>
 
-                    </div>
-                </div>
-            </div>
         </div>
 
 
