@@ -211,17 +211,18 @@
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="single-footer-widget">
                         <div class="footer-heading">
-                            <h3>About Us</h3>
+                            <h3> Follow Us </h3>
+                            <!-- <h3>About Us</h3> -->
                         </div>
-                        <p class="text-vip">
+                        <!-- <p class="text-vip">
                             The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects.
                             An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas.
                             To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science,
                             Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran,
                             will continue to be awarded based on established guidelines. This prize encourages researchers and experts to embrace a new outlook on technology and the economy.
                             It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements.
-                        </p>
-                        <!-- <ul class="footer-social">
+                        </p> -->
+                        <ul class="footer-social">
                                 <li>
                                     <a href="#">
                                         <i class="flaticon-facebook"></i>
@@ -245,7 +246,7 @@
                                         <i class="flaticon-instagram"></i>
                                     </a>
                                 </li>
-                            </ul> -->
+                            </ul>
                     </div>
                 </div>
 
