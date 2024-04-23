@@ -60,7 +60,7 @@
     <!-- End Banner Area -->
 
     <!-- Start Services Area -->
-    <section class="services-section bg-color pt-100 pb-70">
+    <!-- <section class="services-section bg-color pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <h2>IT  Agency Services</h2>
@@ -158,7 +158,7 @@
                 <img src="assets/img/shape/8.png" alt="image">
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Services Area -->
 
     <!-- Start Audience Area -->
