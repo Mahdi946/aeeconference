@@ -7,10 +7,10 @@
         <div class="d-table-cell">
             <div class="container">
                 <div class="page-title-content">
-                    <h2> سوالات متداول </h2>
+                    <h2> Faq</h2>
                     <ul>
-                        <li><a href="<?= base_url('/') ?>">خانه</a></li>
-                        <li> سوالات متداول </li>
+                        <li><a href="<?= base_url('/') ?>">Home</a></li>
+                        <li>   Faq </li>
                     </ul>
                 </div>
             </div>
