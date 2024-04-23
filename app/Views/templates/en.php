@@ -163,12 +163,12 @@
                                     </ul>
                                 </li>
 
-
+<!-- 
                                 <li class="nav-item">
                                     <a href="<?=base_url('events')?>" class="nav-link">
                                         Events
                                     </a>
-                                </li>
+                                </li> -->
 
                                 <li class="nav-item">
                                     <a href="<?=base_url('news')?>" class="nav-link">
