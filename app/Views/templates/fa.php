@@ -116,6 +116,11 @@
                                                 ساختار سازمانی
                                             </a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a href="<?=base_url('fAQs')?>" class="nav-link">
+                                               پرسش های متداول
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
                                 
