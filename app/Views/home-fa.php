@@ -212,62 +212,6 @@
 </section>
 <!-- End Prize Area -->
 
-<!-- Start Solutions Area -->
-<section class="solutions-section pb-100">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="solutions-content-area">
-                    <div class="solutions-content">
-                        <h3>پیشنهاد ما برای شما</h3>
-                        <div class="bar"></div>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    </div>
-
-                    <div class="solutions-details">
-                        <div class="icon">
-                            <i class="flaticon-blog"></i>
-                        </div>
-                        <h3>تبلیغات برنامه ای</h3>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    </div>
-
-                    <div class="solutions-details">
-                        <div class="icon bg-d3fbf9">
-                            <i class="flaticon-software"></i>
-                        </div>
-                        <h3>مدیریت و تحقیق</h3>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    </div>
-
-                    <div class="solutions-details">
-                        <div class="icon bg-fce8c9">
-                            <i class="flaticon-analysis"></i>
-                        </div>
-                        <h3>طراحی و توسعه</h3>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    </div>
-
-                    <div class="solutions-details">
-                        <div class="icon bg-d5e6fe">
-                            <i class="flaticon-laptop"></i>
-                        </div>
-                        <h3>برندسازی و بازاریابی</h3>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 pr-0">
-                <div class="solutions-image">
-                    <img src="assets/img/solutions.png" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Solutions Area -->
-
 <!-- Start Criteria Area -->
 <section class="design-section pb-100">
     <div class="container">
@@ -285,10 +229,10 @@
                     <div class="bar"></div>
                     <p>
                         
-                    </p>
-
-                    <ul class="design-list">
-                        <li>
+                        </p>
+                        
+                        <ul class="design-list">
+                            <li>
                             <i class="flaticon-check"></i>
                             کمک به پیشرفت علم و تکنولوژی
                         </li>
@@ -297,7 +241,7 @@
                             <i class="flaticon-check"></i>
                             پیشرو بودن دستاورد 
                         </li>
-
+                        
                         <li>
                             <i class="flaticon-check"></i>
                             در جهت صلح و رفاه جهانی
@@ -331,7 +275,7 @@
         <div class="shape-2 rotateme">
             <img src="assets/img/shape/5.svg" alt="image">
         </div>
-
+        
         <div class="shape-3">
             <img src="assets/img/shape/6.svg" alt="image">
         </div>
@@ -339,13 +283,79 @@
         <div class="shape-4">
             <img src="assets/img/shape/7.png" alt="image">
         </div>
-
+        
         <div class="shape-5">
             <img src="assets/img/shape/8.png" alt="image">
         </div>
     </div>
 </section>
 <!-- End Criteria Area -->
+
+
+<!-- Start  Selection Process Area -->
+<section class="solutions-section pb-100">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="solutions-content-area">
+                    <div class="solutions-content">
+                        <h3>  مراحل انتخاب و ارزیابی </h3>
+                        <div class="bar"></div>
+                        <p></p>
+                    </div>
+
+                    <div class="solutions-details">
+                        <div class="icon">
+                        <img src="assets/img/icon/first.png" alt="second">
+
+                            <!-- <i class="flaticon-blog"></i> -->
+                        </div>
+                        <h3> مرحله اول </h3>
+                        <p>
+                        «زیر کمیته‌های علمی» مدارک و صلاحیت آثار را از نظر ویژگی‌های عمومی بررسی کرده و آن آثاری که مطابق ضوابط و معیارهای جایزه باشند را به کمیته علمی معرفی میکنند
+                        اثر در صورتی انتخاب میشود که توسط مراجع معتبر معرفی شده باشند و تا به حال برنده جایزه معتبر علمی نشده باشند.
+                        </p>
+                    </div>
+
+                    <div class="solutions-details">
+                        <div class="icon bg-d3fbf9">
+                        <img src="assets/img/icon/second.png" alt="second">
+
+                            <!-- <i class="flaticon-software"></i> -->
+                        </div>
+                        <h3>  مرحله نهایی </h3>
+                        <p>
+                        در هر یک از حوزه‌های جایزه، یک گروه داوری از محققان و دانشمندان برجسته داخلی و بین‌المللی، آثار نهایی را داوری و اثر برگزیده را انتخاب می‌کنند.
+                        </p>
+                    </div>
+
+                    <!-- <div class="solutions-details">
+                        <div class="icon bg-fce8c9">
+                            <i class="flaticon-analysis"></i>
+                        </div>
+                        <h3>طراحی و توسعه</h3>
+                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                    </div>
+
+                    <div class="solutions-details">
+                        <div class="icon bg-d5e6fe">
+                            <i class="flaticon-laptop"></i>
+                        </div>
+                        <h3>برندسازی و بازاریابی</h3>
+                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="col-lg-6 pr-0">
+                <div class="solutions-image">
+                    <img src="assets/img/solutions.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End  Selection Process Area -->
 
 <!-- Start Counter Area -->
 <section class="counter-section pt-100 pb-70">

@@ -3343,7 +3343,8 @@ right: 0;
 	font-size: 14px
 }
 .solutions-image {
-	background-image: url(../img/solutions.png);
+	background-image: url(../../assets/img/solutions.jpg);
+	/* background-image: url(../img/solutions.png); */
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;

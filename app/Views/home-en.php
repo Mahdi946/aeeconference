@@ -211,61 +211,7 @@
 </section>
 <!-- End Prize Area -->
 
-<!-- Start Solutions Area -->
-<section class="solutions-section pb-100">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="solutions-content-area">
-                    <div class="solutions-content">
-                        <h3>Our Featured Solutions</h3>
-                        <div class="bar"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan.</p>
-                    </div>
 
-                    <div class="solutions-details">
-                        <div class="icon">
-                            <i class="flaticon-blog"></i>
-                        </div>
-                        <h3>Programmatic Advertising</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                    </div>
-
-                    <div class="solutions-details">
-                        <div class="icon bg-d3fbf9">
-                            <i class="flaticon-software"></i>
-                        </div>
-                        <h3>Strategy & Research</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                    </div>
-
-                    <div class="solutions-details">
-                        <div class="icon bg-fce8c9">
-                            <i class="flaticon-analysis"></i>
-                        </div>
-                        <h3>Design & Developement</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                    </div>
-
-                    <div class="solutions-details">
-                        <div class="icon bg-d5e6fe">
-                            <i class="flaticon-laptop"></i>
-                        </div>
-                        <h3>Branding & Marketing</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="solutions-image">
-                    <img src="assets/img/solutions.png" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Solutions Area -->
 
 <!-- Start Criteria Area -->
 <section class="design-section pb-100">
@@ -344,6 +290,55 @@
     </div>
 </section>
 <!-- End Criteria Area -->
+
+<!-- Start Solutions Area -->
+<section class="solutions-section pb-100">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="solutions-content-area">
+                    <div class="solutions-content">
+                        <h3> Selection Process</h3>
+                        <div class="bar"></div>
+                        <p>The entries submitted to the UNESCO Prize undergo two stages</p>
+                    </div>
+ 
+
+                    <div class="solutions-details">
+                        <div class="icon bg-d3fbf9">
+                        <img src="assets/img/icon/first.png" alt="second">
+                            <!-- <i class="flaticon-software"></i> -->
+                        </div>
+                        <h3>Evaluation Committees</h3>
+                        <p>
+                        review the documents and qualifications of the works in terms of general characteristics. According to the regulations, works that have previously won at least one valid international scientific prize are excluded from proceeding to the next stage. Additionally, works submitted personally and outside the proper nomination process by the nominating entities are not accepted at this stage.
+                        </p>
+                    </div>
+
+                    <div class="solutions-details">
+                        <div class="icon bg-fce8c9">
+                        <img src="assets/img/icon/second.png" alt="second">
+                            <!-- <i class="flaticon-analysis"></i> -->
+                        </div>
+                        <h3>In The Final Stage</h3>
+                        <p>
+                        in each category of the prize, a science committee conducts a rigorous evaluation of the candidate’s academic achievements and chooses the nominees.
+                        </p>
+                    </div>
+
+           
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="solutions-image">
+                    <img src="assets/img/solutions.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Solutions Area -->
 
 <!-- Start Counter Area -->
 <section class="counter-section pt-100 pb-70">
