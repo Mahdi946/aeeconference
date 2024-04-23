@@ -2,7 +2,12 @@
 <html lang="en" class="theme-light">
 
 <head>
-<meta name="author" content="Novin Tarh Pars">
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Novin Tarh Pars">
 	<!-- Send your Resume to Jobs [ at ] NovinTarhPars.com -->
 	<!-- 
 									  Novin Tarh Pars
@@ -51,9 +56,7 @@
 ░░░░░░░░░░░░░░░░░░░░░░░▓██████░░░░░▒▒▓████░░░░░░████▓▒▒▒░░░▒██████▓▒░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▒░░░░░░░░░████▓▓▓▓▓▓███▓░░░░░░░░░▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                                     	-->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
     <!-- Owl Carousel CSS -->
