@@ -8,10 +8,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2>جایزه یونسکو در یک نگاه</h2>
+                        <h2>جایزه فناوری و نوآوری یونسکو در یک نگاه</h2>
                         <ul>
                             <li><a href="<?= base_url('/'); ?>">خانه</a></li>
-                            <li>جایزه یونسکو در یک نگاه</li>
+                            <li>  جایزه فناوری و نوآوری یونسکو در یک نگاه  </li>
                         </ul>
                     </div>
                 </div>
