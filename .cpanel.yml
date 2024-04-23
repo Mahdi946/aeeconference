@@ -5,11 +5,17 @@ deployment:
  - export PUBLICPATH=/home/unescoprize/public_html/
  - echo "Copying..."
  - /bin/cp -R app $DEPLOYPATH
- - /bin/cp -R public $PUBLICPATH
+ - /bin/cp -R public/favicon.ico $PUBLICPATH
+ - /bin/cp -R public/index.php $PUBLICPATH
+ - /bin/cp -R public/robots.txt $PUBLICPATH
+ - /bin/cp -R public/asset* $PUBLICPATH
  - echo "Copy complete"
  - echo "Composer installing..."
- - cd $PUBLICPATH; composer install
- - cd $PUBLICPATH; composer update --no-dev
+ - cd $DEPLOYPATH; composer install
+ - cd $DEPLOYPATH; composer update --no-dev
  - echo "Composer complete"
 #  - cd $DEPLOYPATH; sudo chmod -R 777 writable
+ - echo "Database Migrating..."
+ - /usr/local/bin/php $DEPLOYPATHspark migrate --all
+ - echo "Database Migrating complete"
  - echo "Deployment complete"
