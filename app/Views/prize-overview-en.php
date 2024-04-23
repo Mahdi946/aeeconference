@@ -7,10 +7,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2>UNESCO Prize at a Glance</h2>
+                        <h2>UNESCO Innovation & Technology Prize</h2>
                         <ul>
                             <li><a href="<?=base_url('/')?>">Home</a></li>
-                            <li>UNESCO Prize at a Glance</li>
+                            <li>UNESCO Innovation & Technology Prize</li>
                         </ul>
                     </div>
                 </div>

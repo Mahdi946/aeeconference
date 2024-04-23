@@ -3282,7 +3282,8 @@ Solutions Area CSS
 }
 
 .solutions-image {
-  background-image: url(../../assets/img/solutions.png);
+  background-image: url(../../assets/img/solutions.jpg);
+  /* background-image: url(../../assets/img/solutions.png); */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
