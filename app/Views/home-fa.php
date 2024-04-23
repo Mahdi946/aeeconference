@@ -268,51 +268,54 @@
 </section>
 <!-- End Solutions Area -->
 
-<!-- Start Design Area -->
+<!-- Start Criteria Area -->
 <section class="design-section pb-100">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="design-image">
-                    <img src="assets/img/design.png" alt="image">
+                    <img  style="border-radius: 50%;"  src="assets/img/criteria.jpg" alt="image">
                 </div>
             </div>
 
             <div class="col-lg-6">
                 <div class="design-content">
-                    <h3>توسعه و <span>طراحی</span></h3>
+                    <h3>شاخص‌های انتخابی و ارزیابی اثر</h3>
+                    <!-- <h3>توسعه و <span>طراحی</span></h3> -->
                     <div class="bar"></div>
-                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. </p>
+                    <p>
+                        
+                    </p>
 
                     <ul class="design-list">
                         <li>
                             <i class="flaticon-check"></i>
-                            توسعه وب
+                            کمک به پیشرفت علم و تکنولوژی
                         </li>
 
                         <li>
                             <i class="flaticon-check"></i>
-                            طراحی و توسعه
+                            پیشرو بودن دستاورد 
                         </li>
 
                         <li>
                             <i class="flaticon-check"></i>
-                            توسعه برنامه
+                            در جهت صلح و رفاه جهانی
                         </li>
 
                         <li>
                             <i class="flaticon-check"></i>
-                            طراحی تعاملی
+                            میزان جامع نگری و تاثیرگذاری 
                         </li>
 
                         <li>
                             <i class="flaticon-check"></i>
-                            طراحی دیجیتال
+                            قابلیت تجاری سازی
                         </li>
 
                         <li>
                             <i class="flaticon-check"></i>
-                            طراحی بی نظیر
+                            میزان انطباق دستاورد با معیارهای پایایی
                         </li>
                     </ul>
                 </div>
@@ -342,7 +345,7 @@
         </div>
     </div>
 </section>
-<!-- End Design Area -->
+<!-- End Criteria Area -->
 
 <!-- Start Counter Area -->
 <section class="counter-section pt-100 pb-70">
