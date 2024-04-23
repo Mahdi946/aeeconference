@@ -22,11 +22,11 @@
 
                         <div class="col-lg-6">
                             <div class="banner-image">
-                                <img src="assets/img/home-three/1.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="image">
-                                <img src="assets/img/home-three/2.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="image">
-                                <img src="assets/img/home-three/3.png" class="wow fadeInUp" data-wow-delay="0.6s" alt="image">
-                                <img src="assets/img/home-three/4.png" class="wow fadeInDown" data-wow-delay="0.6s" alt="image">
-                                <img src="assets/img/home-three/5.png" class="wow zoomIn" data-wow-delay="0.6s" alt="image">
+                                <img src="assets/img/home-three/1.png" class="wow " data-wow-delay="0.6s" alt="image">
+                                <img src="assets/img/home-three/2.png" class="wow " data-wow-delay="0.6s" alt="image">
+                                <img src="assets/img/home-three/3.png" class="wow " data-wow-delay="0.6s" alt="image">
+                                <img src="assets/img/home-three/4.png" class="wow " data-wow-delay="0.6s" alt="image">
+                                <img src="assets/img/home-three/5.png" class="wow " data-wow-delay="0.6s" alt="image">
 
                                 <img src="assets/img/home-three/main.png" class="wow zoomIn" data-wow-delay="0.6s" alt="image">
                             </div>
