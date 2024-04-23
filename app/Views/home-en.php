@@ -942,13 +942,16 @@
                     </div>
 
                     <div class="content">
-                        <span>20 March 2024</span>
+                        <span>6 Feb 2024</span>
                         <h3>
                             <a href="single-blog.html">
-                                Great Tips To Earn More Money From Digital Industry
-                            </a>
+                            Consultative Meeting on UNESCO Science and Innovation Prize at the University of Tehran's Science and Technology Park
+                                                    </a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
+                        <p>
+                        The Science and Technology Park of the University of Tehran held the first consultative meeting of the Scientific and Evaluation Committee of the UNESCO Science and Innovation Prize.
+
+                        </p>
                         <a href="single-blog.html" class="read-more">Read More</a>
                     </div>
                 </div>
