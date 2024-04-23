@@ -118,7 +118,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?= base_url('fAQs') ?>" class="nav-link">
+                                        <a href="<?= base_url('faqs') ?>" class="nav-link">
                                             پرسش های متداول
                                         </a>
                                     </li>

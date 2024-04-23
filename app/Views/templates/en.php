@@ -113,7 +113,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?= base_url('fAQs') ?>" class="nav-link">
+                                        <a href="<?= base_url('faqs') ?>" class="nav-link">
                                             FAQs
                                         </a>
                                     </li>
