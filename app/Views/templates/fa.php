@@ -2,7 +2,12 @@
 <html lang="fa" dir="rtl">
 
 <head>
-<meta name="author" content="Novin Tarh Pars">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Novin Tarh Pars">
 	<!-- Send your Resume to Jobs [ at ] NovinTarhPars.com -->
 	<!-- 
 									  Novin Tarh Pars
@@ -51,13 +56,7 @@
 ░░░░░░░░░░░░░░░░░░░░░░░▓██████░░░░░▒▒▓████░░░░░░████▓▒▒▒░░░▒██████▓▒░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▒░░░░░░░░░████▓▓▓▓▓▓███▓░░░░░░░░░▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Novin Tarh Pars">
-
+                                     	-->
     <link rel="stylesheet" href="<?= base_url('assets-rtl/css/bootstrap.rtl.min.css') ?>">
 
     <link rel="stylesheet" href="<?= base_url('assets-rtl/css/owl.default.min.css') ?>">
@@ -87,7 +86,7 @@
     <title>جایزه فناوری و نوآوری یونسکو</title>
 
     <link rel="icon" type="image/png" href="<?= base_url('assets-rtl/img/favicon.png') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css')?>"  />
+    <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css') ?>" />
 
 </head>
 
@@ -432,14 +431,30 @@
 
     <script src="<?= base_url('assets-rtl/js/main.js') ?>"></script>
     <script src="<?= base_url('assets/js/homePrizeCountDownDate.js') ?>"></script>
-    <script src="<?= base_url('assets/leaflet/leaflet.js')?>" ></script>
+    <script src="<?= base_url('assets/leaflet/leaflet.js') ?>"></script>
 
     <script>
-        var map = L.map('map', {
-            center: [51.39633, 35.70213],
-            zoom: 13
+        $(document).ready(function() {
+
+            //1. initialize leaflet map
+            var center = [35.73338, 51.39444];
+            var propertiesmap = L.map('map').setView(center, 17);
+
+            propertiesmap.invalidateSize();
+
+            var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                maxZoom: 17,
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+            });
+
+            googleStreets.addTo(propertiesmap)
+
+            var marker = L.marker(center).addTo(propertiesmap);
+
         });
-        L.marker([51.39633, 35.70213]).addTo(map);
+
+
+   
     </script>
 </body>
 
