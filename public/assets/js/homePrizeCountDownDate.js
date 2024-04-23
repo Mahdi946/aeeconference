@@ -19,19 +19,24 @@ let counterDayTime= setInterval(function() {
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  Day.innerHTML=days;
+  if(Day!==null){
+     Day.innerHTML=days;
   Hours.innerHTML=hours;
   Minute.innerHTML=minutes;
   Seconds.innerHTML=seconds;
+  }
+ 
   // Output the result in an element with id="demo"
 
 
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(counterDayTime);
+    if(Day!==null){
     Day.innerHTML='...';
     Hours.innerHTML='...';
     Minute.innerHTML='...';
     Seconds.innerHTML='...';
+    }
   }
 }, 1000);
