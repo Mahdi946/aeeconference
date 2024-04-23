@@ -761,7 +761,7 @@
 <!-- End Pricing Area -->
 
 <!-- Start Protfolio Area -->
-<section class="protfolio-section pt-100 pb-70">
+<!-- <section class="protfolio-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
             <h2>نمونه <span>کارهای</span> ما</h2>
@@ -886,11 +886,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Protfolio Area -->
 
 <!-- Start Clients Area -->
-<section class="clients-section">
+<!-- <section class="clients-section">
     <div class="container">
         <div class="section-title">
             <h2>مشتریان چه می گویند</h2>
@@ -939,7 +939,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Clients Area -->
 
 <!-- Start Blog Area -->
