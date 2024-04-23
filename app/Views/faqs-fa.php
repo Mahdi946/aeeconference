@@ -61,7 +61,7 @@
                 <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            این جایزه در ایران، تهران و در روز ؟؟ آذر برگذار میشود.
+                            این جایزه در ایران، تهران و در روز ؟؟ آذر برگزار میشود.
                         </strong>
 
                     </div>
