@@ -427,7 +427,7 @@
 <!-- End Counter Area -->
 
 <!-- Start Team Area -->
-<section class="team-section pt-100 pb-70">
+<!-- <section class="team-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
             <h2>تیم با تجربه ما</h2>
@@ -568,11 +568,11 @@
             <img src="assets/img/shape/8.png" alt="image">
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Team Area -->
 
 <!-- Start Pricing Area -->
-<section class="pricing-section pt-100 pb-70">
+<!-- <section class="pricing-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
             <h2>برنامه <span>قیمت گذاری</span> ما</h2>
@@ -757,7 +757,7 @@
             <img src="assets/img/shape/8.png" alt="image">
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Pricing Area -->
 
 <!-- Start Protfolio Area -->
