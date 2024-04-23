@@ -13,9 +13,9 @@
                                 <span>Digital Marketing</span>
                                 <h1>Digital Agency & Marketing</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing incididunt ut laboredolore magna aliqua elsed  tempomet, consectetur adipiscing.</p>
-                                <div class="banner-btn">
+                                <!-- <div class="banner-btn">
                                     <a href="#" class="default-btn">Get Started</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
 
