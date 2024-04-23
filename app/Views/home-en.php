@@ -344,59 +344,64 @@
 <section class="counter-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2>
+            <h2> To Prize Ceremony  </h2>
+            <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-check"></i>
+                        <!-- <i class="flaticon-check"></i> -->
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="950">00</span>
+                        <span class="odometer" id="dayCount"></span>
+                        <!-- <span class="odometer" data-count="950">00</span> -->
                     </h3>
-                    <p>Completed Project</p>
+                    <p>Day</p>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-happy"></i>
+                        <!-- <i class="flaticon-happy"></i> -->
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="150">00</span>
+                        <span class="odometer" id="hoursCount"></span>
+                        <!-- <span class="odometer" data-count="150">00</span> -->
                     </h3>
-                    <p>Happy Clients</p>
+                    <p>Hours </p>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-technical-support"></i>
+                        <!-- <i class="flaticon-technical-support"></i> -->
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="550">00</span>
+                        <span class="odometer" id="minutesCount"></span>
+                        <!-- <span class="odometer" data-count="550">00</span> -->
                     </h3>
-                    <p>Multi Service</p>
+                    <p>Minutes</p>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-trophy"></i>
+                        <!-- <i class="flaticon-trophy"></i> -->
                     </div>
 
                     <h3>
-                        <span class="odometer" data-count="750">00</span>
+                        <span class="odometer" id="secondsCount"></span>
+                        <!-- <span class="odometer" data-count="750">00</span> -->
                     </h3>
-                    <p>Winning Awards</p>
+                    <p>Seconds</p>
                 </div>
             </div>
         </div>
@@ -997,3 +1002,4 @@
 
 
 <?= $this->endSection() ?>
+

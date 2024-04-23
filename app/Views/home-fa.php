@@ -218,7 +218,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="design-image">
-                    <img  style="border-radius: 50%;"  src="assets/img/criteria.jpg" alt="image">
+                    <img style="border-radius: 50%;" src="assets/img/criteria.jpg" alt="image">
                 </div>
             </div>
 
@@ -228,20 +228,20 @@
                     <!-- <h3>توسعه و <span>طراحی</span></h3> -->
                     <div class="bar"></div>
                     <p>
-                        
-                        </p>
-                        
-                        <ul class="design-list">
-                            <li>
+
+                    </p>
+
+                    <ul class="design-list">
+                        <li>
                             <i class="flaticon-check"></i>
                             کمک به پیشرفت علم و تکنولوژی
                         </li>
 
                         <li>
                             <i class="flaticon-check"></i>
-                            پیشرو بودن دستاورد 
+                            پیشرو بودن دستاورد
                         </li>
-                        
+
                         <li>
                             <i class="flaticon-check"></i>
                             در جهت صلح و رفاه جهانی
@@ -249,7 +249,7 @@
 
                         <li>
                             <i class="flaticon-check"></i>
-                            میزان جامع نگری و تاثیرگذاری 
+                            میزان جامع نگری و تاثیرگذاری
                         </li>
 
                         <li>
@@ -275,7 +275,7 @@
         <div class="shape-2 rotateme">
             <img src="assets/img/shape/5.svg" alt="image">
         </div>
-        
+
         <div class="shape-3">
             <img src="assets/img/shape/6.svg" alt="image">
         </div>
@@ -283,7 +283,7 @@
         <div class="shape-4">
             <img src="assets/img/shape/7.png" alt="image">
         </div>
-        
+
         <div class="shape-5">
             <img src="assets/img/shape/8.png" alt="image">
         </div>
@@ -299,33 +299,33 @@
             <div class="col-lg-6">
                 <div class="solutions-content-area">
                     <div class="solutions-content">
-                        <h3>  مراحل انتخاب و ارزیابی </h3>
+                        <h3> مراحل انتخاب و ارزیابی </h3>
                         <div class="bar"></div>
                         <p></p>
                     </div>
 
                     <div class="solutions-details">
                         <div class="icon">
-                        <img src="assets/img/icon/first.png" alt="second">
+                            <img src="assets/img/icon/first.png" alt="second">
 
                             <!-- <i class="flaticon-blog"></i> -->
                         </div>
                         <h3> مرحله اول </h3>
                         <p>
-                        «زیر کمیته‌های علمی» مدارک و صلاحیت آثار را از نظر ویژگی‌های عمومی بررسی کرده و آن آثاری که مطابق ضوابط و معیارهای جایزه باشند را به کمیته علمی معرفی میکنند
-                        اثر در صورتی انتخاب میشود که توسط مراجع معتبر معرفی شده باشند و تا به حال برنده جایزه معتبر علمی نشده باشند.
+                            «زیر کمیته‌های علمی» مدارک و صلاحیت آثار را از نظر ویژگی‌های عمومی بررسی کرده و آن آثاری که مطابق ضوابط و معیارهای جایزه باشند را به کمیته علمی معرفی میکنند
+                            اثر در صورتی انتخاب میشود که توسط مراجع معتبر معرفی شده باشند و تا به حال برنده جایزه معتبر علمی نشده باشند.
                         </p>
                     </div>
 
                     <div class="solutions-details">
                         <div class="icon bg-d3fbf9">
-                        <img src="assets/img/icon/second.png" alt="second">
+                            <img src="assets/img/icon/second.png" alt="second">
 
                             <!-- <i class="flaticon-software"></i> -->
                         </div>
-                        <h3>  مرحله نهایی </h3>
+                        <h3> مرحله نهایی </h3>
                         <p>
-                        در هر یک از حوزه‌های جایزه، یک گروه داوری از محققان و دانشمندان برجسته داخلی و بین‌المللی، آثار نهایی را داوری و اثر برگزیده را انتخاب می‌کنند.
+                            در هر یک از حوزه‌های جایزه، یک گروه داوری از محققان و دانشمندان برجسته داخلی و بین‌المللی، آثار نهایی را داوری و اثر برگزیده را انتخاب می‌کنند.
                         </p>
                     </div>
 
@@ -361,59 +361,64 @@
 <section class="counter-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2>ما <span>20000+</span> پروژه <span>کامل و موفق داریم</span></h2>
+            <h2> To Prize Ceremony </h2>
+            <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-check"></i>
+                        <!-- <i class="flaticon-check"></i> -->
                     </div>
 
                     <h3>
-                        <span style="direction: ltr;" class="odometer" data-count="950">00</span>
+                        <span class="odometer" id="dayCount"></span>
+                        <!-- <span class="odometer" data-count="950">00</span> -->
                     </h3>
-                    <p>پروژه کامل</p>
+                    <p>روز</p>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-happy"></i>
+                        <!-- <i class="flaticon-happy"></i> -->
                     </div>
 
                     <h3>
-                        <span style="direction: ltr;" class="odometer" data-count="150">00</span>
+                        <span class="odometer" id="hoursCount"></span>
+                        <!-- <span class="odometer" data-count="150">00</span> -->
                     </h3>
-                    <p>مشتری</p>
+                    <p>ساعت </p>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-technical-support"></i>
+                        <!-- <i class="flaticon-technical-support"></i> -->
                     </div>
 
                     <h3>
-                        <span style="direction: ltr;" class="odometer" data-count="550">00</span>
+                        <span class="odometer" id="minutesCount"></span>
+                        <!-- <span class="odometer" data-count="550">00</span> -->
                     </h3>
-                    <p>خدمات چند گانه</p>
+                    <p>Minutes</p>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
-                        <i class="flaticon-trophy"></i>
+                        <!-- <i class="flaticon-trophy"></i> -->
                     </div>
 
                     <h3>
-                        <span style="direction: ltr;" class="odometer" data-count="750">00</span>
+                        <span class="odometer" id="secondsCount"></span>
+                        <!-- <span class="odometer" data-count="750">00</span> -->
                     </h3>
-                    <p>برنده جایزه</p>
+                    <p>ثانیه</p>
                 </div>
             </div>
         </div>

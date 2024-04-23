@@ -379,6 +379,7 @@
     <script src="<?= base_url('assets-rtl/js/wow.min.js') ?>"></script>
 
     <script src="<?= base_url('assets-rtl/js/main.js') ?>"></script>
+    <script src="<?= base_url('assets/js/homePrizeCountDownDate.js') ?>"></script>
 </body>
 
 

@@ -375,6 +375,7 @@
     <script src="<?= base_url('assets/js/wow.min.js') ?>"></script>
     <!-- Custom JS -->
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
+    <script src="<?= base_url('assets/js/homePrizeCountDownDate.js') ?>"></script>
 </body>
 
 </html>
