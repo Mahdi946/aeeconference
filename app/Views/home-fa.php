@@ -361,7 +361,7 @@
 <section class="counter-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2> To Prize Ceremony </h2>
+            <h2> تا برگذاری جایزه </h2>
             <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
@@ -404,7 +404,7 @@
                         <span class="odometer" id="minutesCount"></span>
                         <!-- <span class="odometer" data-count="550">00</span> -->
                     </h3>
-                    <p>Minutes</p>
+                    <p>دقیقه</p>
                 </div>
             </div>
 
