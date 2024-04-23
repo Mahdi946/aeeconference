@@ -76,7 +76,7 @@
                 <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>
-                            افراد و تیم های نوآور و فناور که دارای فعالیت های حرفه‌ای می باشند و همچنین پصاحبان شرکت‌هاي نوآور، فناور و دانش بنيان
+                            افراد و تیم های نوآور و فناور که دارای فعالیت های حرفه‌ای می باشند و همچنین پصاحبان شرکت‌های نوآور، فناور و دانش بنیان
                         </strong>
 
                     </div>
