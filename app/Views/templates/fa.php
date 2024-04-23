@@ -2,7 +2,12 @@
 <html lang="fa" dir="rtl">
 
 <head>
-<meta name="author" content="Novin Tarh Pars">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Novin Tarh Pars">
 	<!-- Send your Resume to Jobs [ at ] NovinTarhPars.com -->
 	<!-- 
 									  Novin Tarh Pars
@@ -51,13 +56,7 @@
 ░░░░░░░░░░░░░░░░░░░░░░░▓██████░░░░░▒▒▓████░░░░░░████▓▒▒▒░░░▒██████▓▒░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▒░░░░░░░░░████▓▓▓▓▓▓███▓░░░░░░░░░▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="Novin Tarh Pars">
-
+                                     	-->
     <link rel="stylesheet" href="<?= base_url('assets-rtl/css/bootstrap.rtl.min.css') ?>">
 
     <link rel="stylesheet" href="<?= base_url('assets-rtl/css/owl.default.min.css') ?>">
