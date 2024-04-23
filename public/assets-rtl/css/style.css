@@ -6588,5 +6588,6 @@ margin-right: 0
 }
 .text-vip-2-5{
 	text-align: justify !important;
-	line-height: 2.5rem;
+	line-height: 2rem;
+	/* line-height: 2.5rem; */
 }
