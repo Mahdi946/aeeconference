@@ -361,7 +361,7 @@
 <section class="counter-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2> تا برگذاری جایزه </h2>
+            <h2> تا برگزاری جایزه </h2>
             <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
