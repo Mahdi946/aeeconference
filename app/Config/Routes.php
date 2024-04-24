@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\News;
 use CodeIgniter\Router\RouteCollection;
 use App\Controllers\Pages;
 
@@ -18,6 +19,8 @@ service('auth')->routes($routes);
 $routes->get('/', 'Home::index');
 $routes->get('lang/{locale}', 'Language::index');
 $routes->get('(:segment)', [Pages::class, 'view']);
+$routes->get('/news', [News::class, 'index']);
+$routes->get('/news/{id}', [News::class, 'view']);
 
 
 
