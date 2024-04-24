@@ -9,8 +9,10 @@ class News extends BaseController
 {
     public function index()
     {
+        
         $newModel = model('News');
         $allNews = $newModel->findAll();
+  
         return view('news-'.$this->locale,["allNews"=>$allNews]);
 
     }
