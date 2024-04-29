@@ -32,23 +32,23 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="image">
-                            <a href="<?=base_url("/news/".$news->id)?>">
-                                <img src="<?=$news->image?>" alt="<?=$news->title?>">
+                            <a href="<?=base_url("/news/".$news['slug'])?>">
+                                <img src="<?=$news['image']?>" alt="<?=$news['title']?>">
                             </a>
                         </div>
 
                         <div class="content">
-                            <span><?=$news->date?></span>
+                            <span><?=$news['date']?></span>
                             <h3>
-                                <a href="<?=base_url("/news/".$news->id)?>">
-                                    <?=$news->title?>
+                                <a href="<?=base_url("/news/".$news['slug'])?>">
+                                    <?=$news['title']?>
                                 </a>
                             </h3>
                             <p>
-                                <?=substr($news->content,0,50) ?>
+                                <?=substr($news['content'],0,50) ?>
 
                             </p>
-                            <a href="<?=base_url("/news/".$news->id)?>" class="read-more">Read More</a>
+                            <a href="<?=base_url("/news/".$news['slug'])?>" class="read-more">Read More</a>
                         </div>
                     </div>
                 </div>

@@ -952,73 +952,34 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="single-blog.html">
-                            <img src="assets/img/blog/1.jpg" alt="image">
-                        </a>
-                    </div>
+            <?php foreach ($newsData as $news) { ?>
 
-                    <div class="content">
-                        <span> سه شنبه 26 دی ماه 1402 </span>
-                        <h3>
-                            <a href="#">
-                                برگزاری اولین نشست کمیته علمی جایزه فناوری و نوآوری یونسکو در پارک علم و فناوری دانشگاه تهران
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="image">
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>">
+                                <img src="<?= $news['image'] ?>" alt="image">
                             </a>
-                        </h3>
-                        <p>
-                            اولین نشست کمیته علمی جایزه فناوری و نوآوری یونسکو در پارک علم و فناوری دانشگاه تهران برگزار شد.
-                        </p>
-                        <a href="single-blog-2.html" class="read-more">بیشتر بخوانید</a>
+                        </div>
+
+                        <div class="content">
+                            <span> <?= $news['date'] ?></span>
+                            <h3>
+                                <a href="<?= base_url("/news/" . $news['slug']) ?>">
+                                    <?= $news['title'] ?>
+                                </a>
+                            </h3>
+                            <p>
+                                <?= substr($news['content'], 0, 50) ?>
+                            </p>
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">بیشتر بخوانید</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="single-blog.html">
-                            <img src="assets/img/blog/2.jpg" alt="image">
-                        </a>
-                    </div>
 
-                    <div class="content">
-                        <span> ۸ خرداد ۱۴۰۱    </span>
-                        <h3>
-                            <a href="#">
-                                رونمایی از تفاهم‌نامه جایزه نوآوری و فناوری یونسکو
-                            </a>
-                        </h3>
-                        <p>
-                            بر پایه گزارش روابط عمومی پارک علم و فناوری دانشگاه تهران و به نقل 
-                            از کمیسیون ملی یونسکو در ایران، تفاهم‌نامه جایزه فناوری و نوآوری یونسکو میان وزارت علوم،
-                        </p>
-                        <a href="single-blog-2.html" class="read-more">بیشتر بخوانید</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="single-blog.html">
-                            <img src="assets/img/blog/3.jpg" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="content">
-                        <span>20 فروردین 1399</span>
-                        <h3>
-                            <a href="#">
-                                نکاتی برای کسب درآمد از صنعت دیجیتال
-                            </a>
-                        </h3>
-                        <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
-                        <a href="single-blog-2.html" class="read-more">بیشتر بخوانید</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
