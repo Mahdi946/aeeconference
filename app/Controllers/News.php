@@ -17,10 +17,10 @@ class News extends BaseController
 
     }
 
-    public function view($id)
+    public function view($slug)
     {
         $newModel = model('News');
-        $news = $newModel->find($id);
+        $news = $newModel->where('slug', $slug)->first();;
         return view('newsDetail-'.$this->locale,["news"=>$news]);
  
     }

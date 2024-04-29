@@ -302,31 +302,31 @@
                         <div class="bar"></div>
                         <p>The entries submitted to the UNESCO Prize undergo two stages</p>
                     </div>
- 
+
 
                     <div class="solutions-details">
                         <div class="icon bg-d3fbf9">
-                        <img src="assets/img/icon/first.png" alt="second">
+                            <img src="assets/img/icon/first.png" alt="second">
                             <!-- <i class="flaticon-software"></i> -->
                         </div>
                         <h3>Evaluation Committees</h3>
                         <p>
-                        review the documents and qualifications of the works in terms of general characteristics. According to the regulations, works that have previously won at least one valid international scientific prize are excluded from proceeding to the next stage. Additionally, works submitted personally and outside the proper nomination process by the nominating entities are not accepted at this stage.
+                            review the documents and qualifications of the works in terms of general characteristics. According to the regulations, works that have previously won at least one valid international scientific prize are excluded from proceeding to the next stage. Additionally, works submitted personally and outside the proper nomination process by the nominating entities are not accepted at this stage.
                         </p>
                     </div>
 
                     <div class="solutions-details">
                         <div class="icon bg-fce8c9">
-                        <img src="assets/img/icon/second.png" alt="second">
+                            <img src="assets/img/icon/second.png" alt="second">
                             <!-- <i class="flaticon-analysis"></i> -->
                         </div>
                         <h3>In The Final Stage</h3>
                         <p>
-                        in each category of the prize, a science committee conducts a rigorous evaluation of the candidate’s academic achievements and chooses the nominees.
+                            in each category of the prize, a science committee conducts a rigorous evaluation of the candidate’s academic achievements and chooses the nominees.
                         </p>
                     </div>
 
-           
+
                 </div>
             </div>
 
@@ -344,7 +344,7 @@
 <section class="counter-section pt-100 pb-70">
     <div class="container">
         <div class="section-title">
-            <h2> To Prize Ceremony  </h2>
+            <h2> To Prize Ceremony </h2>
             <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
@@ -933,71 +933,34 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="single-blog.html">
-                            <img src="assets/img/blog/1.jpg" alt="image">
-                        </a>
-                    </div>
+            <?php foreach ($newsData as $news) { ?>
 
-                    <div class="content">
-                        <span>6 Feb 2024</span>
-                        <h3>
-                            <a href="single-blog.html">
-                            Consultative Meeting on UNESCO Science and Innovation Prize at the University of Tehran's Science and Technology Park
-                                                    </a>
-                        </h3>
-                        <p>
-                        The Science and Technology Park of the University of Tehran held the first consultative meeting of the Scientific and Evaluation Committee of the UNESCO Science and Innovation Prize.
 
-                        </p>
-                        <a href="single-blog.html" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="single-blog.html">
-                            <img src="assets/img/blog/2.jpg" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="content">
-                        <span>25 April 2024</span>
-                        <h3>
-                            <a href="single-blog.html">
-                                The Billionaire Guide On Design That will Get You Rich
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="image">
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>">
+                                <img src="<?= $news['image'] ?>" alt="image">
                             </a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
-                        <a href="single-blog.html" class="read-more">Read More</a>
+                        </div>
+
+                        <div class="content">
+                            <span> <?= $news['date'] ?></span>
+                            <h3>
+                                <a href="<?= base_url("/news/" . $news['slug']) ?>">
+                                    <?= $news['title'] ?>
+                                </a>
+                            </h3>
+                            <p>
+                                <?= substr($news['content'], 0, 50) ?>
+                            </p>
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more"> Read More </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
+          
 
-            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-                <div class="single-blog">
-                    <div class="image">
-                        <a href="single-blog.html">
-                            <img src="assets/img/blog/3.jpg" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="content">
-                        <span>30 July 2024</span>
-                        <h3>
-                            <a href="single-blog.html">
-                                Making Peace With The Feast Or Famine Of Freelancing
-                            </a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor</p>
-                        <a href="single-blog.html" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -1005,4 +968,3 @@
 
 
 <?= $this->endSection() ?>
-
