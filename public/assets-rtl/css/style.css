@@ -877,10 +877,24 @@ img {
 		display: none
 	}
 	.fria-responsive-nav .logo {
-		position: relative;
+		/* position: relative;
 		width: 50%;
-		z-index: 999
+		z-index: 999 */
+		
+		width: 100%;
+		position: relative;
+		z-index: 999;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
 	}
+
+	.logo-header{
+		width: 50%;
+		height: 120px;
+		object-fit: contain;
+	  }
 	.navbar-area {
 		background-color: #fff;
 		padding-top: 15px;
