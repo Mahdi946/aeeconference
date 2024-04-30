@@ -8,6 +8,7 @@ class News extends Migration
 {
     public function up()
     {
+   
         $this->forge->addField([
             'id' => [
                 'type'           => 'INT',
@@ -38,6 +39,7 @@ class News extends Migration
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('news');
+
     }
 
     public function down()
