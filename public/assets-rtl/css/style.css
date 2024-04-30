@@ -842,6 +842,17 @@ img {
 .sidebar-modal.active .sidebar-modal-inner {
 	right: 0
 }
+
+.row-counter{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: unset;
+	padding: 0;
+	justify-content: space-between;
+	gap: .8rem;
+  }
+
 @media only screen and (max-width:991px) {
 	.fria-responsive-nav {
 		display: block
@@ -903,6 +914,13 @@ img {
 	.fria-nav {
 		display: none
 	}
+
+	.row-counter{
+		flex-wrap: wrap;
+        gap: 1.2rem;
+        justify-content: center;
+	
+	  }
 }
 .main-banner-area {
 	position: relative;

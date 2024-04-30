@@ -239,6 +239,15 @@ img {
   animation-name: MOVE-BG;
 }
 
+.row-counter{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: unset;
+  padding: 0;
+  justify-content: space-between;
+  gap: .8rem;
+}
 @keyframes MOVE-BG {
   from {
     transform: translateX(0);
@@ -955,6 +964,14 @@ Navbar Area CSS
   .fria-nav {
     display: none;
   }
+
+  .row-counter{
+		flex-wrap: wrap;
+        gap: 1.2rem;
+        justify-content: center;
+	
+	  }
+    
 }
 /*================================================
 Banner Area CSS

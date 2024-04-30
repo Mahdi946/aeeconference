@@ -12,7 +12,8 @@
                         <div class="main-banner-content">
                             <!-- <span>Digital Marketing</span> -->
                             <!-- <h1>Digital Agency & Marketing</h1> -->
-                            <h1>About Us</h1>
+                            <h3> Technology and Innovation Prize </h3>
+                            <h1>  UNESCO </h1>
                             <p>
                             The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines. This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements.
                             </p>
@@ -351,7 +352,7 @@
             <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
-        <div class="row align-items-center">
+        <div class="row-counter align-items-center">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
