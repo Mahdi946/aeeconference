@@ -1,4 +1,4 @@
-<?= $this->extend('templates/fa') ?>
+<?= $this->extend('templates/en') ?>
 <?= $this->section('content') ?>
 
 

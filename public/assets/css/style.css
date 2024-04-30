@@ -930,9 +930,22 @@ Navbar Area CSS
     display: none;
   }
   .fria-responsive-nav .logo {
+    /* position: relative;
+     width: 50%; 
+    z-index: 999; */
     position: relative;
-    width: 50%;
     z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .black-logo{
+    width: 50%;
+    height: 120px;
+    object-fit: contain;
+  }
+  .logo > .float-end{
+    padding-right: .8rem;
   }
   .navbar-area {
     background-color: #ffffff;

@@ -108,7 +108,8 @@
                 <div class="fria-responsive-menu">
                     <div class="logo">
                         <a href="<?= base_url('/') ?>">
-                            <img src="<?= base_url('assets-rtl/img/logo.png') ?>" alt="logo">
+                            <img src="<?= base_url('assets-rtl/img/logo.png') ?>" alt="logo" class="logo-header">
+                            
                         </a>
                         <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
                             <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem">
