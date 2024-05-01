@@ -176,7 +176,8 @@
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Nomination
+                                    <!-- Nomination -->
+                                    Prize Candidate
                                     <i class='bx bx-chevron-down'></i>
                                 </a>
 

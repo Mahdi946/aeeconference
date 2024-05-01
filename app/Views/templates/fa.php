@@ -179,7 +179,7 @@
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    نامزدی
+                                    نامزد جایزه
                                     <i class='bx bx-chevron-down'></i>
                                 </a>
 
