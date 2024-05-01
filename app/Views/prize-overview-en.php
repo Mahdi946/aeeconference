@@ -23,7 +23,7 @@
     <section class="project-details-area ptb-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <!-- <div class="col-lg-6 col-md-6">
                     <div class="project-details-image">
                         <img src="<?=base_url('assets/img/services-details/1.jpg')?>" alt="projects">
                     </div>
@@ -33,7 +33,7 @@
                     <div class="project-details-image">
                         <img src="<?=base_url('assets/img/services-details/2.jpg')?>" alt="projects">
                     </div>
-                </div>
+                </div> -->
 
                 <div class="col-lg-12 col-md-12">
                     <div class="projects-details-desc">
