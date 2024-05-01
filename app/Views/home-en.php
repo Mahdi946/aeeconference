@@ -15,7 +15,8 @@
                             <h3> Technology and Innovation Prize </h3>
                             <h1>  UNESCO </h1>
                             <p>
-                            The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines. This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements.
+                            UNESCO's International Technology and Innovation PRIZE is held biennially. The fields of each period will be announced by the prize policy council one year before the prize ceremony. During this period, the prize will be given to candidates in the fields of health energy, and water.
+
                             </p>
                             <!-- <div class="banner-btn">
                                     <a href="#" class="default-btn">Get Started</a>
@@ -180,7 +181,8 @@
                     <h3>Prize </h3>
                     <div class="bar"></div>
                     <p>
-                        UNESCO's International Technology and Innovation PRIZE is held biennially. The fields of each period will be announced by the prize policy council one year before the prize ceremony. During this period, the prize will be given to candidates in the fields of health energy, and water.
+                    The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines. This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements.
+
                     </p>
 
                     <div class="audience-btn">
