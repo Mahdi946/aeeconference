@@ -111,7 +111,8 @@
                         </a>
 
                         <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
-                            <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem">
+                            <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
+                            <small>English</small>
                         </a>
                     </div>
                 </div>
@@ -175,7 +176,8 @@
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Nomination
+                                    <!-- Nomination -->
+                                    Prize Candidate
                                     <i class='bx bx-chevron-down'></i>
                                 </a>
 
@@ -244,7 +246,8 @@
 
                         <div class="others-options">
                             <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="">
-                                <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem">
+                                <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
+                                <small>English</small>
                             </a>
                             <a href="<?= base_url('login') ?>" class="default-btn">Login</a>
                             <!--                                <a href="--><?php //=base_url('register')
@@ -430,6 +433,7 @@
     <!-- Custom JS -->
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
     <script src="<?= base_url('assets/js/homePrizeCountDownDate.js') ?>"></script>
+    <script src="<?= base_url('assets/js/CountDownDate.js') ?>"></script>
     <script src="<?= base_url('assets/leaflet/leaflet.js') ?>"></script>
 
     <script>

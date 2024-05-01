@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <div class="project-details-image">
+                    <div class="project-details-image translateXOrganizational" >
                         <img src="<?=base_url('assets/uploads/Picture1.png')?>" alt="projects">
                     </div>
                 </div>

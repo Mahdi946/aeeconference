@@ -7,10 +7,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-title-content">
-                        <h2>حوزه‌های فناوری جایزه فناوری و نوآوری یونسکو</h2>
+                        <h2>حوزه‌های  جایزه فناوری و نوآوری یونسکو</h2>
                         <ul>
                             <li><a href="<?= base_url('/'); ?>">خانه</a></li>
-                            <li>حوزه‌های فناوری جایزه فناوری و نوآوری یونسکو</li>
+                            <li>حوزه‌های   جایزه فناوری و نوآوری یونسکو</li>
                         </ul>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
     <section class="project-details-area ptb-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <!-- <div class="col-lg-6 col-md-6">
                     <div class="project-details-image">
                         <img src="<?=base_url('assets-rtl/img/services-details/1.jpg')?>" alt="projects">
                     </div>
@@ -33,11 +33,11 @@
                     <div class="project-details-image">
                         <img src="<?=base_url('assets-rtl/img/services-details/2.jpg')?>" alt="projects">
                     </div>
-                </div>
+                </div> -->
 
                 <div class="col-lg-12 col-md-12">
                     <div class="projects-details-desc">
-                        <h3>حوزه‌های فناوری جایزه فناوری و نوآوری یونسکو</h3>
+                        <h3>حوزه‌های  جایزه فناوری و نوآوری  یونسکو</h3>
 
                         <p>هر دو سال حوزه‌های فناوری مشخصی جهت ارسال دستاوردها توسط شورای سیاستگذاری تعیین خواهد شد. اولین دوره اعطای جایزه فناوری و نوآوری یونسکو در دو حوزه «سلامت» و «انرژی و آب» انجام خواهد شد.</p>
 
