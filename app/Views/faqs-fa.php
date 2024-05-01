@@ -82,21 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                     جایزه فناوری و نوآوری یونسکو کجا و چه زمانی ارائه می‌شود؟
-                    </button>
-                </h2>
-                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>
-                            این جایزه در ایران، تهران و در روز ؟؟ آذر برگذار میشود.
-                        </strong>
-
-                    </div>
-                </div>
-            </div>
+      
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading6">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
@@ -207,7 +193,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading13">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                    چگونه میتوانید نامزد جایزه شوم؟
+                    چگونه میتوانم نامزد جایزه شوم؟
                     </button>
                 </h2>
                 <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample">
