@@ -67,7 +67,7 @@
 </section>
 <!-- map end -->
 <!-- Start Contact Area -->
-<section class="contact-section pb-100">
+<!-- <section class="contact-section pb-100">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -120,7 +120,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Contact Area -->
 
 <?= $this->endSection() ?>
