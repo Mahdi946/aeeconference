@@ -432,6 +432,7 @@
     <!-- Custom JS -->
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
     <script src="<?= base_url('assets/js/homePrizeCountDownDate.js') ?>"></script>
+    <script src="<?= base_url('assets/js/CountDownDate.js') ?>"></script>
     <script src="<?= base_url('assets/leaflet/leaflet.js') ?>"></script>
 
     <script>

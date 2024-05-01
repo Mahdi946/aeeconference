@@ -434,11 +434,13 @@
 
     <script src="<?= base_url('assets-rtl/js/main.js') ?>"></script>
     <script src="<?= base_url('assets/js/homePrizeCountDownDate.js') ?>"></script>
+    <script src="<?= base_url('assets/js/CountDownDate.js') ?>"></script>
     <script src="<?= base_url('assets/leaflet/leaflet.js') ?>"></script>
 
     <script>
         $(document).ready(function() {
-
+            if(document.querySelector("#map")===null)
+            return;
             //1. initialize leaflet map
             var center = [35.73338, 51.39444];
             var propertiesmap = L.map('map').setView(center, 17);
