@@ -900,7 +900,9 @@ Navbar Area CSS
 .sidebar-modal.active .sidebar-modal-inner {
   right: 0;
 }
-
+.translateXOrganizational{
+  transform: translate(-10%, 0px);
+}
 @media only screen and (max-width: 991px) {
   .fria-responsive-nav {
     display: block;
