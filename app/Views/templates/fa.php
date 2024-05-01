@@ -112,7 +112,8 @@
                             
                         </a>
                         <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
-                            <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem">
+                            <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
+                            <small> فارسی </small>
                         </a>
 
                     </div>
@@ -248,7 +249,8 @@
 
                         <div class="others-options">
                             <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="">
-                                <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem">
+                                <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
+                                <small> فارسی </small>
                             </a>
                             <a href="<?= base_url('login') ?>" class="default-btn">ورود</a>
                             <!--                                <a href="--><?php //=('register')
