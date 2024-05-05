@@ -20,11 +20,11 @@ class Category extends Migration
             'deleted_at' => ['type' => 'DATETIME','null' => true],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('category');
+        $this->forge->createTable('categories');
     }
 
     public function down()
     {
-        $this->forge->dropTable('category');
+        $this->forge->dropTable('categories');
     }
 }
