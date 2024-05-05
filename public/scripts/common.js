@@ -11,6 +11,7 @@ export const SendDataForm = (
   check = [],
   add = [],
   backFun = "",
+  method="POST",
   setNull = false,
   selectReset = false,
   param = {}
@@ -44,7 +45,7 @@ export const SendDataForm = (
      // toast(data.err, "error");
     }
   
-});
+},method);
 }
 
 export const resetForm = (id, select = true) => {
@@ -63,6 +64,7 @@ export const GetIdFromUrl = (number = 1) => {
 
 export default function checkValue(element) {
   if (element.value === "") {
+    alert(element.name + " is empty", "error");
     //toast(element.name + " is empty", "error");
     return false;
   }
