@@ -6,13 +6,12 @@ use App\Controllers\BaseController;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\ResponseInterface;
+use CodeIgniter\Files\File;
 
-class NewsAdmin extends Controller
+class NewsAdmin extends BaseController
 {
     use ResponseTrait;
-
-
-
+    protected $helpers = ['form'];
 
     public function viewPanel()
     {
@@ -35,26 +34,56 @@ class NewsAdmin extends Controller
     {
         
         $Model = model('News');
-        $data=$_REQUEST;
-        if($_FILES['img']){
-     
-            $tmp_name = $_FILES["img"]["tmp_name"];
-            $name = $_FILES["img"]["name"];
-            //$path=WRITEPATH."uploads/$name";
-            $path = "uploads/$name";
-            $data['image']=$path;
-            move_uploaded_file($tmp_name, WRITEPATH."uploads/$name");
+        
+        
+        $validationRule = [
+            'img' => [
+                'label' => 'News Image File',
+                'rules' => [
+                    'uploaded[img]',
+                    'is_image[img]',
+                    'mime_in[img,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                    // 'max_size[img,10000]',
+                    // 'max_dims[img,1024,1024]',
+                ],
+            ],
+        ];
+        $data=($this->request->getPost());
+        if (! $this->validateData([], $validationRule)) {
+            return $this->respond(["error" => $this->validator->getErrors()]);
+        }
 
+        $img = $this->request->getFile('img');
+
+        if (! $img->hasMoved()) {
+            $filepath = WRITEPATH . 'uploads/' . $img->store();
+
+            $data = ['uploaded_fileinfo' => new File($filepath)];
+            return $this->respond($data);
         }
+
+        
+        // $data=$_REQUEST;
+
+        // if($_FILES['img']){
+     
+        //     $tmp_name = $_FILES["img"]["tmp_name"];
+        //     $name = $_FILES["img"]["name"];
+        //     //$path=WRITEPATH."uploads/$name";
+        //     $path = "uploads/$name";
+        //     $data['image']=$path;
+        //     move_uploaded_file($tmp_name, WRITEPATH."uploads/$name");
+
+        // }
     
-        print_r($data);
-        die;
-        try {
-           // $Model->insert($data);
-            return $this->respond(["status" => "success", "data" => $Model]);
-        } catch (\Exception $e) {
-            return $this->respond(["error" => $e->getMessage(), "data" => $data]);
-        }
+        // print_r($data);
+        // die;
+        // try {
+        //    // $Model->insert($data);
+        //     return $this->respond(["status" => "success", "data" => $Model]);
+        // } catch (\Exception $e) {
+        //     return $this->respond(["error" => $e->getMessage(), "data" => $data]);
+        // }
     }
 
     function editPage($id)

@@ -3,9 +3,10 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Controllers\BaseController;
 use CodeIgniter\API\ResponseTrait;
 
-class Category extends Controller
+class Category extends BaseController
 {
     use ResponseTrait;
 
