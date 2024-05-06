@@ -28,7 +28,7 @@
             </div>
             <div class="flex flex-col gap-2">
                 <label for=""> تصویر </label>
-                <input id="title" name="title" type="file" accept="image/*" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ">
+                <input id="img" name="img" type="file" accept="image/*" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ">
             </div>
             <div class="text-center">
                 <button id="actionBtn" type="button" class="p-2 bg-green-500 rounded-[10px] text-white ">

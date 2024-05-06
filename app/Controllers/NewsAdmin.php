@@ -33,12 +33,24 @@ class NewsAdmin extends Controller
 
     function add()
     {
+        
         $Model = model('News');
-        $data = json_decode($this->request->getBody(), true);
-        $data['slug'] = str_replace(" ", "-", $data['title']);
+        $data=$_REQUEST;
+        if($_FILES['img']){
+     
+            $tmp_name = $_FILES["img"]["tmp_name"];
+            $name = $_FILES["img"]["name"];
+            //$path=WRITEPATH."uploads/$name";
+            $path = "uploads/$name";
+            $data['image']=$path;
+            move_uploaded_file($tmp_name, WRITEPATH."uploads/$name");
 
+        }
+    
+        print_r($data);
+        die;
         try {
-            $Model->insert($data);
+           // $Model->insert($data);
             return $this->respond(["status" => "success", "data" => $Model]);
         } catch (\Exception $e) {
             return $this->respond(["error" => $e->getMessage(), "data" => $data]);
@@ -50,7 +62,7 @@ class NewsAdmin extends Controller
         $category = model('category');
         $category = $category->findAll();
         $newModel = model('News');
-        $news = $newModel->where('id', $id)->first();;
+        $news = $newModel->where('id', $id)->first();
         return view('editNews', ["news" => $news, "categories" => $category]);
     }
 
@@ -62,7 +74,7 @@ class NewsAdmin extends Controller
         $data['slug'] = str_replace(" ", "-", $data['title']);
         $id = $data['id'];
         unset($data['id']);
-
+   
         try {
             $Model->update($id, $data);
             return $this->respond(["status" => "success", "data" => $Model]);

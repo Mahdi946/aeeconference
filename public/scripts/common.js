@@ -11,7 +11,8 @@ export const SendDataForm = (
   check = [],
   add = [],
   backFun = "",
-  method="POST",
+  method = "POST",
+  FormData = true,
   setNull = false,
   selectReset = false,
   param = {}
@@ -32,20 +33,24 @@ export const SendDataForm = (
     for (let i = 0; i < add.length; i++)
       formData = { ...formData, ...{ [add[i].name]: add[i].value } };
   }
+  let FormDataEntry = formData
 
-  Fetching(url, formData,(data)=>{
+  if (FormData)
+    FormDataEntry = ConvertToFormData(formData)
+
+  Fetching(url, FormDataEntry, (data) => {
     btn.disabled = false;
     //unblock();
-    if (data.status === "success"|| data.status==='true') {
+    if (data.status === "success" || data.status === 'true') {
       //toast("انجام شد", "success");
       if (backFun !== "") backFun(param);
 
       resetForm(form, selectReset);
     } else {
-     // toast(data.err, "error");
+      // toast(data.err, "error");
     }
-  
-},method);
+
+  }, method, FormData);
 }
 
 export const resetForm = (id, select = true) => {
@@ -71,34 +76,44 @@ export default function checkValue(element) {
   return true;
 }
 
-export const Fetching = async (url, data,fn,method="POST") => {
+export const Fetching = async (url, data, fn, method = "POST", FormData) => {
 
-    let param={
-      method, 
-      headers: {
-        "Content-Type": "application/json",
-        "X-Requested-With": "XMLHttpRequest",
-      },
- 
-    }
-    if(method !=="GET"){
+  let header = {
+    "Content-Type": "application/json",
+    "X-Requested-With": "XMLHttpRequest",
+  }
+
+  if(FormData){
+    delete(header['Content-Type']);
+  }
+
+  let param = {
+    method,
+    headers: header,
+
+  }
+  if (method !== "GET") {
+    if(FormData){
+      param = { ...param, ...{ body: (data) } }
+    }else{
       param={...param,...{body: JSON.stringify(data)}}
     }
-    try {
-      const response = await fetch(ApiUrl+url,param );
-  
-      const result = await response.json();
-      fn(result);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  
+  }
+  try {
+    const response = await fetch(ApiUrl + url, param);
 
-   
+    const result = await response.json();
+    fn(result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+
+
+
   ;
 };
-export const FetchingFile = (url, formData,fn) => {
-  formData.append('token',getCookie());
+export const FetchingFile = (url, formData, fn) => {
+  //  formData.append('token',getCookie());
 
   $.ajax({
     type: "POST",
@@ -164,15 +179,14 @@ export const getCookie = (cname = "token_betonplast") => {
   var decodedCookie = decodeURIComponent(document.cookie);
   var ca = decodedCookie.split(";");
   for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) == " ") {
-          c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-      }
+    var c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
   }
   return "";
 };
 
- 
