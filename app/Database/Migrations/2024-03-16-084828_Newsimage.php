@@ -10,7 +10,7 @@ class Newsimage extends Migration
     {
         $fields = [
             'image' => ['type' => 'INT','constraint' => '5','unsigned' => true,'null' => true,],
-            'CONSTRAINT image FOREIGN KEY(`image`) REFERENCES `files`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE'
+            //'CONSTRAINT image FOREIGN KEY(`image`) REFERENCES `files`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE'
 
         ];
         $this->forge->addColumn('news', $fields);

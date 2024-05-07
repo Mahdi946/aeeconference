@@ -23,9 +23,11 @@ $routes->get('lang/{locale}', 'Language::index');
 
 $routes->get('/news', [News::class, 'index']);
 $routes->get('/admin/news', [NewsAdmin::class, 'viewPanel']);
+$routes->get('/admin/addNewsEn', [NewsAdmin::class, 'addNewsEn']);
 $routes->get('/admin/addNews', [NewsAdmin::class, 'addNews']);
 $routes->post('/admin/news', [NewsAdmin::class, 'add']);
 $routes->get('/admin/editNews/(:segment)', [NewsAdmin::class, 'editPage']);
+$routes->get('/admin/editNewsEn/(:segment)', [NewsAdmin::class, 'editPageEn']);
 $routes->put('/admin/news', [NewsAdmin::class, 'update']);
 $routes->delete('/admin/news/(:segment)', [NewsAdmin::class, 'remove']);
 $routes->get('/news/(:segment)', [News::class, 'view']);

@@ -6,12 +6,18 @@
     <div class="flex flex-row">
         <div class="w-[150px]">
             <a class="cursor-pointer p-2 bg-green-500 rounded-[10px] text-white" href="<?= base_url('/admin/addNews'); ?>">
-                افزودن خبر جدید
+                افزودن خبر فارسی
+            </a>
+        </div>
+
+        <div class="w-[150px]">
+            <a class="cursor-pointer p-2 bg-yellow-500 rounded-[10px] text-white" href="<?= base_url('/admin/addNewsEn'); ?>">
+                افزودن خبر انگلیسی
             </a>
         </div>
     </div>
 
-    <div class="flex flex-row gap-2 flex-wrap p-2 ">
+    <div class="flex flex-row gap-4 flex-wrap p-2 ">
 
         <?php foreach ($allNews as $news) { ?>
             <div class="w-[300px] rounded-md shadow-md bg-slate-50 ">
@@ -32,7 +38,7 @@
                         <hr>
 
                         <div class="flex flex-row justify-between px-4 ">
-                            <div class="cursor-pointer"> <a href="<?= base_url('/admin/editNews/'.$news['id']); ?>" ><small> ویرایش </small></a> </div>
+                            <div class="cursor-pointer"> <a href="<?= base_url("".$news['lng']==='fa'?"/admin/editNews".'/'.$news['id']:"/admin/editNewsEn".'/'.$news['id']); ?>" ><small> ویرایش </small></a> </div>
                             <div><small class="text-red-300 cursor-pointer removeItem" data-id="<?=$news['id']?>" data-title="<?=$news['title']?>" > حذف </small></div>
                         </div>
                     </div>

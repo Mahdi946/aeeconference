@@ -28,7 +28,15 @@ class NewsAdmin extends BaseController
         $Model = model('category');
         $news = $Model->findAll();
 
-        return view('addNews', ["categories" => $news]);
+        return view('addNews', ["categories" => $news,"lng"=>"fa"]);
+    }
+
+    public function addNewsEn()
+    {
+        $Model = model('category');
+        $news = $Model->findAll();
+
+        return view('addNews', ["categories" => $news,"lng"=>"en"]);
     }
 
 
@@ -37,7 +45,7 @@ class NewsAdmin extends BaseController
 
         $Model = model('News');
         $data = ($this->request->getPost());
-        $data['slug'] = str_replace(" ", "-", $data['title']);
+        $data['slug'] = str_replace(" ", "-", $data['slug']);
 
         if ($this->request->getFile('img') !== null) {
             $validationRule = [
@@ -72,7 +80,16 @@ class NewsAdmin extends BaseController
         $category = $category->findAll();
         $newModel = model('News');
         $news = $newModel->where('id', $id)->first();
-        return view('editNews', ["news" => $news, "categories" => $category]);
+        return view('editNews', ["news" => $news, "categories" => $category,"lng"=>"fa"]);
+    }
+
+    function editPageEn($id)
+    {
+        $category = model('category');
+        $category = $category->findAll();
+        $newModel = model('News');
+        $news = $newModel->where('id', $id)->first();
+        return view('editNews', ["news" => $news, "categories" => $category,"lng"=>"en"]);
     }
 
 
@@ -80,7 +97,7 @@ class NewsAdmin extends BaseController
     {
         $Model = model('News');
         $data = $this->request->getPost();
-        $data['slug'] = str_replace(" ", "-", $data['title']);
+        $data['slug'] = str_replace(" ", "-", $data['slug']);
         $id = $data['id'];
         unset($data['id']);
 
@@ -114,16 +131,13 @@ class NewsAdmin extends BaseController
     function remove($id)
     {
         $Model = model('News');
-  
-  
-
         try {
 
             $this->RemoveNewsFile($id);
             $Model->delete($id);
             return $this->respond($Model);
         } catch (\Exception $e) {
-            return $this->respond(["error" => $e->getMessage()   ]);;
+            return $this->respond(["error" => $e->getMessage()]);;
         }
     }
 
@@ -132,7 +146,7 @@ class NewsAdmin extends BaseController
         $Model = model('News');
         $RecordData = $Model->find($id);
         $this->RemoveFile($RecordData['image']);
-        $Model->update($id, ["image"=>null]);
+        $Model->update($id, ["image" => null]);
     }
 
     private function AddImgToFile($img): int
@@ -152,14 +166,12 @@ class NewsAdmin extends BaseController
 
         $ModelFile = model('File');
         $File = $ModelFile->where('id', $id)->first();
-        if($File==null)
-        return;
-    
-        if (file_exists($File['path'])){
+        if ($File == null)
+            return;
+
+        if (file_exists($File['path'])) {
             unlink($File['path']);
             $ModelFile->delete($id);
-
         }
-
     }
 }
