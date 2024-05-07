@@ -37,20 +37,10 @@ class News extends Model
     protected $beforeUpdate   = [];
     protected $afterUpdate    = [];
     protected $beforeFind     = [];
-    protected $afterFind      = ['getImage'];
+    protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
          
-    protected function getImage( $data) {
-        $newData=[];
-        foreach($data['data'] as $d){
-            $d['image']=$d['image']!==null?new File(WRITEPATH .'uploads/'.$d['image']):null;
-            array_push($newData,$d);
-        }
- 
-        $data['data']=$newData;
-            return $data;
-        
-    }
+   
 }

@@ -8,6 +8,8 @@ use CodeIgniter\Controller;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Files\File;
 
+use function PHPUnit\Framework\isNull;
+
 class NewsAdmin extends BaseController
 {
     use ResponseTrait;
@@ -32,58 +34,38 @@ class NewsAdmin extends BaseController
 
     function add()
     {
-        
+
         $Model = model('News');
-        
-        
-        $validationRule = [
-            'img' => [
-                'label' => 'News Image File',
-                'rules' => [
-                    'uploaded[img]',
-                    'is_image[img]',
-                    'mime_in[img,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                    // 'max_size[img,10000]',
-                    // 'max_dims[img,1024,1024]',
+        $data = ($this->request->getPost());
+
+        if ($this->request->getFile('img') !== null) {
+            $validationRule = [
+                'img' => [
+                    'label' => 'News Image File',
+                    'rules' => [
+                        'uploaded[img]',
+                        'is_image[img]',
+                        'mime_in[img,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                    ],
                 ],
-            ],
-        ];
-        $data=($this->request->getPost());
-        if (! $this->validateData([], $validationRule)) {
-            return $this->respond(["error" => $this->validator->getErrors()]);
+            ];
+            if (!$this->validateData([], $validationRule)) {
+                return $this->respond(["error" => $this->validator->getErrors()]);
+            }
+
+            $img = $this->request->getFile('img');
+            $data['image']=$this->AddImgToFile($img);
+          
         }
 
-        $img = $this->request->getFile('img');
-
-        if (! $img->hasMoved()) {
-            $filepath = WRITEPATH . 'uploads/' . $img->store();
-
-            $data = ['uploaded_fileinfo' => new File($filepath)];
-            return $this->respond($data);
+        try {
+            $Model->insert($data);
+            return $this->respond(["status" => "success", "data" => $Model]);
+        } catch (\Exception $e) {
+            return $this->respond(["error" => $e->getMessage(), "data" => $data]);
         }
 
-        
-        // $data=$_REQUEST;
-
-        // if($_FILES['img']){
-     
-        //     $tmp_name = $_FILES["img"]["tmp_name"];
-        //     $name = $_FILES["img"]["name"];
-        //     //$path=WRITEPATH."uploads/$name";
-        //     $path = "uploads/$name";
-        //     $data['image']=$path;
-        //     move_uploaded_file($tmp_name, WRITEPATH."uploads/$name");
-
-        // }
-    
-        // print_r($data);
-        // die;
-        // try {
-        //    // $Model->insert($data);
-        //     return $this->respond(["status" => "success", "data" => $Model]);
-        // } catch (\Exception $e) {
-        //     return $this->respond(["error" => $e->getMessage(), "data" => $data]);
-        // }
+      
     }
 
     function editPage($id)
@@ -103,7 +85,7 @@ class NewsAdmin extends BaseController
         $data['slug'] = str_replace(" ", "-", $data['title']);
         $id = $data['id'];
         unset($data['id']);
-   
+
         try {
             $Model->update($id, $data);
             return $this->respond(["status" => "success", "data" => $Model]);
@@ -124,5 +106,17 @@ class NewsAdmin extends BaseController
         } catch (\Exception $e) {
             return $this->respond(["error" => $e->getMessage(), "data" => $data]);;
         }
+    }
+
+    private function AddImgToFile($img) : int {
+        if (!$img->hasMoved()) {
+            $name = $img->store();
+            $path = WRITEPATH . 'uploads/' . $name;
+            $params = ["path" => $path, "name" => $name];
+            $ModelFile = model('File');
+
+            $ModelFile->insert($params);
+            return  $ModelFile->getInsertID();
+        }   
     }
 }
