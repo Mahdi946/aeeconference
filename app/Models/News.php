@@ -13,7 +13,7 @@ class News extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title', 'content', 'slug', 'image', 'date',"category"];
+    protected $allowedFields    = ['title', 'content', 'slug', 'image', 'date',"category","title_en","content_en"];
 
     protected bool $allowEmptyInserts = false;
 

@@ -973,13 +973,13 @@
                             <span> <?= $news['date'] ?></span>
                             <h3>
                                 <a href="<?= base_url("/news/" . $news['slug']) ?>">
-                                    <?= $news['title'] ?>
+                                    <?= $news['title_en'] ?>
                                 </a>
                             </h3>
                             <p>
-                                <?= substr($news['content'], 0, 50) ?>
+                                <?= substr($news['content_en'], 0, 50) ?>
                             </p>
-                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">بیشتر بخوانید</a>
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">read more</a>
                         </div>
                     </div>
                 </div>

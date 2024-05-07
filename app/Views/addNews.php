@@ -11,6 +11,10 @@
                 <input require id="title" name="title" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] " placeholder="عنوان">
             </div>
             <div class="flex flex-col gap-2">
+                <label for=""> عنوان انگلیسی </label>
+                <input require id="title_en" name="title_en" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] " placeholder="عنوان">
+            </div>
+            <div class="flex flex-col gap-2">
                 <label for=""> دسته بندی </label>
                 <select require id="category" name="category" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ">
                     <?php
@@ -26,6 +30,13 @@
                 <textarea require id="content" name="content" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] "></textarea>
 
             </div>
+
+            <div class="flex flex-col gap-2">
+                <label for=""> متن انگلیسی </label>
+                <textarea require id="content_en" name="content_en" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] "></textarea>
+
+            </div>
+
             <div class="flex flex-col gap-2">
                 <label for=""> تصویر </label>
                 <input id="img" name="img" type="file" accept="image/*" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ">
