@@ -14,23 +14,26 @@
     <div class="flex flex-row gap-2 flex-warp p-2 ">
 
         <?php foreach ($allNews as $news) { ?>
-            <div class="w-[300px] rounded-md shadow-md bg-slate-50 p-4">
-                <div class="flex flex-col gap-4">
-                    <div class="w-full h-[120px] object-fit ">
+            <div class="w-[300px] rounded-md shadow-md bg-slate-50 ">
+                <div class="">
+                    <div class="w-full h-[200px] ">
                         <?php if ($news['image']) { ?>
-                            <img src="<?= $news['image'] ?>" alt="<?= $news['title'] ?>">
+                            <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md " src="<?= base_url().'news/img/'.$news['id'] ?>" alt="<?= $news['title'] ?>">
                         <?php } ?>
-                    </div>
-                    <b><?= $news['title'] ?></b>
-                    <p>
-                        <?= substr($news['content'], 0, 50) ?>
+                    </div>  
+                    <div class="p-4 flex flex-col gap-4">
+                        <b><?= $news['title'] ?></b>
+                        <p>
+                            <?= substr($news['content'], 0, 50) ?>
+    
+                        </p>
+    
+                        <hr>
 
-                    </p>
-
-                    <hr>
-                    <div class="flex flex-row justify-between px-4 ">
-                        <div class="cursor-pointer"> <a href="<?= base_url('/admin/editNews/'.$news['id']); ?>" ><small> ویرایش </small></a> </div>
-                        <div><small class="text-red-300 cursor-pointer removeItem" data-id="<?=$news['id']?>" data-title="<?=$news['title']?>" > حذف </small></div>
+                        <div class="flex flex-row justify-between px-4 ">
+                            <div class="cursor-pointer"> <a href="<?= base_url('/admin/editNews/'.$news['id']); ?>" ><small> ویرایش </small></a> </div>
+                            <div><small class="text-red-300 cursor-pointer removeItem" data-id="<?=$news['id']?>" data-title="<?=$news['title']?>" > حذف </small></div>
+                        </div>
                     </div>
                 </div>
             </div>

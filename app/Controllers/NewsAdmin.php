@@ -37,6 +37,7 @@ class NewsAdmin extends BaseController
 
         $Model = model('News');
         $data = ($this->request->getPost());
+        $data['slug'] = str_replace(" ", "-", $data['title']);
 
         if ($this->request->getFile('img') !== null) {
             $validationRule = [
@@ -81,11 +82,31 @@ class NewsAdmin extends BaseController
     function update()
     {
         $Model = model('News');
-        $data = json_decode($this->request->getBody(), true);
+        $data = $this->request->getPost();
         $data['slug'] = str_replace(" ", "-", $data['title']);
         $id = $data['id'];
         unset($data['id']);
 
+        if ($this->request->getFile('img') !== null) {
+            $validationRule = [
+                'img' => [
+                    'label' => 'News Image File',
+                    'rules' => [
+                        'uploaded[img]',
+                        'is_image[img]',
+                        'mime_in[img,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                    ],
+                ],
+            ];
+            if (!$this->validateData([], $validationRule)) {
+                return $this->respond(["error" => $this->validator->getErrors()]);
+            }
+
+            $img = $this->request->getFile('img');
+            $data['image']=$this->AddImgToFile($img);
+          
+        }
+        
         try {
             $Model->update($id, $data);
             return $this->respond(["status" => "success", "data" => $Model]);

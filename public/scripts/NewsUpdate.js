@@ -7,8 +7,11 @@ const content=document.querySelector("#content");
 
 if(Button !==null){
     Button.onclick=()=>{
-        SendDataForm(Button,"newsForm","admin/news",[title,category,content],[],()=>{
+        SendDataForm(Button,"newsForm","admin/news",[title,category,content],[
+            {name:"_method",value:"PUT"},
+            {name:"img",value:document.querySelector("#img").files[0]}
+        ],()=>{
             history.back();
-        },"PUT");
+        },"POST");
     }
 }
