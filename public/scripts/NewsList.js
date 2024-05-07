@@ -13,7 +13,7 @@ const CreateEditRemoveAction = () => {
 const ReadyForRemove = (param) => {
     let text = `آیا از حذف ${param.title} اطمینان دارید؟`;
     if (confirm(text) == true) {
-        Fetching("admin/news", {id:param.id}, (response) => {
+        Fetching("admin/news/"+param.id, {}, (response) => {
            window.location.reload();
         }, "DELETE")
     } 

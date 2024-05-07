@@ -17,6 +17,7 @@
             <div class="w-[300px] rounded-md shadow-md bg-slate-50 ">
                 <div class="">
                     <div class="w-full h-[200px] ">
+                  
                         <?php if ($news['image']) { ?>
                             <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md " src="<?= base_url().'news/img/'.$news['id'] ?>" alt="<?= $news['title'] ?>">
                         <?php } ?>

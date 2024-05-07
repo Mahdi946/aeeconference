@@ -55,8 +55,7 @@ class NewsAdmin extends BaseController
             }
 
             $img = $this->request->getFile('img');
-            $data['image']=$this->AddImgToFile($img);
-          
+            $data['image'] = $this->AddImgToFile($img);
         }
 
         try {
@@ -65,8 +64,6 @@ class NewsAdmin extends BaseController
         } catch (\Exception $e) {
             return $this->respond(["error" => $e->getMessage(), "data" => $data]);
         }
-
-      
     }
 
     function editPage($id)
@@ -101,12 +98,11 @@ class NewsAdmin extends BaseController
             if (!$this->validateData([], $validationRule)) {
                 return $this->respond(["error" => $this->validator->getErrors()]);
             }
-
+            $this->RemoveNewsFile($id);
             $img = $this->request->getFile('img');
-            $data['image']=$this->AddImgToFile($img);
-          
+            $data['image'] = $this->AddImgToFile($img);
         }
-        
+
         try {
             $Model->update($id, $data);
             return $this->respond(["status" => "success", "data" => $Model]);
@@ -115,21 +111,32 @@ class NewsAdmin extends BaseController
         }
     }
 
-    function remove()
+    function remove($id)
     {
         $Model = model('News');
-        $data = json_decode($this->request->getBody(), true);
-        $id = $data['id'];
+  
+  
 
         try {
+
+            $this->RemoveNewsFile($id);
             $Model->delete($id);
             return $this->respond($Model);
         } catch (\Exception $e) {
-            return $this->respond(["error" => $e->getMessage(), "data" => $data]);;
+            return $this->respond(["error" => $e->getMessage()   ]);;
         }
     }
 
-    private function AddImgToFile($img) : int {
+    private function RemoveNewsFile($id): void
+    {
+        $Model = model('News');
+        $RecordData = $Model->find($id);
+        $this->RemoveFile($RecordData['image']);
+        $Model->update($id, ["image"=>null]);
+    }
+
+    private function AddImgToFile($img): int
+    {
         if (!$img->hasMoved()) {
             $name = $img->store();
             $path = WRITEPATH . 'uploads/' . $name;
@@ -138,6 +145,21 @@ class NewsAdmin extends BaseController
 
             $ModelFile->insert($params);
             return  $ModelFile->getInsertID();
-        }   
+        }
+    }
+    private function RemoveFile($id): void
+    {
+
+        $ModelFile = model('File');
+        $File = $ModelFile->where('id', $id)->first();
+        if($File==null)
+        return;
+    
+        if (file_exists($File['path'])){
+            unlink($File['path']);
+            $ModelFile->delete($id);
+
+        }
+
     }
 }
