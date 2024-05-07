@@ -962,10 +962,11 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
-                        <div class="image">
-                            <a href="<?= base_url("/news/" . $news['slug']) ?>">
-                                <img src="<?= $news['image'] ?>" alt="image">
-                            </a>
+                        <div class="image ">
+
+                            <?php if ($news['image']) { ?>
+                                <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md " src="<?= base_url() . 'news/img/' . $news['id'] ?>" alt="<?= $news['title'] ?>">
+                            <?php } ?>
                         </div>
 
                         <div class="content">

@@ -13,9 +13,9 @@
                             <!-- <span>Digital Marketing</span> -->
                             <!-- <h1>Digital Agency & Marketing</h1> -->
                             <h3> Technology and Innovation Prize </h3>
-                            <h1>  UNESCO </h1>
+                            <h1> UNESCO </h1>
                             <p>
-                            UNESCO's International Technology and Innovation PRIZE is held biennially. The fields of each period will be announced by the prize policy council one year before the prize ceremony. During this period, the prize will be given to candidates in the fields of health energy, and water.
+                                UNESCO's International Technology and Innovation PRIZE is held biennially. The fields of each period will be announced by the prize policy council one year before the prize ceremony. During this period, the prize will be given to candidates in the fields of health energy, and water.
 
                             </p>
                             <!-- <div class="banner-btn">
@@ -181,7 +181,7 @@
                     <h3>Prize </h3>
                     <div class="bar"></div>
                     <p>
-                    The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines. This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements.
+                        The advancement of technology and innovation is vital for the growth and success of every society, encompassing scientific, economic, social, cultural, and educational aspects. An effective approach involves observing and developing talent and guiding individuals toward commercializing their ideas. To this end, the UNESCO Technology and Innovation Prize in the Islamic Republic of Iran, in partnership with the Ministry of Science, Research and Technology, the National Commission for UNESCO-Iran, and the University of Tehran, will continue to be awarded based on established guidelines. This prize encourages researchers and experts to embrace a new outlook on technology and the economy. It inspires them to present innovative studies, conduct research, and offer products and services that align with technological advancements.
 
                     </p>
 
@@ -934,7 +934,7 @@
     <div class="container">
         <div class="section-title">
             <h2>Our <span>Latest</span> News</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p> -->
             <div class="bar"></div>
         </div>
 
@@ -944,10 +944,11 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
-                        <div class="image">
-                            <a href="<?= base_url("/news/" . $news['slug']) ?>">
-                                <img src="<?= $news['image'] ?>" alt="image">
-                            </a>
+                        <div class="image ">
+
+                            <?php if ($news['image']) { ?>
+                                <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md " src="<?= base_url() . 'news/img/' . $news['id'] ?>" alt="<?= $news['title'] ?>">
+                            <?php } ?>
                         </div>
 
                         <div class="content">
@@ -965,7 +966,7 @@
                     </div>
                 </div>
             <?php } ?>
-          
+
 
         </div>
     </div>

@@ -7,10 +7,10 @@
         <div class="d-table-cell">
             <div class="container">
                 <div class="page-title-content">
-                    <h2>  اخبار </h2>
+                    <h2> اخبار </h2>
                     <ul>
                         <li><a href="<?= base_url('/') ?>">خانه</a></li>
-                        <li> اخبار  </li>
+                        <li> اخبار </li>
                     </ul>
                 </div>
             </div>
@@ -20,8 +20,8 @@
 
 <section class="conditions-section ptb-100">
     <div class="container">
-   
-    <div class="section-title">
+
+        <div class="section-title">
             <h2>اخبار</h2>
             <p></p>
             <div class="bar"></div>
@@ -31,24 +31,25 @@
             <?php foreach ($allNews as $news) { ?>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
-                        <div class="image">
-                            <a href="<?=base_url("/news/".$news['slug'])?>">
-                                <img src="<?=$news['image']?>" alt="<?=$news['title']?>">
-                            </a>
+                        <div class="image ">
+
+                            <?php if ($news['image']) { ?>
+                                <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md " src="<?= base_url() . 'news/img/' . $news['id'] ?>" alt="<?= $news['title'] ?>">
+                            <?php } ?>
                         </div>
 
                         <div class="content">
-                            <span><?=$news['date']?></span>
+                            <span><?= $news['date'] ?></span>
                             <h3>
-                                <a href="<?=base_url("/news/".$news['slug'])?>">
-                                    <?=$news['title']?>
+                                <a href="<?= base_url("/news/" . $news['slug']) ?>">
+                                    <?= $news['title'] ?>
                                 </a>
                             </h3>
                             <p>
-                                <?=substr($news['content'],0,50) ?>
+                                <?= substr($news['content'], 0, 50) ?>
 
                             </p>
-                            <a href="<?=base_url("/news/".$news['slug'])?>" class="read-more">  مشاهده </a>
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more"> مشاهده </a>
                         </div>
                     </div>
                 </div>

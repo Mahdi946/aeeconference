@@ -86,6 +86,7 @@
 
     <link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css') ?>" />
+
 </head>
 
 <body>
@@ -112,7 +113,7 @@
 
                         <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
                             <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
-                            <small>English</small>
+                            <small>فارسی</small>
                         </a>
                     </div>
                 </div>
@@ -247,7 +248,7 @@
                         <div class="others-options">
                             <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="">
                                 <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
-                                <small>English</small>
+                                <small>فارسی</small>
                             </a>
                             <a href="<?= base_url('login') ?>" class="default-btn">Login</a>
                             <!--                                <a href="--><?php //=base_url('register')
