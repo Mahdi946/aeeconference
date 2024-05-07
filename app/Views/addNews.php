@@ -27,13 +27,13 @@
             </div>
             <div class="flex flex-col gap-2">
                 <label for=""> متن </label>
-                <textarea require id="content" name="content" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] "></textarea>
+                <textarea require id="content"  type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ckEditorF "></textarea>
 
             </div>
 
             <div class="flex flex-col gap-2">
                 <label for=""> متن انگلیسی </label>
-                <textarea require id="content_en" name="content_en" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] "></textarea>
+                <textarea require id="content_en"  type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ckEditor "></textarea>
 
             </div>
 

@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="flex flex-row gap-2 flex-warp p-2 ">
+    <div class="flex flex-row gap-2 flex-wrap p-2 ">
 
         <?php foreach ($allNews as $news) { ?>
             <div class="w-[300px] rounded-md shadow-md bg-slate-50 ">

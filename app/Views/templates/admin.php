@@ -10,6 +10,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="<?= base_url('assets/css/admin.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets-rtl/css/style.css') ?>">
+    <script src="<?= base_url('ck/ckeditor.js') ?>"></script>
+    <script src="<?= base_url('ck/AddCkToPage.js') ?>"></script>
 
 </head>
 
@@ -35,7 +37,7 @@
             <header class="h-10 w-full bg-slate-50 ">
 
             </header>
-            <div class="md:w-[80%] md:mx-auto">
+            <div class="md:w-[80%] md:mx-auto max-h-[90%] overflow-y-auto">
                 <?= $this->renderSection('content') ?>
             </div>
         </main>

@@ -1,7 +1,7 @@
 <?= $this->extend('templates/admin') ?>
 <?= $this->section('content') ?>
 
-<div class="flex flex-col gap-4 p-2 my-4 ">
+<div class="flex flex-col gap-4 p-2 my-4 max-h-screen ">
 
 
 
@@ -30,13 +30,13 @@
             </div>
             <div class="flex flex-col gap-2">
                 <label for=""> متن </label>
-                <textarea require id="content" name="content" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] "><?= $news['content'] ?> </textarea>
+                <textarea require id="content"   type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ckEditorF"><?= $news['content'] ?> </textarea>
 
             </div>
 
             <div class="flex flex-col gap-2">
                 <label for=""> متن انگلیسی </label>
-                <textarea require id="content_en" name="content_en" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] "><?= $news['content_en'] ?> </textarea>
+                <textarea require id="content_en"   type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] ckEditor"><?= $news['content_en'] ?> </textarea>
 
             </div>
 
