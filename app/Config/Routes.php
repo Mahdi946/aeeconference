@@ -29,6 +29,7 @@ $routes->get('/admin/editNews/(:segment)', [NewsAdmin::class, 'editPage']);
 $routes->put('/admin/news', [NewsAdmin::class, 'update']);
 $routes->delete('/admin/news', [NewsAdmin::class, 'remove']);
 $routes->get('/news/(:segment)', [News::class, 'view']);
+$routes->get('/news/img/(:segment)', [News::class, 'image']);
 $routes->get('/admin/category', [Category::class, 'form']);
 $routes->get('/admin/category/all', [Category::class, 'all']);
 $routes->post('/admin/category', [Category::class, 'add']);
