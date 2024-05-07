@@ -11,6 +11,7 @@ if(Button !==null){
             {name:"content",value:window.editorFa[0].getData()},
             {name:"content_en",value:window.editors[0].getData()},
         ],()=>{
+            window.location.reload()
             history.back();
         },"POST");
     }
