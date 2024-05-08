@@ -22,7 +22,6 @@ service('auth')->routes($routes);
 $routes->get('/', 'Home::index');
 $routes->get('lang/{locale}', 'Language::index');
 
-$routes->get('/news', [News::class, 'index']);
 $routes->get('/admin/news', [NewsAdmin::class, 'viewPanel']);
 $routes->get('/admin/addNewsEn', [NewsAdmin::class, 'addNewsEn']);
 $routes->get('/admin/addNews', [NewsAdmin::class, 'addNews']);
@@ -32,13 +31,15 @@ $routes->get('/admin/editNewsEn/(:segment)', [NewsAdmin::class, 'editPageEn']);
 $routes->put('/admin/news', [NewsAdmin::class, 'update']);
 $routes->delete('/admin/news/(:segment)', [NewsAdmin::class, 'remove']);
 $routes->get('/admin/logout', [Logout::class, 'index']);
-$routes->get('/news/(:segment)', [News::class, 'view']);
-$routes->get('/news/img/(:segment)', [News::class, 'image']);
 $routes->get('/admin/category', [Category::class, 'form']);
 $routes->get('/admin/category/all', [Category::class, 'all']);
 $routes->post('/admin/category', [Category::class, 'add']);
 $routes->put('/admin/category', [Category::class, 'update']);
 $routes->delete('/admin/category', [Category::class, 'remove']);
+
+$routes->get('/news', [News::class, 'index']);
+$routes->get('/news/(:segment)', [News::class, 'view']);
+$routes->get('/news/img/(:segment)', [News::class, 'image']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 
 

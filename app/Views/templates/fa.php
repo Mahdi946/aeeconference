@@ -252,7 +252,15 @@
                                 <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
                                 <small> English </small>
                             </a>
-                            <a href="<?= base_url('login') ?>" class="default-btn">ورود</a>
+                            <?php if ($auth) { ?>
+
+                                <a href="<?= base_url('/admin/news') ?>" class="default-btn">اخبار</a>
+                            <?php
+                            } else {
+                            ?>
+
+                                <a href="<?= base_url('login') ?>" class="default-btn">ورود</a>
+                            <?php } ?>
                             <!--                                <a href="--><?php //=('register')
                                                                             ?><!--" class="default-btn">ثبت‌نام</a>-->
                         </div>
