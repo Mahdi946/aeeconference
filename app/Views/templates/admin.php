@@ -22,6 +22,11 @@
                 <div class="p-4  ">
                     <b> </b>
                 </div>
+                <a href="<?= base_url('/') ?>">
+                    <div class="p-2 border-b border-slate-200 cursor-pointer">
+                        <b>خانه</b>
+                    </div>
+                </a>
                 <a href="<?= base_url('/admin/category') ?>">
                     <div class="p-2 border-b border-slate-200 cursor-pointer">
                         <b>دسته بندی</b>
@@ -44,7 +49,7 @@
             <header class="h-10 w-full bg-slate-50 ">
 
             </header>
-            <div class="md:w-[80%] md:mx-auto max-h-[90%] overflow-y-auto">
+            <div class="md:w-[80%] md:mx-auto max-h-[90%] overflow-y-auto min-w-[330px]">
                 <?= $this->renderSection('content') ?>
             </div>
         </main>

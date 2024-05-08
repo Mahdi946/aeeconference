@@ -5,13 +5,13 @@
 
     <div class="flex flex-row">
         <div class="w-[150px]">
-            <a class="cursor-pointer p-2 bg-green-500 rounded-[10px] text-white" href="<?= base_url('/admin/addNews'); ?>">
+            <a class="cursor-pointer p-2 bg-green-500 rounded-[10px] text-white hover:text-white" href="<?= base_url('/admin/addNews'); ?>">
                 افزودن خبر فارسی
             </a>
         </div>
 
         <div class="w-[150px]">
-            <a class="cursor-pointer p-2 bg-yellow-500 rounded-[10px] text-white" href="<?= base_url('/admin/addNewsEn'); ?>">
+            <a class="cursor-pointer p-2 bg-yellow-500 rounded-[10px] text-white hover:text-white" href="<?= base_url('/admin/addNewsEn'); ?>">
                 افزودن خبر انگلیسی
             </a>
         </div>
