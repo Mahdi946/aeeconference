@@ -28,7 +28,7 @@ class NewsAdmin extends BaseController
         $Model = model('category');
         $news = $Model->findAll();
 
-        return view('addNews', ["categories" => $news,"lng"=>"fa"]);
+        return view('addNews', ["categories" => $news,"lang"=>"fa"]);
     }
 
     public function addNewsEn()
@@ -36,7 +36,7 @@ class NewsAdmin extends BaseController
         $Model = model('category');
         $news = $Model->findAll();
 
-        return view('addNews', ["categories" => $news,"lng"=>"en"]);
+        return view('addNews', ["categories" => $news,"lang"=>"en"]);
     }
 
 
@@ -80,7 +80,7 @@ class NewsAdmin extends BaseController
         $category = $category->findAll();
         $newModel = model('News');
         $news = $newModel->where('id', $id)->first();
-        return view('editNews', ["news" => $news, "categories" => $category,"lng"=>"fa"]);
+        return view('editNews', ["news" => $news, "categories" => $category,"lang"=>"fa"]);
     }
 
     function editPageEn($id)
@@ -89,7 +89,7 @@ class NewsAdmin extends BaseController
         $category = $category->findAll();
         $newModel = model('News');
         $news = $newModel->where('id', $id)->first();
-        return view('editNews', ["news" => $news, "categories" => $category,"lng"=>"en"]);
+        return view('editNews', ["news" => $news, "categories" => $category,"lang"=>"en"]);
     }
 
 

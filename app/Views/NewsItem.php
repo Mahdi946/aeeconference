@@ -1,7 +1,7 @@
 <div class="flex flex-col gap-2">
     <label for="">عنوان </label>
-    <input dir="<?= $lng === "fa" ? "rtl" : "ltr" ?>" require id="title" name="title" value="<?= $edit ? $news['title'] : "" ?>"  type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] " placeholder="عنوان">
-    <input hidden id="lng" name="lng" type="text" value="<?= $lng ?>">
+    <input dir="<?= $lang === "fa" ? "rtl" : "ltr" ?>" require id="title" name="title" value="<?= $edit ? $news['title'] : "" ?>"  type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] " placeholder="عنوان">
+    <input hidden id="lang" name="lang" type="text" value="<?= $lang ?>">
     <?php if ($edit) { ?>
         <input id="id" value="<?= $news['id'] ?>" name="id" type="text" hidden>
     <?php } ?>
@@ -29,7 +29,7 @@
 
 <div class="flex flex-col gap-2">
     <label for=""> متن </label>
-    <textarea require id="content" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] <?= $lng == "fa" ? "ckEditorF" : "ckEditor" ?> ">
+    <textarea require id="content" type="text" class="p-2 rounded-[10px] bg-gray-100   outline-[#0284c7] <?= $lang == "fa" ? "ckEditorF" : "ckEditor" ?> ">
             <?php if ($edit) { ?>
                 <?= $news['content'] ?>
             <?php } ?>

@@ -38,7 +38,7 @@
                         <hr>
 
                         <div class="flex flex-row justify-between px-4 ">
-                            <div class="cursor-pointer"> <a href="<?= base_url("".$news['lng']==='fa'?"/admin/editNews".'/'.$news['id']:"/admin/editNewsEn".'/'.$news['id']); ?>" ><small> ویرایش </small></a> </div>
+                            <div class="cursor-pointer"> <a href="<?= base_url("".$news['lang']==='fa'?"/admin/editNews".'/'.$news['id']:"/admin/editNewsEn".'/'.$news['id']); ?>" ><small> ویرایش </small></a> </div>
                             <div><small class="text-red-300 cursor-pointer removeItem" data-id="<?=$news['id']?>" data-title="<?=$news['title']?>" > حذف </small></div>
                         </div>
                     </div>

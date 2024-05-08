@@ -4,12 +4,12 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class NewsLngFields extends Migration
+class NewslangFields extends Migration
 {
     public function up()
     {
         $fields = [
-            'lng' => [
+            'lang' => [
                 'type' => 'ENUM("fa","en")',
                 'default' => 'fa',
  
@@ -21,7 +21,7 @@ class NewsLngFields extends Migration
 
     public function down()
     {
-        $this->forge->dropColumn('news', 'lng');
+        $this->forge->dropColumn('news', 'lang');
 
     }
 }

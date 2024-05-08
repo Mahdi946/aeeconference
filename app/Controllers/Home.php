@@ -7,7 +7,7 @@ class Home extends BaseController
     {
         $auth=auth()->loggedIn();
         $newModel = model('News');
-        $newsData = $newModel->where("lng",$this->locale)->findAll(3, 0);
+        $newsData = $newModel->where("lang",$this->locale)->findAll(3, 0);
         return view('home-'.$this->locale,["newsData"=>$newsData,"auth"=>$auth]);
     }
 }
