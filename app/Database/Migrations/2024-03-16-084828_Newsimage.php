@@ -9,9 +9,13 @@ class Newsimage extends Migration
     public function up()
     {
         $fields = [
-            'image' => ['type' => 'VARCHAR','constraint' => '255',],
+            'image' => ['type' => 'INT','constraint' => '5','unsigned' => true,'null' => true,],
+            //'CONSTRAINT image FOREIGN KEY(`image`) REFERENCES `files`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE'
+
         ];
         $this->forge->addColumn('news', $fields);
+
+    
     }
 
     public function down()

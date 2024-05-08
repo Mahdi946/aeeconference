@@ -11,6 +11,7 @@ class Pages extends BaseController
 
     public function view($page = 'home')
     {
-        return view($page.'-'.$this->locale);
+        $auth=auth()->loggedIn();
+        return view($page.'-'.$this->locale,["auth"=>$auth]);
     }
 }

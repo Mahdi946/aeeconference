@@ -26,7 +26,9 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="project-details-image">
-                        <img src="<?=$news['image']?>" alt="<?=$news['title']?>">
+                    <?php if ($news['image']) { ?>
+                        <img class="  " src="<?= base_url() . 'news/img/' . $news['id'] ?>" alt="<?= $news['title'] ?>">
+                    <?php } ?>
                     </div>
                 </div>
 

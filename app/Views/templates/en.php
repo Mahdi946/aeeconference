@@ -3,13 +3,13 @@
 
 <head>
 
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="Novin Tarh Pars">
-	<!-- Send your Resume to Jobs [ at ] NovinTarhPars.com -->
-	<!-- 
+    <!-- Send your Resume to Jobs [ at ] NovinTarhPars.com -->
+    <!-- 
 									  Novin Tarh Pars
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -86,6 +86,7 @@
 
     <link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css') ?>" />
+
 </head>
 
 <body>
@@ -112,7 +113,7 @@
 
                         <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
                             <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
-                            <small>English</small>
+                            <small>فارسی</small>
                         </a>
                     </div>
                 </div>
@@ -247,9 +248,17 @@
                         <div class="others-options">
                             <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="">
                                 <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
-                                <small>English</small>
+                                <small>فارسی</small>
                             </a>
-                            <a href="<?= base_url('login') ?>" class="default-btn">Login</a>
+                            <?php if ($auth) { ?>
+
+                                <a href="<?= base_url('/admin/news') ?>" class="default-btn">اخبار</a>
+                            <?php
+                            } else {
+                            ?>
+
+                                <a href="<?= base_url('login') ?>" class="default-btn">Login</a>
+                            <?php } ?>
                             <!--                                <a href="--><?php //=base_url('register')
                                                                             ?><!--" class="default-btn">Register</a>-->
                         </div>

@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Category extends Model
+class File extends Model
 {
-    protected $table            = 'categories';
+    protected $table            = 'files';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = true;
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["title","slug","img"];
+    protected $allowedFields    = ['path','name'];
 
     protected bool $allowEmptyInserts = false;
 
@@ -24,17 +24,8 @@ class Category extends Model
     protected $deletedField  = 'deleted_at';
 
     // Validation
-    protected $validationRules = [
-        'title'     => 'required|max_length[30]|min_length[3]',
-
-    ];
-    protected $validationMessages = [
-        'title' => [
-            'required' => 'فیلد عنوان الزامی است!',
-        ],
-    ];
-
-
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
 

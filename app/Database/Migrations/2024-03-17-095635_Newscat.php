@@ -10,7 +10,7 @@ class Newscat extends Migration
     {
         $fields = [
             'category' => ['type' => 'INT','constraint' => '5','unsigned' => true,],
-            'CONSTRAINT category FOREIGN KEY(`category`) REFERENCES `category`(`id`)'
+            'CONSTRAINT category FOREIGN KEY(`category`) REFERENCES `categories`(`id`)'
         ];
         $this->forge->addColumn('news', $fields);
 
@@ -18,7 +18,7 @@ class Newscat extends Migration
 
     public function down()
     {
-        $this->forge->dropForeignKey('category','category');
+        $this->forge->dropForeignKey('categories','category');
         $this->forge->dropColumn('news', 'category');
     }
 }

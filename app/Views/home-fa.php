@@ -370,7 +370,7 @@
             <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
-        <div class="row-counter align-items-center">
+        <div dir="ltr" class="row-counter align-items-center">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
@@ -962,10 +962,11 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
-                        <div class="image">
-                            <a href="<?= base_url("/news/" . $news['slug']) ?>">
-                                <img src="<?= $news['image'] ?>" alt="image">
-                            </a>
+                        <div class="image ">
+
+                            <?php if ($news['image']) { ?>
+                                <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md " src="<?= base_url() . 'news/img/' . $news['id'] ?>" alt="<?= $news['title'] ?>">
+                            <?php } ?>
                         </div>
 
                         <div class="content">
@@ -978,7 +979,7 @@
                             <p>
                                 <?= substr($news['content'], 0, 50) ?>
                             </p>
-                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">بیشتر بخوانید</a>
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">  مشاهده </a>
                         </div>
                     </div>
                 </div>

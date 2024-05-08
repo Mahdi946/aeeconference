@@ -8,8 +8,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="Novin Tarh Pars">
-	<!-- Send your Resume to Jobs [ at ] NovinTarhPars.com -->
-	<!-- 
+    <!-- Send your Resume to Jobs [ at ] NovinTarhPars.com -->
+    <!-- 
 									  Novin Tarh Pars
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -109,11 +109,11 @@
                     <div class="logo">
                         <a href="<?= base_url('/') ?>">
                             <img src="<?= base_url('assets-rtl/img/logo.png') ?>" alt="logo" class="logo-header">
-                            
+
                         </a>
                         <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
                             <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
-                            <small> فارسی </small>
+                            <small> English </small>
                         </a>
 
                     </div>
@@ -250,9 +250,17 @@
                         <div class="others-options">
                             <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="">
                                 <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
-                                <small> فارسی </small>
+                                <small> English </small>
                             </a>
-                            <a href="<?= base_url('login') ?>" class="default-btn">ورود</a>
+                            <?php if ($auth) { ?>
+
+                                <a href="<?= base_url('/admin/news') ?>" class="default-btn">اخبار</a>
+                            <?php
+                            } else {
+                            ?>
+
+                                <a href="<?= base_url('login') ?>" class="default-btn">ورود</a>
+                            <?php } ?>
                             <!--                                <a href="--><?php //=('register')
                                                                             ?><!--" class="default-btn">ثبت‌نام</a>-->
                         </div>
@@ -439,8 +447,8 @@
 
     <script>
         $(document).ready(function() {
-            if(document.querySelector("#map")===null)
-            return;
+            if (document.querySelector("#map") === null)
+                return;
             //1. initialize leaflet map
             var center = [35.73338, 51.39444];
             var propertiesmap = L.map('map').setView(center, 17);
@@ -457,9 +465,6 @@
             var marker = L.marker(center).addTo(propertiesmap);
 
         });
-
-
-   
     </script>
 </body>
 

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use CodeIgniter\Files\File;
 use CodeIgniter\Model;
 
 class News extends Model
@@ -10,9 +11,9 @@ class News extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = true;
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title', 'content', 'slug', 'image', 'date'];
+    protected $allowedFields    = ['title', 'content', 'slug', 'image', 'date',"category","lang"];
 
     protected bool $allowEmptyInserts = false;
 
@@ -39,4 +40,7 @@ class News extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+         
+   
 }
