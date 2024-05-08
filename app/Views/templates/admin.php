@@ -38,7 +38,7 @@
                     </div>
                 </a>
                 <a href="<?= base_url('/admin/logout') ?>">
-                    <div class="p-2 border-b border-slate-200 cursor-pointer text-red-300">
+                    <div class="p-2  border-slate-200 cursor-pointer text-red-300">
                         <b>خروج</b>
                     </div>
                 </a>
