@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\Category;
+use App\Controllers\Logout;
 use App\Controllers\News;
 use App\Controllers\NewsAdmin;
 use CodeIgniter\Router\RouteCollection;
@@ -30,6 +31,7 @@ $routes->get('/admin/editNews/(:segment)', [NewsAdmin::class, 'editPage']);
 $routes->get('/admin/editNewsEn/(:segment)', [NewsAdmin::class, 'editPageEn']);
 $routes->put('/admin/news', [NewsAdmin::class, 'update']);
 $routes->delete('/admin/news/(:segment)', [NewsAdmin::class, 'remove']);
+$routes->get('/admin/logout', [Logout::class, 'index']);
 $routes->get('/news/(:segment)', [News::class, 'view']);
 $routes->get('/news/img/(:segment)', [News::class, 'image']);
 $routes->get('/admin/category', [Category::class, 'form']);

@@ -31,7 +31,14 @@
                     <div class="p-2 border-b border-slate-200 cursor-pointer">
                         <b>اخبار</b>
                     </div>
-            </div></a>
+                </a>
+                <a href="<?= base_url('/admin/logout') ?>">
+                    <div class="p-2 border-b border-slate-200 cursor-pointer text-red-300">
+                        <b>خروج</b>
+                    </div>
+                </a>
+            </div>
+      
         </aside>
         <main class="w-full h-full">
             <header class="h-10 w-full bg-slate-50 ">

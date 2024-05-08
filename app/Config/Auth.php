@@ -75,7 +75,7 @@ class Auth extends ShieldAuth
      */
     public array $redirects = [
         'register'          => '/',
-        'login'             => '/',
+        'login'             => '/admin/news',
         'logout'            => 'login',
         'force_reset'       => '/',
         'permission_denied' => '/',
@@ -153,7 +153,7 @@ class Auth extends ShieldAuth
      * --------------------------------------------------------------------
      * Determines whether users can register for the site.
      */
-    public bool $allowRegistration = false;
+    public bool $allowRegistration = true;
 
     /**
      * --------------------------------------------------------------------

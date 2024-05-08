@@ -10,7 +10,13 @@ class Category extends BaseController
 {
     use ResponseTrait;
 
-    function all()  {
+    public function __construct()
+    {
+       
+    }
+
+    function all()
+    {
         $categoryModel = model('Category');
         return $this->respond($categoryModel->findAll());
     }
@@ -24,7 +30,7 @@ class Category extends BaseController
     {
         $categoryModel = model('Category');
         $data = json_decode($this->request->getBody(), true);
-        $data['slug']=str_replace(" ","-",$data['title']);
+        $data['slug'] = str_replace(" ", "-", $data['title']);
 
         try {
             $categoryModel->insert($data);
@@ -38,24 +44,24 @@ class Category extends BaseController
     {
         $categoryModel = model('Category');
         $data = json_decode($this->request->getBody(), true);
-        $data['slug']=str_replace(" ","-",$data['title']);
-        $id=$data['id'];
+        $data['slug'] = str_replace(" ", "-", $data['title']);
+        $id = $data['id'];
         unset($data['id']);
 
         try {
-            $categoryModel->update($id,$data);
+            $categoryModel->update($id, $data);
             return $this->respond($categoryModel);
         } catch (\Exception $e) {
             return $this->respond(["error" => $e->getMessage(), "data" => $data]);;
         }
     }
-    
+
     function remove()
     {
         $categoryModel = model('Category');
         $data = json_decode($this->request->getBody(), true);
-        $id=$data['id'];
- 
+        $id = $data['id'];
+
         try {
             $categoryModel->delete($id);
             return $this->respond($categoryModel);
