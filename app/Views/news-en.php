@@ -42,11 +42,11 @@
                             <span><?= $news['date'] ?></span>
                             <h3>
                                 <a href="<?= base_url("/news/" . $news['slug']) ?>">
-                                    <?= $news['title_en'] ?>
+                                    <?= $news['title'] ?>
                                 </a>
                             </h3>
                             <p>
-                                <?= substr($news['content_en'], 0, 50) ?>
+                                <?= substr($news['content'], 0, 50) ?>
 
                             </p>
                             <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">Read More</a>

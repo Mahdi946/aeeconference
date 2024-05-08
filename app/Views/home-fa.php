@@ -370,7 +370,7 @@
             <!-- <h2>We have Completed <span>20000+</span> Projects <span>Successfully</span></h2> -->
         </div>
 
-        <div class="row-counter align-items-center">
+        <div dir="ltr" class="row-counter align-items-center">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-counter">
                     <div class="icon">
@@ -973,13 +973,13 @@
                             <span> <?= $news['date'] ?></span>
                             <h3>
                                 <a href="<?= base_url("/news/" . $news['slug']) ?>">
-                                    <?= $news['title_en'] ?>
+                                    <?= $news['title'] ?>
                                 </a>
                             </h3>
                             <p>
-                                <?= substr($news['content_en'], 0, 50) ?>
+                                <?= substr($news['content'], 0, 50) ?>
                             </p>
-                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">read more</a>
+                            <a href="<?= base_url("/news/" . $news['slug']) ?>" class="read-more">  مشاهده </a>
                         </div>
                     </div>
                 </div>

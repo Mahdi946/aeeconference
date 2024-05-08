@@ -8,7 +8,7 @@ class Home extends BaseController
     {
 
         $newModel = model('News');
-        $newsData = $newModel->findAll(3, 0);
+        $newsData = $newModel->where("lng",$this->locale)->findAll(3, 0);
         return view('home-'.$this->locale,["newsData"=>$newsData]);
     }
 }
