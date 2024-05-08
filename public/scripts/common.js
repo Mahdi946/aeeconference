@@ -2,7 +2,7 @@
 
 //const Proof = await import("../Proof.js");
 
-const ApiUrl = "http://localhost:8081/";
+const ApiUrl = "/";
 
 export const SendDataForm = (
   btn,
