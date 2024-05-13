@@ -5,7 +5,7 @@
 
 <!-- Start Banner Area -->
 <div class="main-banner-area">
-     <section class="clients-section ptb-100">
+    <section class="clients-section ptb-100">
         <div class="container">
 
             <div class="clients-slider owl-carousel owl-theme">
@@ -103,58 +103,58 @@
 <!-- End Blog Area -->
 
 
-        <!-- Start Features Area -->
-        <section class="features-section pt-100 pb-70">
-            <div class="container">
-                <div class="section-title">
-                    <h2>ویژگی های خلاقانه</h2>
-                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
-                    <div class="bar"></div>
-                </div>
+<!-- Start Features Area -->
+<section class="features-section pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <h2>ویژگی های خلاقانه</h2>
+            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p>
+            <div class="bar"></div>
+        </div>
 
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="features-content">
-                            <div class="icon">
-                                <i class="flaticon-blueprint"></i>
-                            </div>
-                            <h3>طراحی عالی</h3>
-                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
-                        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="features-content">
+                    <div class="icon">
+                        <i class="flaticon-blueprint"></i>
                     </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="features-content">
-                            <div class="icon">
-                                <i class="flaticon-update"></i>
-                            </div>
-                            <h3>انتخاب بهینه</h3>
-                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="features-content">
-                            <div class="icon left-icon">
-                                <i class="flaticon-security"></i>
-                            </div>
-                            <h3>بهترین کیفیت</h3>
-                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="features-content">
-                            <div class="icon">
-                                <i class="flaticon-clock"></i>
-                            </div>
-                            <h3>صرفه جویی زمان</h3>
-                            <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
-                        </div>
-                    </div>
+                    <h3>طراحی عالی</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
                 </div>
             </div>
-        </section>
-        <!-- End Features Area -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="features-content">
+                    <div class="icon">
+                        <i class="flaticon-update"></i>
+                    </div>
+                    <h3>انتخاب بهینه</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="features-content">
+                    <div class="icon left-icon">
+                        <i class="flaticon-security"></i>
+                    </div>
+                    <h3>بهترین کیفیت</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="features-content">
+                    <div class="icon">
+                        <i class="flaticon-clock"></i>
+                    </div>
+                    <h3>صرفه جویی زمان</h3>
+                    <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Features Area -->
 
 <?= $this->endSection() ?>
