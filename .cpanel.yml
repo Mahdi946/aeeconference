@@ -1,8 +1,8 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/unescoprize/
- - export PUBLICPATH=/home/unescoprize/public_html/
+ - export DEPLOYPATH=/home/aeeconference/
+ - export PUBLICPATH=/home/aeeconference/public_html/
  - echo "Copying..."
  - /bin/cp -R app $DEPLOYPATH
  - /bin/cp -R public/favicon.ico $PUBLICPATH
