@@ -82,7 +82,7 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css') ?>">
 
-    <title>UNESCO Prize</title>
+    <title>Tarvig Congress</title>
 
     <link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css') ?>" />
@@ -136,10 +136,10 @@
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Prize
-                                    <i class='bx bx-chevron-down'></i>
+                                Communities
+                                    <!-- <i class='bx bx-chevron-down'></i> -->
                                 </a>
-                                <ul class="dropdown-menu">
+                                <!-- <ul class="dropdown-menu">
                                     <li class="nav-item">
                                         <a href="<?= base_url('prize-overview') ?>" class="nav-link">
                                             Prize Overview
@@ -172,71 +172,20 @@
                                             FAQs
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    <!-- Nomination -->
-                                    Prize Candidate
-                                    <i class='bx bx-chevron-down'></i>
+                                    Conferences
                                 </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('nomination-indicator') ?>" class="nav-link">
-                                            Criteria
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('call-for-entries') ?>" class="nav-link">
-                                            Call for Entries
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('process-nominees') ?>" class="nav-link">
-                                            Selection Process
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
-
-                            <li class="nav-item d-none">
-                                <a href="#" class="nav-link">
-                                    Winners
-                                    <i class='bx bx-chevron-down'></i>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('winners-2024') ?>" class="nav-link">
-                                            2024 Winners
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('winners-2025') ?>" class="nav-link">
-                                            2025 Winners
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <!-- 
-                                <li class="nav-item">
-                                    <a href="<?= base_url('events') ?>" class="nav-link">
-                                        Events
-                                    </a>
-                                </li> -->
 
                             <li class="nav-item">
-                                <a href="<?= base_url('news') ?>" class="nav-link">
-                                    News
+                                <a href="<?= base_url('contact') ?>" class="nav-link">
+                                    Education
                                 </a>
                             </li>
-
                             <li class="nav-item">
                                 <a href="<?= base_url('contact') ?>" class="nav-link">
                                     Contact
@@ -252,12 +201,12 @@
                             </a>
                             <?php if ($auth) { ?>
 
-                                <a href="<?= base_url('/admin/news') ?>" class="default-btn">اخبار</a>
+                                <a href="<?= base_url('/admin/news') ?>" class="btn btn-info b-r">اخبار</a>
                             <?php
                             } else {
                             ?>
 
-                                <a href="<?= base_url('login') ?>" class="default-btn">Login</a>
+                                <a href="<?= base_url('login') ?>" class="btn btn-info b-r">Join us</a>
                             <?php } ?>
                             <!--                                <a href="--><?php //=base_url('register')
                                                                             ?><!--" class="default-btn">Register</a>-->

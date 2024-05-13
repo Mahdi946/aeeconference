@@ -83,7 +83,7 @@
 
     <link rel="stylesheet" href="<?= base_url('assets-rtl/css/rtl.css') ?>">
 
-    <title>جایزه فناوری و نوآوری یونسکو</title>
+    <title> سایت کنگره ترویج </title>
 
     <link rel="icon" type="image/png" href="<?= base_url('assets-rtl/img/favicon.png') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css') ?>" />
@@ -136,94 +136,9 @@
                                     صفحه اصلی
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    جوایز
-                                    <i class='bx bx-chevron-down'></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('prize-overview') ?>" class="nav-link">
-                                            جایزه در یک نگاه
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('eligible-fields') ?>" class="nav-link">
-                                            حوزه‌ها
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('awards') ?>" class="nav-link">
-                                            جوایز
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('logo') ?>" class="nav-link">
-                                            دانلود لوگو
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('organizational-structure') ?>" class="nav-link">
-                                            ساختار سازمانی
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('faqs') ?>" class="nav-link">
-                                            پرسش های متداول
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    نامزد جایزه
-                                    <i class='bx bx-chevron-down'></i>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('nomination-indicator') ?>" class="nav-link">
-                                            شاخص های انتخاب و ارزیابی اثر
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('call-for-entries') ?>" class="nav-link">
-                                            فراخوان
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('process-nominees') ?>" class="nav-link">
-                                            مراحل انتخاب و ارزیابی
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item d-none">
-                                <a href="#" class="nav-link">
-                                    برگزیدگان
-                                    <i class='bx bx-chevron-down'></i>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('winners-2024') ?>" class="nav-link">
-                                            برگزیدگان ۲۰۲۴
-                                        </a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('winners-2025') ?>" class="nav-link">
-                                            برگزیدگان ۲۰۲۵
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                       
+ 
+ 
 
 
                             <!-- <li class="nav-item">
@@ -233,13 +148,23 @@
                                 </li> -->
 
                             <li class="nav-item">
-                                <a href="<?= base_url('news') ?>" class="nav-link">
-                                    اخبار
+                                <a href="#" class="nav-link">
+                                    جوامع
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    کنفرانس
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    آموزش
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="<?= base_url('contact') ?>" class="nav-link">
+                                <a href="#" class="nav-link">
                                     تماس با ما
                                 </a>
                             </li>
@@ -254,12 +179,12 @@
                             </a>
                             <?php if ($auth) { ?>
 
-                                <a href="<?= base_url('/admin/news') ?>" class="default-btn">اخبار</a>
+                                <a href="<?= base_url('/admin/news') ?>" class="btn btn-info b-r">اخبار</a>
                             <?php
                             } else {
                             ?>
 
-                                <a href="<?= base_url('login') ?>" class="default-btn">ورود</a>
+                                <a href="<?= base_url('login') ?>" class="btn btn-info b-r">به ما بپیوندید</a>
                             <?php } ?>
                             <!--                                <a href="--><?php //=('register')
                                                                             ?><!--" class="default-btn">ثبت‌نام</a>-->
