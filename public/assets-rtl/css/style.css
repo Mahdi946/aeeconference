@@ -1,5 +1,10 @@
-@import "Vazirmatn-RD-FD-font-face.css";
 
+
+
+@import "Vazirmatn-RD-FD-font-face.css";
+:root{
+	--radius:25px;
+  }
 body {
 	padding: 0;
 	margin: 0;
@@ -7906,3 +7911,39 @@ blockquote::after,
 	line-height: 2rem;
 	/* line-height: 2.5rem; */
 }
+
+.b-r{
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+}
+
+.img-slider{
+  height: 65vh;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+}
+
+.no-shadow{
+	box-shadow: none !important;
+}
+
+.r-5{
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+  }
+  
+  .bg-gray{
+	background: #f5f5f5;
+  }
+  
