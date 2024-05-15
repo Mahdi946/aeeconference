@@ -83,7 +83,7 @@
 
     <link rel="stylesheet" href="<?= base_url('assets-rtl/css/rtl.css') ?>">
 
-    <title> سایت کنگره ترویج </title>
+    <title> کنگره ملی ترویج و آموزش کشاورزی،منابع طبیعی و محیط زیست پایدار </title>
 
     <link rel="icon" type="image/png" href="<?= base_url('assets-rtl/img/favicon.png') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/leaflet/leaflet.css') ?>" />
@@ -244,25 +244,34 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <div class="footer-heading">
-                            <h3>جایزه</h3>
+                            <h3>اطلاعات بیشتر</h3>
                         </div>
 
                         <ul class="footer-quick-links">
                             <li>
-                                <a href="<?= base_url('prize-overview') ?>">جایزه در یک نگاه</a>
+                                 <p>
+                                    زمان برگزاری: سه شنبه و چهارشنبه 8 و 9 آبان 1403
+                                 </p>
                             </li>
                             <li>
-                                <a href="<?= base_url('eligible-fields') ?>">حوزه‌ها</a>
+                                 <p>
+                                       دریافت اصل مقالات : 1403/4/20
+                                 </p>
+                            </li>
+                      
+                            <li>
+                                 <p>
+                                       اعلام نتابج داوری : 1403/6/31
+                                 </p>
                             </li>
                             <li>
-                                <a href="<?= base_url('awards') ?>">جوایز</a>
+                                 <p>
+                                       ثبت نام جهت شرکت در کنگره حداکثر تا 15 مهر 1403
+                                 </p>
                             </li>
-                            <li>
-                                <a href="<?= base_url('logo') ?>"> دانلود لوگو</a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url('organizational-structure') ?>">ساختار سازمانی</a>
-                            </li>
+                      
+                       
+                   
                         </ul>
                     </div>
                 </div>
@@ -276,19 +285,19 @@
                         <div class="footer-info-contact">
                             <i class="flaticon-phone-call"></i>
                             <h3>تلفن</h3>
-                            <span><a href="tel:02188220700;180">۰۲۱-۸۸۲۲۰۷۰۰ داخلی ۱۸۰</a></span>
+                            <span><a href="tel:02632238293"> 02632238293     </a></span>
                         </div>
 
                         <div class="footer-info-contact">
-                            <i class="flaticon-envelope"></i>
-                            <h3>ایمیل</h3>
-                            <span><a href="mailto:info@inotech-unescoprize.org">info@Inotech-UnescoPrize.org</a></span>
+                            <i class="flaticon-phone-call"></i>
+                            <h3> ایتا </h3>
+                            <span> 09192426803 </span>
                         </div>
 
                         <div class="footer-info-contact">
                             <i class="flaticon-pin"></i>
                             <h3>آدرس</h3>
-                            <span>ایران ، تهران، خیابان ۱۶ شهید فرشی مقدم، پارک علم وفناوری دانشگاه تهران، ساختمان شماره یک، دبیرخانه جایزه یونسکو.</span>
+                            <span> دانشکدگان کشاورزی و منابع طبیعی دانشگاه تهران </span>
                         </div>
                     </div>
                 </div>
@@ -309,7 +318,7 @@
             <div class="copyright-area-content">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
-                        <p>کپی رایت © <?= date('Y') ?> دبیرخانه جایزه یونسکو. تمام حقوق محفوظ است. طراحی و توسعه توسط
+                        <p>کپی رایت © <?= date('Y') ?>   تمام حقوق محفوظ است. طراحی و توسعه توسط
                             <a href="https://novintarhpars.com" target="_blank">
                                 نوین طرح پارس
                             </a>
