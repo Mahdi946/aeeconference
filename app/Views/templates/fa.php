@@ -111,10 +111,9 @@
                             <img src="<?= base_url('assets-rtl/img/logo.png') ?>" alt="logo" class="logo-header">
 
                         </a>
-                        <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
-                            <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
+                        <!-- <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="float-end mt-3">
                             <small> English </small>
-                        </a>
+                        </a> -->
 
                     </div>
                 </div>
@@ -125,7 +124,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="<?= base_url('/') ?>">
-                        <img src="<?= base_url('assets-rtl/img/logo.png') ?>" alt="logo">
+                        <img src="<?= base_url('assets-rtl/img/logo.png') ?>" alt="logo" style="max-width: 100px;">
                     </a>
 
 
@@ -136,9 +135,9 @@
                                     صفحه اصلی
                                 </a>
                             </li>
-                       
- 
- 
+
+
+
 
 
                             <!-- <li class="nav-item">
@@ -173,10 +172,9 @@
                         </ul>
 
                         <div class="others-options">
-                            <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="">
-                                <!-- <img src="<?= base_url('assets-rtl/img/language-translation-icon.svg') ?>" class="img-2-rem"> -->
+                            <!-- <a href="<?= base_url('lang/' . ((\Config\Services::language()->getLocale() == "fa") ? 'en' : 'fa')); ?>" class="">
                                 <small> English </small>
-                            </a>
+                            </a> -->
                             <?php if ($auth) { ?>
 
                                 <a href="<?= base_url('/admin/news') ?>" class="btn btn-info b-r">اخبار</a>
@@ -237,6 +235,17 @@
                                     <i class="flaticon-instagram"></i>
                                 </a>
                             </li>
+                            <li>
+
+
+                                <p>
+                                <h6> آدرس دبیرخانه کنگره </h6>
+                                </p>
+                                <p>
+                                    استان البرز، کرج، بلوار امامزاده حسن (ع)،دانشکدگان کشاورزی و منابع طبیعی دانشگاه تهران، گروه ترویج و آموزش کشاورزی، طبقه سوم، دبیرخانه دهمین کنگره ملی علوم ترویج وآموزش کشاورزی، منابع طبیعی و محیط زیست پایدار
+                                </p>
+
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -249,29 +258,29 @@
 
                         <ul class="footer-quick-links">
                             <li>
-                                 <p>
-                                    زمان برگزاری: سه شنبه و چهارشنبه 8 و 9 آبان 1403
-                                 </p>
+                                <p>
+                                    <b>زمان برگزاری:</b> سه شنبه و چهارشنبه 8 و 9 آبان 1403
+                                </p>
                             </li>
                             <li>
-                                 <p>
-                                       دریافت اصل مقالات : 1403/4/20
-                                 </p>
+                                <p>
+                                    <b>دریافت اصل مقالات</b> : 20 تیر 1403
+                                </p>
                             </li>
-                      
+
                             <li>
-                                 <p>
-                                       اعلام نتابج داوری : 1403/6/31
-                                 </p>
+                                <p>
+                                    <b>اعلام نتابج داوری :</b> 31 شهریور 1403
+                                </p>
                             </li>
                             <li>
-                                 <p>
-                                       ثبت نام جهت شرکت در کنگره حداکثر تا 15 مهر 1403
-                                 </p>
+                                <p>
+                                    ثبت نام جهت شرکت در کنگره حداکثر تا 15 مهر 1403
+                                </p>
                             </li>
-                      
-                       
-                   
+
+
+
                         </ul>
                     </div>
                 </div>
@@ -285,7 +294,7 @@
                         <div class="footer-info-contact">
                             <i class="flaticon-phone-call"></i>
                             <h3>تلفن</h3>
-                            <span><a href="tel:02632238293"> 02632238293     </a></span>
+                            <span><a href="tel:02632238293"> 02632238293 </a></span>
                         </div>
 
                         <div class="footer-info-contact">
@@ -295,10 +304,12 @@
                         </div>
 
                         <div class="footer-info-contact">
-                            <i class="flaticon-pin"></i>
-                            <h3>آدرس</h3>
-                            <span> دانشکدگان کشاورزی و منابع طبیعی دانشگاه تهران </span>
+                            <i class="flaticon-envelope"></i>
+                            <h3> کد پستی </h3>
+                            <span> 3158777871 </span>
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -318,7 +329,7 @@
             <div class="copyright-area-content">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
-                        <p>کپی رایت © <?= date('Y') ?>   تمام حقوق محفوظ است. طراحی و توسعه توسط
+                        <p>کپی رایت © <?= date('Y') ?> تمام حقوق محفوظ است. طراحی و توسعه توسط
                             <a href="https://novintarhpars.com" target="_blank">
                                 نوین طرح پارس
                             </a>
