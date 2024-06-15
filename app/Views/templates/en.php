@@ -124,7 +124,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="<?= base_url('/') ?>">
-                        <img src="<?= base_url('assets/img/logo.png') ?>" alt="logo">
+                        <img src="<?= base_url('assets/img/logo.png') ?>" alt="logo" style="max-width: 100px;">
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
