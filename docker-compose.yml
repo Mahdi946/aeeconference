@@ -38,8 +38,8 @@ services:
             - .docker/db/sql:/docker-entrypoint-initdb.d
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: N0v!nT@rhD3v3l0p3rz
-            MYSQL_USER: N0v!nT@rhD3v3l0p3rz
+            MYSQL_DATABASE: NovinTarhApp
+            MYSQL_USER: NovinTarh
             MYSQL_PASSWORD: N0v!nT@rhD3v3l0p3rz
 
     ####################################################################################################
@@ -117,9 +117,9 @@ services:
     #         - .docker/db/data:/var/lib/postgresql/data
     #         - .docker/db/sql:/docker-entrypoint-initdb.d
     #     environment:
-    #         - POSTGRES_USER=N0v!nT@rhD3v3l0p3rz
+    #         - POSTGRES_USER=NovinTarh
     #         - POSTGRES_PASSWORD=N0v!nT@rhD3v3l0p3rz
-    #         - POSTGRES_DB=N0v!nT@rhD3v3l0p3rz
+    #         - POSTGRES_DB=NovinTarhApp
 
     ####################################################################################################
     # pgAdmin

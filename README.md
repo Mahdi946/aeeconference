@@ -47,16 +47,16 @@
 ### phpMyAdmin
 - URL: http://localhost:8080
 - Server: `db`
-- Username: `N0v!nT@rhD3v3l0p3rz`
+- Username: `NovinTarh`
 - Password: `N0v!nT@rhD3v3l0p3rz`
-- Database: `N0v!nT@rhD3v3l0p3rz`
+- Database: `NovinTarhApp`
 
 ### Adminer
 - URL: http://localhost:9090
 - Server: `db`
-- Username: `N0v!nT@rhD3v3l0p3rz`
+- Username: `NovinTarh`
 - Password: `N0v!nT@rhD3v3l0p3rz`
-- Database: `N0v!nT@rhD3v3l0p3rz`
+- Database: `NovinTarhApp`
 
 ### Basic docker compose commands
 - Build or rebuild services
