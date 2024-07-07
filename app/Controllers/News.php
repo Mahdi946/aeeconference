@@ -9,11 +9,20 @@ class News extends BaseController
 {
     public function index()
     {
-
+        $user=null;
+        $isSuperAdmin = false;
         $newModel = model('News');
         $allNews = $newModel->findAll();
+        $auth=auth()->loggedIn();
+        if($auth)
+        $user=auth()->user();
 
-        return view('news-' . $this->locale, ["allNews" => $allNews]);
+                
+        if ($user !== null) {
+            $isSuperAdmin = $user->can("news.access");
+        }
+
+        return view('news-' . $this->locale, ["allNews" => $allNews,"auth"=>$auth,"isSuperAdmin"=>$isSuperAdmin]);
     }
 
     public function image($id)
@@ -40,8 +49,19 @@ class News extends BaseController
 
     public function view($slug)
     {
+        $user = null;
+        $auth=auth()->loggedIn();
+        $isSuperAdmin = false;
+        if($auth)
+        $user=auth()->user();
+
+        
+        if ($user !== null) {
+            $isSuperAdmin = $user->can("news.access");
+        }
+
         $newModel = model('News');
         $news = $newModel->where('slug', $slug)->first();;
-        return view('newsDetail-' . $this->locale, ["news" => $news]);
+        return view('newsDetail-' . $this->locale, ["news" => $news,"auth"=>$auth,"isSuperAdmin"=>$isSuperAdmin ]);
     }
 }

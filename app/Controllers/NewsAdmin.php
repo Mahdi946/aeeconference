@@ -15,33 +15,51 @@ class NewsAdmin extends BaseController
     use ResponseTrait;
     protected $helpers = ['form'];
 
+
     public function viewPanel()
     {
+        $user = auth()->user();
         $newModel = model('News');
         $news = $newModel->findAll();
 
-        return view('newsAdmin', ["allNews" => $news]);
+        if ($user->can("news.access"))
+            return view('newsAdmin', ["allNews" => $news, "user" => $user]);
+
+        return redirect()->to('/login');
     }
 
     public function addNews()
     {
-        $Model = model('category');
-        $news = $Model->findAll();
+        $Model = model('Category');
+        $categories = $Model->findAll();
+        $user = auth()->user();
 
-        return view('addNews', ["categories" => $news,"lang"=>"fa"]);
+        if ($user->can('news.add'))
+            return view('addNews', ["categories" => $categories, "lang" => "fa","user"=>$user]);
+
+        return redirect()->to('/login');
     }
 
     public function addNewsEn()
     {
-        $Model = model('category');
-        $news = $Model->findAll();
+        $Model = model('Category');
+        $categories = $Model->findAll();
+        $user = auth()->user();
 
-        return view('addNews', ["categories" => $news,"lang"=>"en"]);
+        if ($user->can('news.add'))
+            return view('addNews', ["categories" => $categories, "lang" => "en","user"=>$user]);
+
+        return redirect()->to('/login');
     }
 
 
     function add()
     {
+        $user = auth()->user();
+
+        if (!$user->can('news.add'))
+            return $this->respond(["error" => '401', "data" => []]);
+
 
         $Model = model('News');
         $data = ($this->request->getPost());
@@ -76,25 +94,42 @@ class NewsAdmin extends BaseController
 
     function editPage($id)
     {
-        $category = model('category');
+        $category = model('Category');
         $category = $category->findAll();
         $newModel = model('News');
         $news = $newModel->where('id', $id)->first();
-        return view('editNews', ["news" => $news, "categories" => $category,"lang"=>"fa"]);
+        $user = auth()->user();
+
+
+        if ($user->can('news.edit'))
+            return view('editNews', ["news" => $news, "categories" => $category, "lang" => "fa","user"=>$user]);
+
+        return redirect()->to('/login');
     }
 
     function editPageEn($id)
     {
-        $category = model('category');
+        $category = model('Category');
         $category = $category->findAll();
         $newModel = model('News');
         $news = $newModel->where('id', $id)->first();
-        return view('editNews', ["news" => $news, "categories" => $category,"lang"=>"en"]);
+        $user = auth()->user();
+
+
+        if ($user->can('news.edit'))
+            return view('editNews', ["news" => $news, "categories" => $category, "lang" => "en","user"=>$user]);
+
+        return redirect()->to('/login');
     }
 
 
     function update()
     {
+        $user = auth()->user();
+
+        if (!$user->can('news.edit'))
+            return $this->respond(["error" => '401', "data" => []]);
+
         $Model = model('News');
         $data = $this->request->getPost();
         $data['slug'] = str_replace(" ", "-", $data['slug']);
@@ -130,6 +165,12 @@ class NewsAdmin extends BaseController
 
     function remove($id)
     {
+        $user = auth()->user();
+
+        if (!$user->can('news.delete'))
+            return $this->respond(["error" => '401', "data" => []]);
+
+
         $Model = model('News');
         try {
 
@@ -143,6 +184,11 @@ class NewsAdmin extends BaseController
 
     private function RemoveNewsFile($id): void
     {
+        $user = auth()->user();
+
+        if (!$user->can('news.delete'))
+            return;
+
         $Model = model('News');
         $RecordData = $Model->find($id);
         $this->RemoveFile($RecordData['image']);
@@ -151,6 +197,11 @@ class NewsAdmin extends BaseController
 
     private function AddImgToFile($img): int
     {
+        $user = auth()->user();
+
+        if (!$user->can('news.delete'))
+            return $this->respond(["error" => '401', "data" => []]);
+
         if (!$img->hasMoved()) {
             $name = $img->store();
             $path = WRITEPATH . 'uploads/' . $name;
@@ -163,6 +214,10 @@ class NewsAdmin extends BaseController
     }
     private function RemoveFile($id): void
     {
+        $user = auth()->user();
+
+        if (!$user->can('news.delete'))
+            return;
 
         $ModelFile = model('File');
         $File = $ModelFile->where('id', $id)->first();

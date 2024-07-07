@@ -10,11 +10,6 @@ class Category extends BaseController
 {
     use ResponseTrait;
 
-    public function __construct()
-    {
-       
-    }
-
     function all()
     {
         $categoryModel = model('Category');
@@ -23,25 +18,39 @@ class Category extends BaseController
 
     public function form()
     {
-        return view("categoryAdmin");
+        $user = auth()->user();
+
+        if ($user->can("category.access"))
+            return view("categoryAdmin", ["user" => $user]);
+
+        return redirect()->to('/login');
     }
 
     function add()
     {
+        $user = auth()->user();
+        if (!$user->can('category.add'))
+        return $this->respond(["error" => '403', "data" => []]);
+
         $categoryModel = model('Category');
         $data = json_decode($this->request->getBody(), true);
         $data['slug'] = str_replace(" ", "-", $data['title']);
 
+         
         try {
             $categoryModel->insert($data);
             return $this->respond($categoryModel);
         } catch (\Exception $e) {
-            return $this->respond(["error" => $e->getMessage(), "data" => $data]);;
+            return $this->respond(["error" => $e->getMessage(), "data" => $data]);
         }
     }
 
     function update()
     {
+        $user = auth()->user();
+        if (!$user->can('category.edit'))
+        return $this->respond(["error" => '403', "data" => []]);
+
         $categoryModel = model('Category');
         $data = json_decode($this->request->getBody(), true);
         $data['slug'] = str_replace(" ", "-", $data['title']);
@@ -58,6 +67,10 @@ class Category extends BaseController
 
     function remove()
     {
+        $user = auth()->user();
+        if (!$user->can('category.delete'))
+        return $this->respond(["error" => '403', "data" => []]);
+
         $categoryModel = model('Category');
         $data = json_decode($this->request->getBody(), true);
         $id = $data['id'];
