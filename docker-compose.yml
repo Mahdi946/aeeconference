@@ -14,7 +14,7 @@ services:
     # Nginx
     ####################################################################################################
     nginx:
-        image: nginx
+        image: focker.ir/nginx
         ports:
             - 80:80
         volumes:
@@ -28,7 +28,7 @@ services:
     # DATABASE (MySQL)
     ####################################################################################################
     db:
-        image: mysql:8.1
+        image: focker.ir/mysql:8.1
         ports:
             - 3306:3306
         volumes:
@@ -46,7 +46,7 @@ services:
     # phpMyAdmin
     ####################################################################################################
     phpmyadmin:
-        image: phpmyadmin/phpmyadmin
+        image: focker.ir/phpmyadmin/phpmyadmin
         ports:
             - 8080:80
         links:
@@ -62,7 +62,7 @@ services:
     # Adminer
     ####################################################################################################
     adminer:
-        image: adminer
+        image: focker.ir/adminer
         ports:
             - 9090:8080
         depends_on:
@@ -72,7 +72,7 @@ services:
     # Mailpit
     ####################################################################################################
     mail:
-        image: axllent/mailpit:latest
+        image: focker.ir/axllent/mailpit:latest
         ports:
         - 8025:8025
         - 1025:1025
@@ -81,7 +81,7 @@ services:
     # Redis
     ####################################################################################################
     redis:
-        image: redis:latest
+        image: focker.ir/redis:latest
         command: redis-server --appendonly yes
         volumes:
         - .docker/redis/data:/data
@@ -92,7 +92,7 @@ services:
     # # DATABASE (MariaDB)
     # ####################################################################################################
     # db:
-    #     image: mariadb:10.11
+    #     image: focker.ir/mariadb:10.11
     #     ports:
     #         - 3306:3306
     #     volumes:
@@ -110,7 +110,7 @@ services:
     # PostgreSQL
     ####################################################################################################
     # db:
-    #     image: postgres:16
+    #     image: focker.ir/postgres:16
     #     ports:
     #         - 5432:5432
     #     volumes:
@@ -125,7 +125,7 @@ services:
     # pgAdmin
     ####################################################################################################
     # pgadmin:
-    #     image: dpage/pgadmin4
+    #     image: focker.ir/dpage/pgadmin4
     #     ports:
     #         - 5050:80
     #     environment:
