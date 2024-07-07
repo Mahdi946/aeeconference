@@ -1,7 +1,7 @@
-FROM focker.ir/php:8.3-fpm
+FROM focker.ir/php:8.3-apache
 
 COPY php.ini /usr/local/etc/php/
-COPY docker.conf /usr/local/etc/php-fpm.d/docker.conf
+# COPY docker.conf /usr/local/etc/php-fpm.d/docker.conf
 COPY .bashrc /root/
 
 # mix
@@ -51,5 +51,5 @@ RUN composer global require "laravel/installer"
 WORKDIR /root
 RUN git clone https://github.com/seebi/dircolors-solarized
 
-EXPOSE 5173
+EXPOSE 80
 WORKDIR /var/www
