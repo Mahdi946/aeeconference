@@ -1,68 +1,116 @@
-# CodeIgniter 4 Application Starter
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-## What is CodeIgniter?
+# Laravel Docker Starter Kit
+- Laravel v11.x
+- PHP v8.3.x
+- MySQL v8.1.x (default)
+- MariaDB v10.11
+- PostgreSQL v16.x
+- pgAdmin v4.x
+- phpMyAdmin v5.x
+- Mailpit v1.x
+- Node.js v18.x
+- NPM v10.x
+- Yarn v1.x
+- Vite v5.x
+- Rector v1.x
+- Redis v7.2.x
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+# Requirements
+- Stable version of [Docker](https://docs.docker.com/engine/install/)
+- Compatible version of [Docker Compose](https://docs.docker.com/compose/install/#install-compose)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+# How To Deploy
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### For first time only !
+- `git clone https://git.novintarhpars.com/SANA/repoName.git`
+- `cd repoName`
+- `docker compose up -d --build`
+- `docker compose exec phpmyadmin chmod 777 /sessions`
+- `docker compose exec php bash`
+- `chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache`
+- `chmod -R 775 /var/www/storage /var/www/bootstrap/cache`
+- `composer setup`
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### From the second time onwards
+- `docker compose up -d`
 
-## Installation & updates
+# Notes
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### Laravel App
+- URL: http://localhost
 
-## Setup
+### Mailpit
+- URL: http://localhost:8025
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+### phpMyAdmin
+- URL: http://localhost:8080
+- Server: `db`
+- Username: `N0v!nT@rhD3v3l0p3rz`
+- Password: `N0v!nT@rhD3v3l0p3rz`
+- Database: `N0v!nT@rhD3v3l0p3rz`
 
-## Important Change with index.php
+### Adminer
+- URL: http://localhost:9090
+- Server: `db`
+- Username: `N0v!nT@rhD3v3l0p3rz`
+- Password: `N0v!nT@rhD3v3l0p3rz`
+- Database: `N0v!nT@rhD3v3l0p3rz`
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### Basic docker compose commands
+- Build or rebuild services
+    - `docker compose build`
+- Create and start containers
+    - `docker compose up -d`
+- Stop and remove containers, networks
+    - `docker compose down`
+- Stop all services
+    - `docker compose stop`
+- Restart service containers
+    - `docker compose restart`
+- Run a command inside a container
+    - `docker compose exec [container] [command]`
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### Useful Laravel Commands
+- Display basic information about your application
+    - `php artisan about`
+- Remove the configuration cache file
+    - `php artisan config:clear`
+- Flush the application cache
+    - `php artisan cache:clear`
+- Clear all cached events and listeners
+    - `php artisan event:clear`
+- Delete all of the jobs from the specified queue
+    - `php artisan queue:clear`
+- Remove the route cache file
+    - `php artisan route:clear`
+- Clear all compiled view files
+    - `php artisan view:clear`
+- Remove the compiled class file
+    - `php artisan clear-compiled`
+- Remove the cached bootstrap files
+    - `php artisan optimize:clear`
+- Delete the cached mutex files created by scheduler
+    - `php artisan schedule:clear-cache`
+- Flush expired password reset tokens
+    - `php artisan auth:clear-resets`
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### Laravel Pint (Code Style Fixer | PHP-CS-Fixer)
+- Format all files
+    - `vendor/bin/pint`
+- Format specific files or directories
+    - `vendor/bin/pint app/Models`
+    - `vendor/bin/pint app/Models/User.php`
+- Format all files with preview
+    - `vendor/bin/pint -v`
+- Format uncommitted changes according to Git
+    - `vendor/bin/pint --dirty`
+- Inspect all files
+  - `vendor/bin/pint --test`
 
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+### Rector
+- Dry Run
+    - `vendor/bin/rector process --dry-run`
+- Process
+    - `vendor/bin/rector process`
