@@ -111,9 +111,9 @@
                             <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" class="logo-header">
 
                         </a>
-                        <!-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
+                         <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
                             <small> English </small>
-                        </a> -->
+                        
 
                     </div>
                 </div>
@@ -136,9 +136,53 @@
                                 </a>
                             </li>
 
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                   درباره کنفرانس
+                                </a>
+                            </li>
 
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                  سازمان کنفرانس
+                                </a>
+                            </li>
 
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                  کمیته های اختصاصی
+                                </a>
+                            </li>
 
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                  برگزارکنندگان و حامیان
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                 شرکت در کنفرانس
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                  ارسال مقاله
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                 برنامه های جانبی
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                   تماس با کنفرانس
+                                </a>
+                            </li>
 
                             <!-- <li class="nav-item">
                                     <a href="{{ base('events') }}" class="nav-link">
@@ -146,28 +190,7 @@
                                     </a>
                                 </li> -->
 
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    جوامع
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    کنفرانس
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    آموزش
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    تماس با ما
-                                </a>
-                            </li>
-
+                          
 
                         </ul>
 
