@@ -54,4 +54,5 @@ RUN git clone https://github.com/seebi/dircolors-solarized
 EXPOSE 80
 WORKDIR /var/www
 
+RUN a2enmod rewrite
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && service apache2 start
