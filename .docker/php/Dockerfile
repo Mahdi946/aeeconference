@@ -48,6 +48,7 @@ ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
 RUN composer config --global process-timeout 3600
 RUN composer global require "laravel/installer"
+RUN composer install
 
 WORKDIR /root
 RUN git clone https://github.com/seebi/dircolors-solarized
