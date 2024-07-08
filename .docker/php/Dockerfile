@@ -37,7 +37,6 @@ RUN npm install npm@latest -g
 RUN npm install yarn -g
 
 # Composer
-WORKDIR /var/www
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
@@ -48,7 +47,6 @@ ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
 RUN composer config --global process-timeout 3600
 RUN composer global require "laravel/installer"
-RUN composer install
 
 WORKDIR /root
 RUN git clone https://github.com/seebi/dircolors-solarized
