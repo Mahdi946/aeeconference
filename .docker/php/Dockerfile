@@ -37,6 +37,7 @@ RUN npm install npm@latest -g
 RUN npm install yarn -g
 
 # Composer
+WORKDIR /var/www
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
