@@ -87,7 +87,7 @@
 
     <link rel="icon" type="image/png" href="{{ asset('assets-rtl/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/leaflet/leaflet.css') }}" />
-
+@yield('head-tag')
 </head>
 
 <body>
