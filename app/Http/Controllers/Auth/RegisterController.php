@@ -49,9 +49,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {  
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'Name' => ['required', 'string', 'max:255'],
+            'Email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'Password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -65,9 +65,24 @@ class RegisterController extends Controller
     {
        
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'Name' => $data['Name'],
+            'Family' => $data['Family'],
+            'Name_fa' => $data['Name_fa'],
+            'Family_fa' => $data['Family_fa'],
+            'FatherName' => $data['FatherName'],
+            'BirthCert' => $data['BirthCert'],
+            'MobileNumber' => $data['MobileNumber'],
+            'PhoneNumber' => $data['PhoneNumber'],
+            'Field' => $data['Field'],
+            'Edu' => $data['Edu'],
+            'City' => $data['City'],
+            'City_fa' => $data['City_fa'],
+            'Country' => $data['Country'],
+            'Rank' => $data['Rank'],
+            'Org' => $data['Org'],
+            'Org_fa' => $data['Org_fa'],
+            'Email' => $data['Email'],
+            'Password' => Hash::make($data['password']),
         ]);
     }
 }
