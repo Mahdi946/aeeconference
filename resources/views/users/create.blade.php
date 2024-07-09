@@ -1,6 +1,6 @@
 @extends('templates.fa')
 @section('content')
-    <div class="container">
+    <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
             <!-- Start Page Title Area -->
@@ -30,26 +30,11 @@
                             @csrf
                             <div class="row">
 
-                              <div class="col-md-6">
-                                <select name="CongressID" id="CongressID">
-                                    <option value="1"> CongressID</option>
-                                    <option value="2"> CongressID</option>
-                                </select>
-                              </div>
+
+
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('عنوان کامل(انگلیسی)') }}</label>
-
-                                        <div class="col-md-6">
-                                        <option value="1">مقاله علمی پژوهشی</option>
-                                        <option value="2">مقاله پژوهشی</option>
-                                    </select>
-
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('عنوان کامل(انگلیسی)') }}</label>
-
-
-
+                                    <label for="ShortTitle"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('عنوان(کامل)') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="FullTitle" type="text"
@@ -135,6 +120,69 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <div class="container form-group">
+
+                                    <div class="col-md-6">
+                                        <select class="form-select" name="CongressID" id="CongressID">
+                                            <option value="1"> CongressID</option>
+                                            <option value="2"> CongressID</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <div class="col-md-6">
+                                        <select class="form-select" name="TypeID" id="TypeID">
+                                            <option value="1">مقاله علمی پژوهشی</option>
+                                            <option value="2">مقاله پژوهشی</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <div class="col-md-6">
+                                        <select class="form-select" name="CategoriesID" id="CategoriesID">
+                                            <option value="1"> دسته بندی</option>
+                                            <option value="1"> CategoriesID</option>
+                                            <option value="2"> CategoriesID</option>
+                                        </select>
+
+                                    </div>
+
+
+
+
+                                    <div class="row mb-3">
+                                        <label for="Tags"
+                                            class="col-md-4 col-form-label text-md-end">{{ __('در صورنی که دسته بندی مدنظر موجود نیست آن را ایجاد کنید') }}</label>
+
+                                        <div class="col-md-6">
+                                            <input id="FatherName" type="text"
+                                                class="form-control @error('Tags') is-invalid @enderror" name="Tags"
+                                                value="{{ old('Tags') }}" required autocomplete="Tags" autofocus><textarea class="col-md-12" id="w3review" name="w3review" rows="3" cols="20">category</textarea>
+
+                                            @error('Tags')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                  </div>
+
+
+
+
+
+
+
+                                </div>
 
 
                                 <div class="row mb-0">
@@ -142,7 +190,6 @@
                                         <button type="submit" class="btn btn-primary">
                                             {{ __('ایجاد') }}
                                         </button>
-
 
 
                                     </div>
