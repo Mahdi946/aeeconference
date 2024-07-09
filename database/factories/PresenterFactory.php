@@ -20,11 +20,11 @@ class PresenterFactory extends Factory
     {
         return [
             //
-            'user_id' => User::factory(),
-            'description' => $this->faker->sentence,
-            'start_date' =>  $this->faker->dateTime,
-            'end_date' =>  $this->faker->dateTime,
-            'congress_id' => Congress::factory(),
+            'UserID' => User::factory(),
+            'Description' => $this->faker->sentence,
+            'StartDate' =>  $this->faker->dateTime,
+            'EndDate' =>  $this->faker->dateTime,
+            'CongressID' => Congress::factory(),
         ];
     }
 }

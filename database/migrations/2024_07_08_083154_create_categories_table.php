@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
+            $table->string('Name');
 
-            $table->foreignId('congress_id');
-            $table->foreign('congress_id')->references('id')->on('congresses')->onDelete('cascade');
+            $table->foreignId('CongressID');
+            $table->foreign('CongressID')->references('id')->on('congresses')->onDelete('cascade');
 
 
             $table->timestamps();

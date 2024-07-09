@@ -19,9 +19,9 @@ class CategoryFactory extends Factory
     {
         return [
             //
-            'name' => fake()->name(),
+            'Name' => fake()->name(),
 
-            'congress_id' => Congress::factory(),
+            'CongressID' => Congress::factory(),
         ];
     }
 }

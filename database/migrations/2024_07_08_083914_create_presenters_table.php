@@ -14,18 +14,18 @@ return new class extends Migration
         Schema::create('presenters', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('UserID');
+            $table->foreign('UserID')->references('id')->on('users')->onDelete('cascade');
 
-            $table->text('description');
+            $table->text('Description');
 
-            $table->foreignId('congress_id');
-            $table->foreign('congress_id')->references('id')->on('congresses')->onDelete('cascade');
+            $table->foreignId('CongressID');
+            $table->foreign('CongressID')->references('id')->on('congresses')->onDelete('cascade');
 
 
-            $table->dateTime('start_date');
+            $table->dateTime('StartDate');
 
-            $table->dateTime('end_date');
+            $table->dateTime('EndDate');
 
             $table->timestamps();
         });

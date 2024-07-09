@@ -20,14 +20,14 @@ class CongressFactory extends Factory
 
 
             return [
-                'name' => fake()->name(),
+                'Name' => fake()->name(),
 
-                'description' => $this->faker->sentence,
+                'Description' => $this->faker->sentence,
 
-                'secretary_id' => User::factory(),
+                'SecretaryID' => User::factory(),
 
-                'start_date' =>  $this->faker->dateTime,
-                'end_date' =>  $this->faker->dateTime,
+                'StartDate' =>  $this->faker->dateTime,
+                'EndDate' =>  $this->faker->dateTime,
 
             ];
 

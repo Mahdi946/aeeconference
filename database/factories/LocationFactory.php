@@ -19,9 +19,9 @@ class LocationFactory extends Factory
     {
         return [
             //
-            'location' => $this->faker->sentence,
-            'phone' => $this->faker->sentence,
-            'congress_id' => Congress::factory(),
+            'Location' => $this->faker->sentence,
+            'Phone' => $this->faker->sentence,
+            'CongressID' => Congress::factory(),
         ];
     }
 }

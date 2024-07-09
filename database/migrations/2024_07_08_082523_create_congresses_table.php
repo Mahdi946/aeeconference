@@ -14,18 +14,18 @@ return new class extends Migration
         Schema::create('congresses', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
+            $table->string('Name');
 
-            $table->text('description');
+            $table->text('Description');
 
-            $table->foreignId('secretary_id');
-            $table->foreign('secretary_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('SecretaryID');
+            $table->foreign('SecretaryID')->references('id')->on('users')->onDelete('cascade');
 
 
-            $table->dateTime('start_date');
+            $table->dateTime('StartDate');
 
-            $table->dateTime('end_date');
-            
+            $table->dateTime('EndDate');
+
             $table->timestamps();
         });
     }

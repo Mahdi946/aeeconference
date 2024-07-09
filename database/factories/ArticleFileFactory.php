@@ -21,10 +21,10 @@ class ArticleFileFactory extends Factory
             //
              //
              'ArticleID' => Article::factory(),
-             'description' => $this->faker->sentence,
+             'Description' => $this->faker->sentence,
              'FileType' => fake()->name(),
              'Location' => fake()->name(),
-             
+
         ];
     }
 }

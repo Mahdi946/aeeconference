@@ -6,7 +6,10 @@ use App\Models\Article;
 use App\Models\Category;
 use App\Models\Congress;
 use Illuminate\Http\Request;
+use App\Models\ArticleCategory;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -17,7 +20,7 @@ class ArticleController extends Controller
     {
         //
         $articles =Article::latest()->paginate(10);
-
+        return view('users.panel', compact('articles'));
     }
 
     /**
@@ -25,11 +28,12 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
-        $Congress =Congress::all();
-        $Type = ["مقاله پژوهشی" , "مقاله علمی پژوهشی"];
-        $Category =Category::all();
-
+        $Congresses =Congress::latest()->limit(1);
+        // $Congresses =Congress::where('start_date', '>=' , now())
+        // ->where('end_date', '<=' , now());
+        $Types = ["مقاله پژوهشی" , "مقاله علمی پژوهشی"];
+        $categories =Category::all();
+        return view('users.form', compact('Congresses', 'Types', 'categories'));
     }
 
     /**
@@ -37,7 +41,8 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
         $request->validate([
             'TypeID' => 'required',
             'FullTitle' => 'required',
@@ -46,63 +51,44 @@ class ArticleController extends Controller
             'ShortTitle_fa' => 'required',
             'Tags' => 'required',
             'Tags_fa' => 'required',
+            'CongressID' => 'required',
 
-
-            'primary_image' => 'required|mimes:jpg,jpeg,png,svg',
-            'images' => 'required',
-            'images.*' => 'mimes:jpg,jpeg,png,svg',
-            'category_id' => 'required',
-            'attribute_ids' => 'required',
-            'attribute_ids.*' => 'required',
-            'variation_values' => 'required',
-            'variation_values.*.*' => 'required',
-            'variation_values.price.*' => 'integer',
-            'variation_values.quantity.*' => 'integer',
-            'delivery_amount' => 'required|integer',
-            'delivery_amount_per_product' => 'nullable|integer',
         ]);
         try {
             DB::beginTransaction();
 
-            $productImageController = new ProductImageController();
-            $fileNameImages = $productImageController->upload($request->primary_image, $request->images);
 
-            $product = Product::create([
-                'name' => $request->name,
-                'brand_id' => $request->brand_id,
-                'category_id' => $request->category_id,
-                'primary_image' => $fileNameImages['fileNamePrimaryImage'],
-                'description' => $request->description,
-                'is_active' => $request->is_active,
-                'delivery_amount' => $request->delivery_amount,
-                'delivery_amount_per_product' => $request->delivery_amount_per_product,
+            $article = Article::create([
+                'TypeID' => $request->TypeID,
+                'FullTitle' => $request->FullTitle,
+                'ShortTitle' => $request->ShortTitle,
+                'FullTitle_fa' => $request->FullTitle_fa,
+                'ShortTitle_fa' => $request->ShortTitle_fa,
+                'Tags' => $request->Tags,
+                'Tags_fa' => $request->Tags_fa,
+                'UserID' => Auth::user()->id,
+                'CongressID' => $request->CongressID,
             ]);
 
-            foreach ($fileNameImages['fileNameImages'] as $fileNameImage) {
-                ProductImage::create([
-                    'product_id' => $product->id,
-                    'image' => $fileNameImage
+
+            $items = $request->Categories;
+            foreach ($items as $item) {
+                ArticleCategory::create([
+                    'ArticleID' => $article->id,
+                    'CategoryID' => $item
                 ]);
             }
 
-            $productAttributeController = new ProductAttributeController();
-            $productAttributeController->store($request->attribute_ids, $product);
-
-            $category = Category::find($request->category_id);
-            $productVariationController = new ProductVariationController();
-            $productVariationController->store($request->variation_values, $category->attributes()->wherePivot('is_variation', 1)->first()->id, $product);
-
-            $product->tags()->attach($request->tag_ids);
 
             DB::commit();
         } catch (\Exception $ex) {
             DB::rollBack();
-            alert()->error('مشکل در ایجاد محصول', $ex->getMessage())->persistent('حله');
+            die(print_r("error dari"));
             return redirect()->back();
         }
-
-        alert()->success('محصول مورد نظر ایجاد شد', 'باتشکر');
-        return redirect()->route('admin.products.index');
+        die(print_r("save  shode"));
+        // alert()->success('محصول مورد نظر ایجاد شد', 'باتشکر');
+        // return redirect()->route('admin.products.index');
     }
 
     /**
@@ -135,5 +121,14 @@ class ArticleController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+     /**
+     * Display a listing of the resource.
+     */
+    public function getArticle()
+    {
+        $articles =Article::where('ArticleID', '=', Auth::user()->id)->get();
+        return view('users.panel', compact('articles'));
     }
 }
