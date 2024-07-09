@@ -273,22 +273,6 @@
 
 
     <!-- Start Blog Area -->
-    <section class="blog-section pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <h2>آخرین <span>اخبار</span> ما</h2>
-                <p></p>
-                <div class="bar"></div>
-            </div>
-
-            <div class="row">
-
-
-
-
-
-            </div>
-        </div>
-    </section>
+   
     <!-- End Blog Area -->
 @endsection
