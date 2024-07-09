@@ -88,13 +88,13 @@
 
     <link rel="icon" type="image/png" href="{{ asset('assets-rtl/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/leaflet/leaflet.css') }}" />
-    
+    @yield('head-tag') 
 </head>
-@yield('head-tag') 
-@yield('content')
+
+
 
 <body>
-
+   
     <!-- Start Preloader Area -->
     <div class="preloader">
         <div class="preloader">
@@ -125,8 +125,7 @@
 
         <div class="fria-nav">
             <div class="container">
-                <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                <nav class="navbar navbar-expand-md navbar-light">          <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" style="max-width: 100px;">
                     </a>
 
@@ -387,7 +386,7 @@
     </div>
     <!-- End Go Top Section -->
     <!-- dark version -->
-
+    @yield('content')
     <!-- dark version -->
     <script src="{{ asset('assets-rtl/js/jquery.min.js') }}"></script>
 
