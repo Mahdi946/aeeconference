@@ -2,7 +2,8 @@
 
 
 @section('head-tag')
-    <link rel="stylesheet" href="{{ asset('admin-assets/jalalidatepicker/persian-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('jalalidatepicker/persian-datepicker.min.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
 @endSection
 
 @section('content')
@@ -123,7 +124,7 @@
                                     </div>
                                 </div>
 
-                                {{-- <div class="row mb-3">
+                                <div class="row mb-3">
                                     <label for="email"
                                         class="col-md-4 col-form-label text-md-end">{{ __('تاریخ تولد') }}</label>
 
@@ -131,30 +132,17 @@
                                         <input id="BirthDay" type="number"
                                             class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDay"
                                             value="{{ old('BirthDay') }}" required autocomplete="name" autofocus>
-
+                                        <input type="date" id="BirthDayView" class="form-control form-control-sm">
                                         @error('BirthDay')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                </div> --}}
+                                </div>
 
-                                <section class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <label for="">تاریخ تولد</label>
-                                        <input type="text" name="BirthDay" id="BirthDay" class="form-control form-control-sm d-none">
-                                        <input type="text" id="BirthDayView" class="form-control form-control-sm">
-                                    </div>
-                                    @error('BirthDay')
-                                    <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                        <strong>
-                                            {{ $message }}
-                                        </strong>
-                                    </span>
-                                @enderror
-                                </section>
 
+                             
 
 
 
@@ -543,17 +531,31 @@
 
     <script src="{{ asset('assets-rtl/main.js') }}"></script>
 
+    <script src="{{ asset('jalalidatepicker/persian-date.min.js') }}"></script>
+    <script src="{{ asset('jalalidatepicker/persian-datepicker.min.js') }}"></script>
+    <script type="text/javascript" src="jalalidatepicker.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+
     <script src="{{ asset('admin-assets/jalalidatepicker/persian-date.min.js') }}"></script>
     <script src="{{ asset('admin-assets/jalalidatepicker/persian-datepicker.min.js') }}"></script>
+    <script>
+        CKEDITOR.replace('body');
+        CKEDITOR.replace('summary');
+    </script>
 
+    <script src="{{ asset('admin-assets/jalalidatepicker/persian-date.min.js') }}"></script>
+    <script src="{{ asset('admin-assets/jalalidatepicker/persian-datepicker.min.js') }}"></script>
+    <script>
+        CKEDITOR.replace('body');
+        CKEDITOR.replace('summary');
+    </script>
 
     <script>
         $(document).ready(function() {
             $('#BirthDayView').persianDatepicker({
                 format: 'YYYY/MM/DD',
-                altField: '#BirthDay'
+                altField: '#published_at'
             })
         });
     </script>
-
 @endSection

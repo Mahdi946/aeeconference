@@ -82,7 +82,7 @@
     <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
 
     <link rel="stylesheet" href="{{ url('assets-rtl/css/rtl.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('jalalidatepicker/persian-datepicker.min.css') }}">
     <title> کنگره ملی ترویج و آموزش کشاورزی،منابع طبیعی و محیط زیست پایدار </title>
 
     <link rel="icon" type="image/png" href="{{ asset('assets-rtl/img/favicon.png') }}">
@@ -414,6 +414,13 @@
     <script src="{{ asset('assets/js/homePrizeCountDownDate.js') }}"></script>
     <script src="{{ asset('assets/js/CountDownDate.js') }}"></script>
     <script src="{{ asset('assets/leaflet/leaflet.js') }}"></script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/persian-date/dist/parse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jalali-datepicker/dist/js/persian-datepicker.min.js"></script>
 
     <script>
         $(document).ready(function() {
