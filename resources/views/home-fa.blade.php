@@ -1,4 +1,4 @@
-@extends('templates/fa')
+@extends('templates.fa')
 @section('content')
 
 

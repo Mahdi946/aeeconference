@@ -11,10 +11,10 @@
                     <div class="d-table-cell">
                         <div class="container">
                             <div class="page-title-content">
-                                <h2>عضویت</h2>
+                                <h2>register</h2>
                                 <ul>
-                                    <li><a href="index.html">خانه</a></li>
-                                    <li>عضویت</li>
+                                    <li><a href="index.html">home</a></li>
+                                    <li>register</li>
                                 </ul>
                             </div>
                         </div>
@@ -27,13 +27,13 @@
             <div class="signup-section ptb-100">
                 <div class="container">
                     <div class="signup-form">
-                        <h3>ایجاد حساب کاربری</h3>
+                        <h3>Create an account</h3>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <div class="row">
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('name') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="name" type="text"
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('ایمیل') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('email') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="email" type="email"
@@ -66,7 +66,7 @@
 
                                 <div class="row mb-3">
                                     <label for="password"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('پسورد') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('password') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="password" type="password"
@@ -85,7 +85,7 @@
 
                                 <div class="row mb-3">
                                     <label for="password-confirm"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('تایید پسورد') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('Confirm password') }}</label>
 
                                     <div class="col-md-6">
                                         <input name="password_confirmation" id="password" type="password"
@@ -105,15 +105,15 @@
                                 <div class="row mb-0">
                                     <div class="col-md-8 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
-                                            {{ __('ثبت نام') }}
+                                            {{ __('register') }}
                                         </button>
 
-                                        <a href="{{ url('login') }}">قبلا ثبت نام کردید؟</a>
+                                        <a href="{{ url('login') }}">Already registered?</a>
                                         
                                 <div class="col-lg-12">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="checkme">
-                                        <label class="form-check-label" for="checkme">مرا به خاطر بسپار</label>
+                                        <label class="form-check-label" for="checkme">remember me</label>
                                     </div>
                                 </div>
                                     </div>

@@ -57,31 +57,31 @@
 ░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▒░░░░░░░░░████▓▓▓▓▓▓███▓░░░░░░░░░▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
                                      -->
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/bootstrap.rtl.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/bootstrap.rtl.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/owl.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/owl.default.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/owl.carousel.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/magnific-popup.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/magnific-popup.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/animate.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/boxicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/boxicons.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/flaticon.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/meanmenu.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/meanmenu.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/odometer.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/odometer.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/style.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets-rtl/css/rtl.css') }}">
+    <link rel="stylesheet" href="{{ url('assets-rtl/css/rtl.css') }}">
 
     <title> کنگره ملی ترویج و آموزش کشاورزی،منابع طبیعی و محیط زیست پایدار </title>
 
@@ -111,9 +111,9 @@
                             <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" class="logo-header">
 
                         </a>
-                         {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3"> --}}
-                            <small> English </small>
-
+                         {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
+                            <small> English </small> --}}
+                        
 
                     </div>
                 </div>
@@ -183,14 +183,21 @@
                                    تماس با کنفرانس
                                 </a>
                             </li>
+{{-- 
+                            <!-- <li class="nav-item">
+                                    <a href="{{ base('events') }}" class="nav-link">
+                                        رویدادها
+                                    </a>
+                                </li> --> --}}
 
-
-
+                          
 
                         </ul>
 
                         <div class="others-options">
-
+                            {{-- <!-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="">
+                                <small> English </small>
+                            </a> --> --}}
                             @auth
 
                                 <a href="{{ url('/admin/news') }}" class="btn btn-info b-r">اخبار</a>
