@@ -128,7 +128,7 @@ class ArticleController extends Controller
      */
     public function getArticle()
     {
-        $articles =Article::where('ArticleID', '=', Auth::user()->id)->get();
+        $articles =Article::where('UserID', '=', Auth::user()->id)->get();
         return view('users.panel', compact('articles'));
     }
 }
