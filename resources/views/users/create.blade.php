@@ -120,131 +120,118 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="container form-group">
+                                <div class="d-inline-flex p-2">
 
-                                    <div class="col-md-6">
-                                        <select class="form-select" name="CongressID" id="CongressID">
-                                            <option value="1"> CongressID</option>
-                                            <option value="2"> CongressID</option>
-                                        </select>
-                                    </div>
+
+                                    <select class="form-select" name="CongressID" id="CongressID">
+                                        <option value="1"> CongressID</option>
+                                        <option value="2"> CongressID</option>
+                                    </select>
+
 
                                 </div>
 
                                 <div class="form-group">
 
-                                    <div class="col-md-6">
-                                        <select class="form-select" name="TypeID" id="TypeID">
-                                            <option value="1">مقاله علمی پژوهشی</option>
-                                            <option value="2">مقاله پژوهشی</option>
-                                        </select>
-                                    </div>
+
+                                    <select class="form-select" name="TypeID" id="TypeID">
+                                        <option value="1">مقاله علمی پژوهشی</option>
+                                        <option value="2">مقاله پژوهشی</option>
+                                    </select>
+
 
                                 </div>
 
 
                                 <div class="form-group">
 
-                                    <div class="col-md-6">
-                                        <select class="form-select" name="CategoriesID" id="CategoriesID">
-                                            <option value="1"> دسته بندی</option>
-                                            <option value="1"> CategoriesID</option>
-                                            <option value="2"> CategoriesID</option>
-                                        </select>
+                                    <select class="form-select" name="CategoriesID" id="CategoriesID">
+                                        <option value="1"> دسته بندی</option>
+                                        <option value="1"> CategoriesID</option>
+                                        <option value="2"> CategoriesID</option>
+                                    </select>
 
+                                    <div class="mb-3 border border-primary">
+                                        <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{ __('در صورنی که دسته بندی مدنظر موجود نیست آن را ایجاد کنید') }}</textarea>
                                     </div>
 
 
+                                    <div class="row mb-0">
+                                        <div class="col-md-8 offset-md-4">
+                                            <button type="submit" class="btn btn-primary">
+                                                {{ __('ایجاد') }}
+                                            </button>
 
 
-                                    <div class="row mb-3">
-                                        <label for="Tags"
-                                            class="col-md-4 col-form-label text-md-end">{{ __('در صورنی که دسته بندی مدنظر موجود نیست آن را ایجاد کنید') }}</label>
-
-                                        <div class="col-md-6">
-                                            <input id="FatherName" type="text"
-                                                class="form-control @error('Tags') is-invalid @enderror" name="Tags"
-                                                value="{{ old('Tags') }}" required autocomplete="Tags" autofocus><textarea class="col-md-12" id="w3review" name="w3review" rows="3" cols="20">category</textarea>
-
-                                            @error('Tags')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
                                         </div>
                                     </div>
-
-                                  </div>
-
-
-
-
-
-
-
-                                </div>
-
-
-                                <div class="row mb-0">
-                                    <div class="col-md-8 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            {{ __('ایجاد') }}
-                                        </button>
-
-
-                                    </div>
-
                                 </div>
                             </div>
-                        </form>
                     </div>
                 </div>
 
-                <div class="default-shape">
-                    <div class="shape-1">
-                        <img src="assets/img/shape/4.png" alt="image">
-                    </div>
 
-                    <div class="shape-2 rotateme">
-                        <img src="assets/img/shape/5.svg" alt="image">
-                    </div>
 
-                    <div class="shape-3">
-                        <img src="assets/img/shape/6.svg" alt="image">
-                    </div>
 
-                    <div class="shape-4">
-                        <img src="assets/img/shape/7.png" alt="image">
-                    </div>
 
-                    <div class="shape-5">
-                        <img src="assets/img/shape/8.png" alt="image">
-                    </div>
-                </div>
+
             </div>
-            <!-- End Signup Area -->
 
-            <div class="default-shape">
-                <div class="shape-1">
-                    <img src="{{ asset('assets-rtl/img/shape/4.png') }}" alt="image">
-                </div>
 
-                <div class="shape-2 rotateme">
-                    <img src="{{ asset('assets-rtl/img/shape/5.svg') }}" alt="image">
-                </div>
 
-                <div class="shape-3">
-                    <img src="{{ asset('assets-rtl/img/shape/6.svg') }}" alt="image">
-                </div>
 
-                <div class="shape-4">
-                    <img src="{{ asset('assets-rtl/img/shape/7.png') }}" alt="image">
-                </div>
-
-                <div class="shape-5">
-                    <img src="{{ asset('assets-rtl/img/shape/8.png') }}" alt="image">
-                </div>
-            </div>
         </div>
+    </div>
+    </form>
+    </div>
+    </div>
+
+    <div class="default-shape">
+        <div class="shape-1">
+            <img src="assets/img/shape/4.png" alt="image">
+        </div>
+
+        <div class="shape-2 rotateme">
+            <img src="assets/img/shape/5.svg" alt="image">
+        </div>
+
+        <div class="shape-3">
+            <img src="assets/img/shape/6.svg" alt="image">
+        </div>
+
+        <div class="shape-4">
+            <img src="assets/img/shape/7.png" alt="image">
+        </div>
+
+        <div class="shape-5">
+            <img src="assets/img/shape/8.png" alt="image">
+        </div>
+    </div>
+    </div>
+    <!-- End Signup Area -->
+
+    <div class="default-shape">
+        <div class="shape-1">
+            <img src="{{ asset('assets-rtl/img/shape/4.png') }}" alt="image">
+        </div>
+
+        <div class="shape-2 rotateme">
+            <img src="{{ asset('assets-rtl/img/shape/5.svg') }}" alt="image">
+        </div>
+
+        <div class="shape-3">
+            <img src="{{ asset('assets-rtl/img/shape/6.svg') }}" alt="image">
+        </div>
+
+        <div class="shape-4">
+            <img src="{{ asset('assets-rtl/img/shape/7.png') }}" alt="image">
+        </div>
+
+        <div class="shape-5">
+            <img src="{{ asset('assets-rtl/img/shape/8.png') }}" alt="image">
+        </div>
+    </div>
+    </div>
     </div>
 @endsection
