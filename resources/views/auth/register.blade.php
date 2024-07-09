@@ -1,7 +1,7 @@
 @extends('templates.fa')
 
 @section('head-tag')
-    <link rel="stylesheet" href="/assets-rtl/js/persian-datepicker.min.css">
+    <link rel="stylesheet" href="/assets-rtl/js/persian-datepicker/persianDatepicker-default.css" />
 
 @section('content')
     <div class="container">
@@ -493,11 +493,11 @@
     @endsection
 @section('scripts')
 
-    <script src="/assets-rtl/js/persian-datepicker.min.js"></script>
+    <script src="/assets-rtl/js/persian-datepicker/persian-datepicker.js"></script>
 
     <script>
         $(document).ready(function() {
-            
+
             $('#BirthDay').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 altField: '#BirthDayView'
