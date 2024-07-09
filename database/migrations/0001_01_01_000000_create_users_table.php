@@ -20,7 +20,9 @@ return new class extends Migration
             $table->string('Family_fa');
             $table->string('FatherName')->nullable();
             $table->bigInteger('BirthCert',NULL,true)->unique()->nullable();
-            $table->bigInteger('NationalCode',NULL,true)->unique()->nullable();
+            // $table->bigInteger('NationalCode',NULL,true)->unique()->nullable();
+            // $table->bigInteger('BirthCert')->unique()->nullable();
+            $table->bigInteger('NationalCode')->unique()->nullable();
             $table->date('BirthDay')->nullable();
             $table->bigInteger('MobileNumber');
             $table->bigInteger('PhoneNumber');

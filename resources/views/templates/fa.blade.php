@@ -111,9 +111,9 @@
                             <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" class="logo-header">
 
                         </a>
-                         <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
+                         {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3"> --}}
                             <small> English </small>
-                        
+
 
                     </div>
                 </div>
@@ -184,20 +184,13 @@
                                 </a>
                             </li>
 
-                            <!-- <li class="nav-item">
-                                    <a href="{{ base('events') }}" class="nav-link">
-                                        رویدادها
-                                    </a>
-                                </li> -->
 
-                          
+
 
                         </ul>
 
                         <div class="others-options">
-                            <!-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="">
-                                <small> English </small>
-                            </a> -->
+
                             @auth
 
                                 <a href="{{ url('/admin/news') }}" class="btn btn-info b-r">اخبار</a>
