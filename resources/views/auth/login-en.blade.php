@@ -8,8 +8,8 @@
             <div class="container">
                 <div class="login-form">
                     <div class="login-title">
-                        <h3>خوش آمدید!</h3>
-                        <p>لطفا وارد حساب کاربری خود شوید</p>
+                        <h3>welcome !</h3>
+                        <p>Please login  </p>
                     </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -18,10 +18,10 @@
 
                             <div class="row">
                                 <div class="row mb-3">
-                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('نشانی ایمیل') }}</label>
+                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('email') }}</label>
         
                                     <div class="col-md-6">
-                                        <input name="email" id="email" type="email" class="form-control @error('ایمیل') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <input name="email" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
         
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -34,11 +34,11 @@
 
                                 <div class="row mb-3">
                                     <label for="password"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('پسورد') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('password') }}</label>
 
                                     <div class="col-md-6">
                                         <input name="password" id="password" type="password"
-                                            class="form-control @error('پسورد') is-invalid @enderror" name="password"
+                                            class="form-control @error('password') is-invalid @enderror" name="password"
                                             required autocomplete="current-password">
 
                                         @error('password')
@@ -55,10 +55,10 @@
                                     <div class="col-md-6 offset-md-4">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                                {{ old('مرا به خاطر بسپار') ? 'checked' : '' }}>
+                                                {{ old('remember me') ? 'checked' : '' }}>
 
                                             <label class="form-check-label" for="remember">
-                                                {{ __('مرا بخاطر بسپار') }}
+                                                {{ __('remember me') }}
                                             </label>
                                         </div>
                                     </div>
@@ -70,10 +70,10 @@
                                             {{ __('ورود') }}
                                         </button>
                                         <br>
-                                        <a href="{{ url('register') }}">هنوز ثبت نام نکردید؟</a>
+                                        <a href="{{ url('register') }}">Not registered yet?</a>
                                         @if (Route::has('password.request'))
                                             <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                {{ __('فراموشی رمز عبور؟') }}
+                                                {{ __('forget password?') }}
                                             </a>
                                         @endif
                                     </div>
