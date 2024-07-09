@@ -19,7 +19,7 @@
                             <div class="page-title-content">
                                 <h2>register</h2>
                                 <ul>
-                                    <li><a href="index.html">home</a></li>
+                                    <li><a href="/">home</a></li>
                                     <li>register</li>
                                 </ul>
                             </div>
@@ -130,9 +130,9 @@
 
                                     <div class="col-md-6">
                                         <input id="BirthDay" type="number"
-                                            class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDay"
+                                            class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDays"
                                             value="{{ old('BirthDay') }}" required autocomplete="name" autofocus>
-
+                                        <input type="text" id="birthdayh" name="birthday" class="form-control">
                                         @error('BirthDay')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -141,12 +141,12 @@
                                     </div>
                                 </div> --}}
 
-                             
+
                         <section class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="">تاریخ انتشار</label>
                                 <input type="date" name="published_at" id="published_at" class="form-control form-control-sm d-none">
-                                <input type="text" id="birthdate" name="birthdate" class="form-control">
+
                             </div>
                             @error('published_at')
                             <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
@@ -553,9 +553,9 @@
 
     <script>
         $(document).ready(function () {
-            $('#published_at_view').persianDatepicker({
+            $('#BirthDay').persianDatepicker({
                 format: 'YYYY/MM/DD',
-                altField: '#published_at'
+                altField: '#birthdayh'
             })
         });
 </script>
