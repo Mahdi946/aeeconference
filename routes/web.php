@@ -9,7 +9,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/user/', function() {
-    return view("users.panel");
+    return view("home-fa");
  });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

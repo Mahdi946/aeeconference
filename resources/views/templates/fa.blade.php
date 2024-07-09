@@ -56,7 +56,8 @@
 ░░░░░░░░░░░░░░░░░░░░░░░▓██████░░░░░▒▒▓████░░░░░░████▓▒▒▒░░░▒██████▓▒░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▒░░░░░░░░░████▓▓▓▓▓▓███▓░░░░░░░░░▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-                                     -->
+                                    -->
+                                    
     <link rel="stylesheet" href="{{ url('assets-rtl/css/bootstrap.rtl.min.css') }}">
 
     <link rel="stylesheet" href="{{ url('assets-rtl/css/owl.default.min.css') }}">
@@ -82,13 +83,15 @@
     <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
 
     <link rel="stylesheet" href="{{ url('assets-rtl/css/rtl.css') }}">
-    <link rel="stylesheet" href="{{ asset('jalalidatepicker/persian-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/jalalidatepicker/persian-datepicker.min.css') }}">
     <title> کنگره ملی ترویج و آموزش کشاورزی،منابع طبیعی و محیط زیست پایدار </title>
 
     <link rel="icon" type="image/png" href="{{ asset('assets-rtl/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/leaflet/leaflet.css') }}" />
-@yield('head-tag')
+    
 </head>
+@yield('head-tag') 
+@yield('content')
 
 <body>
 
@@ -111,9 +114,9 @@
                             <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" class="logo-header">
 
                         </a>
-                         {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
+                        {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
                             <small> English </small> --}}
-                        
+
 
                     </div>
                 </div>
@@ -138,59 +141,59 @@
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                   درباره کنفرانس
+                                    درباره کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                  سازمان کنفرانس
+                                    سازمان کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                  کمیته های اختصاصی
+                                    کمیته های اختصاصی
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                  برگزارکنندگان و حامیان
+                                    برگزارکنندگان و حامیان
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                 شرکت در کنفرانس
+                                    شرکت در کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                  ارسال مقاله
+                                    ارسال مقاله
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                 برنامه های جانبی
+                                    برنامه های جانبی
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                   تماس با کنفرانس
+                                    تماس با کنفرانس
                                 </a>
                             </li>
-{{-- 
+                            {{-- 
                             <!-- <li class="nav-item">
                                     <a href="{{ base('events') }}" class="nav-link">
                                         رویدادها
                                     </a>
                                 </li> --> --}}
 
-                          
+
 
                         </ul>
 
@@ -229,11 +232,11 @@
                                 <!-- <h3>درباره ما</h3> -->
                             </div>
                             <!-- <p class="text-vip-2-5">
-                                                    توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
-                                                    این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
-                                                    جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
-                                                    کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
-                                                </p> -->
+                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
+                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
+                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
+                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
+                                                    </p> -->
                             <ul class="footer-social">
                                 <li>
                                     <a href="#">
@@ -394,6 +397,7 @@
 
     <script src="{{ asset('assets-rtl/js/jquery.meanmenu.js') }}"></script>
 
+
     <script src="{{ asset('assets-rtl/js/owl.carousel.js') }}"></script>
 
     <script src="{{ asset('assets-rtl/js/jquery.magnific-popup.min.js') }}"></script>
@@ -408,7 +412,7 @@
 
     <script src="{{ asset('assets-rtl/js/contact-form-script.js') }}"></script>
 
-    <script src="{{ asset('assets-rtl/js/wow.min.js') }}"></script>
+    <script src="/assets-rtl/js/wow.min.js"></script>
 
     <script src="{{ asset('assets-rtl/js/main.js') }}"></script>
     <script src="{{ asset('assets/js/homePrizeCountDownDate.js') }}"></script>
@@ -418,9 +422,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/persian-date/dist/parse.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jalali-datepicker/dist/js/persian-datepicker.min.js"></script>
+   
 
     <script>
         $(document).ready(function() {
@@ -443,6 +445,7 @@
 
         });
     </script>
+    @yield('scripts')
 </body>
 
 

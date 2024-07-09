@@ -1,13 +1,9 @@
 @extends('templates.fa')
 
-
 @section('head-tag')
-    <link rel="stylesheet" href="{{ asset('jalalidatepicker/persian-datepicker.min.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
-@endSection
+    <link rel="stylesheet" href="/assets-rtl/js/persian-datepicker.min.css">
 
 @section('content')
-
     <div class="container">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
@@ -59,7 +55,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text"
+                                        <input id="Family" type="text"
                                             class="form-control @error('name') is-invalid @enderror" name="Family"
                                             value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -78,8 +74,8 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('نام (فارسی)') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text"
-                                            class="form-control @error('name') is-invalid @enderror" name="Family_fa"
+                                        <input id="Name_fa" type="text"
+                                            class="form-control @error('Name_fa') is-invalid @enderror" name="Family_fa"
                                             value="{{ old('Family_fa') }}" required autocomplete="Family_fa" autofocus>
 
                                         @error('Family_fa')
@@ -95,7 +91,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('نام پدر') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text"
+                                        <input id="FatherName" type="text"
                                             class="form-control @error('FatherName') is-invalid @enderror" name="FatherName"
                                             value="{{ old('FatherName') }}" required autocomplete="name" autofocus>
 
@@ -112,7 +108,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('کارت ملی') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="number"
+                                        <input id="BirthCert" type="number"
                                             class="form-control @error('BirthCert') is-invalid @enderror" name="BirthCert"
                                             value="{{ old('BirthCert') }}" required autocomplete="name" autofocus>
 
@@ -129,10 +125,10 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('تاریخ تولد') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="BirthDay" type="number"
+                                        <input id="BirthDay" type="text"
                                             class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDay"
-                                            value="{{ old('BirthDay') }}" required autocomplete="name" autofocus>
-                                        <input type="date" id="BirthDayView" class="form-control form-control-sm">
+                                            value="{{ old('BirthDay') }}" required  autofocus data-jdp>
+                                        <input type="hidden" id="BirthDayView" name="BirthDayView" class="form-control form-control-sm">
                                         @error('BirthDay')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -142,19 +138,12 @@
                                 </div>
 
 
-                             
-
-
-
-
-
-
                                 <div class="row mb-3">
                                     <label for="email"
                                         class="col-md-4 col-form-label text-md-end">{{ __('شماره ثابت') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="BirthDay" type="number"
+                                        <input id="phoneNumber" type="number"
                                             class="form-control @error('PhoneNumber') is-invalid @enderror"
                                             name="PhoneNumber" value="{{ old('PhoneNumber') }}" required
                                             autocomplete="name" autofocus>
@@ -172,7 +161,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('شماره موبایل') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="BirthDay" type="number"
+                                        <input id="MobileNumber" type="number"
                                             class="form-control @error('PhoneNumber') is-invalid @enderror"
                                             name="MobileNumber" value="{{ old('PhoneNumber') }}" required
                                             autocomplete="name" autofocus>
@@ -224,7 +213,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('شغل') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="Edu" type="text"
+                                        <input id="Job" type="text"
                                             class="form-control @error('Job') is-invalid @enderror" name="Job"
                                             value="{{ old('Job') }}" autocomplete="شغل" autofocus>
 
@@ -293,7 +282,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('کشور') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="City_fa" type="text"
+                                        <input id="Country" type="text"
                                             class="form-control @error('Country') is-invalid @enderror" name="Country"
                                             value="{{ old('Country') }}" required autocomplete="Country" autofocus>
 
@@ -310,7 +299,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('رتبه') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="City_fa" type="text"
+                                        <input id="Rank" type="text"
                                             class="form-control @error('Rank') is-invalid @enderror" name="Rank"
                                             value="{{ old('Rank') }}" required autocomplete="Rank" autofocus>
 
@@ -379,7 +368,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('کد ملی') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="number"
+                                        <input id="NationalCode" type="number"
                                             class="form-control @error('NationalCode') is-invalid @enderror"
                                             name="NationalCode" value="{{ old('NationalCode') }}" required
                                             autocomplete="name" autofocus>
@@ -418,7 +407,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('تایید پسورد') }}</label>
 
                                     <div class="col-md-6">
-                                        <input name="password_confirmation" id="password" type="password"
+                                        <input name="password_confirmation" id="password_confirmation" type="password"
                                             class="form-control @error('password') is-invalid @enderror" name="password"
                                             required autocomplete="current-password">
 
@@ -501,61 +490,19 @@
             </div>
         </div>
     </div>
-    <!-- End Login Area -->
+    @endsection
 @section('scripts')
-    <script src="{{ asset('scripts/NewsAdd.js?v=1') }}" type="module"></script>
 
-    <script src="{{ asset('assets-rtl/jquery.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/popper.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/bootstrap.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/jquery.meanmenu.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/owl.carousel.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/jquery.magnific-popup.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/jquery.appear.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/odometer.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/jquery.ajaxchimp.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/form-validator.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/contact-form-script.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/wow.min.js') }}"></script>
-
-    <script src="{{ asset('assets-rtl/main.js') }}"></script>
-
-    <script src="{{ asset('jalalidatepicker/persian-date.min.js') }}"></script>
-    <script src="{{ asset('jalalidatepicker/persian-datepicker.min.js') }}"></script>
-    <script type="text/javascript" src="jalalidatepicker.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
-
-    <script src="{{ asset('admin-assets/jalalidatepicker/persian-date.min.js') }}"></script>
-    <script src="{{ asset('admin-assets/jalalidatepicker/persian-datepicker.min.js') }}"></script>
-    <script>
-        CKEDITOR.replace('body');
-        CKEDITOR.replace('summary');
-    </script>
-
-    <script src="{{ asset('admin-assets/jalalidatepicker/persian-date.min.js') }}"></script>
-    <script src="{{ asset('admin-assets/jalalidatepicker/persian-datepicker.min.js') }}"></script>
-    <script>
-        CKEDITOR.replace('body');
-        CKEDITOR.replace('summary');
-    </script>
+    <script src="/assets-rtl/js/persian-datepicker.min.js"></script>
 
     <script>
         $(document).ready(function() {
-            $('#BirthDayView').persianDatepicker({
+            
+            $('#BirthDay').persianDatepicker({
                 format: 'YYYY/MM/DD',
-                altField: '#published_at'
+                altField: '#BirthDayView'
             })
+
         });
     </script>
-@endSection
+@endsection

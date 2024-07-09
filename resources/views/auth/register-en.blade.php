@@ -59,7 +59,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('last name') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text"
+                                        <input id="Family" type="text"
                                             class="form-control @error('name') is-invalid @enderror" name="Family"
                                             value="{{ old('name') }}" required autocomplete="name" autofocus>
 
@@ -78,7 +78,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('name(persian)') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text"
+                                        <input id="Name_fa" type="text"
                                             class="form-control @error('name') is-invalid @enderror" name="Family_fa"
                                             value="{{ old('Family_fa') }}" required autocomplete="Family_fa" autofocus>
 
@@ -95,7 +95,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('father name') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text"
+                                        <input id="FatherName" type="text"
                                             class="form-control @error('FatherName') is-invalid @enderror" name="FatherName"
                                             value="{{ old('FatherName') }}" required autocomplete="name" autofocus>
 
@@ -112,7 +112,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('birth cert') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="number"
+                                        <input id="BirthCert" type="number"
                                             class="form-control @error('BirthCert') is-invalid @enderror" name="BirthCert"
                                             value="{{ old('BirthCert') }}" required autocomplete="name" autofocus>
 
@@ -124,38 +124,24 @@
                                     </div>
                                 </div>
 
-                                {{-- <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('تاریخ تولد') }}</label>
 
-                                    <div class="col-md-6">
-                                        <input id="BirthDay" type="number"
-                                            class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDays"
-                                            value="{{ old('BirthDay') }}" required autocomplete="name" autofocus>
-                                        <input type="text" id="birthdayh" name="birthday" class="form-control">
-                                        @error('BirthDay')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
+
+
+                                <section class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="">تاریخ انتشار</label>
+                                        <input type="date" name="published_at" id="published_at"
+                                            class="form-control form-control-sm d-none">
+
                                     </div>
-                                </div> --}}
-
-
-                        <section class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label for="">تاریخ انتشار</label>
-                                <input type="date" name="published_at" id="published_at" class="form-control form-control-sm d-none">
-
-                            </div>
-                            @error('published_at')
-                            <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                        @enderror
-                        </section>
+                                    @error('published_at')
+                                        <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
+                                            <strong>
+                                                {{ $message }}
+                                            </strong>
+                                        </span>
+                                    @enderror
+                                </section>
 
 
 
@@ -393,7 +379,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('NationalCode') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="number"
+                                        <input id="NationalCode" type="number"
                                             class="form-control @error('NationalCode') is-invalid @enderror"
                                             name="NationalCode" value="{{ old('NationalCode') }}" required
                                             autocomplete="name" autofocus>
@@ -432,7 +418,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('confirm password') }}</label>
 
                                     <div class="col-md-6">
-                                        <input name="password_confirmation" id="password" type="password"
+                                        <input name="password_confirmation" id="password_confirmation" type="password"
                                             class="form-control @error('password') is-invalid @enderror" name="password"
                                             required autocomplete="current-password">
 
@@ -552,13 +538,13 @@
 
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#BirthDay').persianDatepicker({
                 format: 'YYYY/MM/DD',
                 altField: '#birthdayh'
             })
         });
-</script>
+    </script>
 
 
 @endSection
