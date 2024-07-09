@@ -288,41 +288,7 @@
 
 
 
-                @foreach ($newsData as $news)
-                    {{ $date = jdate($news['created_at']) }}
-
-
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-blog">
-                            <div class="image ">
-
-                                @if ($news['image'])
-                                    <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md "
-                                        src="<?= base_url() . 'news/img/' . $news['id'] ?>" alt="<?= $news['title'] ?>">
-                                @endif
-                            </div>
-
-                            <div class="content">
-                                <span> {{ $news['date'] }}</span>
-                                <h3>
-                                    <a href="{{ url('/news/' . $news['slug']) }}">
-                                        {{ $news['title'] }}
-                                    </a>
-                                </h3>
-                                <p>
-                                    {{ substr($news['content'], 0, 50) }}
-                                </p>
-                                <a href="{{ url('/news/' . $news['slug']) }}" class="read-more"> مشاهده </a>
-                                <p>
-
-                                    <small>{{ $date->format('%d %B، %Y') }}</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
+          
 
             </div>
         </div>

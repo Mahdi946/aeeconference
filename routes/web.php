@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/user/', function() {
+Route::get('/', function() {
     return view("home-fa");
  });
 
