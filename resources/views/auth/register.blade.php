@@ -39,15 +39,11 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('نام') }}</label>
 
                                     <div class="col-md-6">
-<<<<<<< Updated upstream
+
                                         <input id="Name" type="text"
                                             class="form-control @error('Name') is-invalid @enderror" name="Name"
                                             value="{{ old('Name') }}" required autocomplete="Name" autofocus>
-=======
-                                        <input id="name" type="text"
-                                            class="form-control @error('name') is-invalid @enderror" name="Name"
-                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
->>>>>>> Stashed changes
+
 
                                         @error('Name')
                                             <span class="invalid-feedback" role="alert">
@@ -99,8 +95,8 @@
 
                                     <div class="col-md-6">
                                         <input id="Family_fa" type="text"
-                                            class="form-control @error('Family_fa') is-invalid @enderror" name="Name_fa"
-                                            value="{{ old('Family_fa') }}" required autocomplete="Name_fa" autofocus>
+                                            class="form-control @error('Family_fa') is-invalid @enderror" name="Family_fa"
+                                            value="{{ old('Family_fa') }}" required autocomplete="Family_fa" autofocus>
 
                                         @error('Family_fa')
                                             <span class="invalid-feedback" role="alert">
