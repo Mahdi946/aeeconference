@@ -117,7 +117,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                 
+
 
                                     <!-- Category Select with Add Option -->
                                     <div class="form-check">
@@ -127,8 +127,8 @@
                                             موضوع 1 </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="flexCheckChecked" checked>
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
                                         <label class="form-check-label" for="flexCheckChecked">
                                             موضوع2
                                         </label>
