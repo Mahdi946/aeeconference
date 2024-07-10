@@ -3,23 +3,7 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-            <!-- Start Page Title Area -->
-            <div class="page-title-area item-bg-5">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="page-title-content">
-                                <h2>عضویت</h2>
-                                <ul>
-                                    <li><a href="index.html">خانه</a></li>
-                                    <li>عضویت</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Page Title Area -->
+            
 
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
@@ -133,24 +117,18 @@
                                     </div>
 
                                     <!-- Category Select with Add Option -->
-                                    <div class="col-md-12 mb-3">
-                                        <label for="CategoriesID" class="form-label">CategoriesID</label>
-                                        <div class="input-group">
-                                            <select class="form-select" id="select3">
-                                                <option selected> دسته بندی</option>
-                                                <option value="1">CategoriesID 1</option>
-                                                <option value="2">CategoriesID2</option>
-                                                <option value="3">CategoriesID 3</option>
-                                            </select>
-                                            <input type="text" class="form-control" id="newCategory"
-                                                placeholder="Add new category">
-                                            <button type="button" class="btn btn-outline-secondary"
-                                                id="addCategoryButton">افزودن</button>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="options">انتخاب گزینه‌ها</label>
+                                        <select id="options" name="options[]" class="custom-select" multiple>
+                                            <option value="option1">گزینه 1</option>
+                                            <option value="option2">گزینه 2</option>
+                                            <option value="option3">گزینه 3</option>
+                                            <option value="option4">گزینه 4</option>
+                                        </select>
                                     </div>
-                                </div>
+                                       
 
-                                <button type="submit" class="btn btn-primary">ایجاد</button>
+                                    <button type="submit" class="btn btn-primary">ایجاد</button>
                             </form>
                         </div>
                     </div>
@@ -210,4 +188,14 @@
     </div>
     </div>
     </div>
+@endsection
+@section('script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#options').selectpicker();
+    });
+</script>
 @endsection

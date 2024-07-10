@@ -3,13 +3,14 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-6">
+            <div class="mr-5 btn btn-danger">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                  خروج
+              </a>  
+            </div>
             <div class="card">
                 <div class="card-body">
-                    <div class="mr-5 btn btn-danger">
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                          خروج
-                      </a>  
-                    </div>
+                    
                     <h5 class="card-title text-center">ثبت ایمیل</h5>
                     <form method="POST" action="">
                         @csrf
