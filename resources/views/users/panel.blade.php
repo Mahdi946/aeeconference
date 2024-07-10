@@ -11,9 +11,9 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">نوع مقاله</th>
-                                <th scope="col">عنوان (خلاصه)</th>
-                                <th scope="col">تگ ها</th>
+                                <th scope="col">عنوان فارسی مقاله</th>
+                                <th scope="col">عنوان انگلیسی مقاله</th>
+                                <th scope="col">عملیات</th>
                             </tr>
                         </thead>
 
