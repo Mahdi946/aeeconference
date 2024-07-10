@@ -393,8 +393,8 @@ Navbar Area CSS
   padding-top: 25px;
   padding-bottom: 25px;
   font-weight: 500;
-  margin-left: 14px;
-  margin-right: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .fria-nav .navbar .navbar-nav .nav-item a:hover, .fria-nav .navbar .navbar-nav .nav-item a:focus, .fria-nav .navbar .navbar-nav .nav-item a.active {
   color: #086AD8;
@@ -951,7 +951,7 @@ Navbar Area CSS
   }
   .fria-responsive-nav .logo {
     /* position: relative;
-     width: 50%; 
+     width: 50%;
     z-index: 999; */
     position: relative;
     z-index: 999;
@@ -980,9 +980,9 @@ Navbar Area CSS
 		flex-wrap: wrap;
         gap: 1.2rem;
         justify-content: center;
-	
+
 	  }
-    
+
 }
 /*================================================
 Banner Area CSS

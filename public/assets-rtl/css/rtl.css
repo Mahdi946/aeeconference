@@ -71,11 +71,11 @@ font-family: "Vazirmatn RD FD", sans-serif;
 }
 .fria-nav .navbar .navbar-nav .nav-item:first-child a {
 	margin-right: 0;
-	margin-left: 14px;
+	margin-left: auto;
 }
 .fria-nav .navbar .navbar-nav .nav-item:last-child a {
 	margin-left: 0;
-	margin-right: 14px;
+	margin-right: auto;
 }
 .fria-nav .navbar .others-options {
 	margin-right: 100px;

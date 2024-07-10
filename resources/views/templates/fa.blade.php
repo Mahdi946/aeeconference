@@ -140,49 +140,49 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     درباره کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     سازمان کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     کمیته های اختصاصی
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     برگزارکنندگان و حامیان
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{ url('register') }}" class="nav-link active">
+                                <a href="{{ url('register') }}" class="nav-link">
                                     شرکت در کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{ url('login') }}" class="nav-link active">
+                                <a href="{{ url('login') }}" class="nav-link">
                                     ارسال مقاله
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     برنامه های جانبی
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link go-down">
                                     تماس با کنفرانس
                                 </a>
                             </li>
@@ -200,8 +200,8 @@
                                 </form>
 
                             @endauth
-                            
-                           
+
+
                             @guest
 
 
@@ -214,7 +214,7 @@
 
                                 <a href="{{ url('register') }}" class="btn btn-info b-r">ثبت‌نام</a>
                             @endguest
-                            
+
                             {{-- <!--                                <a href="--> //=('register') --}}
                             <!--" class="default-btn">ثبت نام</a>-->
                         {{-- </div> --}}
@@ -227,7 +227,7 @@
     <!-- End Navbar Area -->
     @section('content')
         <!-- Start Footer Area -->
-        <section class="footer-section pt-100 pb-70">
+        <section class="footer-section pt-100 pb-70" id="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12">

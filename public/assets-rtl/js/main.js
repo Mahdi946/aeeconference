@@ -145,7 +145,16 @@
 					scrollTop: "0"
 				}, 500);
 			});
-		});
+        });
+
+        // Go to Down
+        $(function(){
+            // Click Event
+            $('.go-down').on('click', function () {
+                $("html, body").animate({ scrollTop: $('body').height() },  500);
+            });
+        });
+
 		// FAQ Accordion
 		$(function() {
 			$('.accordion').find('.accordion-title').on('click', function() {
@@ -207,7 +216,7 @@
 			url: "https://envytheme.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9", // Your url MailChimp
 			callback: callbackFunction
 		});
-		// Count Time 
+		// Count Time
 		function makeTimer() {
 			var endTime = new Date("april  30, 2020 17:00:00 PDT");
 			var endTime = (Date.parse(endTime)) / 1000;
@@ -272,7 +281,7 @@
 				g.preventDefault();
 			});
 		})(jQuery);
-		// Count Time 
+		// Count Time
 		function makeTimer() {
 			var endTime = new Date("September 30, 2022 17:00:00 PDT");
 			var endTime = (Date.parse(endTime)) / 1000;
