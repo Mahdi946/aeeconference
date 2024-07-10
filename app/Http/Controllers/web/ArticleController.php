@@ -88,7 +88,7 @@ class ArticleController extends Controller
             return redirect()->back();
         }
         // return redirect()->route('Writers.writerSave')->with('ArticleID',  $article->id);
-        return redirect()->route('Writers.writerSave')->with('ArticleID', $article->id);
+        return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
         // alert()->success('محصول مورد نظر ایجاد شد', 'باتشکر');
 
     }

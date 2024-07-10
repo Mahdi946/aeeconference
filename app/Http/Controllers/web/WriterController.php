@@ -85,7 +85,7 @@ class WriterController extends Controller
         //
     }
 
-    public function getWriterByID(Article $article)
+    public function getWriterByID($email)
     {
         $writers =Writer::where('ArticleID', '=', $article->id)->get();
         return view('users.panel', compact('writers'));
@@ -100,7 +100,7 @@ class WriterController extends Controller
         $article =Article::findOrFail($id);
         if( Auth::user()->id == $article->UserID){
             $articles =Article::where('UserID', '=', Auth::user()->id)->get();
-            return view('users.panel', compact('articles'));
+            return view('users.writer.writer', compact('articles'));
         }
 
         // $writers =User::where('Email', '=', $request->email)->first();
