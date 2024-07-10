@@ -12,8 +12,13 @@
 
 
                         <div class="container mt-5">
-
-                            <form href="{{ route('Articles.store') }}" method="POST">
+                            <div class="mr-5 btn btn-danger">
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                    خروج
+                                </a>
+                            </div>
+                            <form action="{{ route('Articles.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <!-- Input fields -->
