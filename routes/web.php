@@ -8,7 +8,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', function() {
-    return view("home-fa");
- });
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

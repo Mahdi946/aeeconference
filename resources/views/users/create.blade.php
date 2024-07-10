@@ -26,148 +26,116 @@
                 <div class="container">
                     <div class="signup-form">
                         <h3>ایجاد مقاله</h3>
-                        <form method="POST" action="">
-                            @csrf
-                            <div class="row">
 
 
-
-                                <div class="row mb-3">
-                                    <label for="ShortTitle"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('عنوان(کامل)') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="FullTitle" type="text"
-                                            class="form-control @error('name') is-invalid @enderror" name="FullTitle"
-                                            value="{{ old('FullTitle') }}" required autocomplete="name" autofocus>
-
+                        <div class="container mt-5">
+                            <form>
+                                @csrf
+                                <div class="row">
+                                    <!-- Input fields -->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="input1" class="form-label">{{ __('عنوان(کامل)') }}</label>
+                                        <input name="FullTitle" type="text" class="form-control"
+                                            value="{{ old('FullTitle') }}" id="FullTitle">
                                         @error('FullTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="ShortTitle"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('عنوان(خلاصه)') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="FullTitle" type="text"
-                                            class="form-control @error('name') is-invalid @enderror" name="ShortTitle"
-                                            value="{{ old('ShortTitle') }}" required autocomplete="ShortTitle" autofocus>
-
+                                    <div class="col-md-6 mb-3">
+                                        <label for="ShortTitle" class="form-label">{{ __('عنوان(خلاصه)') }}</label>
+                                        <input name="ShortTitle" type="text" class="form-control"
+                                            value="{{ old('ShortTitle') }}" id="ShortTitle">
                                         @error('ShortTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('عنوان کامل(فارسی)') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="FullTitle_fa" type="text"
-                                            class="form-control @error('FullTitle_fa') is-invalid @enderror"
-                                            name="FullTitle_fa" value="{{ old('FullTitle_fa') }}" required
-                                            autocomplete="name" autofocus>
-
+                                    <div class="col-md-6 mb-3">
+                                        <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل(فارسی)') }}</label>
+                                        <input name="FullTitle_fa" type="text" class="form-control"
+                                            value="{{ old('FullTitle_fa') }}" id="FullTitle_fa">
                                         @error('FullTitle_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
-
-
-
-                                <div class="row mb-3">
-                                    <label for="ShortTitle_fa"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('عنوان (خلاصه-فارسی)') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="ShortTitle_fa" type="text"
-                                            class="form-control @error('ShortTitle_fa') is-invalid @enderror"
-                                            name="ShortTitle_fa" value="{{ old('ShortTitle_fa') }}" required
-                                            autocomplete="ShortTitle_fa" autofocus>
-
+                                    <div class="col-md-6 mb-3">
+                                        <label for="ShortTitle_fa"
+                                            class="form-label">{{ __('عنوان (خلاصه-فارسی)') }}</label>
+                                        <input name="ShortTitle_fa" type="text" class="form-control"
+                                            value="{{ old('ShortTitle_fa') }}" id="ShortTitle_fa">
                                         @error('ShortTitle_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="Tags"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('تگ ها') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="FatherName" type="text"
-                                            class="form-control @error('Tags') is-invalid @enderror" name="Tags"
-                                            value="{{ old('Tags') }}" required autocomplete="Tags" autofocus>
-
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Tags" class="form-label">{{ __('تگ ها') }}</label>
+                                        <input name="Tags" type="text" class="form-control" id="Tags"
+                                            value="{{ old('Tags') }}">
                                         @error('Tags')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                </div>
-                                <div class="d-inline-flex p-2">
 
+                                    <!-- Select options -->
+                                    <div class="col-md-6 mb-3">
+                                        <label for="select1" class="form-label">CongressID</label>
+                                        <select name="CongressID" class="form-select" id="CongressID">
+                                            <option selected>Select an option</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                        </select>
+                                        @error('CongressID')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="TypeID" class="form-label">نوع مقاله</label>
+                                        <select class="form-select" id="TypeID">
+                                            <option selected>انتخاب کنید</option>
+                                            <option value="1">مقاله علمی پژوهشی</option>
+                                            <option value="2">مقاله پژوهشی</option>
 
-                                    <select class="form-select" name="CongressID" id="CongressID">
-                                        <option value="1"> CongressID</option>
-                                        <option value="2"> CongressID</option>
-                                    </select>
-
-
-                                </div>
-
-                                <div class="form-group">
-
-
-                                    <select class="form-select" name="TypeID" id="TypeID">
-                                        <option value="1">مقاله علمی پژوهشی</option>
-                                        <option value="2">مقاله پژوهشی</option>
-                                    </select>
-
-
-                                </div>
-
-
-                                <div class="form-group">
-
-                                    <select class="form-select" name="CategoriesID" id="CategoriesID">
-                                        <option value="1"> دسته بندی</option>
-                                        <option value="1"> CategoriesID</option>
-                                        <option value="2"> CategoriesID</option>
-                                    </select>
-
-                                    <div class="mb-3 border border-primary">
-                                        <label for="exampleFormControlTextarea1" class="form-label"></label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{ __('در صورنی که دسته بندی مدنظر موجود نیست آن را ایجاد کنید') }}</textarea>
+                                        </select>
+                                        @error('TypeID')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
 
-
-                                    <div class="row mb-0">
-                                        <div class="col-md-8 offset-md-4">
-                                            <button type="submit" class="btn btn-primary">
-                                                {{ __('ایجاد') }}
-                                            </button>
-
-
+                                    <!-- Category Select with Add Option -->
+                                    <div class="col-md-12 mb-3">
+                                        <label for="CategoriesID" class="form-label">CategoriesID</label>
+                                        <div class="input-group">
+                                            <select class="form-select" id="select3">
+                                                <option selected> دسته بندی</option>
+                                                <option value="1">CategoriesID 1</option>
+                                                <option value="2">CategoriesID2</option>
+                                                <option value="3">CategoriesID 3</option>
+                                            </select>
+                                            <input type="text" class="form-control" id="newCategory"
+                                                placeholder="Add new category">
+                                            <button type="button" class="btn btn-outline-secondary"
+                                                id="addCategoryButton">افزودن</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
+                                <button type="submit" class="btn btn-primary">ایجاد</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
@@ -183,7 +151,7 @@
 
         </div>
     </div>
-    </form>
+
     </div>
     </div>
 
