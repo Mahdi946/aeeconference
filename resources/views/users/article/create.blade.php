@@ -3,24 +3,7 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-            <!-- Start Page Title Area -->
-            <div class="page-title-area item-bg-5">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="page-title-content">
-                                <h2>عضویت</h2>
-                                <ul>
-                                    <li><a href="index.html">خانه</a></li>
-                                    <li>عضویت</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Page Title Area -->
-
+     
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
                 <div class="container">
@@ -39,7 +22,7 @@
                                 @csrf
                                 <div class="row">
                                     <!-- Input fields -->
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-12 mb-3">
                                         <label for="input1" class="form-label">{{ __('عنوان(کامل)') }}</label>
                                         <input name="FullTitle" type="text" class="form-control"
                                             value="{{ old('FullTitle') }}" id="FullTitle">
@@ -49,7 +32,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-12 mb-3">
                                         <label for="ShortTitle" class="form-label">{{ __('عنوان(خلاصه)') }}</label>
                                         <input name="ShortTitle" type="text" class="form-control"
                                             value="{{ old('ShortTitle') }}" id="ShortTitle">
@@ -59,7 +42,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-12 mb-3">
                                         <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل(فارسی)') }}</label>
                                         <input name="FullTitle_fa" type="text" class="form-control"
                                             value="{{ old('FullTitle_fa') }}" id="FullTitle_fa">
@@ -69,7 +52,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa"
                                             class="form-label">{{ __('عنوان (خلاصه-فارسی)') }}</label>
                                         <input name="ShortTitle_fa" type="text" class="form-control"
@@ -80,7 +63,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __('تگ ها') }}</label>
                                         <input name="Tags" type="text" class="form-control" id="Tags"
                                             value="{{ old('Tags') }}">
@@ -91,7 +74,7 @@
                                         @enderror
                                     </div>
 
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __('تگ ها-فارسی') }}</label>
                                         <input name="Fa-tag" type="text" class="form-control" id="Tags"
                                             value="{{ old('Tags') }}">
@@ -103,7 +86,7 @@
                                     </div>
 
                                     <!-- Select options -->
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-12 mb-3">
                                         <label for="select1" class="form-label">CongressID</label>
                                         <select name="CongressID" class="form-select" id="CongressID">
                                             <option selected>Select an option</option>

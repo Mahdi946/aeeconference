@@ -19,6 +19,7 @@ class ArticleController extends Controller
     public function index()
     {
         //
+        
         $articles =Article::latest()->paginate(10);
         return view('users.panel', compact('articles'));
     }
