@@ -1,29 +1,35 @@
-@extends('templates.fa')
-@section('content')
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="mr-5 btn btn-danger">
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                  خروج
-              </a>  
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    
-                    <h5 class="card-title text-center">ثبت ایمیل</h5>
-                    <form method="POST" action="">
-                        @csrf
-                        <div class="form-group">
-                            <label for="email">ایمیل</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <input type="hidden" name="hidden_email" id="hidden_email">
-                        <button type="submit" class="btn btn-primary btn-block">ثبت</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown با انتخاب چندگانه</title>
+    <!-- لینک به کتابخانه‌های Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <form method="POST" action="">
+            @csrf
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+
+            <button type="submit" class="btn btn-primary">ثبت</button>
+        </form>
     </div>
-</div>
-@endsection
+
+    <!-- اسکریپت لازم برای فعال کردن Dropdown با استفاده از کتابخانه Bootstrap -->
+    <script>
+        $(document).ready(function() {
+            $('#options').selectpicker();
+        });
+    </script>
+</body>
+</html>

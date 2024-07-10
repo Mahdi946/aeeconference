@@ -3,7 +3,23 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-            
+            <!-- Start Page Title Area -->
+            <div class="page-title-area item-bg-5">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="page-title-content">
+                                <h2>عضویت</h2>
+                                <ul>
+                                    <li><a href="index.html">خانه</a></li>
+                                    <li>عضویت</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Page Title Area -->
 
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
@@ -101,34 +117,32 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="TypeID" class="form-label">نوع مقاله</label>
-                                        <select class="form-select" id="TypeID">
-                                            <option selected>انتخاب کنید</option>
-                                            <option value="1">مقاله علمی پژوهشی</option>
-                                            <option value="2">مقاله پژوهشی</option>
-
-                                        </select>
-                                        @error('TypeID')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
+                                 
 
                                     <!-- Category Select with Add Option -->
-                                    <div class="form-group">
-                                        <label for="options">انتخاب گزینه‌ها</label>
-                                        <select id="options" name="options[]" class="custom-select" multiple>
-                                            <option value="option1">گزینه 1</option>
-                                            <option value="option2">گزینه 2</option>
-                                            <option value="option3">گزینه 3</option>
-                                            <option value="option4">گزینه 4</option>
-                                        </select>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            موضوع 1 </label>
                                     </div>
-                                       
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            موضوع2
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            موضوع3
+                                        </label>
+                                    </div>
+                                </div>
 
-                                    <button type="submit" class="btn btn-primary">ایجاد</button>
+                                <button type="submit" class="btn btn-primary">ایجاد</button>
                             </form>
                         </div>
                     </div>
@@ -188,14 +202,4 @@
     </div>
     </div>
     </div>
-@endsection
-@section('script')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#options').selectpicker();
-    });
-</script>
 @endsection
