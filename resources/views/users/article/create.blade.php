@@ -108,7 +108,8 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <select class="form-select" multiple aria-label="multiple select example" name="Categories[]">
+                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-فارسی') }}</label>
+                                        <select class="form-select" multiple aria-label="multiple select" name="Categories[]">
                                             @foreach ($categories as $category)
                                             <option value="{{$category->id}}">{{$category->Name}}</option>
                                             @endforeach
