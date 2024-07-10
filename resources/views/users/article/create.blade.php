@@ -45,16 +45,7 @@
                                         @enderror
                                     </div>
 
-                                    <div class="col-md-12 mb-3">
-                                        <label for="ShortTitle" class="form-label">{{ __('چکیده') }}</label>
-                                        <input name="ShortTitle" type="text" class="form-control"
-                                            value="{{ old('ShortTitle') }}" id="ShortTitle">
-                                        @error('ShortTitle')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
+                                   
                                    
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa"
@@ -72,6 +63,17 @@
                                         <input name="Fa-tag" type="text" class="form-control" id="Tags"
                                             value="{{ old('Tags') }}">
                                         @error('Tags')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label for="ShortTitle" class="form-label">{{ __('چگیده-انگلیسی') }}</label>
+                                        <input name="ShortTitle" type="text" class="form-control"
+                                            value="{{ old('ShortTitle') }}" id="ShortTitle">
+                                        @error('ShortTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
