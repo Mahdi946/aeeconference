@@ -164,13 +164,13 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="{{ url('register') }}" class="nav-link active">
                                     شرکت در کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="{{ url('login') }}" class="nav-link active">
                                     ارسال مقاله
                                 </a>
                             </li>
@@ -210,10 +210,10 @@
                             @guest
                                 </br>
 
-                                <a href="{{ url('register') }}" class="btn btn-info b-r">ثبتنام</a>
+                                <a href="{{ url('register') }}" class="btn btn-info b-r">ثبت‌نام</a>
                             @endguest
                             {{-- <!--                                <a href="--> //=('register') --}}
-                            <!--" class="default-btn">ثبت‌نام</a>-->
+                            <!--" class="default-btn">ثبت نام</a>-->
                         {{-- </div> --}}
                     </div>
                 </nav>
