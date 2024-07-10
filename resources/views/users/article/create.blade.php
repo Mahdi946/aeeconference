@@ -37,7 +37,7 @@
                                             <option value="2">مقاله علمی پژوهشی</option>
 
                                         </select>
-                                        @error('FileType')
+                                        @error('TypeID')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
