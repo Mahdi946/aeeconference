@@ -31,7 +31,7 @@ class ArticleController extends Controller
     {
 
         $Congresses =Congress::first();
-        
+
         // $Congresses =Congress::latest()->limit(1);
         // $Congresses =Congress::where('start_date', '>=' , now())
         // ->where('end_date', '<=' , now());
@@ -90,8 +90,8 @@ class ArticleController extends Controller
             die(print_r("error dari"));
             return redirect()->back();
         }
-        // return redirect()->route('Writers.writerSave')->with('ArticleID',  $article->id);
-        return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
+        return redirect()->route('Articles.getArticle');
+        //return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
         // alert()->success('محصول مورد نظر ایجاد شد', 'باتشکر');
 
     }
