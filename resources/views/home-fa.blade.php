@@ -22,8 +22,8 @@
                         <img class="img-slider" src="assets/img/slider4.jpg" alt="">
                     </div>
                     <!-- <div class="clients-item">
-                            <img class="img-slider" src="assets/img/slider2.jpg" alt="">
-                        </div> -->
+                                <img class="img-slider" src="assets/img/slider2.jpg" alt="">
+                            </div> -->
 
 
                 </div>
@@ -38,6 +38,8 @@
 
 
     <section class="fun-facts-area pt-100 pb-70">
+       
+   
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -86,16 +88,22 @@
             </div>
         </div>
     </section>
-
+    @auth
+        <div class="mr-5 btn btn-danger">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                خروج
+            </a>
+        </div>
+    @endauth
 
     <!-- Start Features Area -->
     <section class="features-section pt-100 pb-70">
         <div class="container">
             <!-- <div class="section-title">
-                    <h2>ویژگی های خلاقانه</h2> -->
+                        <h2>ویژگی های خلاقانه</h2> -->
             <!-- <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p> -->
             <!-- <div class="bar"></div>
-                </div> -->
+                    </div> -->
 
             <div class="row" dir="rtl">
                 <div class="text">
@@ -273,6 +281,6 @@
 
 
     <!-- Start Blog Area -->
-   
+
     <!-- End Blog Area -->
 @endsection
