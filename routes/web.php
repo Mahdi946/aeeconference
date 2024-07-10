@@ -15,7 +15,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles.')->group(function(){
 
-    Route::get('/getArticle','getArticle');
+    Route::get('/getArticle','getArticle')->name('getArticle');
 
 });
 
