@@ -1,59 +1,55 @@
 @extends('templates.fa')
 @section('content')
     <div class="flex flex-col gap-4 p-2 my-4 ">
+        <div class="signup-section ptb-100">
+            <div class="container">
+                <div class="signup-form" style="max-width: 800px;">
 
-        <div class="p-6 btn btn-danger">
-            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                خروج
-            </a>
-        </div>
-        <form id="newsForm" action="{{ route('Articles.store') }}">
-            <div class="flex flex-col gap-6 p-4 bg-slate-50 justify-center rounded-[10px]">
-                {{ $edit = false }}
-                <table class="table">
+                    <table class="table">
 
 
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">نوع مقاله</th>
-                            <th scope="col">عنوان (خلاصه)</th>
-                            <th scope="col">تگ ها</th>
-                        </tr>
-                    </thead>
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">عنوان فارسی مقاله</th>
+                                <th scope="col">عنوان انگلیسی مقاله</th>
+                                <th scope="col">عملیات</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
 
 
-                </table>
+                    </table>
 
-                <div class="text-center">
-                    <a href="{{ route('Articles.create') }}" id="actionBtn" type="button" class="btn btn-success">
-                        <b>افزودن</b>
-                    </a>
                 </div>
             </div>
+        </div>
+        <div class="text-center">
+            <a href="{{ route('Articles.create') }}" id="actionBtn" type="button" class="btn btn-success">
+                <b>افزودن</b>
+            </a>
+        </div>
 
-        </form>
     </div>
 @endSection
 

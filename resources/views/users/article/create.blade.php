@@ -7,7 +7,7 @@
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
                 <div class="container">
-                    <div class="signup-form">
+                    <div class="signup-form" style="max-width: 800px;">
                         <h3>ایجاد مقاله</h3>
 
 
@@ -16,26 +16,7 @@
                                 @csrf
                                 <div class="row">
                                     <!-- Input fields -->
-                                    <div class="col-md-12 mb-3">
-                                        <label for="input1" class="form-label">{{ __('عنوان مقاله') }}</label>
-                                        <input name="FullTitle" type="text" class="form-control"
-                                            value="{{ old('FullTitle') }}" id="FullTitle">
-                                        @error('FullTitle')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="ShortTitle" class="form-label">{{ __('چکیده') }}</label>
-                                        <input name="ShortTitle" type="text" class="form-control"
-                                            value="{{ old('ShortTitle') }}" id="ShortTitle">
-                                        @error('ShortTitle')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
+
                                     <div class="col-md-12 mb-3">
                                         <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل-فارسی') }}</label>
                                         <input name="FullTitle_fa" type="text" class="form-control"
@@ -46,11 +27,60 @@
                                             </span>
                                         @enderror
                                     </div>
+
+                                    <!-- Select options -->
+                                    <div class="col-md-12 mb-3">
+                                        <label for="select1" class="form-label">نوع مقاله</label>
+                                        <select name="TypeID" class="form-select" id="TypeID">
+                                            <option selected> لطفا نوع مقاله راانتخاب کنید </option>
+                                            <option value="1">مقاله پژوهشی</option>
+                                            <option value="2">مقاله علمی پژوهشی</option>
+
+                                        </select>
+                                        @error('FileType')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label for="ShortTitle" class="form-label">{{ __('چکیده') }}</label>
+                                        <input name="ShortTitle" type="text" class="form-control"
+                                            value="{{ old('ShortTitle') }}" id="ShortTitle">
+                                        @error('ShortTitle')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa" class="form-label">{{ __(' چکیده-فارسی') }}</label>
                                         <input name="ShortTitle_fa" type="text" class="form-control"
                                             value="{{ old('ShortTitle_fa') }}" id="ShortTitle_fa">
                                         @error('ShortTitle_fa')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-فارسی') }}</label>
+                                        <input name="Fa-tag" type="text" class="form-control" id="Tags"
+                                            value="{{ old('Tags') }}">
+                                        @error('Tags')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
+                                        <label for="input1" class="form-label">{{ __('عنوان مقاله-انگلیسی') }}</label>
+                                        <input name="FullTitle" type="text" class="form-control"
+                                            value="{{ old('FullTitle') }}" id="FullTitle">
+                                        @error('FullTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
