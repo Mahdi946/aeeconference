@@ -21,9 +21,9 @@
                                     <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('نشانی ایمیل') }}</label>
 
                                     <div class="col-md-6">
-                                        <input name="Email" id="Email" type="email" class="form-control @error('ایمیل') is-invalid @enderror" name="Email" value="{{ old('Email') }}" required autocomplete="Email" autofocus>
+                                        <input name="email" id="email" type="email" class="form-control @error('ایمیل') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                        @error('Email')
+                                        @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -37,11 +37,11 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('پسورد') }}</label>
 
                                     <div class="col-md-6">
-                                        <input name="Password" id="Password" type="password"
-                                            class="form-control @error('پسورد') is-invalid @enderror" name="Password"
+                                        <input name="password" id="password" type="password"
+                                            class="form-control @error('پسورد') is-invalid @enderror" name="password"
                                             required autocomplete="current-Password">
 
-                                        @error('Password')
+                                        @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

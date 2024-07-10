@@ -24,13 +24,13 @@ return new class extends Migration
             $table->date('BirthDay')->nullable();
             $table->bigInteger('MobileNumber');
             $table->bigInteger('PhoneNumber');
-            $table->string('Email')->unique();
+            $table->string('email')->unique();
             $table->string('Field');
             $table->string('Edu');
             $table->string('Job')->nullable();
             $table->text('Address')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('Password');
+            $table->string('password');
             $table->string('City');
             $table->string('City_fa');
             $table->string('Country');
