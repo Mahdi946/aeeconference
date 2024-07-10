@@ -18,24 +18,19 @@
                         </thead>
 
                         <tbody>
+                            @foreach ($articles as $article)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row">{{$article->id}}</th>
+                                <td>{{$article->ShortTitle_fa}}</td>
+                                <td>{{$article->ShortTitle}}</td>
+                                <td>
+                                    <a href="#" id="actionBtn" type="button" class="btn btn-primary">
+                                    <b>ویرایش</b>
+                                    </a>
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            @endforeach
+
                         </tbody>
 
 
