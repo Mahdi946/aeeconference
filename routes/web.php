@@ -8,6 +8,8 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles.')->group(function(){
 
