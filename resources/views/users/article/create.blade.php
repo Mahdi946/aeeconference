@@ -79,22 +79,6 @@
                                         @enderror
                                     </div>
 
-                                    <!-- Select options -->
-                                    <div class="col-md-12 mb-3">
-                                        <label for="select1" class="form-label">CongressID</label>
-                                        <select name="CongressID" class="form-select" id="CongressID">
-                                            <option selected>Select an option</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                            <option value="3">Option 3</option>
-                                        </select>
-                                        @error('CongressID')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-
 
                                     <!-- Category Select with Add Option -->
                                     <div class="form-check">
