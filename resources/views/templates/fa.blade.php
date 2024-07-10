@@ -200,10 +200,12 @@
                                 </form>
 
                             @endauth
+                            
+                           
                             @guest
 
 
-                                <a href="{{ url('login') }}" class="btn btn-info b-r"> ورود </a>
+                                <a class="btn btn-info b-r m-2" href="{{ url('login') }}"> ورود </a>
 
                             @endguest
 
@@ -212,6 +214,7 @@
 
                                 <a href="{{ url('register') }}" class="btn btn-info b-r">ثبتنام</a>
                             @endguest
+                            
                             {{-- <!--                                <a href="--> //=('register') --}}
                             <!--" class="default-btn">ثبت‌نام</a>-->
                         {{-- </div> --}}

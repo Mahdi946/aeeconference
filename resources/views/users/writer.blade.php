@@ -1,59 +1,28 @@
 @extends('templates.fa')
 @section('content')
-    <div class="flex flex-col gap-4 p-2 my-4 ">
-       
-            <div class="mr-5 btn btn-danger">
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                    خروج
-                </a>
-            </div>
-     
-
-        <form id="newsForm">
-            <div class="flex flex-col gap-6 p-4 bg-slate-50 justify-center rounded-[10px]">
-                {{ $edit = false }}
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="text-center">
-                    <a href="#" id="actionBtn" type="button" class="btn btn-success">
-                        <b>افزودن</b>
-                    </a>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="mr-5 btn btn-danger">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                          خروج
+                      </a>  
+                    </div>
+                    <h5 class="card-title text-center">ثبت ایمیل</h5>
+                    <form method="POST" action="">
+                        @csrf
+                        <div class="form-group">
+                            <label for="email">ایمیل</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <input type="hidden" name="hidden_email" id="hidden_email">
+                        <button type="submit" class="btn btn-primary btn-block">ثبت</button>
+                    </form>
                 </div>
             </div>
-
-        </form>
+        </div>
     </div>
-@endSection
-
-@section('scripts')
-    <script src="{{ asset('scripts/NewsAdd.js?v=1') }}" type="module"></script>
-@endSection
+</div>
+@endsection

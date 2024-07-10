@@ -25,7 +25,7 @@
         
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
+                                                <strong>{{ 'ایمیل اجباری است' }}</strong>
                                             </span>
                                         @enderror
                                     </div>

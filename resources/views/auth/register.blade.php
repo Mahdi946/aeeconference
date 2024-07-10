@@ -30,7 +30,7 @@
             <div class="signup-section ptb-100">
                 <div class="container">
                     <div class="signup-form">
-                        @include('auth._message')
+                       
                         <h3>ایجاد حساب کاربری</h3>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
