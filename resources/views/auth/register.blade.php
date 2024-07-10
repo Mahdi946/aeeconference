@@ -29,6 +29,7 @@
             <div class="signup-section ptb-100">
                 <div class="container">
                     <div class="signup-form">
+                        @include('auth._message')
                         <h3>ایجاد حساب کاربری</h3>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -38,9 +39,15 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('نام') }}</label>
 
                                     <div class="col-md-6">
+<<<<<<< Updated upstream
                                         <input id="Name" type="text"
                                             class="form-control @error('Name') is-invalid @enderror" name="Name"
                                             value="{{ old('Name') }}" required autocomplete="Name" autofocus>
+=======
+                                        <input id="name" type="text"
+                                            class="form-control @error('name') is-invalid @enderror" name="Name"
+                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
+>>>>>>> Stashed changes
 
                                         @error('Name')
                                             <span class="invalid-feedback" role="alert">
