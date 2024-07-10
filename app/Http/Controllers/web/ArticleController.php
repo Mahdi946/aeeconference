@@ -31,9 +31,9 @@ class ArticleController extends Controller
         $Congresses =Congress::latest()->limit(1);
         // $Congresses =Congress::where('start_date', '>=' , now())
         // ->where('end_date', '<=' , now());
-        $Types = ["مقاله پژوهشی" , "مقاله علمی پژوهشی"];
+        $Types = ["مقاله پژوهشی", "مقاله علمی پژوهشی"];
         $categories =Category::all();
-        return view('users.form', compact('Congresses', 'Types', 'categories'));
+        return view('users.create', compact('Congresses', 'Types', 'categories'));
     }
 
     /**
