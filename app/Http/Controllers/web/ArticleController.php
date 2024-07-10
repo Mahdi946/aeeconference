@@ -81,14 +81,16 @@ class ArticleController extends Controller
 
 
             DB::commit();
+
         } catch (\Exception $ex) {
             DB::rollBack();
             die(print_r("error dari"));
             return redirect()->back();
         }
-        die(print_r("save  shode"));
+        // return redirect()->route('Writers.writerSave')->with('ArticleID',  $article->id);
+        return redirect()->route('Writers.writerSave')->with('ArticleID', $article->id);
         // alert()->success('محصول مورد نظر ایجاد شد', 'باتشکر');
-        // return redirect()->route('admin.products.index');
+
     }
 
     /**

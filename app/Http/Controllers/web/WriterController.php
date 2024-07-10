@@ -95,5 +95,16 @@ class WriterController extends Controller
         $writers =User::where('Email', '=', $request->email)->first();
         return view('users.panel', compact('writers'));
     }
+    public function writerSave(string $id)
+    {
+        $article =Article::findOrFail($id);
+        if( Auth::user()->id == $article->UserID){
+            $articles =Article::where('UserID', '=', Auth::user()->id)->get();
+            return view('users.panel', compact('articles'));
+        }
+
+        // $writers =User::where('Email', '=', $request->email)->first();
+        // return view('users.panel', compact('writers'));
+    }
 
 }
