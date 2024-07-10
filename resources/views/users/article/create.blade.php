@@ -18,12 +18,12 @@
                                     خروج
                                 </a>
                             </div>
-                            <form>
+                            <form href="{{ route('Articles.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <!-- Input fields -->
                                     <div class="col-md-12 mb-3">
-                                        <label for="input1" class="form-label">{{ __('عنوان(کامل)') }}</label>
+                                        <label for="input1" class="form-label">{{ __('عنوان کامل-انگلیسی)') }}</label>
                                         <input name="FullTitle" type="text" class="form-control"
                                             value="{{ old('FullTitle') }}" id="FullTitle">
                                         @error('FullTitle')
@@ -33,7 +33,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="ShortTitle" class="form-label">{{ __('عنوان(خلاصه)') }}</label>
+                                        <label for="ShortTitle" class="form-label">{{ __('خلاصه عنوان-انگلیسی') }}</label>
                                         <input name="ShortTitle" type="text" class="form-control"
                                             value="{{ old('ShortTitle') }}" id="ShortTitle">
                                         @error('ShortTitle')
@@ -43,7 +43,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل(فارسی)') }}</label>
+                                        <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل-فارسی') }}</label>
                                         <input name="FullTitle_fa" type="text" class="form-control"
                                             value="{{ old('FullTitle_fa') }}" id="FullTitle_fa">
                                         @error('FullTitle_fa')
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa"
-                                            class="form-label">{{ __('عنوان (خلاصه-فارسی)') }}</label>
+                                            class="form-label">{{ __('خلاصه عنوان-فارسی') }}</label>
                                         <input name="ShortTitle_fa" type="text" class="form-control"
                                             value="{{ old('ShortTitle_fa') }}" id="ShortTitle_fa">
                                         @error('ShortTitle_fa')
@@ -64,7 +64,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __('تگ ها') }}</label>
+                                        <label for="Tags" class="form-label">{{ __('تگ ها-انگلیسی') }}</label>
                                         <input name="Tags" type="text" class="form-control" id="Tags"
                                             value="{{ old('Tags') }}">
                                         @error('Tags')

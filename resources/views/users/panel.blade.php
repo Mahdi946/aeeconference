@@ -7,7 +7,7 @@
                 خروج
             </a>
         </div>
-        <form id="newsForm">
+        <form id="newsForm" action="{{ route('Articles.store') }}">
             <div class="flex flex-col gap-6 p-4 bg-slate-50 justify-center rounded-[10px]">
                 {{ $edit = false }}
                 <table class="table">
@@ -16,12 +16,12 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">نوع مقاله</th>
+                            <th scope="col">عنوان (خلاصه)</th>
+                            <th scope="col">تگ ها</th>
                         </tr>
                     </thead>
-                    {{ dd($articles) }}
+
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
@@ -47,7 +47,7 @@
                 </table>
 
                 <div class="text-center">
-                    <a href="#" id="actionBtn" type="button" class="btn btn-success">
+                    <a href="{{ route('Articles.create') }}" id="actionBtn" type="button" class="btn btn-success">
                         <b>افزودن</b>
                     </a>
                 </div>
