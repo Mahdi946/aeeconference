@@ -61,23 +61,23 @@
 
             <div class="default-shape">
                 <div class="shape-1">
-                    <img src="{{ asset('assets/img/shape/4.png') }}" alt="image">
+                    <img src="/assets/img/shape/4.png" alt="image">
                 </div>
 
                 <div class="shape-2 rotateme">
-                    <img src="{{ asset('assets/img/shape/5.svg') }}" alt="image">
+                    <img src="/assets/img/shape/5.svg" alt="image">
                 </div>
 
                 <div class="shape-3">
-                    <img src="{{ asset('assets/img/shape/6.svg') }}" alt="image">
+                    <img src="/assets/img/shape/6.svg" alt="image">
                 </div>
 
                 <div class="shape-4">
-                    <img src="{{ asset('assets/img/shape/7.png') }}" alt="image">
+                    <img src="/assets/img/shape/7.png" alt="image">
                 </div>
 
                 <div class="shape-5">
-                    <img src="{{ asset('assets/img/shape/8.png') }}" alt="image">
+                    <img src="/assets/img/shape/8.png" alt="image">
                 </div>
             </div>
     </section>

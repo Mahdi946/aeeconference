@@ -1,5 +1,5 @@
-@extends('templates.fa') 
-@section('content') 
+@extends('templates.fa')
+@section('content')
 
 
 <div class="page-title-area item-bg-1">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
             </div>
-      
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="heading6">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
@@ -211,23 +211,23 @@
 
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('assets/img/shape/4.png') }}" alt="image">
+                <img src="/assets/img/shape/4.png" alt="image">
             </div>
 
             <div class="shape-2 rotateme">
-                <img src="{{ asset('assets/img/shape/5.svg') }}" alt="image">
+                <img src="/assets/img/shape/5.svg" alt="image">
             </div>
 
             <div class="shape-3">
-                <img src="{{ asset('assets/img/shape/6.svg') }}" alt="image">
+                <img src="/assets/img/shape/6.svg" alt="image">
             </div>
 
             <div class="shape-4">
-                <img src="{{ asset('assets/img/shape/7.png') }}" alt="image">
+                <img src="/assets/img/shape/7.png" alt="image">
             </div>
 
             <div class="shape-5">
-                <img src="{{ asset('assets/img/shape/8.png') }}" alt="image">
+                <img src="/assets/img/shape/8.png" alt="image">
             </div>
         </div>
 </section>

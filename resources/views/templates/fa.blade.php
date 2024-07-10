@@ -58,37 +58,37 @@
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
                                     -->
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/bootstrap.rtl.min.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/bootstrap.rtl.min.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/owl.default.min.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/owl.default.min.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/owl.carousel.min.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/magnific-popup.min.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/magnific-popup.min.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/animate.min.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/animate.min.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/boxicons.min.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/boxicons.min.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/flaticon.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/flaticon.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/meanmenu.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/meanmenu.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/odometer.min.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/odometer.min.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/style.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/style.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/responsive.css">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/rtl.css') }}">
+    <link rel="stylesheet" href="/assets-rtl/css/rtl.css">
 
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/fonts/boxicons.woff2') }}">
+    <link rel="stylesheet" href="/assets-rtl/fonts/boxicons.woff2">
 
     <title> کنگره ملی ترویج و آموزش کشاورزی،منابع طبیعی و محیط زیست پایدار </title>
 
-    <link rel="icon" type="image/png" href="{{ asset('assets-rtl/img/favicon.png') }}">
-    <link rel="stylesheet" href="{{ asset('assets/leaflet/leaflet.css') }}" />
+    <link rel="icon" type="image/png" href="/assets-rtl/img/favicon.png">
+    <link rel="stylesheet" href="/assets/leaflet/leaflet.css" />
     @yield('head-tag')
 </head>
 
@@ -111,7 +111,7 @@
                 <div class="fria-responsive-menu">
                     <div class="logo">
                         <a href="{{ url('/') }}">
-                            <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" class="logo-header">
+                            <img src="/assets-rtl/img/logo.png" alt="logo" class="logo-header">
 
                         </a>
                         {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
@@ -127,7 +127,7 @@
         <div class="fria-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light"> <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" style="max-width: 100px;">
+                        <img src="/assets-rtl/img/logo.png" alt="logo" style="max-width: 100px;">
                     </a>
 
 
@@ -523,35 +523,35 @@
     <!-- End Go Top Section -->
     <!-- dark version -->
     <!-- dark version -->
-    <script src="{{ asset('assets-rtl/js/jquery.min.js') }}"></script>
+    <script src="/assets-rtl/js/jquery.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/popper.min.js') }}"></script>
+    <script src="/assets-rtl/js/popper.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/bootstrap.min.js') }}"></script>
+    <script src="/assets-rtl/js/bootstrap.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/jquery.meanmenu.js') }}"></script>
+    <script src="/assets-rtl/js/jquery.meanmenu.js"></script>
 
 
-    <script src="{{ asset('assets-rtl/js/owl.carousel.js') }}"></script>
+    <script src="/assets-rtl/js/owl.carousel.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="/assets-rtl/js/jquery.magnific-popup.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/jquery.appear.min.js') }}"></script>
+    <script src="/assets-rtl/js/jquery.appear.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/odometer.min.js') }}"></script>
+    <script src="/assets-rtl/js/odometer.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="/assets-rtl/js/jquery.ajaxchimp.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/form-validator.min.js') }}"></script>
+    <script src="/assets-rtl/js/form-validator.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/contact-form-script.js') }}"></script>
+    <script src="/assets-rtl/js/contact-form-script.js"></script>
 
     <script src="/assets-rtl/js/wow.min.js"></script>
 
-    <script src="{{ asset('assets-rtl/js/main.js') }}"></script>
-    <script src="{{ asset('assets/js/homePrizeCountDownDate.js') }}"></script>
-    <script src="{{ asset('assets/js/CountDownDate.js') }}"></script>
-    <script src="{{ asset('assets/leaflet/leaflet.js') }}"></script>
+    <script src="/assets-rtl/js/main.js"></script>
+    <script src="/assets/js/homePrizeCountDownDate.js"></script>
+    <script src="/assets/js/CountDownDate.js"></script>
+    <script src="/assets/leaflet/leaflet.js"></script>
 
 
 
