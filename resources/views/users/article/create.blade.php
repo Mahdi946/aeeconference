@@ -7,7 +7,7 @@
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
                 <div class="container">
-                    <div class="signup-form">
+                    <div class="signup-form" style="max-width: 800px;">
                         <h3>ایجاد مقاله</h3>
 
 
