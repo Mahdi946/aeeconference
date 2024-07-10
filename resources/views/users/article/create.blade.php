@@ -27,6 +27,24 @@
                                             </span>
                                         @enderror
                                     </div>
+
+                                    
+                                    <!-- Select options -->
+                                    <div class="col-md-12 mb-3">
+                                        <label for="select1" class="form-label">نوع مقاله</label>
+                                        <select name="FileType" class="form-select" id="FileType">
+                                            <option selected>Select an option</option>
+                                            <option value="1">مقاله پژوهشی</option>
+                                            <option value="2">مقاله علمی پژوهشی</option>
+                                            <option value="3">Option 3</option>
+                                        </select>
+                                        @error('FileType')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle" class="form-label">{{ __('چکیده') }}</label>
                                         <input name="ShortTitle" type="text" class="form-control"
