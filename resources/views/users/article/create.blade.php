@@ -47,8 +47,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="ShortTitle_fa"
-                                            class="form-label">{{ __(' چکیده-فارسی') }}</label>
+                                        <label for="ShortTitle_fa" class="form-label">{{ __(' چکیده-فارسی') }}</label>
                                         <input name="ShortTitle_fa" type="text" class="form-control"
                                             value="{{ old('ShortTitle_fa') }}" id="ShortTitle_fa">
                                         @error('ShortTitle_fa')
@@ -78,6 +77,22 @@
                                             </span>
                                         @enderror
                                     </div>
+                                    <div class="col-md-12 mb-3">
+                                        <select class="form-select" multiple aria-label="multiple select example" name="Categories[]">
+                                            <option disabled selected>Open this select menu</option>
+                                            @foreach ($categories as $category)
+                                            <option value="{{$category->id}}">{{$category->Name}}</option>
+                                            @endforeach
+
+                                        </select>
+                                    </div>
+                                    <input type="hidden" id="CongressID" name="CongressID" value="{{$categories->id}}">
+
+
+
+
+
+
 
 
                                     <!-- Category Select with Add Option -->
@@ -95,8 +110,8 @@
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="flexCheckChecked" checked>
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
                                         <label class="form-check-label" for="flexCheckChecked">
                                             موضوع3
                                         </label>

@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function index()
     {
         //
-        
+
         $articles =Article::latest()->paginate(10);
         return view('users.panel', compact('articles'));
     }
@@ -29,7 +29,9 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $Congresses =Congress::all();
+
+        $Congresses =Congress::first();
+        
         // $Congresses =Congress::latest()->limit(1);
         // $Congresses =Congress::where('start_date', '>=' , now())
         // ->where('end_date', '<=' , now());
