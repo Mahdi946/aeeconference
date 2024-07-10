@@ -23,7 +23,7 @@
                                 <div class="row">
                                     <!-- Input fields -->
                                     <div class="col-md-12 mb-3">
-                                        <label for="input1" class="form-label">{{ __('عنوان کامل-انگلیسی)') }}</label>
+                                        <label for="input1" class="form-label">{{ __('عنوان مقاله') }}</label>
                                         <input name="FullTitle" type="text" class="form-control"
                                             value="{{ old('FullTitle') }}" id="FullTitle">
                                         @error('FullTitle')
@@ -33,7 +33,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="ShortTitle" class="form-label">{{ __('خلاصه عنوان-انگلیسی') }}</label>
+                                        <label for="ShortTitle" class="form-label">{{ __('چکیده') }}</label>
                                         <input name="ShortTitle" type="text" class="form-control"
                                             value="{{ old('ShortTitle') }}" id="ShortTitle">
                                         @error('ShortTitle')
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa"
-                                            class="form-label">{{ __('خلاصه عنوان-فارسی') }}</label>
+                                            class="form-label">{{ __(' چکیده-فارسی') }}</label>
                                         <input name="ShortTitle_fa" type="text" class="form-control"
                                             value="{{ old('ShortTitle_fa') }}" id="ShortTitle_fa">
                                         @error('ShortTitle_fa')
@@ -64,7 +64,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __('تگ ها-انگلیسی') }}</label>
+                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-انگلیسی') }}</label>
                                         <input name="Tags" type="text" class="form-control" id="Tags"
                                             value="{{ old('Tags') }}">
                                         @error('Tags')
@@ -75,7 +75,7 @@
                                     </div>
 
                                     <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __('تگ ها-فارسی') }}</label>
+                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-فارسی') }}</label>
                                         <input name="Fa-tag" type="text" class="form-control" id="Tags"
                                             value="{{ old('Tags') }}">
                                         @error('Tags')
