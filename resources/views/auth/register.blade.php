@@ -25,12 +25,12 @@
             </div>
             <!-- End Page Title Area -->
 
-            
+
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
                 <div class="container">
                     <div class="signup-form">
-                       
+
                         <h3>ایجاد حساب کاربری</h3>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -367,15 +367,15 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="Email"
+                                    <label for="email"
                                         class="col-md-4 col-form-label text-md-end">{{ __('ایمیل') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
-                                        <input id="Email" type="email"
-                                            class="form-control @error('Email') is-invalid @enderror" name="Email"
-                                            value="{{ old('Email') }}" required autocomplete="Email" autofocus>
+                                        <input id="email" type="email"
+                                            class="form-control @error('email') is-invalid @enderror" name="email"
+                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                        @error('Email')
+                                        @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -405,15 +405,15 @@
 
 
                                 <div class="row mb-3">
-                                    <label for="Password"
+                                    <label for="password"
                                         class="col-md-4 col-form-label text-md-end">{{ __('پسورد') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
-                                        <input id="Password" type="password"
-                                            class="form-control @error('Password') is-invalid @enderror" name="Password"
-                                            required autocomplete="current-Password">
+                                        <input id="password" type="password"
+                                            class="form-control @error('password') is-invalid @enderror" name="password"
+                                            required autocomplete="current-password">
 
-                                        @error('Password')
+                                        @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -424,15 +424,15 @@
 
 
                                 <div class="row mb-3">
-                                    <label for="Password-confirm"
+                                    <label for="password-confirm"
                                         class="col-md-4 col-form-label text-md-end">{{ __('تایید پسورد') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
-                                        <input name="Password_confirmation" id="Password_confirmation" type="password"
-                                            class="form-control @error('Password') is-invalid @enderror" name="Password"
-                                            required autocomplete="current-Password">
+                                        <input name="password_confirmation" id="password_confirmation" type="password"
+                                            class="form-control @error('password') is-invalid @enderror" name="password"
+                                            required autocomplete="current-password">
 
-                                        @error('Password')
+                                        @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
