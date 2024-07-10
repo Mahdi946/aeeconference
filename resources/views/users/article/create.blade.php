@@ -3,24 +3,7 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-            <!-- Start Page Title Area -->
-            <div class="page-title-area item-bg-5">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container">
-                            <div class="page-title-content">
-                                <h2>عضویت</h2>
-                                <ul>
-                                    <li><a href="index.html">خانه</a></li>
-                                    <li>عضویت</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Page Title Area -->
-
+     
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
                 <div class="container">
