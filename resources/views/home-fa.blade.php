@@ -1,8 +1,5 @@
 @extends('templates.fa')
 @section('content')
-
-
-
     <!-- Start Banner Area -->
     <div class="main-banner-area">
         <section class="clients-section ptb-100">
@@ -25,8 +22,8 @@
                         <img class="img-slider" src="assets/img/slider4.jpg" alt="">
                     </div>
                     <!-- <div class="clients-item">
-                        <img class="img-slider" src="assets/img/slider2.jpg" alt="">
-                    </div> -->
+                            <img class="img-slider" src="assets/img/slider2.jpg" alt="">
+                        </div> -->
 
 
                 </div>
@@ -95,10 +92,10 @@
     <section class="features-section pt-100 pb-70">
         <div class="container">
             <!-- <div class="section-title">
-                <h2>ویژگی های خلاقانه</h2> -->
+                    <h2>ویژگی های خلاقانه</h2> -->
             <!-- <p>لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است. لورم ایپسوم به سادگی ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم به مدت 40 سال استاندارد صنعت بوده است.</p> -->
             <!-- <div class="bar"></div>
-            </div> -->
+                </div> -->
 
             <div class="row" dir="rtl">
                 <div class="text">
@@ -288,45 +285,10 @@
 
 
 
-                @foreach ($newsData as $news)
-                    {{ $date = jdate($news['created_at']) }}
-
-
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-blog">
-                            <div class="image ">
-
-                                @if ($news['image'])
-                                    <img class="object-cover h-full w-full rounded-tl-md rounded-tr-md "
-                                        src="<?= base_url() . 'news/img/' . $news['id'] ?>" alt="<?= $news['title'] ?>">
-                                @endif
-                            </div>
-
-                            <div class="content">
-                                <span> {{ $news['date'] }}</span>
-                                <h3>
-                                    <a href="{{ url('/news/' . $news['slug']) }}">
-                                        {{ $news['title'] }}
-                                    </a>
-                                </h3>
-                                <p>
-                                    {{ substr($news['content'], 0, 50) }}
-                                </p>
-                                <a href="{{ url('/news/' . $news['slug']) }}" class="read-more"> مشاهده </a>
-                                <p>
-
-                                    <small>{{ $date->format('%d %B، %Y') }}</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
 
 
             </div>
         </div>
     </section>
     <!-- End Blog Area -->
-
-   @endsection
+@endsection

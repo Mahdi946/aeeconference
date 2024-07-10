@@ -1,4 +1,10 @@
-@extends('templates.fa')
+@extends('templates.en')
+
+
+@section('head-tag')
+    <link rel="stylesheet" href="{{ asset('jalalidatepicker/persian-datepicker.min.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+@endSection
 
 @section('content')
 
@@ -13,7 +19,7 @@
                             <div class="page-title-content">
                                 <h2>register</h2>
                                 <ul>
-                                    <li><a href="index.html">home</a></li>
+                                    <li><a href="/">home</a></li>
                                     <li>register</li>
                                 </ul>
                             </div>
@@ -47,6 +53,309 @@
                                         @enderror
                                     </div>
                                 </div>
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('last name') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Family" type="text"
+                                            class="form-control @error('name') is-invalid @enderror" name="Family"
+                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                        @error('last_name')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('name(persian)') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Name_fa" type="text"
+                                            class="form-control @error('name') is-invalid @enderror" name="Family_fa"
+                                            value="{{ old('Family_fa') }}" required autocomplete="Family_fa" autofocus>
+
+                                        @error('Family_fa')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('father name') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="FatherName" type="text"
+                                            class="form-control @error('FatherName') is-invalid @enderror" name="FatherName"
+                                            value="{{ old('FatherName') }}" required autocomplete="name" autofocus>
+
+                                        @error('FatherName')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('birth cert') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="BirthCert" type="number"
+                                            class="form-control @error('BirthCert') is-invalid @enderror" name="BirthCert"
+                                            value="{{ old('BirthCert') }}" required autocomplete="name" autofocus>
+
+                                        @error('BirthCert')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+
+
+                                <section class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="">تاریخ انتشار</label>
+                                        <input type="date" name="published_at" id="published_at"
+                                            class="form-control form-control-sm d-none">
+
+                                    </div>
+                                    @error('published_at')
+                                        <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
+                                            <strong>
+                                                {{ $message }}
+                                            </strong>
+                                        </span>
+                                    @enderror
+                                </section>
+
+
+
+
+
+
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('phone number') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="PhoneNumber" type="number"
+                                            class="form-control @error('PhoneNumber') is-invalid @enderror"
+                                            name="PhoneNumber" value="{{ old('PhoneNumber') }}" required
+                                            autocomplete="name" autofocus>
+
+                                        @error('PhoneNumber')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('mobile number') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="BirthDay" type="number"
+                                            class="form-control @error('PhoneNumber') is-invalid @enderror"
+                                            name="MobileNumber" value="{{ old('PhoneNumber') }}" required
+                                            autocomplete="name" autofocus>
+
+                                        @error('PhoneNumber')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('field') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Field" type="text"
+                                            class="form-control @error('Field') is-invalid @enderror" name="Field"
+                                            value="{{ old('Field') }}" required autocomplete="name" autofocus>
+
+                                        @error('Field')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('Edu') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Edu" type="text"
+                                            class="form-control @error('Edu') is-invalid @enderror" name="Edu"
+                                            value="{{ old('Edu') }}" required autocomplete="رشته" autofocus>
+
+                                        @error('Field')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('job') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Edu" type="text"
+                                            class="form-control @error('Job') is-invalid @enderror" name="Job"
+                                            value="{{ old('Job') }}" autocomplete="شغل" autofocus>
+
+                                        @error('Field')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('address') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Address" type="text"
+                                            class="form-control @error('Job') is-invalid @enderror" name="Address"
+                                            value="{{ old('Address') }}" autocomplete="Address" autofocus>
+
+                                        @error('Address')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('city') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="City" type="text"
+                                            class="form-control @error('Job') is-invalid @enderror" name="Address"
+                                            value="{{ old('City') }}" required autocomplete="City" autofocus>
+
+                                        @error('City')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('city(persian)') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="City_fa" type="text"
+                                            class="form-control @error('City_fa') is-invalid @enderror" name="City_fa"
+                                            value="{{ old('City') }}" required autocomplete="City_fa" autofocus>
+
+                                        @error('City_fa')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('country') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="City_fa" type="text"
+                                            class="form-control @error('Country') is-invalid @enderror" name="Country"
+                                            value="{{ old('Country') }}" required autocomplete="Country" autofocus>
+
+                                        @error('Country')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('rank') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="City_fa" type="text"
+                                            class="form-control @error('Rank') is-invalid @enderror" name="Rank"
+                                            value="{{ old('Rank') }}" required autocomplete="Rank" autofocus>
+
+                                        @error('Rank')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('org') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Org" type="text"
+                                            class="form-control @error('Rank') is-invalid @enderror" name="Org"
+                                            value="{{ old('Org') }}" required autocomplete="Org" autofocus>
+
+                                        @error('Org')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="Edu"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('org(persiaan)') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Org_fa" type="text"
+                                            class="form-control @error('Rank') is-invalid @enderror" name="Org_fa"
+                                            value="{{ old('Org_fa') }}" required autocomplete="Org_fa" autofocus>
+
+                                        @error('Org')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
                                 <div class="row mb-3">
                                     <label for="email"
                                         class="col-md-4 col-form-label text-md-end">{{ __('email') }}</label>
@@ -63,6 +372,27 @@
                                         @enderror
                                     </div>
                                 </div>
+
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('NationalCode') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="NationalCode" type="number"
+                                            class="form-control @error('NationalCode') is-invalid @enderror"
+                                            name="NationalCode" value="{{ old('NationalCode') }}" required
+                                            autocomplete="name" autofocus>
+
+                                        @error('NationalCode')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
 
                                 <div class="row mb-3">
                                     <label for="password"
@@ -85,10 +415,10 @@
 
                                 <div class="row mb-3">
                                     <label for="password-confirm"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('Confirm password') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('confirm password') }}</label>
 
                                     <div class="col-md-6">
-                                        <input name="password_confirmation" id="password" type="password"
+                                        <input name="password_confirmation" id="password_confirmation" type="password"
                                             class="form-control @error('password') is-invalid @enderror" name="password"
                                             required autocomplete="current-password">
 
@@ -99,25 +429,25 @@
                                         @enderror
                                     </div>
                                 </div>
-                               
+
 
 
                                 <div class="row mb-0">
                                     <div class="col-md-8 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
-                                            {{ __('register') }}
+                                            {{ __('ثبت نام') }}
                                         </button>
 
-                                        <a href="{{ url('login') }}">Already registered?</a>
-                                        
-                                <div class="col-lg-12">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="checkme">
-                                        <label class="form-check-label" for="checkme">remember me</label>
+                                        <a href="{{ url('login') }}">Already registered? </a>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="checkme">
+                                                <label class="form-check-label" for="checkme">remember me</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                    </div>
-                                   
+
                                 </div>
                             </div>
                         </form>
@@ -200,4 +530,21 @@
     <script src="{{ asset('assets-rtl/wow.min.js') }}"></script>
 
     <script src="{{ asset('assets-rtl/main.js') }}"></script>
+
+    <script src="{{ asset('jalalidatepicker/persian-date.min.js') }}"></script>
+    <script src="{{ asset('jalalidatepicker/persian-datepicker.min.js') }}"></script>
+    <script type="text/javascript" src="jalalidatepicker.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#BirthDay').persianDatepicker({
+                format: 'YYYY/MM/DD',
+                altField: '#birthdayh'
+            })
+        });
+    </script>
+
+
 @endSection
