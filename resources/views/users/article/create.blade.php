@@ -3,7 +3,7 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-     
+          
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
                 <div class="container">
@@ -12,12 +12,7 @@
 
 
                         <div class="container mt-5">
-                            <div class="mr-5 btn btn-danger">
-                                <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                                    خروج
-                                </a>
-                            </div>
+                           
                             <form href="{{ route('Articles.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
