@@ -3,7 +3,7 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-          
+
             <!-- Start Signup Area -->
             <div class="signup-section ptb-100">
                 <div class="container">
@@ -12,7 +12,7 @@
 
 
                         <div class="container mt-5">
-                           
+
                             <form href="{{ route('Articles.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
@@ -159,23 +159,23 @@
 
     <div class="default-shape">
         <div class="shape-1">
-            <img src="{{ asset('assets-rtl/img/shape/4.png') }}" alt="image">
+            <img src="/assets-rtl/img/shape/4.png" alt="image">
         </div>
 
         <div class="shape-2 rotateme">
-            <img src="{{ asset('assets-rtl/img/shape/5.svg') }}" alt="image">
+            <img src="/assets-rtl/img/shape/5.svg" alt="image">
         </div>
 
         <div class="shape-3">
-            <img src="{{ asset('assets-rtl/img/shape/6.svg') }}" alt="image">
+            <img src="/assets-rtl/img/shape/6.svg" alt="image">
         </div>
 
         <div class="shape-4">
-            <img src="{{ asset('assets-rtl/img/shape/7.png') }}" alt="image">
+            <img src="/assets-rtl/img/shape/7.png" alt="image">
         </div>
 
         <div class="shape-5">
-            <img src="{{ asset('assets-rtl/img/shape/8.png') }}" alt="image">
+            <img src="/assets-rtl/img/shape/8.png" alt="image">
         </div>
     </div>
     </div>
