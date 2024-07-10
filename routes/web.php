@@ -5,7 +5,7 @@ use App\Http\Controllers\web\WriterController;
 use App\Http\Controllers\web\ArticleController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home-fa');
 });
 
 Auth::routes();

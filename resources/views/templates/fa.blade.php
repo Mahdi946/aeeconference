@@ -57,7 +57,7 @@
 ░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▒░░░░░░░░░████▓▓▓▓▓▓███▓░░░░░░░░░▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓████████████▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
                                     -->
-                                    
+
     <link rel="stylesheet" href="{{ url('assets-rtl/css/bootstrap.rtl.min.css') }}">
 
     <link rel="stylesheet" href="{{ url('assets-rtl/css/owl.default.min.css') }}">
@@ -83,18 +83,18 @@
     <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
 
     <link rel="stylesheet" href="{{ url('assets-rtl/css/rtl.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/jalalidatepicker/persian-datepicker.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ url('assets/jalalidatepicker/persian-datepicker.min.css') }}"> --}}
     <title> کنگره ملی ترویج و آموزش کشاورزی،منابع طبیعی و محیط زیست پایدار </title>
 
     <link rel="icon" type="image/png" href="{{ asset('assets-rtl/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/leaflet/leaflet.css') }}" />
-    @yield('head-tag') 
+    @yield('head-tag')
 </head>
 
 
 
 <body>
-   
+
     <!-- Start Preloader Area -->
     <div class="preloader">
         <div class="preloader">
@@ -103,6 +103,7 @@
         </div>
     </div>
     <!-- End Preloader Area -->
+
 
     <!-- Start Navbar Area -->
     <div class="navbar-area navbar-two">
@@ -123,9 +124,10 @@
             </div>
         </div>
 
+
         <div class="fria-nav">
             <div class="container">
-                <nav class="navbar navbar-expand-md navbar-light">          <a class="navbar-brand" href="{{ url('/') }}">
+                <nav class="navbar navbar-expand-md navbar-light"> <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ asset('assets-rtl/img/logo.png') }}" alt="logo" style="max-width: 100px;">
                     </a>
 
@@ -231,11 +233,11 @@
                                 <!-- <h3>درباره ما</h3> -->
                             </div>
                             <!-- <p class="text-vip-2-5">
-                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
-                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
-                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
-                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
-                                                    </p> -->
+                                                            توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
+                                                            این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
+                                                            جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
+                                                            کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
+                                                        </p> -->
                             <ul class="footer-social">
                                 <li>
                                     <a href="#">
@@ -421,7 +423,7 @@
 
 
 
-   
+
 
     <script>
         $(document).ready(function() {

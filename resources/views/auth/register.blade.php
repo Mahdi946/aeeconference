@@ -29,6 +29,7 @@
             <div class="signup-section ptb-100">
                 <div class="container">
                     <div class="signup-form">
+                        @include('auth._message')
                         <h3>ایجاد حساب کاربری</h3>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -38,9 +39,15 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('نام') }}</label>
 
                                     <div class="col-md-6">
+<<<<<<< Updated upstream
                                         <input id="Name" type="text"
                                             class="form-control @error('Name') is-invalid @enderror" name="Name"
                                             value="{{ old('Name') }}" required autocomplete="Name" autofocus>
+=======
+                                        <input id="name" type="text"
+                                            class="form-control @error('name') is-invalid @enderror" name="Name"
+                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
+>>>>>>> Stashed changes
 
                                         @error('Name')
                                             <span class="invalid-feedback" role="alert">
@@ -52,12 +59,12 @@
 
                                 <div class="row mb-3">
                                     <label for="mail"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی(en)') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="Family" type="text"
-                                            class="form-control @error('name') is-invalid @enderror" name="Family"
-                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                            class="form-control @error('Family') is-invalid @enderror" name="Family"
+                                            value="{{ old('Family') }}" required autocomplete="name" autofocus>
 
                                         @error('last_name')
                                             <span class="invalid-feedback" role="alert">
@@ -79,6 +86,23 @@
                                             value="{{ old('Name_fa') }}" required autocomplete="Name_fa" autofocus>
 
                                         @error('Name_fa')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="email"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="Family_fa" type="text"
+                                            class="form-control @error('Family_fa') is-invalid @enderror" name="Name_fa"
+                                            value="{{ old('Family_fa') }}" required autocomplete="Name_fa" autofocus>
+
+                                        @error('Family_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
