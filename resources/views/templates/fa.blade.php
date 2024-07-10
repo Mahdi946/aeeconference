@@ -189,7 +189,7 @@
 
                         </ul>
 
-                        <div class="others-options">
+                        {{-- <div class="others-options"> --}}
                             {{-- <!-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="">
                                 <small> English </small>
                             </a> --> --}}
@@ -203,11 +203,18 @@
                             @guest
 
 
-                                <a href="{{ url('login') }}" class="btn btn-info b-r">به ما بپیوندید</a>
+                                <a href="{{ url('login') }}" class="btn btn-info b-r"> ورود </a>
+
+                            @endguest
+
+                            @guest
+                                </br>
+
+                                <a href="{{ url('register') }}" class="btn btn-info b-r">ثبتنام</a>
                             @endguest
                             {{-- <!--                                <a href="--> //=('register') --}}
                             <!--" class="default-btn">ثبت‌نام</a>-->
-                        </div>
+                        {{-- </div> --}}
                     </div>
                 </nav>
             </div>
@@ -227,11 +234,11 @@
                                 <!-- <h3>درباره ما</h3> -->
                             </div>
                             <!-- <p class="text-vip-2-5">
-                                                                    توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
-                                                                    این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
-                                                                    جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
-                                                                    کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
-                                                                </p> -->
+                                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
+                                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
+                                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
+                                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
+                                                                    </p> -->
                             <ul class="footer-social">
                                 <li>
                                     <a href="#">
@@ -347,7 +354,135 @@
         <!-- End Footer Area -->
     @endsection
     @yield('content')
+    <!-- Start Footer Area -->
+    <section class="footer-section pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="single-footer-widget">
+                        <div class="footer-heading">
+                            <h3> ما را دنبال کنید </h3>
+                            <!-- <h3>درباره ما</h3> -->
+                        </div>
+                        <!-- <p class="text-vip-2-5">
+                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
+                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
+                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
+                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
+                                                    </p> -->
+                        <ul class="footer-social">
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-facebook"></i>
+                                </a>
+                            </li>
 
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-twitter"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-pinterest"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="flaticon-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+
+
+                                <p>
+                                <h6> آدرس دبیرخانه کنگره </h6>
+                                </p>
+                                <p>
+                                    استان البرز، کرج، بلوار امامزاده حسن (ع)،دانشکدگان کشاورزی و منابع طبیعی دانشگاه
+                                    تهران، گروه ترویج و آموزش کشاورزی، طبقه سوم، دبیرخانه دهمین کنگره ملی علوم ترویج
+                                    وآموزش کشاورزی، منابع طبیعی و محیط زیست پایدار
+                                </p>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <div class="footer-heading">
+                            <h3>اطلاعات بیشتر</h3>
+                        </div>
+
+                        <ul class="footer-quick-links">
+                            <li>
+                                <p>
+                                    <b>زمان برگزاری:</b> سه شنبه و چهارشنبه 8 و 9 آبان 1403
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <b>دریافت اصل مقالات</b> : 20 تیر 1403
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <b>اعلام نتابج داوری :</b> 31 شهریور 1403
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ثبت نام جهت شرکت در کنگره حداکثر تا 15 مهر 1403
+                                </p>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <div class="footer-heading">
+                            <h3>تماس با ما</h3>
+                        </div>
+
+                        <div class="footer-info-contact">
+                            <i class="flaticon-phone-call"></i>
+                            <h3>تلفن</h3>
+                            <span><a href="tel:02632238293"> 02632238293 </a></span>
+                        </div>
+
+                        <div class="footer-info-contact">
+                            <i class="flaticon-phone-call"></i>
+                            <h3> ایتا </h3>
+                            <span> 09192426803 </span>
+                        </div>
+
+                        <div class="footer-info-contact">
+                            <i class="flaticon-envelope"></i>
+                            <h3> کد پستی </h3>
+                            <span> 3158777871 </span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </section>
+    <!-- End Footer Area -->
     <!-- Start Copy Right Area -->
     <div class="copyright-area">
         <div class="container">

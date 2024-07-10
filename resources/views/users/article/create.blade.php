@@ -30,9 +30,10 @@
 
                         <div class="container mt-5">
                             <div class="mr-5 btn btn-danger">
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                                  خروج
-                              </a>
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                    خروج
+                                </a>
                             </div>
                             <form action="{{ route('Articles.store') }}" method="POST">
                                 @csrf
@@ -85,6 +86,17 @@
                                             value="{{ old('Tags') }}">
                                         <input name="Tags_fa" type="text" class="form-control" id="Tags_fa"
                                             value="{{ old('Tags_fa') }}">
+                                        @error('Tags')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Tags" class="form-label">{{ __('تگ ها-فارسی') }}</label>
+                                        <input name="Fa-tag" type="text" class="form-control" id="Tags"
+                                            value="{{ old('Tags') }}">
                                         @error('Tags')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -146,16 +158,7 @@
                     </div>
                 </div>
 
-
-
-
-
-
             </div>
-
-
-
-
         </div>
     </div>
 
