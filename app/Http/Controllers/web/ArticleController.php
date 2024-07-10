@@ -28,12 +28,13 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $Congresses =Congress::latest()->limit(1);
+        $Congresses =Congress::all();
+        // $Congresses =Congress::latest()->limit(1);
         // $Congresses =Congress::where('start_date', '>=' , now())
         // ->where('end_date', '<=' , now());
         $Types = ["مقاله پژوهشی", "مقاله علمی پژوهشی"];
         $categories =Category::all();
-        return view('users.create', compact('Congresses', 'Types', 'categories'));
+        return view('users.article.create', compact('Congresses', 'Types', 'categories'));
     }
 
     /**
@@ -41,7 +42,6 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-
 
         $request->validate([
             'TypeID' => 'required',
@@ -52,11 +52,10 @@ class ArticleController extends Controller
             'Tags' => 'required',
             'Tags_fa' => 'required',
             'CongressID' => 'required',
-
+            'Categories' => 'required',
         ]);
         try {
             DB::beginTransaction();
-
 
             $article = Article::create([
                 'TypeID' => $request->TypeID,
@@ -72,6 +71,7 @@ class ArticleController extends Controller
 
 
             $items = $request->Categories;
+            // foreach ($request->input('Categories', []) as $item) {
             foreach ($items as $item) {
                 ArticleCategory::create([
                     'ArticleID' => $article->id,

@@ -30,12 +30,11 @@
 
                         <div class="container mt-5">
                             <div class="mr-5 btn btn-danger">
-                                <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                                    خروج
-                                </a>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                  خروج
+                              </a>
                             </div>
-                            <form>
+                            <form action="{{ route('Articles.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <!-- Input fields -->
@@ -84,6 +83,8 @@
                                         <label for="Tags" class="form-label">{{ __('تگ ها') }}</label>
                                         <input name="Tags" type="text" class="form-control" id="Tags"
                                             value="{{ old('Tags') }}">
+                                        <input name="Tags_fa" type="text" class="form-control" id="Tags_fa"
+                                            value="{{ old('Tags_fa') }}">
                                         @error('Tags')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -105,12 +106,12 @@
                                     <!-- Select options -->
                                     <div class="col-md-6 mb-3">
                                         <label for="select1" class="form-label">CongressID</label>
-                                        <select name="CongressID" class="form-select" id="CongressID">
-                                            <option selected>Select an option</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                            <option value="3">Option 3</option>
-                                        </select>
+                                            <select name="CongressID" class="form-select" id="CongressID">
+                                                <option selected>لطفا انتخاب کنید</option>
+                                                @foreach ($Congresses as $Congress)
+                                                    <option value="{{$Congress->id}}">{{$Congress->Name}}</option>
+                                                @endforeach
+                                            </select>
                                         @error('CongressID')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -119,7 +120,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="TypeID" class="form-label">نوع مقاله</label>
-                                        <select class="form-select" id="TypeID">
+                                        <select class="form-select" id="TypeID" name="TypeID">
                                             <option selected>انتخاب کنید</option>
                                             <option value="1">مقاله علمی پژوهشی</option>
                                             <option value="2">مقاله پژوهشی</option>
@@ -136,11 +137,11 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="CategoriesID" class="form-label">CategoriesID</label>
                                         <div class="input-group">
-                                            <select class="form-select" id="select3">
-                                                <option selected> دسته بندی</option>
-                                                <option value="1">CategoriesID 1</option>
-                                                <option value="2">CategoriesID2</option>
-                                                <option value="3">CategoriesID 3</option>
+                                            <select class="form-select" id="select3" name="Categories[]">
+                                                <option selected>لطفا انتخاب کنید</option>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{$category->id}}">{{$category->Name}}</option>
+                                                @endforeach
                                             </select>
                                             <input type="text" class="form-control" id="newCategory"
                                                 placeholder="Add new category">
