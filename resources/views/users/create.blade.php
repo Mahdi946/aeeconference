@@ -29,6 +29,11 @@
 
 
                         <div class="container mt-5">
+                            <div class="mr-5 btn btn-danger">
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                  خروج
+                              </a>  
+                            </div>
                             <form>
                                 @csrf
                                 <div class="row">

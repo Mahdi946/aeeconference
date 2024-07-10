@@ -80,19 +80,17 @@
 
     <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
 
-    <link rel="stylesheet" href="{{ url('assets-rtl/css/responsive.css') }}">
-
     <link rel="stylesheet" href="{{ url('assets-rtl/css/rtl.css') }}">
-    {{-- <link rel="stylesheet" href="{{ url('assets/jalalidatepicker/persian-datepicker.min.css') }}"> --}}
+
+
+    <link rel="stylesheet" href="{{ url('assets-rtl/fonts/boxicons.woff2') }}">
+
     <title> کنگره ملی ترویج و آموزش کشاورزی،منابع طبیعی و محیط زیست پایدار </title>
 
     <link rel="icon" type="image/png" href="{{ asset('assets-rtl/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/leaflet/leaflet.css') }}" />
     @yield('head-tag')
 </head>
-
-
-
 <body>
 
     <!-- Start Preloader Area -->
@@ -187,14 +185,6 @@
                                     تماس با کنفرانس
                                 </a>
                             </li>
-                            {{-- 
-                            <!-- <li class="nav-item">
-                                    <a href="{{ base('events') }}" class="nav-link">
-                                        رویدادها
-                                    </a>
-                                </li> --> --}}
-
-
 
                         </ul>
 
@@ -352,6 +342,8 @@
         </section>
         <!-- End Footer Area -->
     @endsection
+    @yield('content')
+
     <!-- Start Copy Right Area -->
     <div class="copyright-area">
         <div class="container">
@@ -388,7 +380,6 @@
     </div>
     <!-- End Go Top Section -->
     <!-- dark version -->
-    @yield('content')
     <!-- dark version -->
     <script src="{{ asset('assets-rtl/js/jquery.min.js') }}"></script>
 
