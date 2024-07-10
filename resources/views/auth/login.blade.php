@@ -134,6 +134,7 @@
     </div>
     </div>
     </div>
+    @endsection
     <!-- End Login Area -->
 @section('scripts')
     <script src="{{ asset('scripts/NewsAdd.js?v=1') }}" type="module"></script>
