@@ -43,7 +43,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-dd('sss');
+
         $request->validate([
             'TypeID' => 'required',
             'FullTitle' => 'required',
