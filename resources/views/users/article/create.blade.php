@@ -101,7 +101,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __(' کلیدواژه-فارسی') }}</label>
-                                        <input name="Fa-tag" type="text" class="form-control" id="Tags"
+                                        <input name="Tags_fa" type="text" class="form-control" id="Tags_fa"
                                             value="{{ old('Tags') }}">
                                         @error('Tags')
                                             <span class="invalid-feedback" role="alert">
@@ -110,7 +110,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-فارسی') }}</label>
+                                        <label for="Tags" class="form-label">{{ __(' موضوعات') }}</label>
                                         <select class="form-select" multiple aria-label="multiple select" name="Categories[]">
                                             @foreach ($categories as $category)
                                             <option value="{{$category->id}}">{{$category->Name}}</option>
