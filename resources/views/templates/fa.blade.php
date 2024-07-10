@@ -194,7 +194,7 @@
                             </a> --> --}}
                             @auth
 
-                                <a href="{{ url('/admin/news') }}" class="btn btn-info b-r">اخبار</a>
+                                <a href="{{ url('logout') }}" class="btn btn-info b-r">خروج</a>
                             @endauth
                             @guest
 
