@@ -39,7 +39,7 @@
 
     <section class="fun-facts-area pt-100 pb-70">
        
-    @guest
+   
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-6 col-sm-6">
