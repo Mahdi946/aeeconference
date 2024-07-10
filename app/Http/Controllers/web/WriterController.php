@@ -5,10 +5,12 @@ namespace App\Http\Controllers\web;
 use App\Models\User;
 use App\Models\Writer;
 use App\Models\Article;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class WriterController extends Controller
 {
@@ -35,16 +37,51 @@ class WriterController extends Controller
     {
         //
         $request->validate([
-            'UserID' => 'required',
             'ArticleID' => 'required',
         ]);
         try {
-            DB::beginTransaction();
-            $writer = Writer::create([
-                'UserID' => $request->UserID,
-                'ArticleID' => $request->ArticleID,
-            ]);
-            DB::commit();
+
+            if($request->UserID){
+
+                DB::beginTransaction();
+                Writer::create([
+                    'UserID' => $request->UserID,
+                    'ArticleID' => $request->ArticleID,
+                ]);
+                DB::commit();
+            }else{
+                dd("hi");
+                DB::beginTransaction();
+
+                $string = Str::random(15);
+                $user = User::create([
+                    'Name' => $request->Name,
+                    'Family' => $request->Family,
+                    'Name_fa' => $request->Name_fa,
+                    'Family_fa' => $request->Family_fa,
+                    'FatherName' => $request->FatherName,
+                    'BirthCert' => $request->BirthCert,
+                    'MobileNumber' => $request->MobileNumber,
+                    'PhoneNumber' => $request->PhoneNumber,
+                    'Field' => $request->Field,
+                    'Edu' => $request->Edu,
+                    'City' => $request->City,
+                    'City_fa' => $request->City_fa,
+                    'Country' => $request->Country,
+                    'Rank' => $request->Rank,
+                    'Org' => $request->Org,
+                    'Org_fa' => $request->Org_fa,
+                    'email' => $request->email,
+                    'password' => Hash::make($string),
+                ]);
+                $writer = Writer::create([
+                    'UserID' =>  $user->id,
+                    'ArticleID' => $request->ArticleID,
+                ]);
+
+                DB::commit();
+            }
+
         } catch (\Exception $ex) {
             DB::rollBack();
             die(print_r("error dari"));
@@ -85,15 +122,15 @@ class WriterController extends Controller
         //
     }
 
-    public function getWriterByID($email)
+    public function getWriterByID(Article $article)
     {
         $writers =Writer::where('ArticleID', '=', $article->id)->get();
         return view('users.panel', compact('writers'));
     }
-    public function getEmailWriter(Request $request)
+    public function getEmailWriter($email)
     {
-        $writers =User::where('Email', '=', $request->email)->first();
-        return view('users.panel', compact('writers'));
+        $writers =User::where('Email', '=', $email)->first();
+        return response()->json($writers);
     }
     public function writerSave(string $id)
     {
@@ -103,8 +140,6 @@ class WriterController extends Controller
             return view('users.writer.writer', compact('articles'));
         }
 
-        // $writers =User::where('Email', '=', $request->email)->first();
-        // return view('users.panel', compact('writers'));
     }
 
 }
