@@ -32,7 +32,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="select1" class="form-label">نوع مقاله</label>
                                         <select name="TypeID" class="form-select" id="TypeID">
-                                            <option selected> لطفا نوع مقاله را انتخاب کنید </option>
+                                            <option disabled selected> لطفا نوع مقاله را انتخاب کنید </option>
                                             <option value="1">مقاله پژوهشی</option>
                                             <option value="2">مقاله علمی پژوهشی</option>
 

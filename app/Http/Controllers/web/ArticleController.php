@@ -5,6 +5,7 @@ namespace App\Http\Controllers\web;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Congress;
+use App\Models\ArticleFile;
 use Illuminate\Http\Request;
 use App\Models\ArticleCategory;
 use Illuminate\Support\Facades\DB;
@@ -125,7 +126,7 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+       
     }
 
      /**
@@ -136,4 +137,5 @@ class ArticleController extends Controller
         $articles =Article::where('UserID', '=', Auth::user()->id)->get();
         return view('users.panel', compact('articles'));
     }
+
 }

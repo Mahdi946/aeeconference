@@ -120,6 +120,9 @@ class WriterController extends Controller
     public function destroy(string $id)
     {
         //
+        $writer = Writer::findOrFail($id);
+        $writer->delete();
+
     }
 
     public function getWriterByID(Article $article)
