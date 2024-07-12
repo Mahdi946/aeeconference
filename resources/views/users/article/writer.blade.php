@@ -28,12 +28,52 @@
                                     <div class="col-md-6 mb-3">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="name" class="form-label">{{ __('نام') }}</label>
-                                        <input name="name" type="text" class="form-control" id="writerName">
+                                        <label for="Name_fa" class="form-label">{{ __('نام') }}</label>
+                                        <input name="Name_fa" type="text" class="form-control" id="writerName_fa">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="family" class="form-label">{{ __('نام خانوادگی') }}</label>
-                                        <input name="family" type="text" class="form-control" id="writerFamily">
+                                        <label for="Family_fa" class="form-label">{{ __('نام خانوادگی') }}</label>
+                                        <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Name" class="form-label">{{ __('Name') }}</label>
+                                        <input name="Name" type="text" class="form-control" id="writerName">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Family" class="form-label">{{ __('Last Name') }}</label>
+                                        <input name="Family" type="text" class="form-control" id="writerFamily">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="MobileNumber" class="form-label">{{ __('موبایل') }}</label>
+                                        <input name="MobileNumber" type="text" class="form-control" id="writerMobileNumber">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="PhoneNumber" class="form-label">{{ __('تلفن') }}</label>
+                                        <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Country" class="form-label">{{ __('کشور') }}</label>
+                                        <input name="Country" type="text" class="form-control" id="writerCountry">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="City_fa" class="form-label">{{ __('شهر') }}</label>
+                                        <input name="City_fa" type="text" class="form-control" id="writerCity_fa">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="City" class="form-label">{{ __('City') }}</label>
+                                        <input name="City" type="text" class="form-control" id="writerCity">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Edu" class="form-label">{{ __('مقطع تحصیلی') }}</label>
+                                        <input name="Edu" type="text" class="form-control" id="writerEdu">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Rank" class="form-label">{{ __('رتبه علمی') }}</label>
+                                        <input name="Rank" type="text" class="form-control" id="writerRank">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="Org" class="form-label">{{ __('وابستگی سازمانی') }}</label>
+                                        <input name="Org" type="text" class="form-control" id="writerOrg">
                                     </div>
                                 </div>
                                 <div class="row">
