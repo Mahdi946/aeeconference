@@ -27,7 +27,8 @@ Route::resource('Articles',  ArticleController::class);
 Route::prefix('/Writers')->controller(WriterController::class)->name('Writers.')->group(function(){
     // Route::get('/writerSave/{id}','writerSave')->name('writerSave');
     Route::get('/writerSave/{id}/show', 'writerSave')->name('writerSave');
-    Route::get('/getWriterByID/{article}','getWriterByID');
+    Route::post('/writerSave/{id}/show', 'store')->name('writerStore');
+    Route::get('/getWritersByID/{article}','getWritersByID');
     Route::get('/getEmailWriter/{email}','getEmailWriter')->name('getEmailWriter');
 });
 
