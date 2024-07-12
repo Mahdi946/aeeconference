@@ -33,7 +33,7 @@ class WriterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(string $id, Request $request)
     {
         //
         $request->validate([
@@ -41,7 +41,7 @@ class WriterController extends Controller
         ]);
         try {
 
-            if($request->UserID){
+            if(!empty($request->UserID)){
 
                 DB::beginTransaction();
                 Writer::create([
@@ -50,7 +50,7 @@ class WriterController extends Controller
                 ]);
                 DB::commit();
             }else{
-                //dd("hi");
+
                 DB::beginTransaction();
 
                 $string = Str::random(15);
@@ -85,9 +85,12 @@ class WriterController extends Controller
         } catch (\Exception $ex) {
             DB::rollBack();
             dd("error in store or create writer");
-            return redirect()->back();
         }
-        //die(print_r("done"));
+        $article =Article::findOrFail($id);
+        if( Auth::user()->id == $article->UserID){
+            //$articles =Article::where('UserID', '=', Auth::user()->id)->get();
+            return view('users.article.writer', compact('article'));
+        }
     }
 
     /**
@@ -125,10 +128,10 @@ class WriterController extends Controller
 
     }
 
-    public function getWriterByID(Article $article)
+    public function getWritersByID(Article $article)
     {
         $writers =Writer::where('ArticleID', '=', $article->id)->get();
-        return view('users.panel', compact('writers'));
+        return response()->json($writers);
     }
     public function getEmailWriter($email)
     {
