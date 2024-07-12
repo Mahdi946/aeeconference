@@ -142,7 +142,18 @@ class WriterController extends Controller
     public function getWritersByID(Article $article)
     {
         $writers =Writer::where('ArticleID', '=', $article->id)->get();
-        return response()->json($writers);
+        $all = [];
+        foreach ($writers as $writer) {
+           $users = User::find($writer->id);
+           $user = new User;
+           $user->id =  $users->id;
+           $user->Name =  $users->Name;
+           $user->email =  $users->email;
+           $user->ArticleID =  $writer->ArticleID;
+           array_push($all, $user);
+            }
+
+        return response()->json($all);
     }
     public function getEmailWriter($email)
     {
