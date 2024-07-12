@@ -60,7 +60,7 @@ class WriterController extends Controller
                     'Name_fa' => $request->Name_fa,
                     'Family_fa' => $request->Family_fa,
                     'FatherName' => $request->FatherName,
-                    'BirthCert' => $request->BirthCert,
+                    'BirthCert' => 0, //$request->BirthCert,
                     'MobileNumber' => $request->MobileNumber,
                     'PhoneNumber' => $request->PhoneNumber,
                     'Field' => $request->Field,
