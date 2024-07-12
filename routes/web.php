@@ -14,12 +14,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-
-
-
-
-
 //route prefix Articles
 Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles.')->group(function(){
     Route::get('/getArticle','getArticle')->name('getArticle');
@@ -27,13 +21,6 @@ Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles
 
 //route resource Articles
 Route::resource('Articles',  ArticleController::class);
-
-
-
-
-
-
-
 
 
 //route prefix Writers
@@ -46,11 +33,6 @@ Route::prefix('/Writers')->controller(WriterController::class)->name('Writers.')
 
 //route resource Writers
 Route::resource('Writers',  WriterController::class);
-
-
-
-
-
 
 
 //route prefix ArticleFiles
