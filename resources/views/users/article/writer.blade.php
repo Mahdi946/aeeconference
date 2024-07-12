@@ -142,9 +142,7 @@
 @endsection
 @section('scripts')
     <script>
-$(document).ready(function() {
-
-    function writerCheck(){
+        function writerCheck(){
         writerEmail = $('#writerEmail').val();
         $.ajax({url: "/Writers/getEmailWriter/" + writerEmail, success: function(result){
             console.log(result);
@@ -184,6 +182,9 @@ $(document).ready(function() {
 
         }});
     }
+$(document).ready(function() {
+
+
 
 
     // Function to create and display the table
