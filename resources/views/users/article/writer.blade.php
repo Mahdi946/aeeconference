@@ -12,7 +12,7 @@
 
 
                         <div class="container mt-5">
-                            <form action="{{route('Writers.store')}}" method="POST">
+                            <form action="" method="POST">
                                 @csrf
                                 <input type="hidden" name="ArticleID" value="{{ $article->id }}" id="ArticleID" />
                                 <input type="hidden" name="UserID" value="" id="writerUserID" />

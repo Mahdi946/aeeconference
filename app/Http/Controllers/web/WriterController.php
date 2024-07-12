@@ -100,7 +100,8 @@ class WriterController extends Controller
 
         $article =Article::findOrFail($request->ArticleID);
         if( Auth::user()->id == $article->UserID){
-            return \redirect()->route('Articles.getArticle');
+            return view('users.article.writer', compact('article'));
+            //return \redirect()->route('Articles.getArticle');
         }
     }
 
