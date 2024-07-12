@@ -49,7 +49,6 @@
                                             <option value="فرم تعارض منافع">فرم تعارض منافع</option>
                                             <option value="فایل‌های تکمیلی، اضافی">فایل‌های تکمیلی، اضافی</option>
                                           </select>
-                                        <input name="FileType" type="text" class="form-control" id="FileType">
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="Description" class="form-label">{{ __('توضیحات') }}</label>
