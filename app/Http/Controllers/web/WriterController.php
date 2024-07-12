@@ -50,7 +50,7 @@ class WriterController extends Controller
                 ]);
                 DB::commit();
             }else{
-                dd("hi");
+                //dd("hi");
                 DB::beginTransaction();
 
                 $string = Str::random(15);
@@ -84,10 +84,10 @@ class WriterController extends Controller
 
         } catch (\Exception $ex) {
             DB::rollBack();
-            die(print_r("error dari"));
+            dd("error in store or create writer");
             return redirect()->back();
         }
-        die(print_r("save  shode"));
+        //die(print_r("done"));
     }
 
     /**
