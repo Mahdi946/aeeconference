@@ -149,8 +149,8 @@ class WriterController extends Controller
            $user = new User;
            $user->id =  $users->id;
            $user->Name =  $users->Name;
+           $user->Family =  $users->Family;
            $user->email =  $users->email;
-           $user->ArticleID =  $writer->ArticleID;
            array_push($all, $user);
             }
 
