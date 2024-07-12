@@ -18,10 +18,22 @@
                                 <div class="row">
                                     <!-- Input fields -->
 
-                                    <div class="col-md-12 mb-3">
+                                    <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label">{{ __('ایمیل') }}</label>
-                                        <input name="email" type="text" class="form-control" id="writerEmail">
-                                        <a href="javascript:writerCheck()" id="checkEmail" class="btn btn-primary">بررسی</a>
+                                        <div class="input-group">
+                                            <input name="email" type="text" class="form-control" id="writerEmail">
+                                            <a href="javascript:writerCheck()" id="checkEmail" class="btn btn-primary">بررسی</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">{{ __('نام') }}</label>
+                                        <input name="name" type="text" class="form-control" id="writerName">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="family" class="form-label">{{ __('نام خانوادگی') }}</label>
+                                        <input name="family" type="text" class="form-control" id="writerFamily">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -73,7 +85,8 @@
     function writerCheck(){
         writerEmail = $('#writerEmail').val();
         $.ajax({url: "/Writers/getEmailWriter/" + writerEmail, success: function(result){
-            $("#result").html(result);
+            console.log(result);
+            //$("#result").val(result);
         }});
     }
     </script>
