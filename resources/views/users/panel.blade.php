@@ -28,15 +28,7 @@
                                     <b>ویرایش</b>
                                     </a>
                                     <a href="/Writers/writerSave/{{$article->id}}/show" id="actionBtn" type="button" class="btn btn-info"><b>نویسندگان</b></a>
-                                    <a href="/ArticleFiles/writerSave/{{$article->id}}" id="actionBtn" type="button" class="btn btn-info"><b>فایل‌ها</b></a>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <a href="/ArticleFiles/getArticleFileByID/{{$article->id}}"  type="button" class="btn btn-info">
-                                    <b> دیدن فایل </b>
-                                    </a>
+                                    <a href="/ArticleFiles/getArticleFileByID/{{$article->id}}" id="actionBtn" type="button" class="btn btn-info"><b>فایل‌ها</b></a>
                                 </td>
                             </tr>
                             @endforeach
