@@ -87,7 +87,7 @@ class ArticleFileController extends Controller
          }
 
          $file->delete();
-         die(print_r("delete shode"));
+         //die(print_r("delete shode"));
     }
     public function getArticleFile(Article $article)
     {
