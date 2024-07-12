@@ -139,8 +139,8 @@ class WriterController extends Controller
     {
         $article =Article::findOrFail($id);
         if( Auth::user()->id == $article->UserID){
-            $articles =Article::where('UserID', '=', Auth::user()->id)->get();
-            return view('users.writer.writer', compact('articles'));
+            //$articles =Article::where('UserID', '=', Auth::user()->id)->get();
+            return view('users.article.writer', compact('article'));
         }
 
     }
