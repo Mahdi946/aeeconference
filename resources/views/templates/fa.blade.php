@@ -198,7 +198,7 @@
                                     @csrf
                                     <button type="submit" class="btn btn-info b-r">خروج</button>
                                 </form>
-
+                                <a href="/Articles/getArticle" class="btn btn-info b-r m-1">  مقالات</a>
                             @endauth
 
 

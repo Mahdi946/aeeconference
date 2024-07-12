@@ -28,6 +28,11 @@
                                     <b>ویرایش</b>
                                     </a>
                                 </td>
+                                <td>
+                                    <a href="/Writers/writerSave/{{$article->id}}/show" id="actionBtn" type="button" class="btn btn-info">
+                                    <b>ایجاد نویسنده</b>
+                                    </a>
+                                </td>
                             </tr>
                             @endforeach
 

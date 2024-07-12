@@ -33,16 +33,30 @@ class WriterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(string $id, Request $request)
+    public function store( Request $request)
     {
         //
         $request->validate([
             'ArticleID' => 'required',
         ]);
+
+        //این برای اینکه کاربر با ای دی مقاله دیگه نیاد اسم بنویسه
+        $article =Article::findOrFail($request->ArticleID);
+        if( Auth::user()->id != $article->UserID){
+            dd("please select your article");
+        }
+
+        //این برای اینکه دوبار یه نویسنده رو ثبت نکنه
+        if($request->UserID){
+            $checkArticle = Writer::where('ArticleID', $request->ArticleID )->where('UserID', $request->UserID )->first();;
+            if($checkArticle){
+                dd("this article has this writer");
+            }
+        }
+
+        //store
         try {
-
-            if(!empty($request->UserID)){
-
+            if($request->UserID){
                 DB::beginTransaction();
                 Writer::create([
                     'UserID' => $request->UserID,
@@ -50,9 +64,7 @@ class WriterController extends Controller
                 ]);
                 DB::commit();
             }else{
-
                 DB::beginTransaction();
-
                 $string = Str::random(15);
                 $user = User::create([
                     'Name' => $request->Name,
@@ -78,18 +90,17 @@ class WriterController extends Controller
                     'UserID' =>  $user->id,
                     'ArticleID' => $request->ArticleID,
                 ]);
-
                 DB::commit();
             }
-
         } catch (\Exception $ex) {
             DB::rollBack();
             dd("error in store or create writer");
         }
-        $article =Article::findOrFail($id);
+
+
+        $article =Article::findOrFail($request->ArticleID);
         if( Auth::user()->id == $article->UserID){
-            //$articles =Article::where('UserID', '=', Auth::user()->id)->get();
-            return view('users.article.writer', compact('article'));
+            return \redirect()->route('Articles.getArticle');
         }
     }
 
