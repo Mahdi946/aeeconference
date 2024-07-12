@@ -27,11 +27,10 @@
                                     <a href="#" id="actionBtn" type="button" class="btn btn-primary">
                                     <b>ویرایش</b>
                                     </a>
+                                    <a href="/Writers/writerSave/{{$article->id}}/show" id="actionBtn" type="button" class="btn btn-info"><b>نویسندگان</b></a>
                                 </td>
                                 <td>
-                                    <a href="/Writers/writerSave/{{$article->id}}/show" id="actionBtn" type="button" class="btn btn-info">
-                                    <b>ایجاد نویسنده</b>
-                                    </a>
+
                                 </td>
                             </tr>
                             @endforeach
@@ -54,5 +53,4 @@
 @endSection
 
 @section('scripts')
-    <script src="{{ asset('scripts/NewsAdd.js?v=1') }}" type="module"></script>
 @endSection
