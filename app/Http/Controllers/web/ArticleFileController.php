@@ -47,7 +47,7 @@ class ArticleFileController extends Controller
             'Description' => $request->Description,
             'Location' => $path,
         ]);
-        die(print_r("save shode"));
+        //dd("Done");
     }
 
     /**
