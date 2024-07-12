@@ -220,7 +220,7 @@
         $.ajax({url: "/Writers/getWritersByID/" + ArticleID,
             success: function(result){
                 console.log(result);
-                createTable(response);
+                createTable(result);
             },
             error: function() {
                 console.error('Failed to fetch data');
