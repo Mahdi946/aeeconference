@@ -135,9 +135,8 @@
 @endsection
 @section('scripts')
     <script>
-        $(document).ready(function() {
-            getWriters();
-        });
+$(document).ready(function() {
+
     function writerCheck(){
         writerEmail = $('#writerEmail').val();
         $.ajax({url: "/Writers/getEmailWriter/" + writerEmail, success: function(result){
@@ -183,28 +182,31 @@
     // Function to create and display the table
     function createTable(data) {
         const tableContainer = $('#Writers');
+        tableContainer.empty();  // Clear any existing content
         const table = $('<table></table>');
         const thead = $('<thead></thead>');
         const tbody = $('<tbody></tbody>');
 
-        // Create table header
+        // Define table headers with Persian names
         const headers = {
             'Name': 'نام',
             'Family': 'نام خانوادگی',
-            'Email': 'ایمیل'
+            'email': 'ایمیل'
         };
+
+        // Create table header row
         const headerRow = $('<tr></tr>');
-        headers.forEach(header => {
-            const th = $('<th></th>').text(header);
+        Object.values(headers).forEach(headerText => {
+            const th = $('<th></th>').text(headerText);
             headerRow.append(th);
         });
         thead.append(headerRow);
 
-        // Create table rows
+        // Create table body rows
         data.forEach(item => {
             const row = $('<tr></tr>');
-            headers.forEach(header => {
-                const td = $('<td></td>').text(item[header.toLowerCase()]);
+            Object.keys(headers).forEach(header => {
+                const td = $('<td></td>').text(item[header]);
                 row.append(td);
             });
             tbody.append(row);
@@ -227,5 +229,7 @@
             }
         });
     }
+    getWriters();
+});
     </script>
 @endSection
