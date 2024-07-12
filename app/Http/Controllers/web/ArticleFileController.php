@@ -89,9 +89,9 @@ class ArticleFileController extends Controller
          $file->delete();
          die(print_r("delete shode"));
     }
-    public function getArticleFile()
+    public function getArticleFile(Article $article)
     {
-        $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
+        // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
         $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
         return view('users.form', compact('articlefiles'));
     }

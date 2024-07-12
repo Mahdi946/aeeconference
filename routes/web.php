@@ -38,7 +38,7 @@ Route::resource('Writers',  WriterController::class);
 
 //route prefix ArticleFiles
 Route::prefix('/ArticleFiles')->controller(ArticleFileController::class)->name('ArticleFiles.')->group(function(){
-    Route::get('/getArticleFile','getArticleFile')->name('getArticleFile');
+    Route::get('/getArticleFileByID/{article}','getArticleFile')->name('getArticleFile');
 });
 //route resource ArticleFiles
 Route::resource('ArticleFiles',  ArticleFileController::class);
