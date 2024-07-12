@@ -111,8 +111,6 @@
                                         </select>
                                     </div>
                                     <input type="hidden" id="CongressID" name="CongressID" value="{{$Congresses->id}}">
-
-
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">ایجاد</button>
