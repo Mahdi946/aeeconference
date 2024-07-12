@@ -178,13 +178,54 @@
 
         }});
     }
+
+
+    // Function to create and display the table
+    function createTable(data) {
+        const tableContainer = $('#Writers');
+        const table = $('<table></table>');
+        const thead = $('<thead></thead>');
+        const tbody = $('<tbody></tbody>');
+
+        // Create table header
+        const headers = {
+            'Name': 'نام',
+            'Family': 'نام خانوادگی',
+            'Email': 'ایمیل'
+        };
+        const headerRow = $('<tr></tr>');
+        headers.forEach(header => {
+            const th = $('<th></th>').text(header);
+            headerRow.append(th);
+        });
+        thead.append(headerRow);
+
+        // Create table rows
+        data.forEach(item => {
+            const row = $('<tr></tr>');
+            headers.forEach(header => {
+                const td = $('<td></td>').text(item[header.toLowerCase()]);
+                row.append(td);
+            });
+            tbody.append(row);
+        });
+
+        table.append(thead);
+        table.append(tbody);
+        tableContainer.append(table);
+    }
+
     function getWriters(){
         ArticleID = $('#ArticleID').val();
-        $.ajax({url: "/Writers/getWritersByID/" + ArticleID, success: function(result){
-            console.log(result);
-            $('#Writers').html(result).show('slow');
-
-        }});
+        $.ajax({url: "/Writers/getWritersByID/" + ArticleID,
+            success: function(result){
+                console.log(result);
+                createTable(response);
+            },
+            error: function() {
+                console.error('Failed to fetch data');
+            }
+        });
     }
     </script>
 @endSection
