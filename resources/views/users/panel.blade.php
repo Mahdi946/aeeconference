@@ -33,6 +33,11 @@
                                     <b>ایجاد نویسنده</b>
                                     </a>
                                 </td>
+                                <td>
+                                    <a href="/ArticleFiles/getArticleFileByID/{{$article->id}}"  type="button" class="btn btn-info">
+                                    <b> دیدن فایل </b>
+                                    </a>
+                                </td>
                             </tr>
                             @endforeach
 
