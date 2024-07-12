@@ -3,13 +3,23 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-
+            <div class="signup-section ptb-50" id="WritersArea">
+                <div class="container">
+                    <div class="signup-form" style="max-width: 800px;">
+                        <h3>نویسندگان</h3>
+                        <div class="container mt-5">
+                            <div class="row">
+                                <span id="Writers"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Start Signup Area -->
             <div class="signup-section ptb-50">
                 <div class="container">
                     <div class="signup-form" style="max-width: 800px;">
                         <h3>تعریف نویسنده</h3>
-
 
                         <div class="container mt-5">
                             <form action="" method="POST">
@@ -88,9 +98,6 @@
                                         <input name="Org" type="text" class="form-control" id="writerOrg" disabled>
                                     </div>
                                     <button type="submit" id="addWriter" class="btn btn-primary">ثبت</button>
-                                </div>
-                                <div class="row">
-                                    <span id="Writers"></span>
                                 </div>
 
                             </form>
@@ -183,21 +190,30 @@ $(document).ready(function() {
     function createTable(data) {
         const tableContainer = $('#Writers');
         tableContainer.empty();  // Clear any existing content
-        const table = $('<table></table>');
-        const thead = $('<thead></thead>');
+
+        // Check if data is empty
+        if (data.length === 0) {
+            $('#WritersArea').hide(); // Hide signup section if no data
+            return;
+        } else {
+            $('#WritersArea').show('slow'); // Show signup section if data exists
+        }
+
+        const table = $('<table class="table table-bordered table-striped"></table>');
+        const thead = $('<thead class="thead-dark"></thead>');
         const tbody = $('<tbody></tbody>');
 
         // Define table headers with Persian names
         const headers = {
             'Name': 'نام',
             'Family': 'نام خانوادگی',
-            'email': 'ایمیل'
+            'email': 'ایمیل',
+            'Actions': 'عملیات'  // Add header for actions column
         };
-
         // Create table header row
         const headerRow = $('<tr></tr>');
         Object.values(headers).forEach(headerText => {
-            const th = $('<th></th>').text(headerText);
+            const th = $('<th scope="col"></th>').text(headerText);
             headerRow.append(th);
         });
         thead.append(headerRow);
@@ -205,10 +221,24 @@ $(document).ready(function() {
         // Create table body rows
         data.forEach(item => {
             const row = $('<tr></tr>');
+
+            // Add columns for each data field
             Object.keys(headers).forEach(header => {
-                const td = $('<td></td>').text(item[header]);
-                row.append(td);
+                if (header === 'Actions') {
+                    // Create delete button in actions column
+                    const deleteBtn = $('<button type="button" class="btn btn-danger btn-sm">حذف</button>');
+                    deleteBtn.on('click', function() {
+                        deleteRow(item); // Call deleteRow function on button click
+                    });
+                    const td = $('<td></td>').append(deleteBtn);
+                    row.append(td);
+                } else {
+                    // Create regular data columns
+                    const td = $('<td></td>').text(item[header]);
+                    row.append(td);
+                }
             });
+
             tbody.append(row);
         });
 
