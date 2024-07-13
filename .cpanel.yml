@@ -18,7 +18,7 @@ deployment:
  - echo "Copy complete"
  - echo "Composer installing..."
  - cd $DEPLOYPATH; composer install
- #- cd $DEPLOYPATH; composer update --no-dev
+ - cd $DEPLOYPATH; composer update --no-dev
  - echo "Composer complete"
 #  - cd $DEPLOYPATH; sudo chmod -R 777 writable
  - echo "Database Migrating..."
