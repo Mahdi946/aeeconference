@@ -42,7 +42,7 @@
                                         @enderror
                                     </div>
 
-                                    <div class="col-md-12 mb-3">
+                                    <div class="col-md-12 mb-3" style="direction: ltr;">
                                         <label for="ShortTitle" class="form-label">{{ __('Abstract') }}</label>
                                         <textarea name="ShortTitle" class="form-control" id="ShortTitle" rows="2">{{ old('ShortTitle') }}</textarea>
                                         @error('ShortTitle')
@@ -60,7 +60,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-12 mb-3">
+                                    <div class="col-md-12 mb-3" style="direction: ltr;">
                                         <label for="FullTitle" class="form-label">{{ __('Subject') }}</label>
                                         <textarea name="FullTitle" class="form-control" id="FullTitle" rows="2">{{ old('FullTitle') }}</textarea>
                                         @error('FullTitle')
@@ -81,7 +81,7 @@
                                         @enderror
                                     </div>
 
-                                    <div class="col-md-12 mb-3">
+                                    <div class="col-md-12 mb-3" style="direction: ltr;">
                                         <label for="Tags" class="form-label">{{ __('Keywords') }}</label>
                                             <textarea name="Tags" class="form-control" id="Tags" rows="5">{{ old('Tags') }}</textarea>
                                         @error('Tags')
