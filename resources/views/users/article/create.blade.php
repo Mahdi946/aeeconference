@@ -30,8 +30,6 @@
                                         @enderror
                                     </div>
 
-
-
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa" class="form-label">{{ __('عنوان کوتاه') }}</label>
                                         <textarea name="ShortTitle_fa" class="form-control" id="ShortTitle_fa" rows="2">{{ old('ShortTitle_fa') }}</textarea>
@@ -93,7 +91,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __(' موضوعات') }}</label>
-                                        <select class="form-select" multiple aria-label="multiple select" name="Categories[]">
+                                        <select class="form-select" multiple aria-label="multiple select" name="Categories[]" data-multi-select>
                                             @foreach ($categories as $category)
                                             <option value="{{$category->id}}">{{$category->Name}}</option>
                                             @endforeach
@@ -143,3 +141,8 @@
     </div>
     </div>
 @endsection
+@section('scripts')
+<link href="/assets/css/multiSelect.css" rel="stylesheet" type="text/css">
+<script src="/assets/js/multiSelect.js"></script>
+
+@endSection
