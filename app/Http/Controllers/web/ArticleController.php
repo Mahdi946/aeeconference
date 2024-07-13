@@ -94,9 +94,8 @@ class ArticleController extends Controller
         }
 
         flash()->success('مقاله با موفقیت ثبت شد');
-        return redirect()->route('Articles.getArticle');
-        //return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
-        // alert()->success('محصول مورد نظر ایجاد شد', 'باتشکر');
+        return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
+
 
     }
 
