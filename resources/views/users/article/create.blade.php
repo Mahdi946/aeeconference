@@ -46,7 +46,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa" class="form-label">{{ __('عنوان کوتاه') }}</label>
-                                        <textarea name="ShortTitle_fa" class="form-control" id="ShortTitle_fa" rows="1">{{ old('ShortTitle_fa') }}</textarea>
+                                        <textarea name="ShortTitle_fa" class="form-control" id="ShortTitle_fa" rows="2">{{ old('ShortTitle_fa') }}</textarea>
                                         @error('ShortTitle_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -56,7 +56,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle" class="form-label">{{ __('Abstract') }}</label>
-                                        <textarea name="ShortTitle" class="form-control" id="ShortTitle" rows="1">{{ old('ShortTitle') }}</textarea>
+                                        <textarea name="ShortTitle" class="form-control" id="ShortTitle" rows="2">{{ old('ShortTitle') }}</textarea>
                                         @error('ShortTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="FullTitle_Fa" class="form-label">{{ __('عنوان کامل') }}</label>
-                                        <input name="FullTitle_Fa" type="text" class="form-control" value="{{ old('FullTitle_Fa') }}" id="FullTitle_Fa">
+                                        <textarea name="FullTitle_Fa" class="form-control" id="FullTitle_Fa" rows="2">{{ old('FullTitle_Fa') }}</textarea>
                                         @error('FullTitle_Fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="FullTitle" class="form-label">{{ __('Subject') }}</label>
-                                        <input name="FullTitle" type="text" class="form-control" value="{{ old('FullTitle') }}" id="FullTitle">
+                                        <textarea name="FullTitle" class="form-control" id="FullTitle" rows="2">{{ old('FullTitle') }}</textarea>
                                         @error('FullTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
