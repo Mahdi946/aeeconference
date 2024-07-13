@@ -13,7 +13,8 @@ deployment:
  - /bin/cp -R public/favicon.ico $PUBLICPATH
  - /bin/cp -R public/index.php $PUBLICPATH
  - /bin/cp -R public/robots.txt $PUBLICPATH
- - /bin/cp -R public/asset* $PUBLICPATH
+ - /bin/cp -R public/assets $PUBLICPATH
+ - /bin/cp -R public/assets-rtl $PUBLICPATH
  - /bin/cp -R public/scripts $PUBLICPATH
  - echo "Copy complete"
  - echo "Composer installing..."
