@@ -35,6 +35,7 @@ class WriterController extends Controller
      */
     public function store( Request $request)
     {
+        dd($request->all());
         //
         $request->validate([
             'ArticleID' => 'required',
@@ -100,6 +101,7 @@ class WriterController extends Controller
 
         $article =Article::findOrFail($request->ArticleID);
         if( Auth::user()->id == $article->UserID){
+            flash()->success('نویسنده مقاله با موفقیت ثبت شد');
             return view('users.article.writer', compact('article'));
             //return \redirect()->route('Articles.getArticle');
         }
@@ -145,7 +147,7 @@ class WriterController extends Controller
         $writers =Writer::where('ArticleID', '=', $article->id)->get();
         $all = [];
         foreach ($writers as $writer) {
-           $users = User::find($writer->id);
+           $users = User::find($writer->UserID);
            $user = new User;
            $user->id =  $users->id;
            $user->Name =  $users->Name;
