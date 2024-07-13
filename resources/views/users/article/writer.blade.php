@@ -230,7 +230,7 @@ $(document).ready(function() {
                         deleteRow(item); // Call deleteRow function on button click
                     });
                     const td = $('<td></td>').append(deleteBtn);
-                    row.append(td);
+                    //row.append(td);
                 } else {
                     // Create regular data columns
                     const td = $('<td></td>').text(item[header]);
