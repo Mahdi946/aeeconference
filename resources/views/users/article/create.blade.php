@@ -50,9 +50,9 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-12 mb-3">
-                                        <label for="FullTitle_Fa" class="form-label">{{ __('عنوان کامل') }}</label>
-                                        <textarea name="FullTitle_Fa" class="form-control" id="FullTitle_Fa" rows="2">{{ old('FullTitle_Fa') }}</textarea>
-                                        @error('FullTitle_Fa')
+                                        <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل') }}</label>
+                                        <textarea name="FullTitle_fa" class="form-control" id="FullTitle_fa" rows="2">{{ old('FullTitle_fa') }}</textarea>
+                                        @error('FullTitle_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -99,7 +99,7 @@
                                     </div>
                                     <input type="hidden" id="CongressID" name="CongressID" value="{{$Congresses->id}}">
                                 </div>
-
+                                <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                 <button type="submit" class="btn btn-primary">ایجاد</button>
                             </form>
                         </div>

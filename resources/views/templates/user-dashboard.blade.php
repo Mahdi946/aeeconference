@@ -439,12 +439,7 @@
 
                                     <a href="{{ url('login') }}">قبلا ثبت نام کردید؟</a>
 
-                                    <div class="col-lg-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="checkme">
-                                            <label class="form-check-label" for="checkme">مرا به خاطر بسپار</label>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
 
                             </div>

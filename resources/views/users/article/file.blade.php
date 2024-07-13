@@ -39,7 +39,7 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="FileType" class="form-label">{{ __('نوع') }}</label>
                                         <select class="form-select" name="FileType" aria-label="Default select">
-                                            <option value="مشخصات نویسندگان" selected>مشخصات نویسندگان*</option>
+                                            <option value="مشخصات نویسندگان">مشخصات نویسندگان*</option>
                                             <option value="فایل اصل مقاله">فایل اصل مقاله (بدون نام نویسندگان)*</option>
                                             <option value="تعهدنامه">نامه به سردبیر (تعهدنامه)*</option>
                                             <option value="تصویر">تصویر</option>
@@ -58,7 +58,7 @@
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
                                         <input type="file" name="File" class="form-control">
                                     </div>
-
+                                    <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                     <button type="submit" id="Submit" class="btn btn-primary">ثبت</button>
                                 </div>
                             </form>
