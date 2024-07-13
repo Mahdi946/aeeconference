@@ -99,7 +99,7 @@
                                     </div>
                                     <input type="hidden" id="CongressID" name="CongressID" value="{{$Congresses->id}}">
                                 </div>
-
+                                <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                 <button type="submit" class="btn btn-primary">ایجاد</button>
                             </form>
                         </div>

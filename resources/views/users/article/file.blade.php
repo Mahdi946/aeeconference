@@ -58,7 +58,7 @@
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
                                         <input type="file" name="File" class="form-control">
                                     </div>
-
+                                    <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                     <button type="submit" id="Submit" class="btn btn-primary">ثبت</button>
                                 </div>
                             </form>
