@@ -24,9 +24,6 @@
                                 <td>{{$article->ShortTitle_fa}}</td>
                                 <td>{{$article->ShortTitle}}</td>
                                 <td>
-                                    <a href="#" id="actionBtn" type="button" class="btn btn-primary">
-                                    <b>ویرایش</b>
-                                    </a>
                                     <a href="/Writers/writerSave/{{$article->id}}/show" id="actionBtn" type="button" class="btn btn-info"><b>نویسندگان</b></a>
                                     <a href="/ArticleFiles/getArticleFileByID/{{$article->id}}" id="actionBtn" type="button" class="btn btn-info"><b>فایل‌ها</b></a>
                                 </td>
