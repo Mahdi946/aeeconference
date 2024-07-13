@@ -47,7 +47,12 @@ class ArticleFileController extends Controller
             'Description' => $request->Description,
             'Location' => $path,
         ]);
-        //dd("Done");
+        $article =Article::findOrFail($request->ArticleID);
+        if( Auth::user()->id == $article->UserID){
+            // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
+            $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
+            return view('users.article.file', compact('article','articlefiles'));
+        }
     }
 
     /**
@@ -87,12 +92,16 @@ class ArticleFileController extends Controller
          }
 
          $file->delete();
-         die(print_r("delete shode"));
+         //die(print_r("delete shode"));
     }
     public function getArticleFile(Article $article)
     {
-        // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
-        $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
-        return view('users.form', compact('articlefiles'));
+        $article =Article::findOrFail($article->id);
+        if( Auth::user()->id == $article->UserID){
+            // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
+            $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
+            return view('users.article.file', compact('article','articlefiles'));
+        }
+
     }
 }

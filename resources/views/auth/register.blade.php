@@ -37,13 +37,11 @@
                             <div class="row">
                                 <div class="row mb-3">
                                   <label for="Name"
-                                        class="col-md-4 col-form-label text-md-end">نام -انگلیسی <label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">First Name<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
 
-                                        <input id="Name" type="text"
-                                            class="form-control @error('Name') is-invalid @enderror" name="Name"
-                                            value="{{ old('Name') }}" required autocomplete="Name" autofocus>
+                                        <input id="Name" type="text" class="form-control @error('Name') is-invalid @enderror" name="Name" value="{{ old('Name') }}" required autocomplete="Name" autofocus>
 
 
                                         @error('Name')
@@ -56,7 +54,7 @@
 
                                 <div class="row mb-3">
                                     <label for="mail"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی -انگلیسی') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Family" type="text"
@@ -75,7 +73,7 @@
 
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام-فارسی') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('نام') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Name_fa" type="text"
@@ -92,7 +90,7 @@
 
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی-فارسی') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Family_fa" type="text"
@@ -109,7 +107,7 @@
 
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام پدر-فارسی') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('نام پدر') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="FatherName" type="text"
@@ -161,7 +159,7 @@
 
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('شماره ثابت') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('تلفن') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="phoneNumber" type="number"
@@ -179,7 +177,7 @@
 
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('شماره موبایل') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('موبایل') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="MobileNumber" type="number"
@@ -197,7 +195,7 @@
 
                                 <div class="row mb-3">
                                     <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('رشته-فارسی') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('رشته') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="Field" type="text"
@@ -214,7 +212,7 @@
 
                                 <div class="row mb-3">
                                     <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('تحصیلات-فارسی') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('تحصیلات') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="Edu" type="text"
@@ -231,7 +229,7 @@
 
                                 <div class="row mb-3">
                                     <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('شغل-فارسی') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('شغل') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="Job" type="text"
@@ -248,7 +246,7 @@
 
                                 <div class="row mb-3">
                                     <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('آدرس-فارسی') }}</label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('آدرس') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="Address" type="text"
@@ -266,7 +264,7 @@
 
                                 <div class="row mb-3">
                                     <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('(انگلیسی)شهر') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('City') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="City" type="text"
@@ -282,8 +280,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('(فارسی)شهر') }}<label for="" class="text-danger">*</label></label>
+                                    <label for="Edu" class="col-md-4 col-form-label text-md-end">{{ __('شهر') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="City_fa" type="text"
@@ -334,12 +331,11 @@
 
                                 <div class="row mb-3">
                                     <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('سازمان(انگلیسی)') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('Organization') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Org" type="text"
-                                            class="form-control @error('Rank') is-invalid @enderror" name="Org"
-                                            value="{{ old('Org') }}" required autocomplete="سازمان" autofocus>
+                                            class="form-control @error('Org') is-invalid @enderror" name="Org" value="{{ old('Org') }}" required autocomplete="Organization" autofocus>
 
                                         @error('Org')
                                             <span class="invalid-feedback" role="alert">
@@ -351,12 +347,11 @@
 
                                 <div class="row mb-3">
                                     <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('سازمان(فارسی)') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('وابستگی سازمانی') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Org_fa" type="text"
-                                            class="form-control @error('Rank') is-invalid @enderror" name="Org_fa"
-                                            value="{{ old('Org_fa') }}" required autocomplete="سازمان" autofocus>
+                                            class="form-control @error('Rank') is-invalid @enderror" name="Org_fa" value="{{ old('Org_fa') }}" required autocomplete="وابستگی سازمانی" autofocus>
 
                                         @error('Org')
                                             <span class="invalid-feedback" role="alert">

@@ -9,7 +9,8 @@
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
-        "morilog/jalali": "3.*"
+        "morilog/jalali": "3.*",
+        "php-flasher/flasher-laravel": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

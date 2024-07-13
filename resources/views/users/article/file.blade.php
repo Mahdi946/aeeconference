@@ -8,18 +8,27 @@
             <div class="signup-section ptb-50">
                 <div class="container">
                     <div class="signup-form">
-                        <h3>ارسال فایل</h3>
+                        <h3>‌فایل‌ها</h3>
 
                         <div class="container mt-5">
-                            <table>
+                            <table class="table table-bordered table-striped">
+                                <thead class="thead-dark">
+                                    <th scope="col">نوع</th>
+                                    <th scope="col">توضیحات</th>
+                                    <th scope="col">بازبینی</th>
+                                </thead>
+                                <tbody>
                             @foreach ($articlefiles as $articlefile)
                                 <tr>
-                                    <td>نوع: {{ $articlefile->FileType }}</td>
-                                    <td>توضیحات: {{ $articlefile->Description }}</td>
-                                    <td>بازبینی: <a href="{{ Storage::url($articlefile->Location) }}">دانلود</a></td>
+                                    <td>{{ $articlefile->FileType }}</td>
+                                    <td>{{ $articlefile->Description }}</td>
+                                    <td><a href="{{ Storage::url($articlefile->Location) }}">دانلود</a></td>
                                 </tr>
                             @endforeach
+                                </tbody>
                             </table>
+                            <br>
+                            <h3>ارسال فایل</h3>
                             <form action="{{ route('ArticleFiles.store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <input type="hidden" name="ArticleID" value="{{ $article->id }}" id="ArticleID" />
@@ -29,7 +38,17 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="FileType" class="form-label">{{ __('نوع') }}</label>
-                                        <input name="FileType" type="text" class="form-control" id="FileType">
+                                        <select class="form-select" name="FileType" aria-label="Default select">
+                                            <option value="مشخصات نویسندگان" selected>مشخصات نویسندگان*</option>
+                                            <option value="فایل اصل مقاله">فایل اصل مقاله (بدون نام نویسندگان)*</option>
+                                            <option value="تعهدنامه">نامه به سردبیر (تعهدنامه)*</option>
+                                            <option value="تصویر">تصویر</option>
+                                            <option value="جدول">جدول</option>
+                                            <option value="تازه‌های تحقیق">تازه‌های تحقیق</option>
+                                            <option value="چکیده تصویری">چکیده تصویری</option>
+                                            <option value="فرم تعارض منافع">فرم تعارض منافع</option>
+                                            <option value="فایل‌های تکمیلی، اضافی">فایل‌های تکمیلی، اضافی</option>
+                                          </select>
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="Description" class="form-label">{{ __('توضیحات') }}</label>

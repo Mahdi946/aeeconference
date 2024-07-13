@@ -10,13 +10,11 @@
                     <div class="signup-form" style="max-width: 800px;">
                         <h3>ایجاد مقاله</h3>
 
-
                         <div class="container mt-5">
                             <form action="{{ route('Articles.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <!-- Input fields -->
-
                                     <div class="col-md-12 mb-3">
                                         <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل-فارسی') }}</label>
                                         <input name="FullTitle_fa" type="text" class="form-control"
@@ -47,51 +45,47 @@
 
 
                                     <div class="col-md-12 mb-3">
-                                        <label for="ShortTitle_fa" class="form-label">{{ __(' چکیده-فارسی') }}</label>
-                                        <input name="ShortTitle_fa" type="text" class="form-control"
-                                            value="{{ old('ShortTitle_fa') }}" id="ShortTitle_fa">
+                                        <label for="ShortTitle_fa" class="form-label">{{ __('عنوان کوتاه') }}</label>
+                                        <textarea name="ShortTitle_fa" class="form-control" id="ShortTitle_fa" rows="1">{{ old('ShortTitle_fa') }}</textarea>
                                         @error('ShortTitle_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-فارسی') }}</label>
-                                        <input name="Fa-tag" type="text" class="form-control" id="Tags"
-                                            value="{{ old('Tags') }}">
-                                        @error('Tags')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
 
                                     <div class="col-md-12 mb-3">
-                                        <label for="ShortTitle" class="form-label">{{ __('چکیده-انگلیسی') }}</label>
-                                        <input name="ShortTitle" type="text" class="form-control"
-                                            value="{{ old('ShortTitle') }}" id="ShortTitle">
+                                        <label for="ShortTitle" class="form-label">{{ __('Abstract') }}</label>
+                                        <textarea name="ShortTitle" class="form-control" id="ShortTitle" rows="1">{{ old('ShortTitle') }}</textarea>
                                         @error('ShortTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-
                                     <div class="col-md-12 mb-3">
-                                        <label for="input1" class="form-label">{{ __('عنوان مقاله-انگلیسی') }}</label>
-                                        <input name="FullTitle" type="text" class="form-control"
-                                            value="{{ old('FullTitle') }}" id="FullTitle">
+                                        <label for="FullTitle_Fa" class="form-label">{{ __('عنوان کامل') }}</label>
+                                        <input name="FullTitle_Fa" type="text" class="form-control" value="{{ old('FullTitle_Fa') }}" id="FullTitle_Fa">
+                                        @error('FullTitle_Fa')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="FullTitle" class="form-label">{{ __('Subject') }}</label>
+                                        <input name="FullTitle" type="text" class="form-control" value="{{ old('FullTitle') }}" id="FullTitle">
                                         @error('FullTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
+
+
                                     <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-انگلیسی') }}</label>
-                                        <input name="Tags" type="text" class="form-control" id="Tags"
-                                            value="{{ old('Tags') }}">
+                                        <label for="Tags" class="form-label">{{ __('Keywords') }}</label>
+                                            <textarea name="Tags" class="form-control" id="Tags" rows="5">{{ old('Tags') }}</textarea>
                                         @error('Tags')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -100,10 +94,9 @@
                                     </div>
 
                                     <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __(' کلیدواژه-فارسی') }}</label>
-                                        <input name="Tags_fa" type="text" class="form-control" id="Tags_fa"
-                                            value="{{ old('Tags') }}">
-                                        @error('Tags')
+                                        <label for="Tags" class="form-label">{{ __('کلیدواژه') }}</label>
+                                        <textarea name="Tags_fa" class="form-control" id="Tags_fa" rows="5">{{ old('Tags_fa') }}</textarea>
+                                        @error('Tags_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -115,12 +108,9 @@
                                             @foreach ($categories as $category)
                                             <option value="{{$category->id}}">{{$category->Name}}</option>
                                             @endforeach
-
                                         </select>
                                     </div>
                                     <input type="hidden" id="CongressID" name="CongressID" value="{{$Congresses->id}}">
-
-
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">ایجاد</button>
