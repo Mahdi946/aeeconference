@@ -142,7 +142,7 @@
     </div>
 @endsection
 @section('scripts')
-<link href="/assets/css/multiselect.css" rel="stylesheet" type="text/css">
-<script src="/assets/js/multiselect.js"></script>
+<link href="/assets/css/multiSelect.css" rel="stylesheet" type="text/css">
+<script src="/assets/js/multiSelect.js"></script>
 
 @endSection
