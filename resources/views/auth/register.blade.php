@@ -443,22 +443,13 @@
                                             {{ __('ثبت نام') }}
                                         </button>
 
-                                        <a href="{{ url('login') }}">قبلا ثبت نام کردید؟</a>
-
-                                        <div class="col-lg-12">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="checkme">
-                                                <label class="form-check-label" for="checkme">مرا به خاطر بسپار</label>
-                                            </div>
-                                        </div>
+                                        <a href="{{ url('login') }}">قبلا ثبت نام کردید؟</a>                        
                                     </div>
-
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-
                 <div class="default-shape">
                     <div class="shape-1">
                         <img src="assets/img/shape/4.png" alt="image">

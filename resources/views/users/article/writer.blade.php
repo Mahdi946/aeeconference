@@ -95,6 +95,7 @@
                                         <label for="Org" class="form-label">{{ __('Organisation') }}</label>
                                         <input name="Org" type="text" class="form-control" id="writerOrg" disabled>
                                     </div>
+                                    <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                     <button type="submit" id="addWriter" class="btn btn-primary">ثبت</button>
                                 </div>
 
