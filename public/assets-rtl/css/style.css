@@ -7919,7 +7919,7 @@ blockquote::after,
 }
 
 .img-slider{
-  height: 65vh;
+  /* height: 65vh; */
   width: 100%;
   object-fit: cover;
   border-radius: var(--radius);
