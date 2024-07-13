@@ -127,11 +127,9 @@
         <div class="fria-nav">
             <div class="container">
                 <nav class="navbar-scroll navbar-expand-md">
-
-
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <a class="navbar-brand mt-3" href="{{ url('/') }}">
-                            <img src="/assets-rtl/img/logo.png" alt="logo" style="max-width: 100px;">
+                            <img src="/assets-rtl/img/logo.png" alt="logo" class="logo-header" style="max-width: 100px;">
                         </a>
                         <ul class="navbar-nav mt-5">
 
@@ -195,30 +193,33 @@
                         {{-- <!-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="">
                                 <small> English </small>
                             </a> --> --}}
-                        @auth
-                       
-                            <form action="{{ url('logout') }}" method="POST">
-                                @csrf
-                                <button type="submit" class="btn btn-info b-r mt-5 m-2">خروج</button>
-                            </form>
-                            <a href="/Articles/getArticle" class="btn btn-info b-r mt-5 m-2"> مقالات</a>
-                           <p class="mt-5 m-2"> {{ Auth::user()->Name }} خوش آمدیدd</p>
-                         
-                        @endauth
+                            <div class="btn-group">
+                                @auth
+    
+                                    <form action="{{ url('logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-info b-r mt-5 m-2">خروج</button>
+                                    </form>
+                                    <a href="/Articles/getArticle" class="btn btn-info rounded-pill b-r mt-5 m-2 h-25 d-inline-block"> مقالات</a>
+                                    <p class="mt-5 m-2"> {{ Auth::user()->Name }}خوش آمدید</p>
+    
+                                @endauth
+    
+    
+                                @guest
+    
+    
+                                    <a class="btn btn-info b-r mt-5 m-2" href="{{ url('login') }}"> ورود </a>
+    
+                             
+                                    </br>
+    
+                                    <a href="{{ url('register') }}" class="btn btn-info b-r mt-5 m-2">ثبت‌نام</a>
+                                @endguest
+                            </div>
 
 
-                        @guest
-
-
-                            <a class="btn btn-info b-r mt-5 m-2" href="{{ url('login') }}"> ورود </a>
-
-                        @endguest
-
-                        @guest
-                            </br>
-
-                            <a href="{{ url('register') }}" class="btn btn-info b-r mt-5 m-2">ثبت‌نام</a>
-                        @endguest
+                   
 
                         {{-- <!--                                <a href="--> //=('register') --}}
                         <!--" class="default-btn">ثبت نام</a>-->
@@ -242,11 +243,11 @@
                                 <!-- <h3>درباره ما</h3> -->
                             </div>
                             <!-- <p class="text-vip-2-5">
-                                                                                    توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
-                                                                                    این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
-                                                                                    جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
-                                                                                    کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
-                                                                                </p> -->
+                                                                                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
+                                                                                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
+                                                                                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
+                                                                                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
+                                                                                                                    </p> -->
                             <ul class="footer-social">
                                 <li>
                                     <a href="#">
