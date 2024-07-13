@@ -30,8 +30,6 @@
                                         @enderror
                                     </div>
 
-
-
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa" class="form-label">{{ __('عنوان کوتاه') }}</label>
                                         <textarea name="ShortTitle_fa" class="form-control" id="ShortTitle_fa" rows="2">{{ old('ShortTitle_fa') }}</textarea>
