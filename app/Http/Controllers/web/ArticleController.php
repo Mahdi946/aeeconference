@@ -91,6 +91,8 @@ class ArticleController extends Controller
             die(print_r("error dari"));
             return redirect()->back();
         }
+
+        flash()->flash('success', 'مقاله با موفقیت ثبت شد');
         return redirect()->route('Articles.getArticle');
         //return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
         // alert()->success('محصول مورد نظر ایجاد شد', 'باتشکر');
@@ -126,7 +128,7 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-       
+
     }
 
      /**

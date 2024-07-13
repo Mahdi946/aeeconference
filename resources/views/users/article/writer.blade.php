@@ -79,12 +79,10 @@
                                         <label for="Edu" class="form-label">{{ __('مقطع تحصیلی') }}</label>
                                         <input name="Edu" type="text" class="form-control" id="writerEdu" disabled>
                                     </div>
-                                    {{-- ///////////// --}}
                                     <div class="col-md-6 mb-3">
                                         <label for="Field" class="form-label">{{ __(' رشته-فارسی') }}</label>
                                         <input name="Field" type="text" class="form-control" id="writerField" disabled>
                                     </div>
-                                    {{-- /////////////////// --}}
                                     <div class="col-md-6 mb-3">
                                         <label for="Rank" class="form-label">{{ __('رتبه علمی') }}</label>
                                         <input name="Rank" type="text" class="form-control" id="writerRank" disabled>
