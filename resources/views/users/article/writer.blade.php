@@ -96,6 +96,9 @@
                                         <input name="Org" type="text" class="form-control" id="writerOrg" disabled>
                                     </div>
                                     <button type="submit" id="addWriter" class="btn btn-primary">ثبت</button>
+                                    <a href="/ArticleFiles/getArticleFileByID/{{$article->id}}" id="NextButton" class="btn btn-success my-2">مرحله بعد</a>
+                                    {{-- <a href="{{route('admin.color.edit',$color->id)}}" id="NextButton" class="btn btn-success my-2">مرحله بعد</a> --}}
+
                                 </div>
 
                             </form>

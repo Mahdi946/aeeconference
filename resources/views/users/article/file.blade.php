@@ -60,6 +60,9 @@
                                     </div>
 
                                     <button type="submit" id="Submit" class="btn btn-primary">ثبت</button>
+
+                                    <a href="/Articles" id="HomeButton" class="btn btn-success my-2"> بازگشت به پنل</a>
+
                                 </div>
                             </form>
                         </div>
