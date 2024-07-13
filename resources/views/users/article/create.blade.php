@@ -14,18 +14,6 @@
                             <form action="{{ route('Articles.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
-                                    <!-- Input fields -->
-                                    <div class="col-md-12 mb-3">
-                                        <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل-فارسی') }}</label>
-                                        <input name="FullTitle_fa" type="text" class="form-control"
-                                            value="{{ old('FullTitle_fa') }}" id="FullTitle_fa">
-                                        @error('FullTitle_fa')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-
                                     <!-- Select options -->
                                     <div class="col-md-12 mb-3">
                                         <label for="select1" class="form-label">نوع مقاله</label>
@@ -84,6 +72,16 @@
 
 
                                     <div class="col-md-12 mb-3">
+                                        <label for="Tags" class="form-label">{{ __('کلیدواژه') }}</label>
+                                        <textarea name="Tags_fa" class="form-control" id="Tags_fa" rows="5">{{ old('Tags_fa') }}</textarea>
+                                        @error('Tags_fa')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __('Keywords') }}</label>
                                             <textarea name="Tags" class="form-control" id="Tags" rows="5">{{ old('Tags') }}</textarea>
                                         @error('Tags')
@@ -93,15 +91,6 @@
                                         @enderror
                                     </div>
 
-                                    <div class="col-md-12 mb-3">
-                                        <label for="Tags" class="form-label">{{ __('کلیدواژه') }}</label>
-                                        <textarea name="Tags_fa" class="form-control" id="Tags_fa" rows="5">{{ old('Tags_fa') }}</textarea>
-                                        @error('Tags_fa')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __(' موضوعات') }}</label>
                                         <select class="form-select" multiple aria-label="multiple select" name="Categories[]">
