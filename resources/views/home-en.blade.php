@@ -1,5 +1,5 @@
-@extends('templates.en') 
-@section('content') 
+@extends('templates.en')
+@section('content')
 
 
 <!-- Start Banner Area -->
@@ -9,7 +9,7 @@
 
         <div class="clients-slider owl-carousel owl-theme">
                 <div class="clients-item">
-                    <img class="img-slider" src="assets/img/slider.jpg" alt="">
+                    <img class="img-slider" src="assets/img/slide1.jpg" alt="">
                 </div>
                 <div class="clients-item">
                     <img class="img-slider" src="assets/img/slider1.jpg" alt="">
