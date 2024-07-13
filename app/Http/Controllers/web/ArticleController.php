@@ -21,8 +21,9 @@ class ArticleController extends Controller
     {
         //
 
-        $articles =Article::latest()->paginate(10);
-        return view('users.panel', compact('articles'));
+        // $articles =Article::latest()->paginate(10);
+        // return view('users.panel', compact('articles'));
+        return redirect()->route('Articles.getArticle');
     }
 
     /**
