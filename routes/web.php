@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\web\WriterController;
-use App\Http\Controllers\web\ArticleController;
-use App\Http\Controllers\web\ArticleFileController;
+use App\Http\Controllers\Web\WriterController;
+use App\Http\Controllers\Web\ArticleController;
+use App\Http\Controllers\Web\ArticleFileController;
 
 Auth::routes();
 
@@ -11,8 +11,18 @@ Auth::routes();
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
+Route::get('/org', [App\Http\Controllers\HomeController::class, 'org']);
+Route::get('/committee', [App\Http\Controllers\HomeController::class, 'committee']);
+Route::get('/partners', [App\Http\Controllers\HomeController::class, 'partners']);
+Route::get('/workshops', [App\Http\Controllers\HomeController::class, 'workshops']);
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //route prefix Articles
 Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles.')->group(function(){
@@ -21,6 +31,7 @@ Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles
 
 //route resource Articles
 Route::resource('Articles',  ArticleController::class);
+// Route::resource('Articles',  ArticleController::class)->middleware(['CheckLogin']);
 
 
 //route prefix Writers
