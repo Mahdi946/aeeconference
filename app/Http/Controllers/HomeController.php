@@ -25,4 +25,28 @@ class HomeController extends Controller
     {
         return view('home-fa');
     }
+    public function about()
+    {
+        return view('about-fa');
+    }
+    public function org()
+    {
+        return view('org-fa');
+    }
+    public function committee()
+    {
+        return view('committee-fa');
+    }
+    public function partners()
+    {
+        return view('partners-fa');
+    }
+    public function workshops()
+    {
+        return view('workshops-fa');
+    }
+    public function contact()
+    {
+        return view('contact-fa');
+    }
 }
