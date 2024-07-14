@@ -114,3 +114,12 @@
     - `vendor/bin/rector process --dry-run`
 - Process
     - `vendor/bin/rector process`
+
+
+### Package of sweet alert
+php-flasher/flasher-toastr-laravel
+
+
+
+
+
