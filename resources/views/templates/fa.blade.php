@@ -140,13 +140,13 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/about" class="nav-link">
                                     درباره کنفرانس
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/org" class="nav-link">
                                     سازمان کنفرانس
                                 </a>
                             </li>
@@ -195,31 +195,31 @@
                             </a> --> --}}
                             <div class="btn-group">
                                 @auth
-    
+
                                     <form action="{{ url('logout') }}" method="POST">
                                         @csrf
                                         <button type="submit" class="btn btn-info b-r mt-5 m-2">خروج</button>
                                     </form>
                                     <a href="/Articles/getArticle" class="btn btn-info rounded-pill b-r mt-5 m-2 h-25 d-inline-block"> مقالات</a>
                                     <p class="mt-5 m-2"> {{ Auth::user()->Name }}خوش آمدید</p>
-    
+
                                 @endauth
-    
-    
+
+
                                 @guest
-    
-    
+
+
                                     <a class="btn btn-info b-r mt-5 m-2" href="{{ url('login') }}"> ورود </a>
-    
-                             
+
+
                                     </br>
-    
+
                                     <a href="{{ url('register') }}" class="btn btn-info b-r mt-5 m-2">ثبت‌نام</a>
                                 @endguest
                             </div>
 
 
-                   
+
 
                         {{-- <!--                                <a href="--> //=('register') --}}
                         <!--" class="default-btn">ثبت نام</a>-->
