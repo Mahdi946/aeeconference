@@ -9,8 +9,11 @@ Auth::routes();
 
 
 
+Route::get('/', function () {
+    return view('homepage.org');
+});
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
 Route::get('/org', [App\Http\Controllers\HomeController::class, 'org']);
 Route::get('/committee', [App\Http\Controllers\HomeController::class, 'committee']);

@@ -27,26 +27,26 @@ class HomeController extends Controller
     }
     public function about()
     {
-        return view('about-fa');
+        return view('homepage_fa.about');
     }
     public function org()
     {
-        return view('org-fa');
+        return view('homepage_fa.org');
     }
     public function committee()
     {
-        return view('committee-fa');
+        return view('homepage_fa.committee');
     }
     public function partners()
     {
-        return view('partners-fa');
+        return view('homepage_fa.partners');
     }
     public function workshops()
     {
-        return view('workshops-fa');
+        return view('homepage_fa.workshops');
     }
     public function contact()
     {
-        return view('contact-fa');
+        return view('homepage_fa.contact');
     }
 }
