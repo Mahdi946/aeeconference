@@ -11,8 +11,18 @@ Auth::routes();
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
+Route::get('/org', [App\Http\Controllers\HomeController::class, 'org']);
+Route::get('/committee', [App\Http\Controllers\HomeController::class, 'committee']);
+Route::get('/partners', [App\Http\Controllers\HomeController::class, 'partners']);
+Route::get('/workshops', [App\Http\Controllers\HomeController::class, 'workshops']);
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //route prefix Articles
 Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles.')->group(function(){
