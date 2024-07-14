@@ -21,6 +21,7 @@ Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles
 
 //route resource Articles
 Route::resource('Articles',  ArticleController::class);
+// Route::resource('Articles',  ArticleController::class)->middleware(['CheckLogin']);
 
 
 //route prefix Writers
