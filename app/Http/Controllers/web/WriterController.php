@@ -144,6 +144,9 @@ class WriterController extends Controller
         //
         $writer = Writer::findOrFail($id);
         $writer->delete();
+        
+        flash()->success('مقاله با موفقیت حذف شد');
+        return redirect()->route('Articles.getArticle');
 
     }
 
