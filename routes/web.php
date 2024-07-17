@@ -30,6 +30,7 @@ Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
 //route prefix Articles
 Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles.')->group(function(){
     Route::get('/getArticle','getArticle')->name('getArticle');
+    Route::get('/ArticleStatus/{id}','ArticleStatus')->name('ArticleStatus');
 });
 
 //route resource Articles

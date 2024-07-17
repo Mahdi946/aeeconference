@@ -118,17 +118,57 @@ class ArticleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Article $article)
     {
         //
+        $request->validate([
+            'TypeID' => 'required',
+            'FullTitle' => 'required',
+            'ShortTitle' => 'required',
+            'FullTitle_fa' => 'required',
+            'ShortTitle_fa' => 'required',
+            'Tags' => 'required',
+            'Tags_fa' => 'required',
+            'CongressID' => 'required',
+            'Categories' => 'required',
+        ]);
+        try {
+         DB::beginTransaction();
+
+            $article->update([
+                'TypeID' => $request->TypeID,
+                'FullTitle' => $request->FullTitle,
+                'ShortTitle' => $request->ShortTitle,
+                'FullTitle_fa' => $request->FullTitle_fa,
+                'ShortTitle_fa' => $request->ShortTitle_fa,
+                'Tags' => $request->Tags,
+                'Tags_fa' => $request->Tags_fa,
+                'UserID' => Auth::user()->id,
+                'CongressID' => $request->CongressID,
+            ]);
+
+
+        DB::commit();
+
+    } catch (\Exception $ex) {
+        DB::rollBack();
+        flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
+        return redirect()->back();
+    }
+        flash()->success('مقاله با موفقیت ویرایش شد');
+        return redirect()->route('Articles.getArticle');
+
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Article $article)
     {
-
+        $article->delete();
+        flash()->success('مقاله با موفقیت حذف شد');
+        return redirect()->route('Articles.getArticle');
     }
 
      /**
@@ -138,6 +178,17 @@ class ArticleController extends Controller
     {
         $articles =Article::where('UserID', '=', Auth::user()->id)->get();
         return view('users.panel', compact('articles'));
+    }
+    public function ArticleStatus(string $id)
+    {
+
+        $article =Article::findOrFail($id);
+        $article->update([
+            'Status' => 1,
+        ]);
+        flash()->success('مقاله با موفقیت ثبت نهایی  شد');
+        return redirect()->route('Articles.getArticle');
+
     }
 
 }

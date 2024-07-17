@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             //
-            $table->integer('status')->default(0)->after('TypeID');
+            $table->integer('Status')->default(0)->after('TypeID');
         });
     }
 
