@@ -183,10 +183,14 @@ class ArticleController extends Controller
     {
 
         $article =Article::findOrFail($id);
+        if( Auth::user()->id != $article->UserID){
+            flash()->error('عدم تطابق ID');
+            return redirect()->route('Articles.getArticle');
+        }
         $article->update([
             'Status' => 1,
         ]);
-        flash()->success('مقاله با موفقیت ثبت نهایی  شد');
+        flash()->success('مقاله با موفقیت ثبت نهایی شد');
         return redirect()->route('Articles.getArticle');
 
     }
