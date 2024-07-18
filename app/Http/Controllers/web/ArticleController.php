@@ -89,11 +89,11 @@ class ArticleController extends Controller
 
         } catch (\Exception $ex) {
             DB::rollBack();
-            flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
+            // flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
             return redirect()->back();
         }
 
-        flash()->success('مقاله با موفقیت ثبت شد');
+        // flash()->success('مقاله با موفقیت ثبت شد');
         return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
 
 

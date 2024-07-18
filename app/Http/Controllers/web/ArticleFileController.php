@@ -51,7 +51,7 @@ class ArticleFileController extends Controller
         if( Auth::user()->id == $article->UserID){
             // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
             $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
-            flash()->success('فایل مقاله با موفقیت ثبت شد');
+            // flash()->success('فایل مقاله با موفقیت ثبت شد');
             return view('users.article.file', compact('article','articlefiles'));
         }
     }
