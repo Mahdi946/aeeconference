@@ -110,10 +110,10 @@
             <div class="container">
                 <div class="fria-responsive-menu">
                     <div class="logo">
-                        <a href="{{ url('/') }}">
+                        {{-- <a href="{{ url('/') }}">
                             <img src="/assets-rtl/img/logo.png" alt="logo" class="logo-header">
 
-                        </a>
+                        </a> --}}
                         {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
                             <small> English </small> --}}
 
