@@ -110,17 +110,26 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    // public function edit(Article $article)
     public function edit(string $id)
     {
         //
+        $article = Article::findOrFail($id);
+        if($article->Status !== 0){
+            flash()->error('مقاله ثبت نهایی شده است');
+            return redirect()->back();
+        }
+        $categories =Category::all();
+        return view('users.article.edit',compact('article','categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, string $id)
     {
-        //
+
+        $article = Article::findOrFail($id);
         $request->validate([
             'TypeID' => 'required',
             'FullTitle' => 'required',
@@ -146,7 +155,8 @@ class ArticleController extends Controller
                 'UserID' => Auth::user()->id,
                 'CongressID' => $request->CongressID,
             ]);
-
+            $article->categories()->sync($request->Categories);
+          
 
         DB::commit();
 
@@ -157,8 +167,6 @@ class ArticleController extends Controller
     }
         flash()->success('مقاله با موفقیت ویرایش شد');
         return redirect()->route('Articles.getArticle');
-
-
     }
 
     /**
