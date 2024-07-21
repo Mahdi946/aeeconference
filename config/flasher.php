@@ -9,11 +9,11 @@ return [
     'default' => 'flasher',
 
     // Path to the main JavaScript file of PHPFlasher
-    'main_script' => '/vendor/flasher/flasher.min.js',
+    'main_script' => '/assets/js/flasher.min.js',
 
     // Path to the stylesheets for PHPFlasher notifications
     'styles' => [
-        '/vendor/flasher/flasher.min.css',
+        '/assets/css/flasher.min.css',
     ],
 
     // Whether to translate PHPFlasher messages using Laravel's translation service
