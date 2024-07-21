@@ -308,7 +308,7 @@
                                 class="btn btn-info rounded-pill b-r mt-5 m-2 h-25 d-inline-block">
                                 مقالات</a>
                         </div>
-                        {{ Auth::user()->Name }} خوش آمدید
+                        {{ Auth::user()->Name_fa }} خوش آمدید
                     @endauth
                     @guest
                         <div class="d-flex justify-content-center">
