@@ -10,6 +10,7 @@ deployment:
  - /bin/cp -R resources $DEPLOYPATH
  - /bin/cp -R routes $DEPLOYPATH
  - /bin/cp -R resources $DEPLOYPATH
+ - /bin/cp -R composer.json $DEPLOYPATH
  - /bin/cp -R public/favicon.ico $PUBLICPATH
  - /bin/cp -R public/index.php $PUBLICPATH
  - /bin/cp -R public/robots.txt $PUBLICPATH
