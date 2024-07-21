@@ -307,8 +307,8 @@
                             <a href="/Articles/getArticle"
                                 class="btn btn-info rounded-pill b-r mt-5 m-2 h-25 d-inline-block">
                                 مقالات</a>
-                            <p class="mt-5 m-2"> {{ Auth::user()->Name }}خوش آمدید</p>
                         </div>
+                        {{ Auth::user()->Name }} خوش آمدید
                     @endauth
                     @guest
                         <div class="d-flex justify-content-center">
