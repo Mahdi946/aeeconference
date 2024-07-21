@@ -89,6 +89,8 @@
 
     <link rel="icon" type="image/png" href="/assets-rtl/img/favicon.png">
     <link rel="stylesheet" href="/assets/leaflet/leaflet.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     @yield('head-tag')
 </head>
 
@@ -105,17 +107,11 @@
 
 
     <!-- Start Navbar Area -->
-    <div class="navbar-area navbar-two">
+    {{-- <div class="navbar-area navbar-two">
         <div class="fria-responsive-nav">
             <div class="container">
                 <div class="fria-responsive-menu">
                     <div class="logo">
-                        <a href="{{ url('/') }}">
-                            <img src="/assets-rtl/img/logo.png" alt="logo" class="logo-header">
-
-                        </a>
-                        {{-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="float-end mt-3">
-                            <small> English </small> --}}
 
 
                     </div>
@@ -124,7 +120,7 @@
         </div>
 
 
-        <div class="fria-nav">
+        <div class="fria-nav ">
             <div class="container">
                 <nav class="navbar-scroll navbar-expand-md">
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -189,11 +185,8 @@
 
                         </ul>
 
-                        {{-- <div class="others-options"> --}}
-                        {{-- <!-- <a href="{{ url('lang/' . (\Config\Services::language()->getLocale() == 'fa' ? 'en' : 'fa')) }}" class="">
-                                <small> English </small>
-                            </a> --> --}}
-                            <div class="btn-group">
+
+                            <div class="btn-group ">
                                 @auth
 
                                     <form action="{{ url('logout') }}" method="POST">
@@ -221,14 +214,238 @@
 
 
 
-                        {{-- <!--                                <a href="--> //=('register') --}}
-                        <!--" class="default-btn">ثبت نام</a>-->
-                        {{-- </div> --}}
+
                     </div>
                 </nav>
             </div>
         </div>
-    </div>
+
+
+    </div> --}}
+
+
+    {{-- in baraye navbar lg hast --}}
+    <nav class="d-none d-sm-block navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-3" href="{{ url('/') }}">
+                <img src="/assets-rtl/img/logo.png" alt="logo" class="logo-header" style="max-width: 100px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarText">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a href="{{ url('/') }}" class="nav-link active">
+                            صفحه اصلی
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">
+                            درباره کنفرانس
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/org" class="nav-link">
+                            سازمان کنفرانس
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            کمیته های اختصاصی
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            برگزارکنندگان و حامیان
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('register') }}" class="nav-link">
+                            شرکت در کنفرانس
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('login') }}" class="nav-link">
+                            ارسال مقاله
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            برنامه های جانبی
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link go-down">
+                            تماس با کنفرانس
+                        </a>
+                    </li>
+
+                </ul>
+
+                <span class="navbar-text ">
+                    @auth
+                        <div class="d-flex justify-content-center">
+                            <form action="{{ url('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-info b-r mt-5 m-2">خروج</button>
+                            </form>
+                            <a href="/Articles/getArticle"
+                                class="btn btn-info rounded-pill b-r mt-5 m-2 h-25 d-inline-block">
+                                مقالات</a>
+                            <p class="mt-5 m-2"> {{ Auth::user()->Name }}خوش آمدید</p>
+                        </div>
+                    @endauth
+                    @guest
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-info mx-2 " href="{{ url('login') }}"> ورود </a>
+                            <a href="{{ url('register') }}" class="btn btn-info   ">ثبت‌نام</a>
+                        </div>
+                    @endguest
+                </span>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    {{-- in baraye navbar sm hast --}}
+    <nav class=" d-block d-sm-none navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+
+            <div class=" w-100 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand mt-3 " href="{{ url('/') }}">
+                    <img src="/assets-rtl/img/logo.png" alt="logo" class="logo-header" style="width: 100px;">
+                </a>
+
+                @auth
+                    <div class="d-flex justify-content-center" style="height: 40px">
+                        <form action="{{ url('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-info b-r mt-5">خروج</button>
+                        </form>
+                        <a href="/Articles/getArticle" class="btn btn-info rounded-pill b-r mt-5 m-2 h-25 d-inline-block">
+                            مقالات</a>
+                    </div>
+                @endauth
+                @guest
+                    <div class="d-flex justify-content-center" style="height: 40px">
+                        <a class="btn btn-info mx-2 " href="{{ url('login') }}">  ورود </a>
+                        <a href="{{ url('register') }}" class="btn btn-info   ">ثبت‌نام</a>
+                    </div>
+                @endguest
+
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+                </button>
+            </div>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarText">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a href="{{ url('/') }}" class="nav-link active">
+                            صفحه اصلی
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">
+                            درباره کنفرانس
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/org" class="nav-link">
+                            سازمان کنفرانس
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            کمیته های اختصاصی
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            برگزارکنندگان و حامیان
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('register') }}" class="nav-link">
+                            شرکت در کنفرانس
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('login') }}" class="nav-link">
+                            ارسال مقاله
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            برنامه های جانبی
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link go-down">
+                            تماس با کنفرانس
+                        </a>
+                    </li>
+
+                </ul>
+
+                <span class="navbar-text ">
+                    @auth
+                        <div class="d-flex justify-content-center">
+                            <form action="{{ url('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-info b-r mt-5 m-2">خروج</button>
+                            </form>
+                            <a href="/Articles/getArticle"
+                                class="btn btn-info rounded-pill b-r mt-5 m-2 h-25 d-inline-block">
+                                مقالات</a>
+                            <p class="mt-5 m-2"> {{ Auth::user()->Name }}خوش آمدید</p>
+                        </div>
+                    @endauth
+                    @guest
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-info mx-2 " href="{{ url('login') }}"> ورود </a>
+                            <a href="{{ url('register') }}" class="btn btn-info   ">ثبت‌نام</a>
+                        </div>
+                    @endguest
+                </span>
+
+            </div>
+        </div>
+    </nav>
+
+
 
     <!-- End Navbar Area -->
     @section('content')
@@ -243,11 +460,11 @@
                                 <!-- <h3>درباره ما</h3> -->
                             </div>
                             <!-- <p class="text-vip-2-5">
-                                                                                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
-                                                                                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
-                                                                                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
-                                                                                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
-                                                                                                                    </p> -->
+                                                                                                                                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
+                                                                                                                                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
+                                                                                                                                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
+                                                                                                                                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
+                                                                                                                                                                    </p> -->
                             <ul class="footer-social">
                                 <li>
                                     <a href="#">
