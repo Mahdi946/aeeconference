@@ -13,7 +13,7 @@
                             <th scope="col">#</th>
                             <th scope="col">عنوان فارسی مقاله</th>
                             <th scope="col">عنوان انگلیسی مقاله</th>
-                            <th scope="col"> وضعییت مقاله </th>
+                            <th scope="col">وضعیت مقاله</th>
                             <th scope="col">عملیات</th>
                         </tr>
                     </thead>
