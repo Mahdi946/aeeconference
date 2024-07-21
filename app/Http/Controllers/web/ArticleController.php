@@ -110,9 +110,17 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    // public function edit(Article $article)
     public function edit(string $id)
     {
         //
+        $article = Article::findOrFail($id);
+        if($article->Status !== 0){
+            flash()->error('مقاله ثبت نهایی شده است');
+            return redirect()->back();
+        }
+        $categories =Category::all();
+        return view('users.article.edit',compact('article','categories'));
     }
 
     /**
@@ -120,15 +128,55 @@ class ArticleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        $article = Article::findOrFail($id);
+        $request->validate([
+            'TypeID' => 'required',
+            'FullTitle' => 'required',
+            'ShortTitle' => 'required',
+            'FullTitle_fa' => 'required',
+            'ShortTitle_fa' => 'required',
+            'Tags' => 'required',
+            'Tags_fa' => 'required',
+            'CongressID' => 'required',
+            'Categories' => 'required',
+        ]);
+        try {
+         DB::beginTransaction();
+
+            $article->update([
+                'TypeID' => $request->TypeID,
+                'FullTitle' => $request->FullTitle,
+                'ShortTitle' => $request->ShortTitle,
+                'FullTitle_fa' => $request->FullTitle_fa,
+                'ShortTitle_fa' => $request->ShortTitle_fa,
+                'Tags' => $request->Tags,
+                'Tags_fa' => $request->Tags_fa,
+                'UserID' => Auth::user()->id,
+                'CongressID' => $request->CongressID,
+            ]);
+            $article->categories()->sync($request->Categories);
+          
+
+        DB::commit();
+
+    } catch (\Exception $ex) {
+        DB::rollBack();
+        flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
+        return redirect()->back();
+    }
+        flash()->success('مقاله با موفقیت ویرایش شد');
+        return redirect()->route('Articles.getArticle');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Article $article)
     {
-
+        $article->delete();
+        flash()->success('مقاله با موفقیت حذف شد');
+        return redirect()->route('Articles.getArticle');
     }
 
      /**
@@ -138,6 +186,21 @@ class ArticleController extends Controller
     {
         $articles =Article::where('UserID', '=', Auth::user()->id)->get();
         return view('users.panel', compact('articles'));
+    }
+    public function ArticleStatus(string $id)
+    {
+
+        $article =Article::findOrFail($id);
+        if( Auth::user()->id != $article->UserID){
+            flash()->error('عدم تطابق ID');
+            return redirect()->route('Articles.getArticle');
+        }
+        $article->update([
+            'Status' => 1,
+        ]);
+        flash()->success('مقاله با موفقیت ثبت نهایی شد');
+        return redirect()->route('Articles.getArticle');
+
     }
 
 }

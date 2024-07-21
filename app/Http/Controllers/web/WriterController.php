@@ -46,6 +46,12 @@ class WriterController extends Controller
             return response()->json(['status' => false, 'message'=> "please select your article"]);
         }
 
+        //این برای چک کردن وضعیت مقاله هست
+        if($article->Status !== 0){
+            flash()->error(' وضعیت مقاله مشکل دارد ');
+            return view('users.article.file', compact('article'));
+        }
+
         //این برای اینکه دوبار یه نویسنده رو ثبت نکنه
         if($request->UserID){
             $checkArticle = Writer::where('ArticleID', $request->ArticleID )->where('UserID', $request->UserID )->first();;
@@ -138,6 +144,9 @@ class WriterController extends Controller
         //
         $writer = Writer::findOrFail($id);
         $writer->delete();
+        
+        flash()->success('مقاله با موفقیت حذف شد');
+        return redirect()->route('Articles.getArticle');
 
     }
 

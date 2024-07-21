@@ -59,9 +59,11 @@
                                         <input type="file" name="File" class="form-control">
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
-                                    <button type="submit" id="Submit" class="btn btn-primary">ثبت</button>
+                                    <?php if( $article->Status == 0){ ?>
+                                    <button type="submit" id="Submit" class="btn btn-primary my-2">ثبت</button>
 
-                                    <a href="/Articles" id="HomeButton" class="btn btn-success my-2"> بازگشت به پنل</a>
+                                    <?php }  ?>
+
 
                                 </div>
                             </form>

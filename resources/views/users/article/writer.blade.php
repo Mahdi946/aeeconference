@@ -32,19 +32,23 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label">{{ __('ایمیل') }}</label>
                                         <div class="input-group">
-                                            <input name="email" type="text" onblur="writerCheck()" class="form-control" id="writerEmail">
-                                            <a href="javascript:writerCheck()" id="checkEmail" class="btn btn-primary">بررسی</a>
+                                            <input name="email" type="text" onblur="writerCheck()" class="form-control"
+                                                id="writerEmail">
+                                            <a href="javascript:writerCheck()" id="checkEmail"
+                                                class="btn btn-primary">بررسی</a>
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name_fa" class="form-label">{{ __('نام') }}</label>
-                                        <input name="Name_fa" type="text" class="form-control" id="writerName_fa" disabled>
+                                        <input name="Name_fa" type="text" class="form-control" id="writerName_fa"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family_fa" class="form-label">{{ __('نام خانوادگی') }}</label>
-                                        <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa" disabled>
+                                        <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
@@ -52,52 +56,67 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family" class="form-label">{{ __('Last Name') }}</label>
-                                        <input name="Family" type="text" class="form-control" id="writerFamily" disabled>
+                                        <input name="Family" type="text" class="form-control" id="writerFamily"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="MobileNumber" class="form-label">{{ __('موبایل') }}</label>
-                                        <input name="MobileNumber" type="text" class="form-control" id="writerMobileNumber" disabled>
+                                        <input name="MobileNumber" type="text" class="form-control"
+                                            id="writerMobileNumber" disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="PhoneNumber" class="form-label">{{ __('تلفن') }}</label>
-                                        <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber" disabled>
+                                        <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Country" class="form-label">{{ __('کشور') }}</label>
-                                        <input name="Country" type="text" class="form-control" id="writerCountry" disabled>
+                                        <input name="Country" type="text" class="form-control" id="writerCountry"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3"></div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City_fa" class="form-label">{{ __('شهر') }}</label>
-                                        <input name="City_fa" type="text" class="form-control" id="writerCity_fa" disabled>
+                                        <input name="City_fa" type="text" class="form-control" id="writerCity_fa"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City" class="form-label">{{ __('City') }}</label>
-                                        <input name="City" type="text" class="form-control" id="writerCity" disabled>
+                                        <input name="City" type="text" class="form-control" id="writerCity"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Edu" class="form-label">{{ __('مقطع تحصیلی') }}</label>
-                                        <input name="Edu" type="text" class="form-control" id="writerEdu" disabled>
+                                        <input name="Edu" type="text" class="form-control" id="writerEdu"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Field" class="form-label">{{ __(' رشته-فارسی') }}</label>
-                                        <input name="Field" type="text" class="form-control" id="writerField" disabled>
+                                        <input name="Field" type="text" class="form-control" id="writerField"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Rank" class="form-label">{{ __('رتبه علمی') }}</label>
-                                        <input name="Rank" type="text" class="form-control" id="writerRank" disabled>
+                                        <input name="Rank" type="text" class="form-control" id="writerRank"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org_fa" class="form-label">{{ __('وابستگی سازمانی') }}</label>
-                                        <input name="Org_fa" type="text" class="form-control" id="writerOrg_fa" disabled>
+                                        <input name="Org_fa" type="text" class="form-control" id="writerOrg_fa"
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org" class="form-label">{{ __('Organisation') }}</label>
-                                        <input name="Org" type="text" class="form-control" id="writerOrg" disabled>
+                                        <input name="Org" type="text" class="form-control" id="writerOrg"
+                                            disabled>
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
-                                    <button type="submit" id="addWriter" class="btn btn-primary">ثبت</button>
-                                    <a href="/ArticleFiles/getArticleFileByID/{{$article->id}}" id="NextButton" class="btn btn-success my-2">مرحله بعد</a>
+                                    <?php if( $article->Status == 0){ ?>
+                                    <button type="submit" id="addWriter" class="btn btn-primary my-2">ثبت</button>
+
+                                    <?php }  ?>
+                                    <a href="/ArticleFiles/getArticleFileByID/{{ $article->id }}" id="NextButton"
+                                        class="btn btn-success mt-1">مرحله بعد</a>
                                     {{-- <a href="{{route('admin.color.edit',$color->id)}}" id="NextButton" class="btn btn-success my-2">مرحله بعد</a> --}}
 
                                 </div>
@@ -144,125 +163,136 @@
 @endsection
 @section('scripts')
     <script>
-        function writerCheck(){
-        writerEmail = $('#writerEmail').val();
-        $.ajax({url: "/Writers/getEmailWriter/" + writerEmail, success: function(result){
-            console.log(result);
-            if(result.id){
-                $('#writerUserID').val(result.id);
-                $('#writerName_fa').val(result.Name_fa);
-                $('#writerFamily_fa').val(result.Family_fa);
-                $('#writerName').val(result.Name);
-                $('#writerFamily').val(result.Family);
-                $('#writerMobileNumber').val(result.MobileNumber);
-                $('#writerPhoneNumber').val(result.PhoneNumber);
-                $('#writerField').val(result.Field);
-                $('#writerRank').val(result.Rank);
-                $('#writerEdu').val(result.Edu);
-                $('#writerCity').val(result.City);
-                $('#writerCity_fa').val(result.City_fa);
-                $('#writerCountry').val(result.Country);
-                $('#writerOrg').val(result.Org);
-                $('#writerOrg_fa').val(result.Org_fa);
-            }else{
-                $('#writerUserID').val('');
-                $('#writerName_fa').val('').removeAttr('disabled');
-                $('#writerFamily_fa').val('').removeAttr('disabled');
-                $('#writerName').val('').removeAttr('disabled');
-                $('#writerFamily').val('').removeAttr('disabled');
-                $('#writerMobileNumber').val('').removeAttr('disabled');
-                $('#writerPhoneNumber').val('').removeAttr('disabled');
-                $('#writerField').val('').removeAttr('disabled');
-                $('#writerRank').val('').removeAttr('disabled');
-                $('#writerEdu').val('').removeAttr('disabled');
-                $('#writerCity').val('').removeAttr('disabled');
-                $('#writerCity_fa').val('').removeAttr('disabled');
-                $('#writerCountry').val('').removeAttr('disabled');
-                $('#writerOrg').val('').removeAttr('disabled');
-                $('#writerOrg_fa').val('').removeAttr('disabled');
-            }
-
-        }});
-    }
-$(document).ready(function() {
-
-
-
-
-    // Function to create and display the table
-    function createTable(data) {
-        const tableContainer = $('#Writers');
-        tableContainer.empty();  // Clear any existing content
-
-        // Check if data is empty
-        if (data.length === 0) {
-            $('#WritersArea').hide(); // Hide signup section if no data
-            return;
-        } else {
-            $('#WritersArea').show('slow'); // Show signup section if data exists
+        let StatusID = {{ $article->Status }};
+        if (StatusID !== 0) {
+            document.getElementById("writerEmail").disabled = true;
         }
 
-        const table = $('<table class="table table-bordered table-striped"></table>');
-        const thead = $('<thead class="thead-dark"></thead>');
-        const tbody = $('<tbody></tbody>');
+        function writerCheck() {
+            writerEmail = $('#writerEmail').val();
+            $.ajax({
+                url: "/Writers/getEmailWriter/" + writerEmail,
+                success: function(result) {
+                    console.log(result);
+                    if (result.id) {
+                        $('#writerUserID').val(result.id);
+                        $('#writerName_fa').val(result.Name_fa);
+                        $('#writerFamily_fa').val(result.Family_fa);
+                        $('#writerName').val(result.Name);
+                        $('#writerFamily').val(result.Family);
+                        $('#writerMobileNumber').val(result.MobileNumber);
+                        $('#writerPhoneNumber').val(result.PhoneNumber);
+                        $('#writerField').val(result.Field);
+                        $('#writerRank').val(result.Rank);
+                        $('#writerEdu').val(result.Edu);
+                        $('#writerCity').val(result.City);
+                        $('#writerCity_fa').val(result.City_fa);
+                        $('#writerCountry').val(result.Country);
+                        $('#writerOrg').val(result.Org);
+                        $('#writerOrg_fa').val(result.Org_fa);
+                    } else {
+                        $('#writerUserID').val('');
+                        $('#writerName_fa').val('').removeAttr('disabled');
+                        $('#writerFamily_fa').val('').removeAttr('disabled');
+                        $('#writerName').val('').removeAttr('disabled');
+                        $('#writerFamily').val('').removeAttr('disabled');
+                        $('#writerMobileNumber').val('').removeAttr('disabled');
+                        $('#writerPhoneNumber').val('').removeAttr('disabled');
+                        $('#writerField').val('').removeAttr('disabled');
+                        $('#writerRank').val('').removeAttr('disabled');
+                        $('#writerEdu').val('').removeAttr('disabled');
+                        $('#writerCity').val('').removeAttr('disabled');
+                        $('#writerCity_fa').val('').removeAttr('disabled');
+                        $('#writerCountry').val('').removeAttr('disabled');
+                        $('#writerOrg').val('').removeAttr('disabled');
+                        $('#writerOrg_fa').val('').removeAttr('disabled');
+                    }
 
-        // Define table headers with Persian names
-        const headers = {
-            'Name': 'نام',
-            'Family': 'نام خانوادگی',
-            'email': 'ایمیل',
-            'Actions': 'عملیات'  // Add header for actions column
-        };
-        // Create table header row
-        const headerRow = $('<tr></tr>');
-        Object.values(headers).forEach(headerText => {
-            const th = $('<th scope="col"></th>').text(headerText);
-            headerRow.append(th);
-        });
-        thead.append(headerRow);
-
-        // Create table body rows
-        data.forEach(item => {
-            const row = $('<tr></tr>');
-
-            // Add columns for each data field
-            Object.keys(headers).forEach(header => {
-                if (header === 'Actions') {
-                    // Create delete button in actions column
-                    const deleteBtn = $('<button type="button" class="btn btn-danger btn-sm">حذف</button>');
-                    deleteBtn.on('click', function() {
-                        deleteRow(item); // Call deleteRow function on button click
-                    });
-                    const td = $('<td></td>').append(deleteBtn);
-                    //row.append(td);
-                } else {
-                    // Create regular data columns
-                    const td = $('<td></td>').text(item[header]);
-                    row.append(td);
                 }
             });
+        }
+        $(document).ready(function() {
 
-            tbody.append(row);
-        });
 
-        table.append(thead);
-        table.append(tbody);
-        tableContainer.append(table);
-    }
 
-    function getWriters(){
-        ArticleID = $('#ArticleID').val();
-        $.ajax({url: "/Writers/getWritersByID/" + ArticleID,
-            success: function(result){
-                console.log(result);
-                createTable(result);
-            },
-            error: function() {
-                console.error('Failed to fetch data');
+
+            // Function to create and display the table
+            function createTable(data) {
+                const tableContainer = $('#Writers');
+                tableContainer.empty(); // Clear any existing content
+
+                // Check if data is empty
+                if (data.length === 0) {
+                    $('#WritersArea').hide(); // Hide signup section if no data
+                    return;
+                } else {
+                    $('#WritersArea').show('slow'); // Show signup section if data exists
+                }
+
+                const table = $('<table class="table table-bordered table-striped"></table>');
+                const thead = $('<thead class="thead-dark"></thead>');
+                const tbody = $('<tbody></tbody>');
+
+                // Define table headers with Persian names
+                const headers = {
+                    'Name': 'نام',
+                    'Family': 'نام خانوادگی',
+                    'email': 'ایمیل',
+                    'Actions': 'عملیات' // Add header for actions column
+                };
+                // Create table header row
+                const headerRow = $('<tr></tr>');
+                Object.values(headers).forEach(headerText => {
+                    const th = $('<th scope="col"></th>').text(headerText);
+                    headerRow.append(th);
+                });
+                thead.append(headerRow);
+
+                // Create table body rows
+                data.forEach(item => {
+                    const row = $('<tr></tr>');
+
+                    // Add columns for each data field
+                    Object.keys(headers).forEach(header => {
+                        if (header === 'Actions') {
+                            // Create delete button in actions column
+                            const deleteBtn = $(
+                                '<button type="button" class="btn btn-danger btn-sm">حذف</button>'
+                                );
+                            deleteBtn.on('click', function() {
+                                deleteRow(item); // Call deleteRow function on button click
+                            });
+                            const td = $('<td></td>').append(deleteBtn);
+                            //row.append(td);
+                        } else {
+                            // Create regular data columns
+                            const td = $('<td></td>').text(item[header]);
+                            row.append(td);
+                        }
+                    });
+
+                    tbody.append(row);
+                });
+
+                table.append(thead);
+                table.append(tbody);
+                tableContainer.append(table);
             }
+
+            function getWriters() {
+                ArticleID = $('#ArticleID').val();
+                $.ajax({
+                    url: "/Writers/getWritersByID/" + ArticleID,
+                    success: function(result) {
+                        console.log(result);
+                        createTable(result);
+                    },
+                    error: function() {
+                        console.error('Failed to fetch data');
+                    }
+                });
+            }
+            getWriters();
         });
-    }
-    getWriters();
-});
     </script>
 @endSection

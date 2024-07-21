@@ -37,6 +37,13 @@ class ArticleFileController extends Controller
             'File' => 'required|file',
             'Description' => 'nullable|string',
         ]);
+        $article =Article::findOrFail($request->ArticleID);
+
+        //این برای چک کردن وضعیت مقاله هست
+        if($article->Status !== 0){
+            flash()->error(' وضعیت مقاله مشکل دارد ');
+            return view('users.article.file', compact('article'));
+        }
 
         $file = $request->file('File');
         $path = $file->store('Files', 'public');
@@ -47,7 +54,7 @@ class ArticleFileController extends Controller
             'Description' => $request->Description,
             'Location' => $path,
         ]);
-        $article =Article::findOrFail($request->ArticleID);
+
         if( Auth::user()->id == $article->UserID){
             // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
             $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();

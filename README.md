@@ -117,8 +117,8 @@
 
 
 ### Package of sweet alert
-php-flasher/flasher-toastr-laravel
-
+ php-flasher/flasher-toastr-laravel
+ https://php-flasher.io/
 
 
 

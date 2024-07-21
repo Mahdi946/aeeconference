@@ -9,6 +9,9 @@ Auth::routes();
 
 
 
+// Route::get('/', function () {
+//     return view('homepage.org');
+// });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
@@ -27,6 +30,7 @@ Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
 //route prefix Articles
 Route::prefix('/Articles')->controller(ArticleController::class)->name('Articles.')->group(function(){
     Route::get('/getArticle','getArticle')->name('getArticle');
+    Route::get('/ArticleStatus/{id}','ArticleStatus')->name('ArticleStatus');
 });
 
 //route resource Articles
