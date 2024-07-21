@@ -100,7 +100,7 @@ class WriterController extends Controller
 
         $article =Article::findOrFail($request->ArticleID);
         if( Auth::user()->id == $article->UserID){
-            // flash()->success('نویسنده مقاله با موفقیت ثبت شد');
+            flash()->success('نویسنده مقاله با موفقیت ثبت شد');
             return view('users.article.writer', compact('article'));
             //return \redirect()->route('Articles.getArticle');
         }

@@ -17,7 +17,7 @@ class CheckLogin
     public function handle(Request $request, Closure $next): Response
     {
         if(!Auth::check()){
-            // flash()->info('لطفا وارد حساب کاربری شوید');
+            flash()->info('لطفا وارد حساب کاربری شوید');
             return redirect()->route('login');
         }
         return $next($request);
