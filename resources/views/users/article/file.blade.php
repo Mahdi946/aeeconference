@@ -39,15 +39,15 @@
                                     <div class="col-md-12 mb-3">
                                         <label for="FileType" class="form-label">{{ __('نوع') }}</label>
                                         <select class="form-select" name="FileType" aria-label="Default select">
-                                            <option value="مشخصات نویسندگان">مشخصات نویسندگان*</option>
-                                            <option value="فایل اصل مقاله">فایل اصل مقاله (بدون نام نویسندگان)*</option>
-                                            <option value="تعهدنامه">نامه به سردبیر (تعهدنامه)*</option>
-                                            <option value="تصویر">تصویر</option>
-                                            <option value="جدول">جدول</option>
-                                            <option value="تازه‌های تحقیق">تازه‌های تحقیق</option>
-                                            <option value="چکیده تصویری">چکیده تصویری</option>
-                                            <option value="فرم تعارض منافع">فرم تعارض منافع</option>
-                                            <option value="فایل‌های تکمیلی، اضافی">فایل‌های تکمیلی، اضافی</option>
+                                            <option value="1">مشخصات نویسندگان (اجباری)</option>
+                                            <option value="2">فایل اصل مقاله بدون نام نویسندگان (اجباری)</option>
+                                            <option value="3">نامه به سردبیر (تعهدنامه) (اجباری)</option>
+                                            <option value="4">تصویر</option>
+                                            <option value="5">جدول</option>
+                                            <option value="6">تازه‌های تحقیق</option>
+                                            <option value="7">چکیده تصویری</option>
+                                            <option value="8">فرم تعارض منافع</option>
+                                            <option value="9">فایل‌های تکمیلی، اضافی</option>
                                           </select>
                                     </div>
                                     <div class="col-md-12 mb-3">
