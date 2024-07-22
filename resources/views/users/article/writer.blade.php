@@ -163,11 +163,7 @@
 @endsection
 @section('scripts')
     <script>
-        let StatusID = {{ $article->Status }};
-        if (StatusID !== 0) {
-            document.getElementById("writerEmail").disabled = true;
-        }
-
+       
         function writerCheck() {
             writerEmail = $('#writerEmail').val();
             $.ajax({
