@@ -254,7 +254,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="/org" class="nav-link">
+                        <a href="#" class="nav-link go-down">
                             سازمان کنگره
                         </a>
                     </li>
@@ -456,15 +456,14 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="single-footer-widget">
                             <div class="footer-heading">
-                                <h3> ما را دنبال کنید </h3>
-                                <!-- <h3>درباره ما</h3> -->
+                                <h3>درباره ما</h3>
                             </div>
-                            <!-- <p class="text-vip-2-5">
-                                                                                                                                                                        توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
-                                                                                                                                                                        این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
-                                                                                                                                                                        جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
-                                                                                                                                                                        کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
-                                                                                                                                                                    </p> -->
+{{-- <p class="text-vip-2-5">
+    توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
+    این کاربست مبتنی بر رصد و توان افزایی، هدایت و پرورش استعدادها و تجاری‌سازی در حوزه‌های فناوری و نوآوری است.
+    جایزه فناوری و نوآوری یونسکو در جمهوری اسلامی ایران، به منظور تشویق و ترغیب ذینفعان این بخش و شناسایی ظرفیت‌های فناوری و نوآوری با همکاری وزارت علوم، تحقیقات و فناوری،
+    کمیسیون ملی یونسکو ایران و دانشگاه تهران مطابق با ضوابط و مقررات به مدت نامحدود اعطا خواهد شد.
+</p> --}}
                             <ul class="footer-social">
                                 <li>
                                     <a href="#">
@@ -722,7 +721,7 @@
                         </p>
                     </div>
 
-                    <div class="col-lg-6 col-md-6">
+                    {{-- <div class="col-lg-6 col-md-6">
                         <ul>
                             <li>
                                 <a href="{{ url('terms-condition') }}">قوانین و مقررات</a>
@@ -731,7 +730,7 @@
                                 <a href="{{ url('privacy-policy') }}">حریم خصوصی</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -744,64 +743,21 @@
         <i class="bx bx-chevron-up"></i>
     </div>
     <!-- End Go Top Section -->
-    <!-- dark version -->
-    <!-- dark version -->
+
     <script src="/assets-rtl/js/jquery.min.js"></script>
-
     <script src="/assets-rtl/js/popper.min.js"></script>
-
     <script src="/assets-rtl/js/bootstrap.min.js"></script>
-
     <script src="/assets-rtl/js/jquery.meanmenu.js"></script>
-
-
     <script src="/assets-rtl/js/owl.carousel.js"></script>
-
     <script src="/assets-rtl/js/jquery.magnific-popup.min.js"></script>
-
     <script src="/assets-rtl/js/jquery.appear.min.js"></script>
-
     <script src="/assets-rtl/js/odometer.min.js"></script>
-
-    <script src="/assets-rtl/js/jquery.ajaxchimp.min.js"></script>
-
     <script src="/assets-rtl/js/form-validator.min.js"></script>
-
     <script src="/assets-rtl/js/contact-form-script.js"></script>
-
     <script src="/assets-rtl/js/wow.min.js"></script>
-
     <script src="/assets-rtl/js/main.js"></script>
     <script src="/assets/js/homePrizeCountDownDate.js"></script>
     <script src="/assets/js/CountDownDate.js"></script>
-    <script src="/assets/leaflet/leaflet.js"></script>
-
-
-
-
-
-
-    <script>
-        $(document).ready(function() {
-            if (document.querySelector("#map") === null)
-                return;
-            //1. initialize leaflet map
-            var center = [35.73338, 51.39444];
-            var propertiesmap = L.map('map').setView(center, 17);
-
-            propertiesmap.invalidateSize();
-
-            var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-                maxZoom: 17,
-                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-            });
-
-            googleStreets.addTo(propertiesmap)
-
-            var marker = L.marker(center).addTo(propertiesmap);
-
-        });
-    </script>
     @yield('scripts')
 </body>
 
