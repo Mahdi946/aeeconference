@@ -24,6 +24,6 @@ deployment:
  - echo "Composer complete"
 #  - cd $DEPLOYPATH; sudo chmod -R 777 writable
  - echo "Database Migrating..."
- - /usr/local/bin/php $DEPLOYPATHartisan migrate
+ - /usr/local/bin/php /home/aeeconference/artisan migrate
  - echo "Database Migrating complete"
  - echo "Deployment complete"
