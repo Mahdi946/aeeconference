@@ -53,7 +53,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="mail" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}<label for="" class="text-danger">*</label></label>
+                                    <label for="Family" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Family" type="text" class="form-control @error('Family') is-invalid @enderror" name="Family" value="{{ old('Family') }}" required autocomplete="name" autofocus>
@@ -85,7 +85,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}<label for="" class="text-danger">*</label></label>
+                                    <label for="Family_fa" class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Family_fa" type="text" class="form-control @error('Family_fa') is-invalid @enderror" name="Family_fa" value="{{ old('Family_fa') }}" required autocomplete="Family_fa" autofocus>
@@ -129,7 +129,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('تاریخ تولد') }}</label>
+                                    <label for="BirthDay" class="col-md-4 col-form-label text-md-end">{{ __('تاریخ تولد') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="BirthDay" type="text" class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDay" value="{{ old('BirthDay') }}" required autofocus>
@@ -186,12 +186,17 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('تحصیلات') }}</label>
+                                    <label for="Edu" class="col-md-4 col-form-label text-md-end">{{ __('تحصیلات') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="Edu" type="text" class="form-control @error('Edu') is-invalid @enderror" name="Edu" value="{{ old('Edu') }}" required autocomplete="رشته" autofocus>
-
+                                        <select class="form-select form-select-sm @error('Edu') is-invalid @enderror" name="Edu" required id="Edu" aria-label=".form-select-sm example">
+                                            <option selected disabled> لطفا انتخاب کنید </option>
+                                            <option value="1">دیپلم</option>
+                                            <option value="2">کاردانی</option>
+                                            <option value="3">کارشناسی</option>
+                                            <option value="4">کارشناسی ارشد</option>
+                                            <option value="5">دکتری</option>
+                                        </select>
                                         @error('Edu')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -201,8 +206,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="Job"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('شغل') }}</label>
+                                    <label for="Job" class="col-md-4 col-form-label text-md-end">{{ __('شغل') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="Job" type="text" class="form-control @error('Job') is-invalid @enderror" name="Job" value="{{ old('Job') }}" autocomplete="شغل" autofocus>
@@ -335,8 +339,7 @@
 
 
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('کد ملی') }}</P></label>
+                                    <label for="NationalCode" class="col-md-4 col-form-label text-md-end">{{ __('کد ملی') }}</P></label>
 
                                     <div class="col-md-6">
                                         <input id="NationalCode" type="number" class="form-control @error('NationalCode') is-invalid @enderror" name="NationalCode" value="{{ old('NationalCode') }}" required autofocus>
