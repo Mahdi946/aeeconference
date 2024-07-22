@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Web;
+namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Writer;
@@ -144,7 +144,7 @@ class WriterController extends Controller
         //
         $writer = Writer::findOrFail($id);
         $writer->delete();
-        
+
         flash()->success('مقاله با موفقیت حذف شد');
         return redirect()->route('Articles.getArticle');
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Web;
+namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
@@ -156,7 +156,7 @@ class ArticleController extends Controller
                 'CongressID' => $request->CongressID,
             ]);
             $article->categories()->sync($request->Categories);
-          
+
 
         DB::commit();
 

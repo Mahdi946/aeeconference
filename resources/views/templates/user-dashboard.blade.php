@@ -10,7 +10,7 @@
 
 
 
-  
+
 
 </head>
 
@@ -306,7 +306,7 @@
 
                             <div class="row mb-3">
                                 <label for="Edu"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('رتبه') }}</label>
+                                    class="col-md-4 col-form-label text-md-end">{{ __('رتبه علمی') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="Rank" type="text"
@@ -327,7 +327,7 @@
 
                                 <div class="col-md-6">
                                     <input id="Org" type="text"
-                                        class="form-control @error('Rank') is-invalid @enderror" name="Org"
+                                        class="form-control @error('Org') is-invalid @enderror" name="Org"
                                         value="{{ old('Org') }}" required autocomplete="سازمان" autofocus>
 
                                     @error('Org')
@@ -343,11 +343,11 @@
                                     class="col-md-4 col-form-label text-md-end">{{ __('سازمان(فارسی)') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="Org_fa" type="text"
-                                        class="form-control @error('Rank') is-invalid @enderror" name="Org_fa"
-                                        value="{{ old('Org_fa') }}" required autocomplete="سازمان" autofocus>
+                                    <input id="Edu" type="text"
+                                        class="form-control @error('Edu') is-invalid @enderror" name="Edu"
+                                        value="{{ old('Edu') }}" required autocomplete="سازمان" autofocus>
 
-                                    @error('Org')
+                                    @error('Edu')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -439,7 +439,7 @@
 
                                     <a href="{{ url('login') }}">قبلا ثبت نام کردید؟</a>
 
-                                    
+
                                 </div>
 
                             </div>
