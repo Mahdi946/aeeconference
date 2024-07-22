@@ -569,12 +569,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="lines">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
         </section>
         <!-- End Footer Area -->
     @endsection
@@ -586,7 +580,7 @@
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="single-footer-widget">
                         <div class="footer-heading">
-                            <h3>درباره ما</h3>
+                            <h3>درباره کنگره</h3>
                         </div>
                         {{-- <p class="text-vip-2-5">
                             توسعه فناوری و نوآوری، توجه به مولفه‌های علمی، اقتصادی، اجتماعی، فرهنگی و آموزشی آن به عنوان رکن شکوفایی هر جامعه ای از کاربست منسجمی برخوردار است.
