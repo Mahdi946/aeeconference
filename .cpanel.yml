@@ -9,7 +9,7 @@ deployment:
  - /bin/cp -R config $DEPLOYPATH
  - /bin/cp -R resources $DEPLOYPATH
  - /bin/cp -R routes $DEPLOYPATH
- - /bin/cp -R resources $DEPLOYPATH
+ - /bin/cp -R database $DEPLOYPATH
  - /bin/cp -R composer.json $DEPLOYPATH
  - /bin/cp -R public/favicon.ico $PUBLICPATH
  - /bin/cp -R public/index.php $PUBLICPATH
