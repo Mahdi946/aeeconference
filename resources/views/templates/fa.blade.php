@@ -260,7 +260,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/committee" class="nav-link">
                             کمیته های اختصاصی
                         </a>
                     </li>
