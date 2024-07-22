@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Web\WriterController;
-use App\Http\Controllers\Web\ArticleController;
-use App\Http\Controllers\Web\ArticleFileController;
+use App\Http\Controllers\WriterController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticleFileController;
 
 Auth::routes();
 
