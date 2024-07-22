@@ -53,15 +53,12 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="mail"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}<label for="" class="text-danger">*</label></label>
+                                    <label for="mail" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
-                                        <input id="Family" type="text"
-                                            class="form-control @error('Family') is-invalid @enderror" name="Family"
-                                            value="{{ old('Family') }}" required autocomplete="name" autofocus>
+                                        <input id="Family" type="text" class="form-control @error('Family') is-invalid @enderror" name="Family" value="{{ old('Family') }}" required autocomplete="name" autofocus>
 
-                                        @error('last_name')
+                                        @error('Family')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -72,8 +69,7 @@
 
 
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام') }}<label for="" class="text-danger">*</label></label>
+                                    <label for="Name_fa" class="col-md-4 col-form-label text-md-end">{{ __('نام') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Name_fa" type="text"
@@ -89,13 +85,10 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}<label for="" class="text-danger">*</label></label>
+                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('نام خانوادگی') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
-                                        <input id="Family_fa" type="text"
-                                            class="form-control @error('Family_fa') is-invalid @enderror" name="Family_fa"
-                                            value="{{ old('Family_fa') }}" required autocomplete="Family_fa" autofocus>
+                                        <input id="Family_fa" type="text" class="form-control @error('Family_fa') is-invalid @enderror" name="Family_fa" value="{{ old('Family_fa') }}" required autocomplete="Family_fa" autofocus>
 
                                         @error('Family_fa')
                                             <span class="invalid-feedback" role="alert">
@@ -106,8 +99,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('نام پدر') }}</label>
+                                    <label for="FatherName" class="col-md-4 col-form-label text-md-end">{{ __('نام پدر') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="FatherName" type="text"
@@ -123,13 +115,10 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('شماره شناسنامه') }}</label>
+                                    <label for="BirthCert" class="col-md-4 col-form-label text-md-end">{{ __('شماره شناسنامه') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="BirthCert" type="number"
-                                            class="form-control @error('BirthCert') is-invalid @enderror" name="BirthCert"
-                                            value="{{ old('BirthCert') }}" required autocomplete="name" autofocus>
+                                        <input id="BirthCert" type="number" class="form-control @error('BirthCert') is-invalid @enderror" name="BirthCert" value="{{ old('BirthCert') }}" required autocomplete="name" autofocus>
 
                                         @error('BirthCert')
                                             <span class="invalid-feedback" role="alert">
@@ -140,13 +129,10 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('تاریخ تولد') }}</label>
+                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('تاریخ تولد') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="BirthDay" type="text"
-                                            class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDay"
-                                            value="{{ old('BirthDay') }}" required  autofocus data-jdp>
+                                        <input id="BirthDay" type="text" class="form-control @error('BirthDay') is-invalid @enderror" name="BirthDay" value="{{ old('BirthDay') }}" required autofocus>
                                         <input type="hidden" id="BirthDayView" name="BirthDayView" class="form-control form-control-sm">
                                         @error('BirthDay')
                                             <span class="invalid-feedback" role="alert">
@@ -158,14 +144,10 @@
 
 
                                 <div class="row mb-3">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('تلفن') }}<label for="" class="text-danger">*</label></label>
+                                    <label for="phoneNPhoneNumberumber" class="col-md-4 col-form-label text-md-end">{{ __('تلفن') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
-                                        <input id="phoneNumber" type="number"
-                                            class="form-control @error('PhoneNumber') is-invalid @enderror"
-                                            name="PhoneNumber" value="{{ old('PhoneNumber') }}" required
-                                            autocomplete="name" autofocus>
+                                        <input id="PhoneNumber" type="number" class="form-control @error('PhoneNumber') is-invalid @enderror" name="PhoneNumber" value="{{ old('PhoneNumber') }}" required autocomplete="name" autofocus>
 
                                         @error('PhoneNumber')
                                             <span class="invalid-feedback" role="alert">
@@ -314,7 +296,7 @@
 
                                 <div class="row mb-3">
                                     <label for="Edu"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('رتبه') }}<label for="" class="text-danger">*</label></label>
+                                        class="col-md-4 col-form-label text-md-end">{{ __('رتبه علمی') }}<label for="" class="text-danger">*</label></label>
 
                                     <div class="col-md-6">
                                         <input id="Rank" type="text"
@@ -443,7 +425,7 @@
                                             {{ __('ثبت نام') }}
                                         </button>
 
-                                        <a href="{{ url('login') }}">قبلا ثبت نام کردید؟</a>                        
+                                        <a href="{{ url('login') }}">قبلا ثبت نام کردید؟</a>
                                     </div>
                                 </div>
                             </div>
