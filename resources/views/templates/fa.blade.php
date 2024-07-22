@@ -137,13 +137,13 @@
 
                             <li class="nav-item">
                                 <a href="/about" class="nav-link">
-                                    درباره کنفرانس
+                                    درباره کنگره
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="/org" class="nav-link">
-                                    سازمان کنفرانس
+                                    سازمان کنگره
                                 </a>
                             </li>
 
@@ -161,7 +161,7 @@
 
                             <li class="nav-item">
                                 <a href="{{ url('register') }}" class="nav-link">
-                                    شرکت در کنفرانس
+                                    شرکت در کنگره
                                 </a>
                             </li>
 
@@ -179,7 +179,7 @@
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link go-down">
-                                    تماس با کنفرانس
+                                    تماس با کنگره
                                 </a>
                             </li>
 
@@ -249,13 +249,13 @@
 
                     <li class="nav-item">
                         <a href="/about" class="nav-link">
-                            درباره کنفرانس
+                            درباره کنگره
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a href="/org" class="nav-link">
-                            سازمان کنفرانس
+                            سازمان کنگره
                         </a>
                     </li>
 
@@ -273,7 +273,7 @@
 
                     <li class="nav-item">
                         <a href="{{ url('register') }}" class="nav-link">
-                            شرکت در کنفرانس
+                            شرکت در کنگره
                         </a>
                     </li>
 
@@ -291,7 +291,7 @@
 
                     <li class="nav-item">
                         <a href="#" class="nav-link go-down">
-                            تماس با کنفرانس
+                            تماس با کنگره
                         </a>
                     </li>
 
@@ -372,13 +372,13 @@
 
                     <li class="nav-item">
                         <a href="/about" class="nav-link">
-                            درباره کنفرانس
+                            درباره کنگره
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a href="/org" class="nav-link">
-                            سازمان کنفرانس
+                            سازمان کنگره
                         </a>
                     </li>
 
@@ -396,7 +396,7 @@
 
                     <li class="nav-item">
                         <a href="{{ url('register') }}" class="nav-link">
-                            شرکت در کنفرانس
+                            شرکت در کنگره
                         </a>
                     </li>
 
@@ -414,7 +414,7 @@
 
                     <li class="nav-item">
                         <a href="#" class="nav-link go-down">
-                            تماس با کنفرانس
+                            تماس با کنگره
                         </a>
                     </li>
 
