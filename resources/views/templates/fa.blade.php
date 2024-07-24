@@ -333,7 +333,7 @@
                     <img src="/assets-rtl/img/logo.png" alt="logo" class="logo-header" style="width: 100px;">
                 </a>
 
-                @auth
+                {{-- @auth
                     <div class="d-flex justify-content-center" style="height: 40px">
                         <form action="{{ url('logout') }}" method="POST">
                             @csrf
@@ -348,7 +348,7 @@
                         <a class="btn btn-info mx-2 " href="{{ url('login') }}">  ورود </a>
                         <a href="{{ url('register') }}" class="btn btn-info   ">ثبت‌نام</a>
                     </div>
-                @endguest
+                @endguest --}}
 
 
 
@@ -383,7 +383,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/committee" class="nav-link">
                             کمیته های اختصاصی
                         </a>
                     </li>
