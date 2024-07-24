@@ -109,6 +109,8 @@ class ArticleFileController extends Controller
             // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
             $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
             return view('users.article.file', compact('article','articlefiles'));
+        }else{
+            abort(403);
         }
 
     }
