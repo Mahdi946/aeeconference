@@ -59,4 +59,3 @@ Route::prefix('/ArticleFiles')->controller(ArticleFileController::class)->name('
 Route::resource('ArticleFiles',  ArticleFileController::class);
 
 
-require_once 'admin.php';
