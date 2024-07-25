@@ -3,6 +3,8 @@ deployment:
  tasks:
  - export DEPLOYPATH=/home/aeeconference/
  - export PUBLICPATH=/home/aeeconference/public_html/
+ - echo "Starting Maintenance mode..."
+ - cd $DEPLOYPATH; php artisan down
  - echo "Copying..."
  - /bin/cp -R app $DEPLOYPATH
  - /bin/cp -R bootstrap $DEPLOYPATH
@@ -25,4 +27,16 @@ deployment:
  - echo "Database Migrating..."
  - cd $DEPLOYPATH; php artisan migrate
  - echo "Database Migrating complete"
+ - echo "Optimizing ..."
+ - cd $DEPLOYPATH; php artisan optimize
+ - cd $DEPLOYPATH; php artisan auth:clear-resets
+#  - echo "Clearing Cache..."
+#  - cd $DEPLOYPATH; php artisan view:clear
+#  - cd $DEPLOYPATH; php artisan config:clear
+#  - echo "Caching ..."
+#  - cd $DEPLOYPATH; php artisan view:cache
+#  - cd $DEPLOYPATH; php artisan config:cache
+#  - cd $DEPLOYPATH; php artisan config:publish
  - echo "Deployment complete"
+ - cd $DEPLOYPATH; php artisan up
+ - echo "Maintenance mode End."
