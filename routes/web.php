@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticleFileController;
+use App\Http\Controllers\Admin\LocationController;
 
 Auth::routes();
 
@@ -59,4 +60,7 @@ Route::prefix('/ArticleFiles')->controller(ArticleFileController::class)->name('
 Route::resource('ArticleFiles',  ArticleFileController::class);
 
 
-require_once 'admin.php';
+
+
+//route resource LocationController
+Route::resource('Admin/Location',  LocationController::class);
