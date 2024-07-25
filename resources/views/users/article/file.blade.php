@@ -18,13 +18,46 @@
                                     <th scope="col">بازبینی</th>
                                 </thead>
                                 <tbody>
-                            @foreach ($articlefiles as $articlefile)
-                                <tr>
-                                    <td>{{ $articlefile->FileType }}</td>
-                                    <td>{{ $articlefile->Description }}</td>
-                                    <td><a href="{{ Storage::url($articlefile->Location) }}">دانلود</a></td>
-                                </tr>
-                            @endforeach
+                                    @foreach ($articlefiles as $articlefile)
+                                        <tr>
+                                            <td>
+                                                @switch($articlefile->FileType)
+                                                    @case(1)
+                                                        <span>مشخصات نویسندگان </span>
+                                                    @break
+                                                    @case(2)
+                                                        <span>فایل اصل مقاله بدون نام نویسندگان </span>
+                                                    @break
+                                                    @case(3)
+                                                        <span> نامه به سردبیر (تعهدنامه)  </span>
+                                                    @break
+                                                    @case(4)
+                                                        <span> تصویر  </span>
+                                                    @break
+                                                    @case(5)
+                                                        <span> جدول  </span>
+                                                    @break
+                                                    @case(6)
+                                                        <span>تازه‌های تحقیق  </span>
+                                                    @break
+                                                    @case(7)
+                                                        <span> چکیده تصویری  </span>
+                                                    @break
+                                                    @case(8)
+                                                        <span>فرم تعارض منافع  </span>
+                                                    @break
+                                                    @case(9)
+                                                        <span> فایل‌های تکمیلی، اضافی  </span>
+                                                    @break
+
+                                                    @default
+                                                        <span>#</span>
+                                                @endswitch
+                                            </td>
+                                            <td>{{ $articlefile->Description }}</td>
+                                            <td><a href="{{ Storage::url($articlefile->Location) }}">دانلود</a></td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                             <br>
@@ -48,7 +81,7 @@
                                             <option value="7">چکیده تصویری</option>
                                             <option value="8">فرم تعارض منافع</option>
                                             <option value="9">فایل‌های تکمیلی، اضافی</option>
-                                          </select>
+                                        </select>
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="Description" class="form-label">{{ __('توضیحات') }}</label>
@@ -113,8 +146,8 @@
 
 
 
-    {{-- in baraye delete articlefiles hast --}}
-    {{-- <form action="{{ route('ArticleFiles.destroy', $file->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this file?');">
+{{-- in baraye delete articlefiles hast --}}
+{{-- <form action="{{ route('ArticleFiles.destroy', $file->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this file?');">
     @csrf
     @method('DELETE')
     <button type="submit">Delete</button>
