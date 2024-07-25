@@ -31,22 +31,24 @@ class ArticleFileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
         $request->validate([
             'ArticleID' => 'required|exists:articles,id',
-            'File' => 'required|file',
+            'File' => 'required',
             'Description' => 'nullable|string',
         ]);
         $article =Article::findOrFail($request->ArticleID);
 
-        //این برای چک کردن وضعیت مقاله هست
-        if($article->Status !== 0){
-            flash()->error(' وضعیت مقاله مشکل دارد ');
-            return view('users.article.file', compact('article'));
-        }
+
+        // //این برای چک کردن وضعیت مقاله هست
+        // if($article->Status !== 0){
+        //     flash()->error(' وضعیت مقاله مشکل دارد ');
+        //     return view('users.article.file', compact('article'));
+        // }
 
         $file = $request->file('File');
         $path = $file->store('Files', 'public');
+
 
         $fileRecord = ArticleFile::create([
             'ArticleID' => $request->ArticleID,
@@ -56,7 +58,6 @@ class ArticleFileController extends Controller
         ]);
 
         if( Auth::user()->id == $article->UserID){
-            // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
             $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
             flash()->success('فایل مقاله با موفقیت ثبت شد');
             return view('users.article.file', compact('article','articlefiles'));
@@ -109,6 +110,8 @@ class ArticleFileController extends Controller
             // $article =Article::where('UserID', '=', Auth::user()->id)->latest()->first();
             $articlefiles =ArticleFile::where('ArticleID', '=', $article->id)->get();
             return view('users.article.file', compact('article','articlefiles'));
+        }else{
+            abort(403);
         }
 
     }

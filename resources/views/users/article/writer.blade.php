@@ -86,9 +86,25 @@
                                             disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="Edu" class="form-label">{{ __('مقطع تحصیلی') }}</label>
-                                        <input name="Edu" type="text" class="form-control" id="writerEdu"
-                                            disabled>
+
+                                        <label for="Edu" class="form-label">{{ __('تحصیلات') }}</label>
+
+                                        <select class="form-select form-select-sm @error('Edu') is-invalid @enderror"
+                                            name="Edu" required id="writerEdu" aria-label=".form-select-sm example">
+                                            <option selected disabled> لطفا انتخاب کنید </option>
+                                            <option value="1">دیپلم</option>
+                                            <option value="2">کاردانی</option>
+                                            <option value="3">کارشناسی</option>
+                                            <option value="4">کارشناسی ارشد</option>
+                                            <option value="5">دکتری</option>
+                                        </select>
+                                        @error('Edu')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+
+
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Field" class="form-label">{{ __(' رشته-فارسی') }}</label>
@@ -163,7 +179,6 @@
 @endsection
 @section('scripts')
     <script>
-       
         function writerCheck() {
             writerEmail = $('#writerEmail').val();
             $.ajax({
@@ -254,7 +269,7 @@
                             // Create delete button in actions column
                             const deleteBtn = $(
                                 '<button type="button" class="btn btn-danger btn-sm">حذف</button>'
-                                );
+                            );
                             deleteBtn.on('click', function() {
                                 deleteRow(item); // Call deleteRow function on button click
                             });
