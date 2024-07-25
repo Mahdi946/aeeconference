@@ -22,8 +22,7 @@ deployment:
  - cd $DEPLOYPATH; composer install
  - cd $DEPLOYPATH; composer update --no-dev
  - echo "Composer complete"
-#  - cd $DEPLOYPATH; sudo chmod -R 777 writable
  - echo "Database Migrating..."
- - /usr/local/bin/php /home/aeeconference/artisan migrate
+ - cd $DEPLOYPATH; php artisan migrate
  - echo "Database Migrating complete"
  - echo "Deployment complete"
