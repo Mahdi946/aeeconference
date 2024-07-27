@@ -18,13 +18,13 @@
                         <h3>ایجاد کنگره جدید</h3>
 
                         <div class="container mt-5">
-                            <form action="" method="POST">
+                            <form action="{{ route('Congress.store') }}" method="POST">
                                 @csrf
                                  <div class="row">
 
                                     <div class="col-md-6 mb-3">
                                         <label for="Name" class="form-label">{{ __('نام کنگره') }}</label>
-                                        <input name="Name" type="text" class="form-control" id="Name">
+                                        <input name="Name" type="text" class="form-control" id="Name" required>
                                     </div>
 
                                     <!-- Input fields -->
@@ -39,20 +39,17 @@
                                     </div>
 
 
-                                    <div class="col-md-6 mb-3">
-                                        <label for="SecretaryID" class="form-label">{{ __('ای دی دبیر') }}</label>
-                                        <input name="SecretaryID" type="text" class="form-control" id="SecretaryID">
-                                    </div>
+
 
 
                                     <div class="col-md-6 mb-3">
                                         <label for="StartDate" class="form-label">{{ __('تاریخ شروع کنگره') }}</label>
-                                        <input name="StartDate" type="date" class="form-control" id="StartDate">
+                                        <input name="StartDate" type="date" class="form-control" id="StartDate" required>
                                     </div>
 
                                     <div class="col-md-6 mb-3">
                                         <label for="EndDate" class="form-label">{{ __('تاریخ پایان کنگره') }}</label>
-                                        <input name="EndDate" type="date" class="form-control" id="EndDate">
+                                        <input name="EndDate" type="date" class="form-control" id="EndDate" required>
                                     </div>
                                     <button type="submit" class="btn btn-primary">ثبت</button>
 
