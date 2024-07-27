@@ -33,9 +33,9 @@
                                 <td>{{ $Congress->StartDate }}</td>
                                 <td>{{ $Congress->EndDate }}</td>
                                 <td>
-                                    <a href="/Admin/Location/create" id="locationBtn" type="button"
-                                        class="btn btn-info"><b>موقعیت مکانی</b></a>
-                                    <a href="{{ route('Congress.edit', $article->id) }}" id="locationBtn" type="button"
+                                    <a href="/Admin/Location/getLocationByID/{{ $Congress->id }}" id="actionBtn"
+                                        type="button" class="btn btn-info"><b>ایجاد موقعیت مکانی</b></a>
+                                    <a href="{{ route('Congress.edit', $Congress->id) }}" id="locationBtn" type="button"
                                         class="btn btn-success mx-2"><b> ویرایش</b></a>
                                 </td>
 

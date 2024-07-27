@@ -3,14 +3,14 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-            <div class="signup-section ptb-50" id="WritersArea">
+            {{-- <div class="signup-section ptb-50" id="WritersArea">
                 <div class="container">
                     <div class="signup-form" style="max-width: 800px;">
                         <h3>کنگره</h3>
 
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- Start Signup Area -->
             <div class="signup-section ptb-50">
                 <div class="container">

@@ -24,8 +24,8 @@ class LocationController extends Controller
      */
     public function create()
     {
-        $Congress = Congress::first();
-        return view('admin.location.create', compact('Congress'));
+        // $Congress = Congress::first();
+        // return view('admin.location.create', compact('Congress'));
     }
 
     /**
@@ -99,5 +99,11 @@ class LocationController extends Controller
 
         flash()->success('موقعیت مکانی با موفقیت حذف شد');
         return redirect()->route('Articles.getArticle');
+    }
+    public function getLocation(Congress $congress)
+    {
+
+        return view('admin.location.create', compact('congress'));
+
     }
 }

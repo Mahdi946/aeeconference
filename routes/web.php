@@ -72,9 +72,14 @@ Route::resource('ArticleFiles',  ArticleFileController::class);
 
 
 
-
+//route prefix ArticleFiles
+Route::prefix('/Admin/Location')->controller(LocationController::class)->name('Admin.Location.')->group(function(){
+    Route::get('/getLocationByID/{congress}','getLocation')->name('getLocation');
+});
 //route resource LocationController
 Route::resource('Admin/Location',  LocationController::class);
+
+
 
 
 
