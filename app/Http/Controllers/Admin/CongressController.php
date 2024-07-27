@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Congress;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CongressController extends Controller
 {
@@ -12,7 +13,9 @@ class CongressController extends Controller
      */
     public function index()
     {
-        //
+        $Congresses = Congress::all();
+
+        return view('admin.congress.index', compact('Congresses'));
     }
 
     /**
@@ -21,7 +24,9 @@ class CongressController extends Controller
     public function create()
     {
         //
+        return view('admin.congress.create');
     }
+
 
     /**
      * Store a newly created resource in storage.

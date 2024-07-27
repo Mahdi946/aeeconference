@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticleFileController;
+use App\Http\Controllers\Admin\CongressController;
 use App\Http\Controllers\Admin\LocationController;
 
 Auth::routes();
@@ -62,5 +63,21 @@ Route::resource('ArticleFiles',  ArticleFileController::class);
 
 
 
+
+
+
+
+///////////////////////////////////////////////////////
+
+
+
+
+
 //route resource LocationController
 Route::resource('Admin/Location',  LocationController::class);
+
+
+
+//route resource Location
+Route::resource('Admin/Congress',  CongressController::class);
+
