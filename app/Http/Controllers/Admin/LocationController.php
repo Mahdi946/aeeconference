@@ -58,7 +58,7 @@ class LocationController extends Controller
         }
 
         flash()->success('موقعیت مکانی با موفقیت ثبت شد');
-        return view('admin.congress.index');
+        return redirect()->route('Congress.index');
     }
 
 
@@ -75,6 +75,7 @@ class LocationController extends Controller
      */
     public function edit(string $id)
     {
+       
         //
         $location = Location::findOrFail($id);
         return view('admin.location.edit', compact('location'));
