@@ -41,10 +41,10 @@ class ArticleFileController extends Controller
 
 
         // //این برای چک کردن وضعیت مقاله هست
-        // if($article->Status !== 0){
-        //     flash()->error(' وضعیت مقاله مشکل دارد ');
-        //     return view('users.article.file', compact('article'));
-        // }
+        if($article->Status !== 0){
+            flash()->error(' وضعیت مقاله مشکل دارد ');
+            return view('users.article.file', compact('article'));
+        }
 
         $file = $request->file('File');
         $path = $file->store('Files', 'public');

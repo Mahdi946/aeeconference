@@ -24,7 +24,7 @@
                         <div class="container mt-5">
                             <form action="" method="POST">
                                 @csrf
-                                <input type="hidden" name="ArticleID" value="{{ $article->id }}" id="ArticleID" />
+                                <input type="hidden" name="CongressID" value="{{ $congress->id }}" id="ArticleID" />
                                 <input type="hidden" name="UserID" value="" id="writerUserID" />
                                 <div class="row">
                                     <!-- Input fields -->
@@ -126,13 +126,12 @@
                                         <input name="Org" type="text" class="form-control" id="writerOrg"
                                             disabled>
                                     </div>
-                                    <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
-                                    <?php if( $article->Status == 0){ ?>
+                                    {{-- <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a> --}}
+
                                     <button type="submit" id="addWriter" class="btn btn-primary my-2">ثبت</button>
 
-                                    <?php }  ?>
-                                    <a href="/ArticleFiles/getArticleFileByID/{{ $article->id }}" id="NextButton"
-                                        class="btn btn-success mt-1">مرحله بعد</a>
+
+
                                     {{-- <a href="{{route('admin.color.edit',$color->id)}}" id="NextButton" class="btn btn-success my-2">مرحله بعد</a> --}}
 
                                 </div>

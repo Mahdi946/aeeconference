@@ -75,7 +75,7 @@ class LocationController extends Controller
      */
     public function edit(string $id)
     {
-       
+
         //
         $location = Location::findOrFail($id);
         return view('admin.location.edit', compact('location'));
@@ -94,7 +94,6 @@ class LocationController extends Controller
      */
     public function destroy(string $id)
     {
-        //
         $location = Location::findOrFail($id);
         $location->delete();
 

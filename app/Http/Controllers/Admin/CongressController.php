@@ -57,7 +57,6 @@ class CongressController extends Controller
 
 
             DB::commit();
-
         } catch (\Exception $ex) {
             DB::rollBack();
             flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
@@ -65,7 +64,10 @@ class CongressController extends Controller
         }
 
         flash()->success('کنگره با موفقیت ثبت شد');
-        return redirect()->route('Congress.index');
+        return view('admin.congress.secretary', compact('congress'));
+
+        // flash()->success('کنگره با موفقیت ثبت شد');
+        // return redirect()->route('Congress.index');
 
     }
 
@@ -92,14 +94,34 @@ class CongressController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $congress = Congress::findOrFail($id);
+        $congress->update([
+            'Name' => $request->Name,
+            'Description' => $request->Description,
+            'StartDate' => $request->StartDate,
+            'EndDate' => $request->EndDate,
+        ]);
+        flash()->success('کنگره با موفقیت ویرایش شد');
+        return redirect()->route('Congress.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Congress $congress)
     {
-        //
+        $congress->delete();
+        flash()->success('کنگره با موفقیت حذف شد');
+        return redirect()->route('Congress.index');
+    }
+
+    public function storeSecretary(Request $request)
+    {
+        $congress = Congress::findOrFail($request->CongressID);
+        $congress->update([
+            'SecretaryID' => $request->SecretaryID,
+        ]);
+        flash()->success('دبیر با موفقیت ثبت شد');
+        return redirect()->route('Congress.index');
     }
 }

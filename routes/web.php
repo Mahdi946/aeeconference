@@ -82,7 +82,9 @@ Route::resource('Admin/Location',  LocationController::class);
 
 
 
-
+Route::prefix('/Admin/Congress')->controller(CongressController::class)->name('Admin.Congress.')->group(function(){
+    Route::post('/storeSecretary','storeSecretary')->name('storeSecretary');
+});
 //route resource Location
 Route::resource('Admin/Congress',  CongressController::class);
 
