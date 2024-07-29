@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Jury extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+
 }
