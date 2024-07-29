@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Admin\JuryController;
 use App\Http\Controllers\ArticleFileController;
 use App\Http\Controllers\Admin\CongressController;
 use App\Http\Controllers\Admin\LocationController;
@@ -88,3 +89,7 @@ Route::prefix('/Admin/Congress')->controller(CongressController::class)->name('A
 //route resource Location
 Route::resource('Admin/Congress',  CongressController::class);
 
+
+
+//route resource JuryController
+Route::resource('Admin/Jury',  JuryController::class);
