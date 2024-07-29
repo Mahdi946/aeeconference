@@ -18,27 +18,28 @@
                         <h3>ایجاد  داوران</h3>
 
                         <div class="container mt-5">
-                            <form action="{{ route('Jury.store') }}" method="POST">
+                            <form action="{{ route('Jury.update', $jury->id) }}" method="POST">
                                 @csrf
+                                @method('PUT')
                                  <div class="row">
-
                                     <!-- Input fields -->
-
                                     <div class="col-md-12 mb-3">
                                         <label for="congress" class="form-label">{{ __(' انتخاب کنگره') }}</label>
                                         <select class="form-select"  id="congress" name="CongressID">
                                             @foreach ($congresses as $congress)
-                                            <option value="{{$congress->id}}">{{$congress->Name}}</option>
+                                            <option value="{{$congress->id}}" {{$congress->id == $jury->CongressID ? 'selected':''}}>{{$congress->Name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
+
+
 
 
                                     <div class="col-md-12 mb-3">
                                         <label for="users" class="form-label">{{ __('انتخاب داور') }}</label>
                                         <select class="form-select" multiple aria-label="multiple select" id="users" name="users[]">
                                             @foreach ($users as $user)
-                                            <option value="{{$user->id}}">{{$user->Name_fa }} {{ $user->Family_fa}} </option>
+                                            <option value="{{$user->id}}" {{$user->id == $jury->UserID ? 'selected':''}}>{{$user->Name_fa }} {{ $user->Family_fa}} </option>
                                             @endforeach
                                         </select>
                                     </div>

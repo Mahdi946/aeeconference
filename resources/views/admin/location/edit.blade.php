@@ -18,8 +18,9 @@
                         <h3>ایجاد موقعیت مکانی</h3>
 
                         <div class="container mt-5">
-                            <form action="" method="POST">
+                            <form action="{{ route('Location.update', $location->id) }}" method="POST">
                                 @csrf
+                                @method('PUT')
                                  <div class="row">
                                     <input type="hidden" name="CongressID" value="{{ $location->CongressID }}" id="CongressID" />
 
