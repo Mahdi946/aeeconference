@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticleFileController;
+use App\Http\Controllers\Admin\CongressController;
 use App\Http\Controllers\Admin\LocationController;
 
 Auth::routes();
@@ -62,5 +63,28 @@ Route::resource('ArticleFiles',  ArticleFileController::class);
 
 
 
+
+
+
+
+///////////////////////////////////////////////////////
+
+
+
+
+//route prefix ArticleFiles
+Route::prefix('/Admin/Location')->controller(LocationController::class)->name('Admin.Location.')->group(function(){
+    Route::get('/getLocationByID/{congress}','getLocation')->name('getLocation');
+});
 //route resource LocationController
 Route::resource('Admin/Location',  LocationController::class);
+
+
+
+
+Route::prefix('/Admin/Congress')->controller(CongressController::class)->name('Admin.Congress.')->group(function(){
+    Route::post('/storeSecretary','storeSecretary')->name('storeSecretary');
+});
+//route resource Location
+Route::resource('Admin/Congress',  CongressController::class);
+

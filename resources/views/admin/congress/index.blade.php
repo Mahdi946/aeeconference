@@ -16,35 +16,29 @@
                             <th scope="col">نام دبیر</th>
                             <th scope="col">شروع کنگره</th>
                             <th scope="col">پایان کنگره</th>
+                            <th scope="col"> عملیات </th>
+
 
                         </tr>
                     </thead>
 
                     <tbody>
-                        @foreach ($articles as $article)
+                        @foreach ($Congresses as $Congress)
+
                             <tr>
-                                <th scope="row">{{ $article->id }}</th>
-                                <td>{{ $article->ShortTitle_fa }}</td>
-                                <td>{{ $article->ShortTitle }}</td>
+                                <th scope="row">{{ $Congress->id }}</th>
+                                <td>{{ $Congress->Name }}</td>
+                                <td>{{ $Congress->Description }}</td>
+                                <td>{{ $Congress->secretary->Name }}</td>
+                                <td>{{ $Congress->StartDate }}</td>
+                                <td>{{ $Congress->EndDate }}</td>
                                 <td>
-                                    <?php if($article->Status == 0){ ?>
-                                    <a href="/Articles/ArticleStatus/{{ $article->id }}" id="" type="button"
-                                        class="btn btn-success"><b>ثبت نهایی مقاله</b></a>
-                                    <?php }else{ echo "ثبت نهایی شده است";} ?>
-
+                                    <a href="/Admin/Location/getLocationByID/{{ $Congress->id }}" id="actionBtn"
+                                        type="button" class="btn btn-info"><b>ایجاد موقعیت مکانی</b></a>
+                                    <a href="{{ route('Congress.edit', $Congress->id) }}" id="locationBtn" type="button"
+                                        class="btn btn-success mx-2"><b> ویرایش</b></a>
                                 </td>
 
-                                <td>
-                                    <a href="/Writers/writerSave/{{ $article->id }}/show" id="actionBtn" type="button"
-                                        class="btn btn-info"><b>نویسندگان</b></a>
-                                    <a href="/ArticleFiles/getArticleFileByID/{{ $article->id }}" id="actionBtn"
-                                        type="button" class="btn btn-info"><b>فایل‌ها</b></a>
-                                    <?php if($article->Status == 0){ ?>
-                                    <a href="{{ route('Articles.edit', $article->id) }}"
-                                        class="my-2 btn btn-primary">ویرایش</a>
-                                    <?php } ?>
-
-                                </td>
                             </tr>
                         @endforeach
 
@@ -57,7 +51,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="{{ route('Articles.create') }}" id="actionBtn" type="button" class="btn btn-success">
+            <a href="{{ route('Congress.create') }}" id="actionBtn" type="button" class="btn btn-success">
                 <b>افزودن</b>
             </a>
         </div>
