@@ -15,10 +15,8 @@ class JuryController extends Controller
      */
     public function index()
     {
-        //
         $juries = Jury::all();
         return view('admin.jury.index', compact('juries'));
-
     }
 
     /**
@@ -36,7 +34,12 @@ class JuryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'CongressID' => 'required',
+            'users' => 'required',
+        ]);
+
+
     }
 
     /**
@@ -52,7 +55,10 @@ class JuryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $jury = Jury::findOrFail($id);
+        $congresses = Congress::all();
+        $users = User::all();
+        return view('admin.jury.edit', compact('congresses','users','jury'));
     }
 
     /**
