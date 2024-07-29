@@ -6,6 +6,7 @@ use App\Models\Jury;
 use App\Models\User;
 use App\Models\Congress;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class JuryController extends Controller
@@ -38,7 +39,27 @@ class JuryController extends Controller
             'CongressID' => 'required',
             'users' => 'required',
         ]);
+        try {
+            DB::beginTransaction();
 
+            $items = $request->users;
+            foreach ($items as $item) {
+                Jury::create([
+                    'CongressID' => $request->CongressID,
+                    'UserID' => $item
+                ]);
+            }
+
+
+            DB::commit();
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
+            return redirect()->back();
+        }
+
+        flash()->success('داوران با موفقیت ثبت شد');
+        return redirect()->route('Jury.index');
 
     }
 
@@ -67,6 +88,9 @@ class JuryController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $request->validate([
+            'users' => 'required',
+        ]);
     }
 
     /**
@@ -74,6 +98,10 @@ class JuryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $location = Jury::findOrFail($id);
+        $location->delete();
+
+        flash()->success('داور با موفقیت حذف شد');
+        return redirect()->route('Jury.index');
     }
 }
