@@ -84,7 +84,6 @@ class CongressController extends Controller
      */
     public function edit(string $id)
     {
-        //
         $congress = Congress::findOrFail($id);
         return view('admin.congress.edit', compact('congress'));
     }
