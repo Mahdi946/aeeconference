@@ -32,13 +32,13 @@ class ArticleController extends Controller
     public function create()
     {
 
-        $Congresses =Congress::first();
+        $Congresses = Congress::first();
 
         // $Congresses =Congress::latest()->limit(1);
         // $Congresses =Congress::where('start_date', '>=' , now())
         // ->where('end_date', '<=' , now());
         $Types = ["مقاله پژوهشی", "مقاله علمی پژوهشی"];
-        $categories =Category::all();
+        $categories = Category::all();
         return view('users.article.create', compact('Congresses', 'Types', 'categories'));
     }
 
@@ -86,7 +86,6 @@ class ArticleController extends Controller
 
 
             DB::commit();
-
         } catch (\Exception $ex) {
             DB::rollBack();
             flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
@@ -95,8 +94,6 @@ class ArticleController extends Controller
 
         flash()->success('مقاله با موفقیت ثبت شد');
         return redirect()->route('Writers.writerSave',  $article->id)->with('ArticleID', $article->id);
-
-
     }
 
     /**
@@ -115,12 +112,12 @@ class ArticleController extends Controller
     {
         //
         $article = Article::findOrFail($id);
-        if($article->Status !== 0){
+        if ($article->Status !== 0) {
             flash()->error('مقاله ثبت نهایی شده است');
             return redirect()->back();
         }
-        $categories =Category::all();
-        return view('users.article.edit',compact('article','categories'));
+        $categories = Category::all();
+        return view('users.article.edit', compact('article', 'categories'));
     }
 
     /**
@@ -142,7 +139,7 @@ class ArticleController extends Controller
             'Categories' => 'required',
         ]);
         try {
-         DB::beginTransaction();
+            DB::beginTransaction();
 
             $article->update([
                 'TypeID' => $request->TypeID,
@@ -158,13 +155,12 @@ class ArticleController extends Controller
             $article->categories()->sync($request->Categories);
 
 
-        DB::commit();
-
-    } catch (\Exception $ex) {
-        DB::rollBack();
-        flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
-        return redirect()->back();
-    }
+            DB::commit();
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
+            return redirect()->back();
+        }
         flash()->success('مقاله با موفقیت ویرایش شد');
         return redirect()->route('Articles.getArticle');
     }
@@ -179,28 +175,42 @@ class ArticleController extends Controller
         return redirect()->route('Articles.getArticle');
     }
 
-     /**
+    /**
      * Display a listing of the resource.
      */
     public function getArticle()
     {
-        $articles =Article::where('UserID', '=', Auth::user()->id)->get();
+        $articles = Article::where('UserID', '=', Auth::user()->id)->get();
         return view('users.panel', compact('articles'));
     }
     public function ArticleStatus(string $id)
     {
 
-        $article =Article::findOrFail($id);
-        if( Auth::user()->id != $article->UserID){
-            flash()->error('عدم تطابق ID');
+        $articleFile = ArticleFile::where('ArticleID', $id)->pluck('FileType')->toArray();
+
+
+        if( array_search('1', $articleFile) !== false  && array_search('2', $articleFile) !== false && array_search('3', $articleFile) !== false ){
+
+            $article = Article::findOrFail($id);
+            if (Auth::user()->id != $article->UserID) {
+                flash()->error('عدم تطابق ID');
+                return redirect()->route('Articles.getArticle');
+            }
+            $article->update([
+                'Status' => 1,
+            ]);
+            flash()->success('مقاله با موفقیت ثبت نهایی شد');
             return redirect()->route('Articles.getArticle');
+
+
+        }else{
+
+            flash()->error(' فایل های اجباری را ارسال کنید ');
+            return redirect()->route('Articles.getArticle');
+            
         }
-        $article->update([
-            'Status' => 1,
-        ]);
-        flash()->success('مقاله با موفقیت ثبت نهایی شد');
-        return redirect()->route('Articles.getArticle');
+
+
 
     }
-
 }
