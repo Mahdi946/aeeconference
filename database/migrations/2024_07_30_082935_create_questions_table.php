@@ -18,7 +18,9 @@ return new class extends Migration
             $table->foreign('CongressID')->references('id')->on('congresses')->onDelete('cascade');
 
             $table->unsignedInteger('Sortable')->default(0);
-            $table->text('Description');
+
+            
+            $table->text('Question');
 
             $table->timestamps();
         });
