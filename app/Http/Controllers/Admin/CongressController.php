@@ -53,9 +53,6 @@ class CongressController extends Controller
             ]);
 
 
-
-
-
             DB::commit();
         } catch (\Exception $ex) {
             DB::rollBack();
@@ -64,11 +61,7 @@ class CongressController extends Controller
         }
 
         flash()->success('کنگره با موفقیت ثبت شد');
-        return view('admin.congress.secretary', compact('congress'));
-
-        // flash()->success('کنگره با موفقیت ثبت شد');
-        // return redirect()->route('Congress.index');
-
+        return redirect()->route('Admin.Congress.createSecretary',  $congress->id)->with('CongressID', $congress->id);
     }
 
     /**
@@ -123,4 +116,12 @@ class CongressController extends Controller
         flash()->success('دبیر با موفقیت ثبت شد');
         return redirect()->route('Congress.index');
     }
+
+    public function createSecretary(string $id)
+    {
+        $congress = Congress::findOrFail($id);
+        return view('admin.congress.secretary', compact('congress'));
+    }
+
+
 }
