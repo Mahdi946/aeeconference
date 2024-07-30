@@ -24,7 +24,7 @@
                         <div class="container mt-5">
                             <form action="" method="POST">
                                 @csrf
-                                <input type="hidden" name="CongressID" value="{{ $congress->id }}" id="ArticleID" />
+                                <input type="hidden" name="CongressID" value="{{ $congress->id }}" id="CongressID" />
                                 <input type="hidden" name="UserID" value="" id="writerUserID" />
                                 <div class="row">
                                     <!-- Input fields -->
