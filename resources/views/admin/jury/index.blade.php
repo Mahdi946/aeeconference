@@ -23,10 +23,12 @@
                             <tr>
                                 <th scope="row">{{ $jury->id }}</th>
                                 <td>{{ $jury->user->Name_fa }} {{ $jury->user->Family_fa }}</td>
-                                <td>{{ $jury->Description }}</td>
+                                <td>{{ $jury->congress->Name }}</td>
                                 <td>
                                     <a href="{{ route('Jury.edit', $jury->id) }}" id="JuryBtn" type="button"
                                         class="btn btn-success"><b> ویرایش</b></a>
+                                    <a href="{{ route('Jury.edit', $jury->id) }}" id="JuryBtn" type="button"
+                                        class="btn btn-info"><b> دبیر </b></a>
                                 </td>
 
                             </tr>
