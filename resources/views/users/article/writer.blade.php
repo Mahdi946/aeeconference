@@ -127,7 +127,7 @@
                                             disabled>
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
-                                    <?php if( $article->Status == 0){ ?>
+                                    <?php if( $article->Status->value == 0){ ?>
                                     <button type="submit" id="addWriter" class="btn btn-primary my-2">ثبت</button>
 
                                     <?php }  ?>
