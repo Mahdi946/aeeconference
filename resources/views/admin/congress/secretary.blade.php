@@ -3,18 +3,7 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-            <div class="signup-section ptb-50" id="WritersArea">
-                <div class="container">
-                    <div class="signup-form" style="max-width: 800px;">
-                        <h3>دبیر</h3>
-                        <div class="container mt-5">
-                            <div class="row">
-                                <span id="Writers"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             <!-- Start Signup Area -->
             <div class="signup-section ptb-50">
                 <div class="container">
@@ -22,7 +11,7 @@
                         <h3>تعریف دبیر</h3>
 
                         <div class="container mt-5">
-                            <form action="" method="POST">
+                            <form action="{{ route('Admin.Congress.storeSecretary') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="CongressID" value="{{ $congress->id }}" id="CongressID" />
                                 <input type="hidden" name="UserID" value="" id="writerUserID" />

@@ -18,8 +18,9 @@
                         <h3>ویرایش کنگره </h3>
 
                         <div class="container mt-5">
-                            <form action="" method="POST">
+                            <form action="{{ route('Congress.update', $congress->id) }}" method="POST">
                                 @csrf
+                                @method('PUT')
                                  <div class="row">
 
                                     <div class="col-md-6 mb-3">
@@ -40,8 +41,8 @@
 
 
                                     <div class="col-md-6 mb-3">
-                                        <label for="SecretaryID" class="form-label">{{ __('ای دی دبیر') }}</label>
-                                        <input name="SecretaryID" type="text" class="form-control" id="SecretaryID" value="{{ $congress->SecretaryID }}">
+                                        <label for="SecretaryID" class="form-label">{{ __(' دبیر') }}</label>
+                                       <span>{{$congress->secretary->Name_fa }}   {{$congress->secretary->Family_fa }}  </span>
                                     </div>
 
 

@@ -27,8 +27,14 @@
                                 <td>
                                     <a href="{{ route('Jury.edit', $jury->id) }}" id="JuryBtn" type="button"
                                         class="btn btn-success"><b> ویرایش</b></a>
-                                    <a href="{{ route('Jury.edit', $jury->id) }}" id="JuryBtn" type="button"
-                                        class="btn btn-info"><b> دبیر </b></a>
+                                    {{-- <a href="{{ route('Jury.edit', $jury->id) }}" id="JuryBtn" type="button"
+                                        class="btn btn-info"><b> دبیر </b></a> --}}
+                                        <form action="{{route('Jury.destroy',$jury->id)}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-danger">حذف</button>
+
+                                        </form>
                                 </td>
 
                             </tr>

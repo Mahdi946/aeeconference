@@ -111,7 +111,7 @@ class CongressController extends Controller
     {
         $congress = Congress::findOrFail($request->CongressID);
         $congress->update([
-            'SecretaryID' => $request->SecretaryID,
+            'SecretaryID' => $request->UserID,
         ]);
         flash()->success('دبیر با موفقیت ثبت شد');
         return redirect()->route('Congress.index');
