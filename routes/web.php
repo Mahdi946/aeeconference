@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\JuryController;
 use App\Http\Controllers\ArticleFileController;
 use App\Http\Controllers\Admin\CongressController;
 use App\Http\Controllers\Admin\LocationController;
+use App\Http\Controllers\Admin\UserRoleController;
 
 Auth::routes();
 
@@ -92,5 +93,10 @@ Route::resource('Admin/Congress',  CongressController::class);
 
 
 
-//route resource JuryController
-Route::resource('Admin/Jury',  JuryController::class)->middleware(['CheckAdmin']);;
+//route resource Jury
+Route::resource('Admin/Jury',  JuryController::class)->middleware(['CheckAdmin']);
+
+
+
+//route resource UserRole
+Route::resource('Admin/UserRole',  UserRoleController::class);
