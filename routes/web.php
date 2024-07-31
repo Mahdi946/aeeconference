@@ -93,4 +93,4 @@ Route::resource('Admin/Congress',  CongressController::class);
 
 
 //route resource JuryController
-Route::resource('Admin/Jury',  JuryController::class);
+Route::resource('Admin/Jury',  JuryController::class)->middleware(['CheckAdmin']);;

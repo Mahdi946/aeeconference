@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\CheckAdmin;
 use App\Http\Middleware\CheckLogin;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -15,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
         //
         $middleware->alias([
             'CheckLogin' => CheckLogin::class,
+            'CheckAdmin' => CheckAdmin::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
