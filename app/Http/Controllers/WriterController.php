@@ -47,7 +47,7 @@ class WriterController extends Controller
         }
 
         //این برای چک کردن وضعیت مقاله هست
-        if($article->Status !== 0){
+        if($article->Status->value !== 0){
             flash()->error(' وضعیت مقاله مشکل دارد ');
             return view('users.article.file', compact('article'));
         }

@@ -112,7 +112,7 @@ class ArticleController extends Controller
     {
         //
         $article = Article::findOrFail($id);
-        if ($article->Status !== 0) {
+        if ($article->Status->value !== 0) {
             flash()->error('مقاله ثبت نهایی شده است');
             return redirect()->back();
         }
@@ -181,21 +181,23 @@ class ArticleController extends Controller
     public function getArticle()
     {
         $articles = Article::where('UserID', '=', Auth::user()->id)->get();
+
         return view('users.panel', compact('articles'));
     }
     public function ArticleStatus(string $id)
     {
+        $article = Article::findOrFail($id);
+        if (Auth::user()->id != $article->UserID) {
+            flash()->error('عدم تطابق ID');
+            return redirect()->route('Articles.getArticle');
+        }
 
         $articleFile = ArticleFile::where('ArticleID', $id)->pluck('FileType')->toArray();
 
 
         if( array_search('1', $articleFile) !== false  && array_search('2', $articleFile) !== false && array_search('3', $articleFile) !== false ){
 
-            $article = Article::findOrFail($id);
-            if (Auth::user()->id != $article->UserID) {
-                flash()->error('عدم تطابق ID');
-                return redirect()->route('Articles.getArticle');
-            }
+
             $article->update([
                 'Status' => 1,
             ]);
@@ -207,7 +209,7 @@ class ArticleController extends Controller
 
             flash()->error(' فایل های اجباری را ارسال کنید ');
             return redirect()->route('Articles.getArticle');
-            
+
         }
 
 
