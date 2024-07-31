@@ -37,6 +37,8 @@
                                         type="button" class="btn btn-info"><b>ایجاد موقعیت مکانی</b></a>
                                     <a href="{{ route('Congress.edit', $Congress->id) }}" id="locationBtn" type="button"
                                         class="btn btn-success mx-2"><b> ویرایش</b></a>
+                                    <a href="{{ route('Admin.Congress.createSecretary', $Congress->id) }}" id="Secretary" type="button"
+                                        class="btn btn-warning mx-2"><b> دبیر</b></a>
                                 </td>
 
                             </tr>
