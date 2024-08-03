@@ -17,7 +17,7 @@ return new class extends Migration
         });
         Schema::table('articles', function (Blueprint $table) {
             //
-            $table->enum('Status', ['Edit', 'Submited', 'Rejected', 'Approved' , 'Winned'])->default('Edit');
+            $table->enum('Status', ['Edit', 'Submited', 'Rejected', 'Approved' , 'Winner'])->default('Edit')->after('TypeID');;
         });
     }
 
@@ -28,7 +28,7 @@ return new class extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             //
-            $table->enum('Status', ['Edit', 'Submited', 'Rejected', 'Approved' , 'Winned'])->default('Edit');
+            $table->enum('Status', ['Edit', 'Submited', 'Rejected', 'Approved' , 'Winner'])->default('Edit');
         });
     }
 };

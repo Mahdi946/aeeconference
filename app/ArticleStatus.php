@@ -8,5 +8,5 @@ enum ArticleStatus: string
     case Submited = 'Submited';
     case Rejected = 'Rejected';
     case Approved = 'Approved';
-    case Winned = 'Winned';
+    case Winner = 'Winner';
 }
