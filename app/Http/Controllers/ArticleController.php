@@ -112,7 +112,7 @@ class ArticleController extends Controller
     {
         //
         $article = Article::findOrFail($id);
-        if ($article->Status->value !== 0) {
+        if ($article->Status->value !== 'Edit') {
             flash()->error('مقاله ثبت نهایی شده است');
             return redirect()->back();
         }
@@ -199,7 +199,7 @@ class ArticleController extends Controller
 
 
             $article->update([
-                'Status' => 1,
+                'Status' => 'Submited',
             ]);
             flash()->success('مقاله با موفقیت ثبت نهایی شد');
             return redirect()->route('Articles.getArticle');

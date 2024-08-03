@@ -41,7 +41,7 @@ class ArticleFileController extends Controller
 
 
         // //این برای چک کردن وضعیت مقاله هست
-        if($article->Status->value !== 0){
+        if($article->Status->value !== 'Edit'){
             flash()->error(' وضعیت مقاله مشکل دارد ');
             return view('users.article.file', compact('article'));
         }
