@@ -8,6 +8,7 @@ use App\Http\Controllers\ArticleFileController;
 use App\Http\Controllers\Admin\CongressController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\UserRoleController;
+use App\Http\Controllers\Admin\AdminArticleController;
 
 Auth::routes();
 
@@ -100,3 +101,9 @@ Route::resource('Admin/Jury',  JuryController::class)->middleware(['CheckAdmin']
 
 //route resource UserRole
 Route::resource('Admin/UserRole',  UserRoleController::class);
+
+
+
+
+//route resource AdminArticle
+Route::resource('Admin/Article',  AdminArticleController::class);
