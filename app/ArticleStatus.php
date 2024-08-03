@@ -2,11 +2,11 @@
 
 namespace App;
 
-enum ArticleStatus: int
+enum ArticleStatus: string
 {
-    case Edit = 0;
-    case Submited = 1;
-    case Rejected = 2;
-    case Approved = 3;
-    case Winned = 4;
+    case Edit = 'Edit';
+    case Submited = 'Submited';
+    case Rejected = 'Rejected';
+    case Approved = 'Approved';
+    case Winned = 'Winned';
 }
