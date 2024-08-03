@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Jury;
+use App\Models\User;
 use App\Models\Congress;
-use App\Models\Location;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
-class LocationController extends Controller
+class JuryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-
+        $juries = Jury::all();
+        return view('admin.jury.index', compact('juries'));
     }
 
     /**
@@ -24,8 +25,9 @@ class LocationController extends Controller
      */
     public function create()
     {
-        // $Congress = Congress::first();
-        // return view('admin.location.create', compact('Congress'));
+        $congresses = Congress::all();
+        $users = User::all();
+        return view('admin.jury.create', compact('congresses', 'users'));
     }
 
     /**
@@ -34,20 +36,19 @@ class LocationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'Location' => 'required',
             'CongressID' => 'required',
+            'users' => 'required',
         ]);
-
         try {
             DB::beginTransaction();
 
-            $location = Location::create([
-                'Location' => $request->Location,
-                'Phone' => $request->Phone,
-                'CongressID' => $request->CongressID,
-            ]);
-
-
+            $items = $request->users;
+            foreach ($items as $item) {
+                Jury::create([
+                    'CongressID' => $request->CongressID,
+                    'UserID' => $item
+                ]);
+            }
 
 
             DB::commit();
@@ -57,10 +58,10 @@ class LocationController extends Controller
             return redirect()->back();
         }
 
-        flash()->success('موقعیت مکانی با موفقیت ثبت شد');
-        return redirect()->route('Congress.index');
-    }
+        flash()->success('داوران با موفقیت ثبت شد');
+        return redirect()->route('Jury.index');
 
+    }
 
     /**
      * Display the specified resource.
@@ -75,10 +76,10 @@ class LocationController extends Controller
      */
     public function edit(string $id)
     {
-
-        //
-        $location = Location::findOrFail($id);
-        return view('admin.location.edit', compact('location'));
+        $jury = Jury::findOrFail($id);
+        $congresses = Congress::all();
+        $users = User::all();
+        return view('admin.jury.edit', compact('congresses','users','jury'));
     }
 
     /**
@@ -86,7 +87,10 @@ class LocationController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+        $request->validate([
+            'users' => 'required',
+        ]);
     }
 
     /**
@@ -94,16 +98,10 @@ class LocationController extends Controller
      */
     public function destroy(string $id)
     {
-        $location = Location::findOrFail($id);
+        $location = Jury::findOrFail($id);
         $location->delete();
 
-        flash()->success('موقعیت مکانی با موفقیت حذف شد');
-        return redirect()->route('Articles.getArticle');
-    }
-    public function getLocation(Congress $congress)
-    {
-
-        return view('admin.location.create', compact('congress'));
-
+        flash()->success('داور با موفقیت حذف شد');
+        return redirect()->route('Jury.index');
     }
 }
