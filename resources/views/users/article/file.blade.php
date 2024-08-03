@@ -92,7 +92,7 @@
                                         <input type="file" name="File" class="form-control">
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
-                                    <?php if( $article->Status == 0){ ?>
+                                    <?php if($article->Status->value == 'Edit'){ ?>
                                     <button type="submit" id="Submit" class="btn btn-primary my-2">ثبت</button>
 
                                     <?php }  ?>
