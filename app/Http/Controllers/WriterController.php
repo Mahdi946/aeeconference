@@ -141,6 +141,7 @@ class WriterController extends Controller
      */
     public function destroy(string $id)
     {
+        dd("hi");
         //
         $writer = Writer::findOrFail($id);
         $writer->delete();
@@ -161,6 +162,7 @@ class WriterController extends Controller
            $user->Name =  $users->Name;
            $user->Family =  $users->Family;
            $user->email =  $users->email;
+           $user->writerId =$writer->id;
            array_push($all, $user);
             }
 
