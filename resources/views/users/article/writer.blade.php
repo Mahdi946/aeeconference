@@ -32,8 +32,8 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label">{{ __('ایمیل') }}</label>
                                         <div class="input-group">
-                                            <input name="email" type="text" onblur="writerCheck()" required class="form-control"
-                                                id="writerEmail">
+                                            <input name="email" type="text" onblur="writerCheck()" required
+                                                class="form-control" id="writerEmail">
                                             <a href="javascript:writerCheck()" id="checkEmail"
                                                 class="btn btn-primary">بررسی</a>
                                         </div>
@@ -42,17 +42,18 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name_fa" class="form-label">{{ __('نام') }}</label>
-                                        <input name="Name_fa" type="text" class="form-control" id="writerName_fa" required
-                                            disabled>
+                                        <input name="Name_fa" type="text" class="form-control" id="writerName_fa"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family_fa" class="form-label">{{ __('نام خانوادگی') }}</label>
-                                        <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa" required
-                                            disabled>
+                                        <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
-                                        <input name="Name" type="text" class="form-control" id="writerName" required disabled>
+                                        <input name="Name" type="text" class="form-control" id="writerName" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family" class="form-label">{{ __('Last Name') }}</label>
@@ -66,31 +67,32 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="PhoneNumber" class="form-label">{{ __('تلفن') }}</label>
-                                        <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber" required
-                                            disabled>
+                                        <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Country" class="form-label">{{ __('کشور') }}</label>
-                                        <input name="Country" type="text" class="form-control" id="writerCountry" required
-                                            disabled>
+                                        <input name="Country" type="text" class="form-control" id="writerCountry"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3"></div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City_fa" class="form-label">{{ __('شهر') }}</label>
-                                        <input name="City_fa" type="text" class="form-control" id="writerCity_fa" required
-                                            disabled>
+                                        <input name="City_fa" type="text" class="form-control" id="writerCity_fa"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City" class="form-label">{{ __('City') }}</label>
-                                        <input name="City" type="text" class="form-control" id="writerCity" required
-                                            disabled>
+                                        <input name="City" type="text" class="form-control" id="writerCity"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
 
                                         <label for="Edu" class="form-label">{{ __('تحصیلات') }}</label>
 
-                                        <select class="form-select form-select-sm @error('Edu') is-invalid @enderror" required
-                                            name="Edu" required id="writerEdu" aria-label=".form-select-sm example">
+                                        <select class="form-select form-select-sm @error('Edu') is-invalid @enderror"
+                                            required name="Edu" required id="writerEdu"
+                                            aria-label=".form-select-sm example">
                                             <option selected disabled> لطفا انتخاب کنید </option>
                                             <option value="1">دیپلم</option>
                                             <option value="2">کاردانی</option>
@@ -108,23 +110,23 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Field" class="form-label">{{ __(' رشته-فارسی') }}</label>
-                                        <input name="Field" type="text" class="form-control" id="writerField" required
-                                            disabled>
+                                        <input name="Field" type="text" class="form-control" id="writerField"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Rank" class="form-label">{{ __('رتبه علمی') }}</label>
-                                        <input name="Rank" type="text" class="form-control" id="writerRank" required
-                                            disabled>
+                                        <input name="Rank" type="text" class="form-control" id="writerRank"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org_fa" class="form-label">{{ __('وابستگی سازمانی') }}</label>
-                                        <input name="Org_fa" type="text" class="form-control" id="writerOrg_fa" required
-                                            disabled>
+                                        <input name="Org_fa" type="text" class="form-control" id="writerOrg_fa"
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org" class="form-label">{{ __('Organisation') }}</label>
-                                        <input name="Org" type="text" class="form-control" id="writerOrg"  required
-                                            disabled>
+                                        <input name="Org" type="text" class="form-control" id="writerOrg"
+                                            required disabled>
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                     <?php if( $article->Status == 0){ ?>
@@ -260,7 +262,7 @@
                 thead.append(headerRow);
 
                 // Create table body rows
-                data.forEach(item => {
+                data.forEach((item, index) => {
                     const row = $('<tr></tr>');
 
                     // Add columns for each data field
@@ -268,13 +270,13 @@
                         if (header === 'Actions') {
                             // Create delete button in actions column
                             const deleteBtn = $(
-                                '<button type="button" class="btn btn-danger btn-sm">حذف</button>'
+                                '<button type="button" class="btn btn-danger" >حذف</button>'
                             );
                             deleteBtn.on('click', function() {
-                                deleteRow(item); // Call deleteRow function on button click
+                                deleteRow(index , data); // Call deleteRow function on button click
                             });
                             const td = $('<td></td>').append(deleteBtn);
-                            //row.append(td);
+                            row.append(td);
                         } else {
                             // Create regular data columns
                             const td = $('<td></td>').text(item[header]);
@@ -289,6 +291,10 @@
                 table.append(tbody);
                 tableContainer.append(table);
             }
+
+
+
+
 
             function getWriters() {
                 ArticleID = $('#ArticleID').val();
