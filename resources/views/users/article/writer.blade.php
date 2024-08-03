@@ -263,17 +263,23 @@
 
                 // Create table body rows
                 data.forEach((item, index) => {
+
                     const row = $('<tr></tr>');
 
                     // Add columns for each data field
                     Object.keys(headers).forEach(header => {
                         if (header === 'Actions') {
                             // Create delete button in actions column
+
+
                             const deleteBtn = $(
                                 '<button type="button" class="btn btn-danger" >حذف</button>'
                             );
                             deleteBtn.on('click', function() {
-                                deleteRow(index , data); // Call deleteRow function on button click
+
+                                deleteRow(index, data, item
+                                    .writerId); // Call deleteRow function on button click
+
                             });
                             const td = $('<td></td>').append(deleteBtn);
                             row.append(td);
@@ -292,6 +298,58 @@
                 tableContainer.append(table);
             }
 
+
+            function deleteRow(index, data, id) {
+                deleteWriter(id)
+                data.splice(index, 1);
+                createTable(data);
+            }
+
+
+            function deleteWriter(id) {
+
+
+
+                // $.ajax({
+                //     url: `/Writers/${id}`, // URL درخواست با شناسه نویسنده
+                //     type: 'DELETE', // نوع درخواست
+                //     headers: {
+                //         'X-CSRF-TOKEN': csrfToken // اضافه کردن توکن CSRF به هدر درخواست
+                //     },
+                //     success: function(result) {
+                //         console.log('Writer deleted successfully');
+                //         console.log(result);
+                //         // // پس از حذف موفقیت‌آمیز، ممکن است بخواهید جدول را دوباره بارگذاری کنید
+                //         // // فرض کنید که createTable(data) برای بارگذاری دوباره جدول استفاده می‌شود
+                //         // createTable(result);
+                //     },
+                //     error: function(xhr) {
+                //         console.error('Failed to delete writer');
+                //         console.error(xhr.responseText);
+                //     }
+                // });
+
+
+                // $.ajax({
+                //     url: "/Writers/" + id,
+                //     type: 'post', // replaced from put
+
+
+                //     success: function(response) {
+                //         console.log(response); // see the reponse sent
+                //     },
+                //     error: function(xhr) {
+                //         console.log(xhr
+                //         .responseText); // this line will save you tons of hours while debugging
+                //         // do something here because of error
+                //     }
+                // });
+
+
+
+
+
+            }
 
 
 
