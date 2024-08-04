@@ -8,6 +8,7 @@ use App\Http\Controllers\ArticleFileController;
 use App\Http\Controllers\Admin\CongressController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\UserRoleController;
+use App\Http\Controllers\Admin\JuryArticleController;
 use App\Http\Controllers\Admin\AdminArticleController;
 
 Auth::routes();
@@ -107,3 +108,11 @@ Route::resource('Admin/UserRole',  UserRoleController::class);
 
 //route resource AdminArticle
 Route::resource('Admin/Article',  AdminArticleController::class);
+
+
+
+
+Route::prefix('/Admin/JuryArticle')->controller(JuryArticleController::class)->name('Admin.JuryArticle.')->group(function(){
+    Route::get('/create/{id}','create')->name('create');
+    Route::post('/store','store')->name('store');
+});
