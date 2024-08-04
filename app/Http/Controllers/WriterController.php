@@ -33,7 +33,7 @@ class WriterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store( Request $request)
+    public function store(Request $request)
     {
         //
         $request->validate([
@@ -41,22 +41,22 @@ class WriterController extends Controller
         ]);
 
         //این برای اینکه کاربر با ای دی مقاله دیگه نیاد اسم بنویسه
-        $article =Article::findOrFail($request->ArticleID);
-        if( Auth::user()->id != $article->UserID){
+        $article = Article::findOrFail($request->ArticleID);
+        if (Auth::user()->id != $article->UserID) {
 
-            return response()->json(['status' => false, 'message'=> "please select your article"]);
+            return response()->json(['status' => false, 'message' => "please select your article"]);
         }
 
         //این برای چک کردن وضعیت مقاله هست
-        if($article->Status->value !== 'Edit'){
+        if ($article->Status->value !== 'Edit') {
             flash()->error(' وضعیت مقاله مشکل دارد ');
             return view('users.article.file', compact('article'));
         }
 
         //این برای اینکه دوبار یه نویسنده رو ثبت نکنه
-        if($request->UserID){
-            $checkArticle = Writer::where('ArticleID', $request->ArticleID )->where('UserID', $request->UserID )->first();;
-            if($checkArticle){
+        if ($request->UserID) {
+            $checkArticle = Writer::where('ArticleID', $request->ArticleID)->where('UserID', $request->UserID)->first();;
+            if ($checkArticle) {
                 flash()->error(' این مقاله قبلا این نویسنده را ثبت کرده ');
                 return redirect()->back();
                 // return response()->json(['status' => false, 'message'=> "this article has this writer"]);
@@ -65,14 +65,14 @@ class WriterController extends Controller
 
         //store
         try {
-            if($request->UserID){
+            if ($request->UserID) {
                 DB::beginTransaction();
                 Writer::create([
                     'UserID' => $request->UserID,
                     'ArticleID' => $request->ArticleID,
                 ]);
                 DB::commit();
-            }else{
+            } else {
                 DB::beginTransaction();
                 $string = Str::random(15);
                 $user = User::create([
@@ -103,12 +103,12 @@ class WriterController extends Controller
             }
         } catch (\Exception $ex) {
             DB::rollBack();
-            return response()->json(['status' => false, 'message'=> "error in store or create writer"]);
+            return response()->json(['status' => false, 'message' => "error in store or create writer"]);
         }
 
 
-        $article =Article::findOrFail($request->ArticleID);
-        if( Auth::user()->id == $article->UserID){
+        $article = Article::findOrFail($request->ArticleID);
+        if (Auth::user()->id == $article->UserID) {
             flash()->success('نویسنده مقاله با موفقیت ثبت شد');
             return view('users.article.writer', compact('article'));
             //return \redirect()->route('Articles.getArticle');
@@ -150,38 +150,35 @@ class WriterController extends Controller
 
         flash()->success('مقاله با موفقیت حذف شد');
         return redirect()->route('Articles.getArticle');
-
     }
 
     public function getWritersByID(Article $article)
     {
-        $writers =Writer::where('ArticleID', '=', $article->id)->get();
+        $writers = Writer::where('ArticleID', '=', $article->id)->get();
         $all = [];
         foreach ($writers as $writer) {
-           $users = User::find($writer->UserID);
-           $user = new User;
-           $user->id =  $users->id;
-           $user->Name =  $users->Name;
-           $user->Family =  $users->Family;
-           $user->email =  $users->email;
-           array_push($all, $user);
-            }
+            $users = User::find($writer->UserID);
+            $user = new User;
+            $user->id =  $users->id;
+            $user->Name =  $users->Name;
+            $user->Family =  $users->Family;
+            $user->email =  $users->email;
+            array_push($all, $user);
+        }
 
         return response()->json($all);
     }
     public function getEmailWriter($email)
     {
-        $writers =User::where('Email', '=', $email)->first();
+        $writers = User::where('Email', '=', $email)->first();
         return response()->json($writers);
     }
     public function writerSave(string $id)
     {
-        $article =Article::findOrFail($id);
-        if( Auth::user()->id == $article->UserID){
+        $article = Article::findOrFail($id);
+        if (Auth::user()->id == $article->UserID) {
             //$articles =Article::where('UserID', '=', Auth::user()->id)->get();
             return view('users.article.writer', compact('article'));
         }
-
     }
-
 }
