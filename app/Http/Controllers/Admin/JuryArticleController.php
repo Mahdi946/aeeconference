@@ -87,6 +87,11 @@ class JuryArticleController extends Controller
     public function edit(string $id)
     {
         //
+        $article = Article::findOrFail($id);
+        $jures = Jury::where('CongressID' , $article->CongressID)->get();
+        $juryArticles =  JuryArticle::where('ArticleID' , $article->id)->get();
+       
+        return view('admin.juryArticle.edit', compact('article', 'jures' ,'juryArticles' ));
     }
 
     /**
