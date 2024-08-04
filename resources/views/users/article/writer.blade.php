@@ -32,8 +32,8 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label">{{ __('ایمیل') }}</label>
                                         <div class="input-group">
-                                            <input name="email" type="text" onblur="writerCheck()" class="form-control"
-                                                id="writerEmail">
+                                            <input name="email" type="text" onblur="writerCheck()" required
+                                                class="form-control" id="writerEmail">
                                             <a href="javascript:writerCheck()" id="checkEmail"
                                                 class="btn btn-primary">بررسی</a>
                                         </div>
@@ -43,54 +43,56 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="Name_fa" class="form-label">{{ __('نام') }}</label>
                                         <input name="Name_fa" type="text" class="form-control" id="writerName_fa"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family_fa" class="form-label">{{ __('نام خانوادگی') }}</label>
                                         <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
-                                        <input name="Name" type="text" class="form-control" id="writerName" disabled>
+                                        <input name="Name" type="text" class="form-control" id="writerName" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family" class="form-label">{{ __('Last Name') }}</label>
-                                        <input name="Family" type="text" class="form-control" id="writerFamily"
+                                        <input name="Family" type="text" class="form-control" id="writerFamily" required
                                             disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="MobileNumber" class="form-label">{{ __('موبایل') }}</label>
-                                        <input name="MobileNumber" type="text" class="form-control"
+                                        <input name="MobileNumber" type="text" class="form-control" required
                                             id="writerMobileNumber" disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="PhoneNumber" class="form-label">{{ __('تلفن') }}</label>
                                         <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Country" class="form-label">{{ __('کشور') }}</label>
                                         <input name="Country" type="text" class="form-control" id="writerCountry"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3"></div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City_fa" class="form-label">{{ __('شهر') }}</label>
                                         <input name="City_fa" type="text" class="form-control" id="writerCity_fa"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City" class="form-label">{{ __('City') }}</label>
                                         <input name="City" type="text" class="form-control" id="writerCity"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
 
                                         <label for="Edu" class="form-label">{{ __('تحصیلات') }}</label>
 
                                         <select class="form-select form-select-sm @error('Edu') is-invalid @enderror"
-                                            name="Edu" required id="writerEdu" aria-label=".form-select-sm example">
+                                            required name="Edu" required id="writerEdu"
+                                            aria-label=".form-select-sm example">
                                             <option selected disabled> لطفا انتخاب کنید </option>
                                             <option value="1">دیپلم</option>
                                             <option value="2">کاردانی</option>
@@ -109,22 +111,22 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="Field" class="form-label">{{ __(' رشته-فارسی') }}</label>
                                         <input name="Field" type="text" class="form-control" id="writerField"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Rank" class="form-label">{{ __('رتبه علمی') }}</label>
                                         <input name="Rank" type="text" class="form-control" id="writerRank"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org_fa" class="form-label">{{ __('وابستگی سازمانی') }}</label>
                                         <input name="Org_fa" type="text" class="form-control" id="writerOrg_fa"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org" class="form-label">{{ __('Organisation') }}</label>
                                         <input name="Org" type="text" class="form-control" id="writerOrg"
-                                            disabled>
+                                            required disabled>
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                     <?php if( $article->Status->value == 'Edit'){ ?>
@@ -260,21 +262,27 @@
                 thead.append(headerRow);
 
                 // Create table body rows
-                data.forEach(item => {
+                data.forEach((item, index) => {
+
                     const row = $('<tr></tr>');
 
                     // Add columns for each data field
                     Object.keys(headers).forEach(header => {
                         if (header === 'Actions') {
                             // Create delete button in actions column
+
+
                             const deleteBtn = $(
-                                '<button type="button" class="btn btn-danger btn-sm">حذف</button>'
+                                '<button type="button" class="btn btn-danger" >حذف</button>'
                             );
                             deleteBtn.on('click', function() {
-                                deleteRow(item); // Call deleteRow function on button click
+
+                                deleteRow(index, data, item
+                                    .writerId); // Call deleteRow function on button click
+
                             });
                             const td = $('<td></td>').append(deleteBtn);
-                            //row.append(td);
+                            row.append(td);
                         } else {
                             // Create regular data columns
                             const td = $('<td></td>').text(item[header]);
@@ -289,6 +297,62 @@
                 table.append(tbody);
                 tableContainer.append(table);
             }
+
+
+            function deleteRow(index, data, id) {
+                deleteWriter(id)
+                data.splice(index, 1);
+                createTable(data);
+            }
+
+
+            function deleteWriter(id) {
+
+
+
+                // $.ajax({
+                //     url: `/Writers/${id}`, // URL درخواست با شناسه نویسنده
+                //     type: 'DELETE', // نوع درخواست
+                //     headers: {
+                //         'X-CSRF-TOKEN': csrfToken // اضافه کردن توکن CSRF به هدر درخواست
+                //     },
+                //     success: function(result) {
+                //         console.log('Writer deleted successfully');
+                //         console.log(result);
+                //         // // پس از حذف موفقیت‌آمیز، ممکن است بخواهید جدول را دوباره بارگذاری کنید
+                //         // // فرض کنید که createTable(data) برای بارگذاری دوباره جدول استفاده می‌شود
+                //         // createTable(result);
+                //     },
+                //     error: function(xhr) {
+                //         console.error('Failed to delete writer');
+                //         console.error(xhr.responseText);
+                //     }
+                // });
+
+
+                // $.ajax({
+                //     url: "/Writers/" + id,
+                //     type: 'post', // replaced from put
+
+
+                //     success: function(response) {
+                //         console.log(response); // see the reponse sent
+                //     },
+                //     error: function(xhr) {
+                //         console.log(xhr
+                //         .responseText); // this line will save you tons of hours while debugging
+                //         // do something here because of error
+                //     }
+                // });
+
+
+
+
+
+            }
+
+
+
 
             function getWriters() {
                 ArticleID = $('#ArticleID').val();
