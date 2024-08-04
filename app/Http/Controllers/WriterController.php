@@ -141,7 +141,7 @@ class WriterController extends Controller
      */
     public function destroy(string $id)
     {
-        dd("hi");
+       
         //
         $writer = Writer::findOrFail($id);
         $writer->delete();
