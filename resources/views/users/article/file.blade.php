@@ -71,7 +71,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="FileType" class="form-label">{{ __('نوع') }}</label>
-                                        <select class="form-select" name="FileType" aria-label="Default select">
+                                        <select class="form-select" name="FileType" aria-label="Default select" required>
                                             <option value="1">مشخصات نویسندگان (اجباری)</option>
                                             <option value="2">فایل اصل مقاله بدون نام نویسندگان (اجباری)</option>
                                             <option value="3">نامه به سردبیر (تعهدنامه) (اجباری)</option>
@@ -89,7 +89,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
-                                        <input type="file" name="File" class="form-control">
+                                        <input type="file" name="File" class="form-control" required>
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                     <?php if($article->Status->value == 'Edit'){ ?>
