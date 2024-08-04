@@ -32,7 +32,7 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label">{{ __('ایمیل') }}</label>
                                         <div class="input-group">
-                                            <input name="email" type="text" onblur="writerCheck()" required class="form-control"
+                                            <input name="email" type="text" onblur="writerCheck()" class="form-control" required
                                                 id="writerEmail">
                                             <a href="javascript:writerCheck()" id="checkEmail"
                                                 class="btn btn-primary">بررسی</a>
@@ -52,7 +52,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
-                                        <input name="Name" type="text" class="form-control" id="writerName" required disabled>
+                                        <input name="Name" type="text" class="form-control" id="writerName" disabled required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family" class="form-label">{{ __('Last Name') }}</label>
@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org" class="form-label">{{ __('Organisation') }}</label>
-                                        <input name="Org" type="text" class="form-control" id="writerOrg"  required
+                                        <input name="Org" type="text" class="form-control" id="writerOrg" required
                                             disabled>
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>

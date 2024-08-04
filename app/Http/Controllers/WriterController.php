@@ -43,7 +43,9 @@ class WriterController extends Controller
         //این برای اینکه کاربر با ای دی مقاله دیگه نیاد اسم بنویسه
         $article =Article::findOrFail($request->ArticleID);
         if( Auth::user()->id != $article->UserID){
-            return response()->json(['status' => false, 'message'=> "please select your article"]);
+
+            flash()->error('دسترسی امکان پذیر نیست');
+            return redirect()->back();
         }
 
         //این برای چک کردن وضعیت مقاله هست
@@ -56,7 +58,8 @@ class WriterController extends Controller
         if($request->UserID){
             $checkArticle = Writer::where('ArticleID', $request->ArticleID )->where('UserID', $request->UserID )->first();;
             if($checkArticle){
-                return response()->json(['status' => false, 'message'=> "this article has this writer"]);
+                flash()->error(' این مقاله قبلا این نویسنده را ثبت کرده ');
+                return redirect()->back();
             }
         }
 
@@ -100,7 +103,8 @@ class WriterController extends Controller
             }
         } catch (\Exception $ex) {
             DB::rollBack();
-            return response()->json(['status' => false, 'message'=> "error in store or create writer"]);
+            flash()->error('مشکل در ذخیره سازی دوباره تلاش کنید');
+            return redirect()->back();
         }
 
 
