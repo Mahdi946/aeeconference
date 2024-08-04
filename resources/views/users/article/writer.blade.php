@@ -32,8 +32,8 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="email" class="form-label">{{ __('ایمیل') }}</label>
                                         <div class="input-group">
-                                            <input name="email" type="text" onblur="writerCheck()" required
-                                                class="form-control" id="writerEmail">
+                                            <input name="email" type="text" onblur="writerCheck()" class="form-control" required
+                                                id="writerEmail">
                                             <a href="javascript:writerCheck()" id="checkEmail"
                                                 class="btn btn-primary">بررسی</a>
                                         </div>
@@ -42,18 +42,17 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name_fa" class="form-label">{{ __('نام') }}</label>
-                                        <input name="Name_fa" type="text" class="form-control" id="writerName_fa"
-                                            required disabled>
+                                        <input name="Name_fa" type="text" class="form-control" id="writerName_fa" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family_fa" class="form-label">{{ __('نام خانوادگی') }}</label>
-                                        <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa"
-                                            required disabled>
+                                        <input name="Family_fa" type="text" class="form-control" id="writerFamily_fa" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Name" class="form-label">{{ __('Name') }}</label>
-                                        <input name="Name" type="text" class="form-control" id="writerName" required
-                                            disabled>
+                                        <input name="Name" type="text" class="form-control" id="writerName" disabled required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Family" class="form-label">{{ __('Last Name') }}</label>
@@ -67,24 +66,24 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="PhoneNumber" class="form-label">{{ __('تلفن') }}</label>
-                                        <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber"
-                                            required disabled>
+                                        <input name="PhoneNumber" type="text" class="form-control" id="writerPhoneNumber" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Country" class="form-label">{{ __('کشور') }}</label>
-                                        <input name="Country" type="text" class="form-control" id="writerCountry"
-                                            required disabled>
+                                        <input name="Country" type="text" class="form-control" id="writerCountry" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3"></div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City_fa" class="form-label">{{ __('شهر') }}</label>
-                                        <input name="City_fa" type="text" class="form-control" id="writerCity_fa"
-                                            required disabled>
+                                        <input name="City_fa" type="text" class="form-control" id="writerCity_fa" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="City" class="form-label">{{ __('City') }}</label>
-                                        <input name="City" type="text" class="form-control" id="writerCity"
-                                            required disabled>
+                                        <input name="City" type="text" class="form-control" id="writerCity" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
 
@@ -110,23 +109,23 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Field" class="form-label">{{ __(' رشته-فارسی') }}</label>
-                                        <input name="Field" type="text" class="form-control" id="writerField"
-                                            required disabled>
+                                        <input name="Field" type="text" class="form-control" id="writerField" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Rank" class="form-label">{{ __('رتبه علمی') }}</label>
-                                        <input name="Rank" type="text" class="form-control" id="writerRank"
-                                            required disabled>
+                                        <input name="Rank" type="text" class="form-control" id="writerRank" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org_fa" class="form-label">{{ __('وابستگی سازمانی') }}</label>
-                                        <input name="Org_fa" type="text" class="form-control" id="writerOrg_fa"
-                                            required disabled>
+                                        <input name="Org_fa" type="text" class="form-control" id="writerOrg_fa" required
+                                            disabled>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="Org" class="form-label">{{ __('Organisation') }}</label>
-                                        <input name="Org" type="text" class="form-control" id="writerOrg"
-                                            required disabled>
+                                        <input name="Org" type="text" class="form-control" id="writerOrg" required
+                                            disabled>
                                     </div>
                                     <a href="{{ url('Articles') }}" class="btn btn-danger">بازگشت</a>
                                     <?php if( $article->Status->value == 'Edit'){ ?>

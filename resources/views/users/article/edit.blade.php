@@ -18,7 +18,7 @@
                                     <!-- Select options -->
                                     <div class="col-md-12 mb-3">
                                         <label for="select1" class="form-label">نوع مقاله</label>
-                                        <select name="TypeID" class="form-select" id="TypeID">
+                                        <select name="TypeID" class="form-select" id="TypeID" required>
                                             <option disabled selected> لطفا نوع مقاله را انتخاب کنید </option>
                                             <option value="1"  {{$article->TypeID ==1 ? 'selected':''}}>مقاله پژوهشی</option>
                                             <option value="2" {{$article->TypeID ==2 ? 'selected':''}}>مقاله علمی پژوهشی</option>
@@ -33,7 +33,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="ShortTitle_fa" class="form-label">{{ __('عنوان کوتاه') }}</label>
-                                        <textarea name="ShortTitle_fa" class="form-control" id="ShortTitle_fa" rows="2">{{ $article->ShortTitle_fa }}</textarea>
+                                        <textarea name="ShortTitle_fa" class="form-control" id="ShortTitle_fa" rows="2" required>{{ $article->ShortTitle_fa }}</textarea>
                                         @error('ShortTitle_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -43,7 +43,7 @@
 
                                     <div class="col-md-12 mb-3" style="direction: ltr;">
                                         <label for="ShortTitle" class="form-label">{{ __('Abstract') }}</label>
-                                        <textarea name="ShortTitle" class="form-control" id="ShortTitle" rows="2">{{ $article->ShortTitle }}</textarea>
+                                        <textarea name="ShortTitle" class="form-control" id="ShortTitle" rows="2" required>{{ $article->ShortTitle }}</textarea>
                                         @error('ShortTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -52,7 +52,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3">
                                         <label for="FullTitle_fa" class="form-label">{{ __('عنوان کامل') }}</label>
-                                        <textarea name="FullTitle_fa" class="form-control" id="FullTitle_fa" rows="2">{{ $article->FullTitle_fa }}</textarea>
+                                        <textarea name="FullTitle_fa" class="form-control" id="FullTitle_fa" rows="2" required>{{ $article->FullTitle_fa }}</textarea>
                                         @error('FullTitle_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="col-md-12 mb-3" style="direction: ltr;">
                                         <label for="FullTitle" class="form-label">{{ __('Subject') }}</label>
-                                        <textarea name="FullTitle" class="form-control" id="FullTitle" rows="2">{{ $article->FullTitle }}</textarea>
+                                        <textarea name="FullTitle" class="form-control" id="FullTitle" rows="2" required>{{ $article->FullTitle }}</textarea>
                                         @error('FullTitle')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __('کلیدواژه') }}</label>
-                                        <textarea name="Tags_fa" class="form-control" id="Tags_fa" rows="5">{{ $article->Tags_fa }}</textarea>
+                                        <textarea name="Tags_fa" class="form-control" id="Tags_fa" rows="5" required>{{ $article->Tags_fa }}</textarea>
                                         @error('Tags_fa')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -82,7 +82,7 @@
 
                                     <div class="col-md-12 mb-3" style="direction: ltr;">
                                         <label for="Tags" class="form-label">{{ __('Keywords') }}</label>
-                                        <textarea name="Tags" class="form-control" id="Tags" rows="5">{{ $article->Tags }}</textarea>
+                                        <textarea name="Tags" class="form-control" id="Tags" rows="5" required>{{ $article->Tags }}</textarea>
                                         @error('Tags')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -92,7 +92,7 @@
 
                                     <div class="col-md-12 mb-3">
                                         <label for="Tags" class="form-label">{{ __(' موضوعات') }}</label>
-                                        <select class="form-select" multiple aria-label="multiple select" id="Categories"
+                                        <select class="form-select" multiple aria-label="multiple select" id="Categories" required
                                             name="Categories[]">
                                             @php
                                                 $articleCategoryIds = $article->categories()->pluck('CategoryID')->toArray();
