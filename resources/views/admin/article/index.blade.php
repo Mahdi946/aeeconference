@@ -33,15 +33,15 @@
                                 </td>
 
                                 <td>
-                                    <?php if($article->Status == 0){ ?>
-                                    <a href="/Writers/writerSave/{{ $article->id }}/show" id="actionBtn" type="button"
-                                        class="btn btn-info"><b>نویسندگان</b></a>
-                                    <a href="/ArticleFiles/getArticleFileByID/{{ $article->id }}" id="actionBtn"
-                                        type="button" class="btn btn-info"><b>فایل‌ها</b></a>
+
+
+                                    <a href="/Admin/JuryArticle/create/{{ $article->id }}" id="actionBtn"
+                                        type="button" class="btn btn-info"><b>ایجاد داوران</b></a>
+                                  
 
                                     <a href="{{ route('Articles.edit', $article->id) }}"
                                         class="my-2 btn btn-primary">ویرایش</a>
-                                    <?php } ?>
+
 
                                 </td>
                             </tr>

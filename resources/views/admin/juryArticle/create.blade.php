@@ -3,34 +3,29 @@
     <div class="container form-group">
         <!-- Start Login Area -->
         <div class="login-section ptb-100">
-          
+
+
             <div class="signup-section ptb-50">
                 <div class="container">
                     <div class="signup-form" style="max-width: 800px;">
-                        <h3>ایجاد  داوران</h3>
+                        <h3>ایجاد داوران</h3>
 
                         <div class="container mt-5">
-                            <form action="{{ route('Jury.store') }}" method="POST">
+                            <form action="{{ route('Admin.JuryArticle.store') }}" method="POST">
                                 @csrf
-                                 <div class="row">
+                                <div class="row">
 
-                                    <!-- Input fields -->
+                                    <input type="hidden" name="ArticleID" value="{{ $article->id }}" id="ArticleID" />
 
-                                    <div class="col-md-12 mb-3">
-                                        <label for="congress" class="form-label">{{ __(' انتخاب کنگره') }}</label>
-                                        <select class="form-select"  id="congress" name="CongressID">
-                                            @foreach ($congresses as $congress)
-                                            <option value="{{$congress->id}}">{{$congress->Name}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
 
 
                                     <div class="col-md-12 mb-3">
                                         <label for="users" class="form-label">{{ __('انتخاب داور') }}</label>
-                                        <select class="form-select" multiple aria-label="multiple select" id="users" name="users[]">
-                                            @foreach ($users as $user)
-                                            <option value="{{$user->id}}">{{$user->Name_fa }} {{ $user->Family_fa}} </option>
+                                        <select class="form-select" multiple aria-label="multiple select" id="users"
+                                            name="users[]" required>
+                                            @foreach ($jures as $jury)
+                                                <option value="{{ $jury->UserID }}">{{ $jury->user->Name_fa }}
+                                                    {{ $jury->user->Family_fa }} </option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -42,12 +37,14 @@
 
                             </form>
                         </div>
-                    </div>
-                </div>
 
+
+
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
 
     </div>
     </div>
@@ -81,5 +78,4 @@
     </div>
 @endsection
 @section('scripts')
-
 @endSection
