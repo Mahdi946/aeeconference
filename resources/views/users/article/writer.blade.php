@@ -90,7 +90,8 @@
                                         <label for="Edu" class="form-label">{{ __('تحصیلات') }}</label>
 
                                         <select class="form-select form-select-sm @error('Edu') is-invalid @enderror"
-                                            name="Edu" required id="writerEdu" aria-label=".form-select-sm example">
+                                            required name="Edu" required id="writerEdu"
+                                            aria-label=".form-select-sm example">
                                             <option selected disabled> لطفا انتخاب کنید </option>
                                             <option value="1">دیپلم</option>
                                             <option value="2">کاردانی</option>
@@ -260,21 +261,27 @@
                 thead.append(headerRow);
 
                 // Create table body rows
-                data.forEach(item => {
+                data.forEach((item, index) => {
+
                     const row = $('<tr></tr>');
 
                     // Add columns for each data field
                     Object.keys(headers).forEach(header => {
                         if (header === 'Actions') {
                             // Create delete button in actions column
+
+
                             const deleteBtn = $(
-                                '<button type="button" class="btn btn-danger btn-sm">حذف</button>'
+                                '<button type="button" class="btn btn-danger" >حذف</button>'
                             );
                             deleteBtn.on('click', function() {
-                                deleteRow(item); // Call deleteRow function on button click
+
+                                deleteRow(index, data, item
+                                    .writerId); // Call deleteRow function on button click
+
                             });
                             const td = $('<td></td>').append(deleteBtn);
-                            //row.append(td);
+                            row.append(td);
                         } else {
                             // Create regular data columns
                             const td = $('<td></td>').text(item[header]);
@@ -289,6 +296,62 @@
                 table.append(tbody);
                 tableContainer.append(table);
             }
+
+
+            function deleteRow(index, data, id) {
+                deleteWriter(id)
+                data.splice(index, 1);
+                createTable(data);
+            }
+
+
+            function deleteWriter(id) {
+
+
+
+                // $.ajax({
+                //     url: `/Writers/${id}`, // URL درخواست با شناسه نویسنده
+                //     type: 'DELETE', // نوع درخواست
+                //     headers: {
+                //         'X-CSRF-TOKEN': csrfToken // اضافه کردن توکن CSRF به هدر درخواست
+                //     },
+                //     success: function(result) {
+                //         console.log('Writer deleted successfully');
+                //         console.log(result);
+                //         // // پس از حذف موفقیت‌آمیز، ممکن است بخواهید جدول را دوباره بارگذاری کنید
+                //         // // فرض کنید که createTable(data) برای بارگذاری دوباره جدول استفاده می‌شود
+                //         // createTable(result);
+                //     },
+                //     error: function(xhr) {
+                //         console.error('Failed to delete writer');
+                //         console.error(xhr.responseText);
+                //     }
+                // });
+
+
+                // $.ajax({
+                //     url: "/Writers/" + id,
+                //     type: 'post', // replaced from put
+
+
+                //     success: function(response) {
+                //         console.log(response); // see the reponse sent
+                //     },
+                //     error: function(xhr) {
+                //         console.log(xhr
+                //         .responseText); // this line will save you tons of hours while debugging
+                //         // do something here because of error
+                //     }
+                // });
+
+
+
+
+
+            }
+
+
+
 
             function getWriters() {
                 ArticleID = $('#ArticleID').val();
