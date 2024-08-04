@@ -115,4 +115,5 @@ Route::resource('Admin/Article',  AdminArticleController::class);
 Route::prefix('/Admin/JuryArticle')->controller(JuryArticleController::class)->name('Admin.JuryArticle.')->group(function(){
     Route::get('/create/{id}','create')->name('create');
     Route::post('/store','store')->name('store');
+    Route::get('/edit/{id}','edit')->name('edit');
 });
