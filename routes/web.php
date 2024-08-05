@@ -76,21 +76,21 @@ Route::resource('ArticleFiles',  ArticleFileController::class);
 
 
 //route prefix ArticleFiles
-Route::prefix('/Admin/Location')->controller(LocationController::class)->name('Admin.Location.')->group(function(){
+Route::prefix('/Admin/Location')->controller(LocationController::class)->name('Admin.Location.')->middleware(['CheckAdmin'])->group(function(){
     Route::get('/getLocationByID/{congress}','getLocation')->name('getLocation');
 });
 //route resource LocationController
-Route::resource('Admin/Location',  LocationController::class);
+Route::resource('Admin/Location',  LocationController::class)->middleware(['CheckAdmin']);
 
 
 
 
-Route::prefix('/Admin/Congress')->controller(CongressController::class)->name('Admin.Congress.')->group(function(){
+Route::prefix('/Admin/Congress')->controller(CongressController::class)->name('Admin.Congress.')->middleware(['CheckAdmin'])->group(function(){
     Route::post('/storeSecretary','storeSecretary')->name('storeSecretary');
     Route::get('/createSecretary/{id}','createSecretary')->name('createSecretary');
 });
 //route resource Location
-Route::resource('Admin/Congress',  CongressController::class);
+Route::resource('Admin/Congress',  CongressController::class)->middleware(['CheckAdmin']);
 
 
 
@@ -100,10 +100,10 @@ Route::resource('Admin/Jury',  JuryController::class)->middleware(['CheckAdmin']
 
 
 //route resource UserRole
-Route::resource('Admin/UserRole',  UserRoleController::class);
+Route::resource('Admin/UserRole',  UserRoleController::class)->middleware(['CheckAdmin']);
 
 
 
 
 //route resource AdminArticle
-Route::resource('Admin/Article',  AdminArticleController::class);
+Route::resource('Admin/Article',  AdminArticleController::class)->middleware(['CheckAdmin']);
