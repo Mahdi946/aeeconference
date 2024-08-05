@@ -25,7 +25,7 @@
                                 <td>{{ $article->ShortTitle_fa }}</td>
                                 <td>{{ $article->ShortTitle }}</td>
                                 <td>
-                                    <?php if($article->Status->value == 'Edit'){ ?>
+                                    <?php if($article->Status == 0){ ?>
                                     <a href="/Articles/ArticleStatus/{{ $article->id }}" id="" type="button"
                                         class="btn btn-success"><b>ثبت نهایی مقاله</b></a>
                                     <?php }else{ echo "ثبت نهایی شده است";} ?>
@@ -33,7 +33,7 @@
                                 </td>
 
                                 <td>
-                                    <?php if($article->Status->value == 'Edit'){ ?>
+                                    <?php if($article->Status == 0){ ?>
                                     <a href="/Writers/writerSave/{{ $article->id }}/show" id="actionBtn" type="button"
                                         class="btn btn-info"><b>نویسندگان</b></a>
                                     <a href="/ArticleFiles/getArticleFileByID/{{ $article->id }}" id="actionBtn"

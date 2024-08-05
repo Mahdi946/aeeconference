@@ -49,7 +49,7 @@ class WriterController extends Controller
         }
 
         //این برای چک کردن وضعیت مقاله هست
-        if($article->Status !== 0){
+        if($article->Status->value !== 'Edit'){
             flash()->error(' وضعیت مقاله مشکل دارد ');
             return view('users.article.file', compact('article'));
         }
@@ -145,6 +145,7 @@ class WriterController extends Controller
      */
     public function destroy(string $id)
     {
+       
         //
         $writer = Writer::findOrFail($id);
         $writer->delete();
@@ -165,6 +166,7 @@ class WriterController extends Controller
            $user->Name =  $users->Name;
            $user->Family =  $users->Family;
            $user->email =  $users->email;
+           $user->writerId =$writer->id;
            array_push($all, $user);
             }
 
